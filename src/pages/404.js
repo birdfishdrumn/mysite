@@ -3,11 +3,11 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const NotFoundPage = () => (
+const NotFoundPage = (location) => (
   <Layout>
-    <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <SEO  pagetitle="ページが見つかりません" pagepath={location.pathname} />
+    <h1 style={{ padding:"20vh 0",textAlign: "center"}}>お探しのページが見つかりませんでした。</h1>
+
   </Layout>
 )
 

@@ -1,3 +1,12 @@
+// const config = require('gatsby-plugin-config');
+
+// require('dotenv').config({
+//   path: `.env.${process.env.NODE_ENV}`, // or '.env'
+// });
+
+// And then you can use the config in gatsby-config.js
+
+
 module.exports = {
   siteMetadata: {
     title: `ESSENTIALS`,
@@ -31,7 +40,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-material-ui`,
-    `gatsby-plugin-offline`
+    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        host: process.env.CONTENTFUL_HOST,
+
+
+      },
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

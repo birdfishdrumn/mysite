@@ -35,7 +35,7 @@ const SEO = (props) => {
 // snsでシェアした時の画像を設定する。存在すれば子コンポーネントから渡された画像を表示するが、なければ、thumb.imgを返す
   const imgurl = props.pageimg
     ? `${data.site.siteMetadata.siteUrl}${props.pageimg}`
-    : `${data.site.siteMetadata.siteUrl}/thumb.jpg`
+    : props.blogimg || `${data.site.siteMetadata.siteUrl}/thumb.jpg`
 
   const imgw = props.pageimgw || 1280
   const imgh = props.pageimgh || 640

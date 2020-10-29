@@ -1,6 +1,6 @@
 import React from "react"
 // import {Header} from "../components/Header/Header"
-import {graphql} from "gatsby"
+import {graphql,Link} from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -85,6 +85,30 @@ export default ({data}) => (
 <Img fluid = {data.berry.childImageSharp.fluid} alt=""  style={{height: "100%"}}/>
       </figure>
     </section>
+    <section>
+    <div className="container">
+        <h2 className="sr-only">RECENT POSTS</h2>
+
+        <div className="posts">
+          {data.allContentfulWork.edges.map(({ node }) => (
+                       <article className="post" key={node.id}>
+              <Link to={`/blog/post/${node.slug}`}>
+                <figure className="eyecatch-box">
+                  <Img fluid={node.image.fluid} alt={node.image.description} style={{ height: "100%" }} />
+                   <p className="cat-chip">{node.category.name}</p>
+                </figure>
+                <h3>{node.title}</h3>
+                </Link>
+            </article>
+
+          ))}
+
+
+        </div>
+
+    </div>
+</section>
+
 </Layout>
 
 )
@@ -134,6 +158,28 @@ query {
       }
     }
   }
+  allContentfulWork(
+    sort: {fields: date,order: DESC}
+    skip: 0
+    limit: 4
+    ){
+    edges{
+      node{
+      title
+      category{
+        name
+      }
+      id
+      slug
+      image{
+        fluid(maxWidth: 573){
+          ...GatsbyContentfulFluid_withWebp
+        }
+          description
+      }
+      }
 
+    }
+  }
 }
 `

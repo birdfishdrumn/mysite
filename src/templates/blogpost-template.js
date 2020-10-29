@@ -8,6 +8,8 @@ import { faClock, faFolderOpen } from "@fortawesome/free-regular-svg-icons";
 import { faChevronLeft,faChevronRight,faTags} from "@fortawesome/free-solid-svg-icons";
 // import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 
+
+// 個別記事ページ
 export default ({data,pageContext,location}) =>(
   <Layout>
     <SEO pagetitle={data.contentfulWork.title}
@@ -34,12 +36,13 @@ export default ({data,pageContext,location}) =>(
           <aside className="info">
             <time dataTime={data.contentfulWork.date}><FontAwesomeIcon icon={faClock} />
             {data.contentfulWork.dateJP}</time>
-
+{/* カテゴリーの表示 */}
             <div className="cat">
               <FontAwesomeIcon icon={faFolderOpen} />
-              <ul>
+            <ul>
+<Link to={`/cat/${data.contentfulWork.category.slug}/`}>
               <li className={data.contentfulWork.category.slug}>{data.contentfulWork.category.name}</li>
-
+</Link>
               </ul>
             </div>
           </aside>
@@ -50,15 +53,16 @@ export default ({data,pageContext,location}) =>(
             </p>
           </div>
  <div className="tag">
-
+{/* タグ */}
               <ul>
             {data.contentfulWork.tags.map(tag => (
               <>
-                <FontAwesomeIcon icon={faTags} /><li className={tag.slug} key={tag.id}>{tag.name}</li></>
+                <FontAwesomeIcon icon={faTags} /><li className={tag.slug} key={tag.id}><Link to={`/tag/${tag.slug}/`}>{tag.name}</Link></li></>
                ))}
 
               </ul>
-            </div>
+        </div>
+        {/*  ページネーションの設定 */}
         <ul className="postlink">
           {pageContext.next && (
                         <li className="prev">
@@ -78,7 +82,7 @@ export default ({data,pageContext,location}) =>(
             </li>
           )}
           </ul>
-
+ {/*  ページネーションの設定 */}
         </div>
       </article>
     </Layout>

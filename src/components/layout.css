@@ -609,6 +609,7 @@ display: inline-flex
   margin-top: 1.8em;
   list-style: none;
   display: flex;
+  margin-bottom: 1.8em;
 }
 
 .pagenation .next {
@@ -636,4 +637,22 @@ display: inline-flex
 
 .pagenation .next [class*="fa-"] {
   margin-left: 10px;
+}
+/* UI */
+.cat-chip{
+
+    padding: 0.3em 0.8em;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 255, 0.3);
+    color: #fff;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+}
+.eyecatch-box{
+  position: relative;
 }

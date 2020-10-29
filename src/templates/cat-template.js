@@ -4,34 +4,27 @@ import Img from "gatsby-image";
 import { graphql, Link } from "gatsby";
 import SEO from "../components/seo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faClock, faFolderOpen } from "@fortawesome/free-regular-svg-icons";
-
-// ブログ一覧ページ
+import { faChevronLeft,faChevronRight} from "@fortawesome/free-solid-svg-icons";
 
 export default ({data,location,pageContext}) => (
   <Layout>
     <SEO
-      pagetitle="ブログ"
-      pagedesc="篠原のブログです"
+      pagetitle={`CATEGORY: ${pageContext.catname}`}
+      pagedesc={`「${pageContext.catname}」カテゴリーの記事一覧です`}
       pagepath={location.pathname}
+
     />
 <section classNameName="content bloglist">
     <div className="container">
-        <h1 className="bar">RECENT POSTS</h1>
+        <h1 className="bar">CATEGORY: {pageContext.catname}</h1>
 
         <div className="posts">
           {data.allContentfulWork.edges.map(({ node }) => (
                        <article className="post" key={node.id}>
               <Link to={`/blog/post/${node.slug}`}>
-                <figure class="eyecatch-box">
-                  <Img fluid={node.image.fluid} alt={node.image.description} style={{ height: "100%" }} />
-                        <p className="cat-chip">{node.category.name}</p>
+                <figure>
+                  <Img fluid={node.image.fluid} alt={node.image.description} style={{height:"100%"}}/>
                 </figure>
-     <aside className="info">
-            <time dataTime={node.date}><FontAwesomeIcon icon={faClock} />
-            {node.dateJP}</time>
-                  </aside>
                 <h3>{node.title}</h3>
                 </Link>
             </article>
@@ -45,8 +38,8 @@ export default ({data,location,pageContext}) => (
   <li className="prev">
               <Link to={
                 pageContext.currentPage === 2
-                  ? `/blog/`
-                  : `/blog/${pageContext.currentPage - 1}/`
+                  ? `/cat/${pageContext.catslug}/`
+                  : `/cat/${pageContext.catslug}/${pageContext.currentPage - 1}/`
                 }
                 rel="prev">
                     <FontAwesomeIcon icon={faChevronLeft}/>
@@ -57,7 +50,7 @@ export default ({data,location,pageContext}) => (
           {!pageContext.isLast && (
               <li className="next">
               <Link to={
-                `/blog/${pageContext.currentPage + 1}/`
+                `/cat/${pageContext.catslug}/${pageContext.currentPage + 1}/`
               }rel = "next" >
               <span>次のページ</span>
                  <FontAwesomeIcon icon={faChevronRight}/>
@@ -67,28 +60,24 @@ export default ({data,location,pageContext}) => (
 
         </ul>
     </div>
-    </section>
-
+</section>
 
   </Layout>
 )
 // skipは何軒めからという意味、limitは何軒表示するかという意味
 export const query = graphql`
-query($skip: Int!, $limit: Int!) {
+query($catid: String!,$skip: Int!, $limit: Int!) {
   allContentfulWork(
     sort: {fields: date,order: DESC}
     skip: $skip
     limit: $limit
-    ){
+     filter: {category:
+    {id: {eq: $catid}}})
+    {
     edges{
       node{
       title
-      category{
-        name
-      }
       id
-      date
-      dateJP:date(formatString: "YYYY年MM月DD日")
       slug
       image{
         fluid(maxWidth: 500){

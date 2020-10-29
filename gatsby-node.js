@@ -19,6 +19,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       node{
         id
         slug
+
+        tags{
+          id
+        }
       }
          next{
         title
@@ -63,14 +67,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 return
   }
 
-  blogresult.data.allContentfulWork.edges.forEach(({ node ,next,previous}) => {
+// 全ての個別記事ページを作成する。
+  blogresult.data.allContentfulWork.edges.forEach(({ node, next, previous }) => {
+      const random = Math.floor( Math.random() * node.tags.length );
     createPage({
+
       path: `/blog/post/${node.slug}`,
       component: path.resolve(`./src/templates/blogpost-template.js`),
       context: {
         id: node.id,
         next,
         previous,
+        // catid: node.category.id,
+        tagid: node.tags[random].id //tagsにはidが二つはいるものもある為、その中の0番目の要素をもつidを取得する。
       },
     })
   }

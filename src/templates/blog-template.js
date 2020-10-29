@@ -5,7 +5,7 @@ import { graphql, Link } from "gatsby";
 import SEO from "../components/seo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faClock, faFolderOpen } from "@fortawesome/free-regular-svg-icons";
+import { faClock} from "@fortawesome/free-regular-svg-icons";
 
 // ブログ一覧ページ
 
@@ -28,7 +28,7 @@ export default ({data,location,pageContext}) => (
                   <Img fluid={node.image.fluid} alt={node.image.description} style={{ height: "100%" }} />
                         <p className="cat-chip">{node.category.name}</p>
                 </figure>
-     <aside className="info">
+     <aside>
             <time dataTime={node.date}><FontAwesomeIcon icon={faClock} />
             {node.dateJP}</time>
                   </aside>

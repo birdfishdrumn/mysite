@@ -14,7 +14,7 @@ export default ({data,location,pageContext}) => (
       pagepath={location.pathname}
 
     />
-<section classNameName="content bloglist">
+<section className="content bloglist">
     <div className="container">
         <h1 className="bar">Tag: {pageContext.tagname}</h1>
 
@@ -22,8 +22,9 @@ export default ({data,location,pageContext}) => (
           {data.allContentfulWork.edges.map(({ node }) => (
                        <article className="post" key={node.id}>
               <Link to={`/blog/post/${node.slug}`}>
-                <figure>
-                  <Img fluid={node.image.fluid} alt={node.image.description} style={{height:"100%"}}/>
+                <figure className="eyecatch-box">
+                  <Img fluid={node.image.fluid} alt={node.image.description} style={{ height: "100%" }} />
+                     <p className="cat-chip">{node.category.name}</p>
                 </figure>
                 <h3>{node.title}</h3>
                 </Link>
@@ -79,6 +80,9 @@ query($tagid: String!,$skip: Int!, $limit: Int!) {
       node{
       title
       id
+        category{
+        name
+      }
       slug
       image{
         fluid(maxWidth: 500){

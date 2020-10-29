@@ -653,6 +653,30 @@ display: inline-flex
     left: 5px;
 
 }
+
 .eyecatch-box{
   position: relative;
+}
+
+.tag-chip{
+padding: 0.3em 0.8em;
+border-radius: 1em;
+background-color: rgba(0, 0, 255, 0.3);
+color: #fff;
+font-size: 14px;
+display: inline-flex;
+align-items: center;
+margin:5px
+}
+
+.center{
+  text-align: center;
+  margin:0 auto;
+}
+
+.space-m{
+  margin:10px 0 10px 0;
+}
+.space-l {
+  margin: 50px 0 50px 0;
 }

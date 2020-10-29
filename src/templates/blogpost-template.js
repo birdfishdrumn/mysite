@@ -62,6 +62,8 @@ export default ({data,pageContext,location}) =>(
 
               </ul>
         </div>
+
+
         {/*  ページネーションの設定 */}
         <ul className="postlink">
           {pageContext.next && (
@@ -82,19 +84,65 @@ export default ({data,pageContext,location}) =>(
             </li>
           )}
           </ul>
- {/*  ページネーションの設定 */}
+        {/*  ページネーションの設定 */}
+
+        {/* 関連記事の取得 */}
+        <div className="space-l" />
+                   <h2 className="bar center">
+      Related Post
+        </h2>
+              <div className="posts">
+          {data.allContentfulWork.edges.map(({ node }) => (
+                       <article className="post" key={node.id}>
+              <Link to={`/blog/post/${node.slug}`}>
+                <figure className="eyecatch-box">
+                  <Img fluid={node.image.fluid} alt={node.image.description} style={{ height: "100%" }} />
+                     <p className="cat-chip">{node.category.name}</p>
+                </figure>
+                <h3>{node.title}</h3>
+                </Link>
+            </article>
+
+          ))}
+        </div>
+ {/* 関連記事の取得 */}
         </div>
       </article>
     </Layout>
 )
 
 export const query = graphql`
-  query($id: String!){
+  query($id: String!, $tagid: String!){
+     allContentfulWork(
+    sort: {fields: date,order: DESC}
+    skip: 0
+    limit: 4
+       filter: {tags:{
+      elemMatch:{id: {eq: $tagid}}}})
+{
+    edges{
+      node{
+      title
+      category{
+        name
+      }
+      id
+      slug
+      image{
+        fluid(maxWidth: 573){
+          ...GatsbyContentfulFluid_withWebp
+        }
+          description
+      }
+      }
+
+    }
+  }
   contentfulWork(id: {eq: $id}){
     title
-       dateJP:date(formatString: "YYYY年MM月DD日")
+    dateJP:date(formatString: "YYYY年MM月DD日")
     date
-      category {
+    category {
       name
       slug
     }

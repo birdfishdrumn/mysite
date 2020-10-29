@@ -2,6 +2,7 @@ import React from "react"
 
 import Header from "./header"
 import Footer from "./footer"
+import TagFooter from "./tagFooter"
 import "./layout.css"
 
 import "@fortawesome/fontawesome-svg-core/styles.css"//FontawsomeCssを先読みにする設定
@@ -11,7 +12,8 @@ const Layout = ({children}) => {
   return (
     <div>
       <Header />
-{children}
+      {children}
+       <TagFooter/>
       <Footer/>
     </div>
   )

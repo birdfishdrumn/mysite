@@ -58,10 +58,14 @@ export const Wrapper = styled.div`
   }
   @media screen and (max-width: 780px) {
     display:inline-flex;
- width: ${props => (props.focus ? "210px" : "150px")};
+ width: ${props =>props.focus ? "260px" : "170px"};
    margin:5px auto 0 auto;
     input {
      border-width;none;
+    }
+    input[type="text"]{
+      font-size: 16px;
+
     }
   }
 `
@@ -74,7 +78,7 @@ export const ResultWrapper = styled.div`
     box-shadow: rgba(20, 20, 20, 0.2) 1px 1px 20px;
     width: var(--width);
     width: 520px;
-    top: 70px;
+    top: 90px;
     right: calc((100vw - var(--width)) / 2);
     /* left: 0;
     margin: auto; */
@@ -92,8 +96,11 @@ export const ResultWrapper = styled.div`
     display: flex;
     align-items: center;
     padding: 15px 20px;
+
     border-bottom: 1px solid var(--lightGray);
     b {
+         text-align:center;
+    margin:0 auto;
       padding: 0 3px;
       color:black;
     }
@@ -102,6 +109,8 @@ export const ResultWrapper = styled.div`
 
 
   ul {
+     text-align:center;
+    margin:0 auto;
     max-height: 210px;
     overflow-y: scroll;
     li {
@@ -132,6 +141,7 @@ export const ResultWrapper = styled.div`
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
+         transition: 0.1s ease;
     }
     .res,
     ul {
@@ -142,6 +152,7 @@ export const ResultWrapper = styled.div`
     .result-inner {
       width: 95%;
       right: 2.5%;
+          transform: translateY(20px);
     }
   }
 `

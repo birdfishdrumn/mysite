@@ -55,9 +55,9 @@ const SearchResult = props => {
         setClassName("active")
       }, 100)
     } else {
-      id = setTimeout(() => {
-        setClassName("")
-      }, 100)
+
+        id=setClassName("")
+
     }
     return () => {
       clearTimeout(id)
@@ -68,16 +68,17 @@ const SearchResult = props => {
   const [result, setResult] = useState([])
   const search = () => {
     const value = props.value.toLowerCase()
+    // filterで当てはまった、title,contentのみを取得する。
     const temp = data.filter(e => {
       const target = `
         ${e.title.toLowerCase()}
-
         ${e.content.content.toLowerCase()}
       `
       return target.indexOf(value) !== -1
     })
     setResult(temp)
   }
+  // もしvalueに何か値が出力されたらsearchを実行して検索結果を取得する。
   useEffect(() => {
     if (props.value !== "") {
       search()
@@ -85,6 +86,7 @@ const SearchResult = props => {
   }, [props.value])
 
   return (
+    // classNameは表示、非表示を決める
     <ResultWrapper className={className}>
       <div className="result-inner">
         <span className="res">

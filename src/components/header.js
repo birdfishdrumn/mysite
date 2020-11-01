@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby";
-
+import Search from "./Search/search"
 const Header = () => {
   return (
     <div>
@@ -18,15 +18,14 @@ const Header = () => {
             </svg>
 
         </Link>
-      </div>
+          </div>
+           <Search/>
       <nav className="nav">
         <ul>
           <li>
             <Link to="/">TOP</Link>
           </li>
-          <li>
-            <Link to="/about/">ABOUT</Link>
-              </li>
+
                 <li>
             <Link to="/blog/">BLOG</Link>
           </li>

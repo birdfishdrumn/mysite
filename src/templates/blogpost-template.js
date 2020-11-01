@@ -5,7 +5,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faFolderOpen } from "@fortawesome/free-regular-svg-icons";
-import { faChevronLeft,faChevronRight,faTags} from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight, faTags } from "@fortawesome/free-solid-svg-icons";
+import BlogCard from "../components/Blog/blogCard"
 // import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 
 
@@ -86,25 +87,17 @@ export default ({data,pageContext,location}) =>(
           </ul>
         {/*  ページネーションの設定 */}
 
-        {/* 関連記事の取得 */}
+        {/* タグに関連する関連記事の取得 */}
         <div className="space-l" />
                    <h2 className="bar center">
       Related Post
         </h2>
-              <div className="posts">
-          {data.allContentfulWork.edges.map(({ node }) => (
-                       <article className="post" key={node.id}>
-              <Link to={`/blog/post/${node.slug}`}>
-                <figure className="eyecatch-box">
-                  <Img fluid={node.image.fluid} alt={node.image.description} style={{ height: "100%" }} />
-                     <p className="cat-chip">{node.category.name}</p>
-                </figure>
-                <h3>{node.title}</h3>
-                </Link>
-            </article>
-
-          ))}
-        </div>
+    <div className="posts">
+        {data.allContentfulWork.edges.map(({ node }) => (
+          <BlogCard key={node.id} slug={node.slug} fluid={node.image.fluid} alt={node.image.description} dataTime={node.date}
+            catname={node.category.name} title={node.title}  dateJP={node.dateJP} />
+        ))}
+</div>
  {/* 関連記事の取得 */}
         </div>
       </article>

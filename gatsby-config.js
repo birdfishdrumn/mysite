@@ -40,6 +40,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-material-ui`,
+       `gatsby-plugin-styled-components`,
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-contentful`,

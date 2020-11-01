@@ -1,9 +1,11 @@
 import React from "react"
 // import {Header} from "../components/Header/Header"
-import {graphql,Link} from "gatsby"
+import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import BlogCard from "../components/Blog/blogCard"
+// import News from  "../components/Blog/news"
 export default ({data}) => (
 
 
@@ -79,6 +81,7 @@ export default ({data}) => (
         </div>
       </div>
     </section>
+    {/* <News/> */}
     <section className="photo">
       <h2 className="sr-only">Photo</h2>
       <figure>
@@ -88,23 +91,12 @@ export default ({data}) => (
     <section>
     <div className="container">
         <h2 className="sr-only">RECENT POSTS</h2>
-
-        <div className="posts">
-          {data.allContentfulWork.edges.map(({ node }) => (
-                       <article className="post" key={node.id}>
-              <Link to={`/blog/post/${node.slug}`}>
-                <figure className="eyecatch-box">
-                  <Img fluid={node.image.fluid} alt={node.image.description} style={{ height: "100%" }} />
-                   <p className="cat-chip">{node.category.name}</p>
-                </figure>
-                <h3>{node.title}</h3>
-                </Link>
-            </article>
-
-          ))}
-
-
-        </div>
+ <div className="posts">
+        {data.allContentfulWork.edges.map(({ node }) => (
+          <BlogCard key={node.id} slug={node.slug} fluid={node.image.fluid} alt={node.image.description} dataTime={node.date}
+            catname={node.category.name} title={node.title} dateJP={node.dateJP} />
+        ))}
+</div>
 
     </div>
 </section>

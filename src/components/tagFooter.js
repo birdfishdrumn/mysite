@@ -3,7 +3,7 @@ import {graphql,useStaticQuery,Link} from "gatsby"
 
 export default () => {
   const data = useStaticQuery(graphql`
-query {
+query footerQuery{
     allContentfulTag {
     edges {
       node{

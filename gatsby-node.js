@@ -86,7 +86,7 @@ return
   )
 
   // 記事一覧ページのページネーションの設定
-  const blogPostsPerPage = 2//1ページに表示する記事の数
+  const blogPostsPerPage = 4//1ページに表示する記事の数
   const blogPosts = blogresult.data.allContentfulWork.edges.length //記事の総数
   const blogPages= Math.ceil(blogPosts / blogPostsPerPage) //ページ数を求める式、例えば記事総数が18、表示する記事の数が6だとすると、18/6= 3と3ページになる。
 

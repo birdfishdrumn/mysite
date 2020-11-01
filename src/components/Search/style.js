@@ -58,10 +58,10 @@ export const Wrapper = styled.div`
   }
   @media screen and (max-width: 780px) {
     display:inline-flex;
- width: ${props => (props.focus ? "200px" : "140px")};
+ width: ${props => (props.focus ? "210px" : "150px")};
    margin:5px auto 0 auto;
     input {
-       display:inline-block;
+     border-width;none;
     }
   }
 `

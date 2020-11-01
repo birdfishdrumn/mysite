@@ -121,7 +121,7 @@ const Search = props => {
   }
   return (
     <Wrapper className={props.className} focus={focus}>
-
+<FontAwesomeIcon style={{color:"#6DB65B"}} icon={faSearch} />
       <input
         type="text"
         placeholder="Search"
@@ -129,7 +129,7 @@ const Search = props => {
         onBlur={onBlur}
         onChange={onChange}
       />
-      <FontAwesomeIcon style={{color:"#6DB65B"}} icon={faSearch} />
+
       <SearchResult focus={focus} value={value} />
     </Wrapper>
   )

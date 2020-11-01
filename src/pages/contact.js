@@ -1,5 +1,5 @@
 import React, { useState,useCallback } from "react";
-import { Link} from "gatsby";
+import TextField from "@material-ui/core/TextField";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -91,8 +91,8 @@ const Contact = () => {
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
-            {/* <div className="contact__area">
-              {/* <TextField
+            <div className="contact__area">
+              <TextField
                 id="name"
                 className="contact__field"
                 name="name"
@@ -100,11 +100,11 @@ const Contact = () => {
                 type="text"
                 variant="outlined"
                 value={name}
-                onChange={handleChange}
+                onChange={inputName}
               />
-            </div> */}
+            </div>
 
-            <TextInput
+            {/* <TextInput
               id={name}
           fullWidth={true}
           label={"お名前"}
@@ -116,7 +116,7 @@ const Contact = () => {
           value={name}
               type={"text"}
               name="name"
-            />
+            /> */}
                  <div className="space-s" />
             <TextInput
               id={email}

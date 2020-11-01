@@ -96,6 +96,7 @@ svg {
 @media (min-width: 768px) {
   .nav ul {
     margin-top: 0;
+
   }
 
   .header .container {
@@ -110,6 +111,7 @@ svg {
 /* ヒーロー */
 .hero {
   position: relative;
+  margin-top: 20px;
 }
 
 .hero figure {
@@ -604,6 +606,16 @@ display: inline-flex
 }
 
 
+/* Contact */
+
+.contact{
+      margin: 0 auto;
+      max-width: 500px;
+      padding: 1rem;
+      height: auto;
+      width: calc(100% - 2rem);
+}
+
 /* ページネーション */
 .pagenation {
   margin-top: 1.8em;
@@ -673,14 +685,13 @@ margin:5px
   text-align: center;
   margin:0 auto;
 }
+.space-s{
+  margin: 10px 0 10px 0;
+}
 
 .space-m{
-  margin:10px 0 10px 0;
+  margin:30px 0 30px 0;
 }
 .space-l {
   margin: 50px 0 50px 0;
-}
-
-.vZzvg svg {
-  color: black !important;
 }

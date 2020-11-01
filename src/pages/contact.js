@@ -115,6 +115,7 @@ const Contact = () => {
                variant="outlined"
           value={name}
               type={"text"}
+              name="name"
             />
                  <div className="space-s" />
             <TextInput
@@ -128,7 +129,7 @@ const Contact = () => {
                variant="outlined"
           value={email}
               type={"email"}
-
+             name="email"
             />
                  <div className="space-s" />
             <TextInput
@@ -141,7 +142,8 @@ const Contact = () => {
               rows={1}
                variant="outlined"
           value={subject}
-          type={"text"}
+              type={"text"}
+                name="subject"
             />
                  <div className="space-s" />
             <TextInput
@@ -154,7 +156,8 @@ const Contact = () => {
               rows={5}
                variant="outlined"
           value={message}
-          type={"text"}
+              type={"text"}
+                name="message"
         />
      <div className="space-s" />
             <div className="contact__btn">

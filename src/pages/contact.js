@@ -91,7 +91,7 @@ const Contact = () => {
           >
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
-            <div className="contact__area">
+            {/* <div className="contact__area">
               <TextField
                 id="name"
                 className="contact__field"
@@ -102,9 +102,9 @@ const Contact = () => {
                 value={name}
                 onChange={inputName}
               />
-            </div>
+            </div> */}
 
-            {/* <TextInput
+            <TextInput
               id={name}
           fullWidth={true}
           label={"お名前"}
@@ -115,8 +115,8 @@ const Contact = () => {
                variant="outlined"
           value={name}
               type={"text"}
-              name="name"
-            /> */}
+              name={name}
+            />
                  <div className="space-s" />
             <TextInput
               id={email}

@@ -2,6 +2,7 @@ import React from "react"
 
 import Header from "./header"
 import Footer from "./footer"
+import CategoryFooter from "./categoryFooter"
 import TagFooter from "./tagFooter"
 import "./layout.css"
 
@@ -13,6 +14,7 @@ const Layout = ({children}) => {
     <div>
       <Header />
       {children}
+        <CategoryFooter/>
        <TagFooter/>
       <Footer/>
     </div>

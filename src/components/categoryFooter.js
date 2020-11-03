@@ -3,13 +3,16 @@ import {graphql,useStaticQuery,Link} from "gatsby"
 
 export default () => {
   const data = useStaticQuery(graphql`
-query footerQuery{
-    allContentfulTag {
+query categoryQuery{
+    allContentfulCategory {
     edges {
       node{
         slug
         name
         id
+        work{
+          title
+        }
       }
     }
   }
@@ -18,13 +21,13 @@ query footerQuery{
     return(
     < div >
                <h2 className="bar center">
-      Tag
+          Category
         </h2>
-        <div className="space-l" />
-
+ {/* <p>{data.allContentfulCategory.edges.node.work[1].title}</p> */}
+          <div className="space-l"/>
           <ul className="center">
-            {data.allContentfulTag.edges.map(({ node }) => (
-            <Link to ={`/tag/${node.slug}/`}><li className="tag-chip" key={node.id}>{node.name}</li></Link>
+            {data.allContentfulCategory.edges.map(({ node }) => (
+            <Link to ={`/cat/${node.slug}/`}><li className="tag-chip" key={node.id}>{node.name} {node.work.length}</li></Link>
 
           ))}
         </ul>

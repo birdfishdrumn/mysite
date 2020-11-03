@@ -17,6 +17,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   ){
     edges{
       node{
+        date
         id
         slug
 
@@ -158,4 +159,49 @@ return
     })
   })
   })
+
+
+  // const blogresultData = blogresult.data.allContentfulWork.edges
+  // const yearMonth = ['2020-09','2020-10'];
+  // const archiveByMonth = yearMonth.map(x => {
+  //   const obj = {};
+  //   obj[x] = (blogresultData.filter(y => y.node.date.match(x))).length;
+  //   return obj;
+  // });
+
+  // const archivePerpage = 5 //１ページに表示する記事の数
+  // archiveByMonth.forEach((x) => {
+  //   const archivePosts = x[Object.keys(x)] //記事の総数
+  //   if (archivePosts === 0) return;
+  //   const archivePages = Math.ceil(archivePosts / archivePerpage) //記事一覧ページの総数
+  //   const currentYear = Object.keys(x)[0].split('-')[0];
+  //   const currentMonth = Object.keys(x)[0].split('-')[1];
+  //   const nextMonth = Number(currentMonth) + 1 === 13 ? '01' : ('00' + String(Number(currentMonth) + 1)).slice(-2);
+  //   const nextYear = (nextMonth === '01') ? String(Number(nextMonth) + 1) : currentYear;
+
+  //   Array.from({ length: archivePages }).forEach((_, i) => {
+  //     createPage({
+  //       path:
+  //         i === 0
+  //           ? `/${currentYear}/${currentMonth}`
+  //           : `/${currentYear}/${currentMonth}/${i + 1}/`,
+  //       component: path.resolve('./src/templates/archiveTemplate.js'),
+  //       context: {
+  //         currentYearMonth: currentYear + '-' + currentMonth,
+  //         nextYearMonth: nextYear + '-' + nextMonth,
+  //         currentYear,
+  //         currentMonth,
+  //         skip: archivePerpage * i,
+  //         limit: archivePerpage,
+  //         currentPage: i + 1, // 現在のページ番号
+  //         isFirst: i + 1 === 1, //最初のページ
+  //         isLast: i + 1 === archivePages, // 最後のページ
+  //       }
+  //     })
+  //   })
+  // })
+
+
 }
+
+// archive //

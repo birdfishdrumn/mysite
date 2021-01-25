@@ -1,4 +1,5 @@
-import { css, createGlobalStyle, keyframes } from "styled-components"
+import styled, { css, createGlobalStyle, keyframes } from "styled-components"
+
 import { rgba } from "polished"
 
 /* ===============================================
@@ -28,7 +29,7 @@ colors.info = "#2490eb"
 #  other variables
 =============================================== */
 
-export const fadeIn = keyframes`
+export const fadeIn = keyframes `
   0% {
     opacity: 0;
     visibility: hidden;
@@ -41,7 +42,7 @@ export const fadeIn = keyframes`
   }
 `
 
-export const fadeOut = keyframes`
+export const fadeOut = keyframes `
   0% {
     opacity: 1;
     visibility: visible;
@@ -55,19 +56,76 @@ export const fadeOut = keyframes`
 `
 
 export const size = {
-  width: "800px",
-  topHeight: "370px",
+    width: "800px",
+    topHeight: "370px",
 }
 
-/* ===============================================
-#  set css variables
-=============================================== */
-function setColor() {
-  let styles = ""
-  for (const key in colors) {
-    styles += `--${key}: ${colors[key]};`
+export const Content = styled.h1 `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+ font-weight: bold;
+ margin:100px;
+ text-align:center;
+ font-size:3.5rem;
+
+   @media(max-width:768px){
+     margin:50px;
+    font-size:2.5rem;
   }
-  return css`
+`;
+
+
+export const SubTitle = styled.div `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
+ font-weight: bold;
+ margin-bottom:0px;
+ text-align:center;
+ font-size:2.5rem;
+ padding:30px;
+`
+export const Description = styled.div `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
+
+ font-weight:bold;
+ line-height: 2em;
+ padding:30px 0 30px;
+ width:${props => (props.space && "60%")};
+  font-size:${props => (props.large ? "1.1rem" : "1rem")};
+ margin:0 auto;
+ /* margin:${props => (props.both && "0 10px 0 10px")}; */
+ @media(max-width:767px){
+  width:80%;
+ }
+`
+
+
+export const ImageText = styled.div `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+ font-weight: bold;
+ font-size:${props =>(props.large ? "1.4rem" : "3.5rem")};
+     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto 10%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    text-align:${props =>(props.left ? "left" : "center")} ;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+`
+    /* ===============================================
+    #  set css variables
+    =============================================== */
+function setColor() {
+    let styles = ""
+    for (const key in colors) {
+        styles += `--${key}: ${colors[key]};`
+    }
+    return css `
     :root {
       ${styles}
       --width: ${size.width};
@@ -79,7 +137,7 @@ function setColor() {
 /* ===============================================
 #  font setting
 =============================================== */
-const font = css`
+const font = css `
   font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI",
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial,
     メイリオ, Meiryo, sans-serif;
@@ -102,7 +160,7 @@ const font = css`
 /* ===============================================
 #  global style
 =============================================== */
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle `
   ${setColor}
   html {
     font-size: 16px;

@@ -1,6 +1,6 @@
 import React from "react"
 
-import Header from "./header"
+import Header from "./Header/header"
 import Footer from "./footer"
 import CategoryFooter from "./categoryFooter"
 import TagFooter from "./tagFooter"
@@ -13,9 +13,10 @@ const Layout = ({children}) => {
   return (
     <div>
       <Header />
-      {children}
-        <CategoryFooter/>
-       <TagFooter/>
+
+        {children}
+
+
       <Footer/>
     </div>
   )

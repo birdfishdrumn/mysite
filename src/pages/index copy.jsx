@@ -5,6 +5,10 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import BlogCard from "../components/Blog/blogCard"
+import { Title, Content, TwoColumn } from "./style"
+import { SubTitle, Description } from "../style/GlobalStyle"
+import { Button } from "../components/Button"
+import CardList from "../components/CardList/CardList"
 // import News from  "../components/Blog/news"
 export default ({data}) => (
 
@@ -16,72 +20,39 @@ export default ({data}) => (
         <Img fluid={data.hero.childImageSharp.fluid} alt="" style={{height: "100%"}}/>
       </figure>
       <div className="catch">
-        <h1>
-          There is no love sincerer than
-          <br /> the love of food.
-        </h1>
-        <p>食物を愛するよりも誠実な愛はない ― バーナード・ショー</p>
+        <Title>
+           風を音に変える
+        </Title>
+
       </div>
-      <div className="wave">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1366 229.5"
-          fill="#fff"
-        >
-          <path
-            d="M1369,6.3C1222.5-12.2,1189.5,8,919.2,96.6C665,179.8,160,141.7-2,53.1v150l1371-14.2V6.3z"
-            opacity=".53"
-          />
-          <path d="M1369 229.5V55.8c-9.5-2.4-19.2-4.4-28.9-5.8-196.9-29.9-203.4-15.8-503.9 82.6-219.8 72-627.6 53.2-838.2-10.5v107.4h1371z" />
-        </svg>
-      </div>
+
     </section>
-    <section className="food">
-      <div className="container">
-        <h2 className="bar">
-          Food <span>Essence</span>
-        </h2>
-        <div className="details">
-          <div className="detail">
-            <figure>
-<Img fluid = {data.fruit.childImageSharp.fluid} alt=""/>
-            </figure>
-            <h3>フルーツ</h3>
-            <p>FRUIT</p>
-            <p>
-              甘くてすっぱくておいしい果実たち。
-              <br />
-              旬のフルーツを満喫します。
-            </p>
-          </div>
-          <div className="detail">
-            <figure>
-<Img fluid = {data.grain.childImageSharp.fluid} alt=""/>
-            </figure>
-            <h3>穀物</h3>
-            <p>GRAIN</p>
-            <p>
-              食事の基本となる穀物。
-              <br />
-              毎日の活動のエネルギー源になります。
-            </p>
-          </div>
-          <div className="detail">
-            <figure>
-<Img fluid = {data.beverage.childImageSharp.fluid} alt=""/>
-            </figure>
-            <h3>飲み物</h3>
-            <p>BEVERAGE</p>
-            <p>
-              リラックスするのに欠かせない飲み物。
-              <br />
-              お気に入りの一杯はありますか？
-            </p>
-          </div>
+    <section>
+      <Content>
+        江戸風鈴とは
+      </Content>
+      <TwoColumn>
+        <div>
+          <Img fluid={data.kikyou.childImageSharp.fluid} />
         </div>
-      </div>
+        <div>
+          <Title>江戸時代から受け継がれてきた技術</Title>
+          <Description>型を使わず空中で形を整える「宙吹き」
+          ガラスのツヤを活かすため、絵は風鈴の「内側に彩色」
+鳴り口の部分にガラスが擦れた時、優しい音色がなるように「ギザギザの鳴り口」</Description>
+          <Button className="center">詳しく見る</Button>
+        </div>
+      </TwoColumn>
     </section>
+    <div className="space-l" />
+     <div className="space-l"/>
     {/* <News/> */}
+    <section>
+      <SubTitle>篠原まるよし風鈴の仕事</SubTitle>
+      <Description space>篠原まるよし風鈴では、風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、また体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。</Description>
+      <CardList/>
+    </section>
+        <div className="space-l"/>
     <section className="photo">
       <h2 className="sr-only">Photo</h2>
       <figure>
@@ -90,7 +61,7 @@ export default ({data}) => (
     </section>
     <section>
     <div className="container">
-        <h2 className="sr-only">RECENT POSTS</h2>
+        <SubTitle>お知らせ</SubTitle>
  <div className="posts">
         {data.allContentfulWork.edges.map(({ node }) => (
           <BlogCard key={node.id} slug={node.slug} fluid={node.image.fluid} alt={node.image.description} dataTime={node.date}
@@ -107,7 +78,7 @@ export default ({data}) => (
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
-  hero: file(relativePath: {eq: "hero.jpg"}){
+  hero: file(relativePath: {eq: "uniqlo_poster.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 
@@ -115,9 +86,7 @@ query {
       }
     }
   }
-
-
-  fruit: file(relativePath: {eq: "fruit.jpg"}){
+  kikyou: file(relativePath: {eq: "kikyou.jpg"}){
     childImageSharp {
       fluid(maxWidth: 320) {
 

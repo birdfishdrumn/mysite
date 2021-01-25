@@ -1,13 +1,13 @@
 import React, { useState,useCallback } from "react";
 import TextField from "@material-ui/core/TextField";
-
+import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-
+import { SubTitle } from "../style/GlobalStyle";
 import Button from "@material-ui/core/Button";
 import TextInput from "../components/UI/textInput"
 
-const Contact = () => {
+export default ({data})=>{
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -70,10 +70,17 @@ const Contact = () => {
 
   return (
     <div>
-      <Layout>
-        <SEO  pagetitle="お問い合わせフォーム" />
 
-        <h1 className="bar center">Contact</h1>
+      <Layout>
+        <div>
+	<figure>
+	   <Img fluid={data.contact.childImageSharp.fluid} alt="製品情報"/>
+    </figure>
+        </div>
+
+        <SEO  pagetitle="お問い合わせフォーム" />
+ <article className="content">
+        <SubTitle>お問い合わせ</SubTitle>
         <div className="space-m" />
 
         <p className="center">
@@ -172,10 +179,26 @@ const Contact = () => {
             </div>
           </form>
         </div>
-
+   </article>
       </Layout>
     </div>
   );
 };
 
-export default Contact;
+
+
+export const query = graphql`
+query {
+  contact: file(relativePath: {eq: "iro.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 1600) {
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+      original{
+        src
+        height
+        width
+      }
+    }
+  }
+}`

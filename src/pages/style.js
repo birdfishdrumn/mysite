@@ -42,7 +42,7 @@ export const Title = styled.h1 `
 // `
 
 export const Featured = styled.section `
-
+  margin:0;
 `;
 
 export const News = styled.section `

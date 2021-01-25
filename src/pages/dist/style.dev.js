@@ -30,7 +30,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin:0;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;

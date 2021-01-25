@@ -5,8 +5,8 @@ import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import BlogCard from "../components/Blog/blogCard"
-import {  TwoColumn,News,Post,Gallery,Featured } from "./style"
-import { Content,SubTitle, Description,ImageText } from "../style/GlobalStyle"
+
+import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText } from "../style/GlobalStyle"
 import { Button } from "../components/Button"
 import CardList from "../components/CardList/CardList"
 import NewsCardList  from "../components/Blog/NewsCardList";

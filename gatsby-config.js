@@ -9,8 +9,8 @@ require('dotenv').config({
 
 module.exports = {
     siteMetadata: {
-        title: `ESSENTIALS`,
-        description: `美味しい食事と食材を探求するサイト`,
+        title: `篠原まるよし風鈴`,
+        description: `江戸時代から続く江戸風鈴を制作している篠原まるよし風鈴です。`,
         lang: `ja`,
         siteUrl: `https://wonderful-hopper-4ed849.netlify.app`,
         locale: `ja_JP`,
@@ -21,8 +21,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `ESSENTIALS エッセンシャルズ`,
-                short_name: `オシャレ`,
+                name: `篠原まるよし風鈴`,
+                short_name: `篠原まるよし風鈴`,
                 start_url: `/`,
                 background_color: `#ffffff`,
                 theme_color: `#477294`,
@@ -50,7 +50,29 @@ module.exports = {
                 host: process.env.CONTENTFUL_HOST,
             },
         },
-
+        {
+            resolve: 'gatsby-firesource', //プラグイン名
+            options: {
+                credential: require("./firebase.json"), //認証情報
+                types: [{
+                    type: 'Products', // GraphQL上で表示される名前
+                    collection: 'products', // 作成したコレクション名
+                    map: doc => ({ // ドキュメントデータ
+                        name: doc.name,
+                        imageUrl: doc.imageUrl, // ドキ
+                        category: doc.category,
+                        description: doc.description
+                    }),
+                }, ],
+            }
+        },
+        {
+            resolve: `gatsby-plugin-remote-images`,
+            options: {
+                nodeType: 'Products',
+                imagePath: 'imageUrl',
+            },
+        },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,

@@ -1,5 +1,5 @@
 import styled, { css, createGlobalStyle, keyframes } from "styled-components"
-
+import Img from "gatsby";
 import { rgba } from "polished"
 
 /* ===============================================
@@ -60,6 +60,8 @@ export const size = {
     topHeight: "370px",
 }
 
+// ==========テキストデザイン===========
+
 export const Title = styled.h1 `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  font-weight: bold;
@@ -78,28 +80,137 @@ export const Title = styled.h1 `
 
 `;
 
-// export const TwoColumn = styled.h1 `
-//   display: grid;
-//   grid-gap:50px;
-//   margin:0 150px 0;
-//   grid-template-columns:1fr 1fr;
 
-//   >div{
-//    margin:40px;
-//   }
-//   >div:last-child{
-//    text-align:center;
-//   }
+export const Nav = styled.ul `
+   font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
+ font-weight: bold;
+ margin:0 auto;
+ text-align:center;
+ font-size:1.8rem;
+ padding:30px;
+ list-style:none;
+  @media(max-width:767px){
+　　font-size:1.4rem;
+   }
+ >li{
+  margin:10px;
+    text-align:center;
+ }
+ >p{
+   display:inline-block;
+   font-size:1.2rem;
+    text-align:center;
+   color:grey;
+  width:60%;
+   margin:10px;
+   @media(max-width:767px){
+width:90%;
+ font-size:1.1rem;
+   }
+ }
+`
 
-//   @media(max-width:1024px){
-//     margin:10px;
-//     grid-gap:10px;
-//     grid-template-columns:1fr;
-//      >div{
-//    margin:5x;
-//   }
-//   }
-// `
+
+export const SubTitle = styled.div `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
+ font-weight: bold;
+ margin-bottom:0px;
+ text-align:center;
+ font-size:${props=>(props.small ? "1.8rem" : "2.2rem")};
+ border:${props=>(props.border && "1px solid black")};
+ padding:${props=>(props.noSpace ? "10px": "30px")};
+`
+
+
+
+export const Description = styled.div `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
+text-align:left;
+ font-weight:bold;
+ line-height: 1.8em;
+ padding:10px 0 30px;
+ width:${props => (props.space && "50%")};
+  font-size:${props => (props.large ? "1.1rem" : "1rem")};
+ margin:0 auto;
+ /* margin:${props => (props.both && "0 10px 0 10px")}; */
+ @media(max-width:767px){
+  width:90%;
+  font-size:${props => (props.small &&  "0.8rem")};
+ }
+`
+
+
+export const ImageText = styled.div `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+ font-weight: bold;
+ font-size:${props =>(props.large ? "1.4rem" : "3.5rem")};
+     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto 10%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    text-align:${props =>(props.left ? "left" : "center")} ;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+`
+export const MinTitle = styled.div `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+ font-weight: bold;
+ font-size:1rem;
+ margin:10px;
+  `
+    // ==========テキストデザイン===========
+
+
+// ------------- レイアウト--------------------
+
+export const TwoColumn = styled.h1 `
+   display: grid;
+   grid-gap:50px;
+   margin:0 10% 0;
+   grid-template-columns:1fr 1fr;
+   max-width:1000px;
+   >div{
+    margin:40px;
+   }
+   >div:last-child{
+    text-align:center;
+   }
+
+   @media(max-width:1024px){
+     margin:10px;
+     grid-gap:10px;
+     grid-template-columns:1fr;
+      >div{
+    margin:5x;
+   }
+   }
+`
+
+
+export const GridList = styled.figure `
+ display:grid;
+ grid-template-columns:1fr 1fr 1fr;
+ grid-gap:0px;
+ max-width:1024px;
+ text-align:center;
+ margin:0 auto;
+
+ @media(max-width:1024px){
+ grid-template-columns:1fr 1fr 1fr;
+ }
+ @media(max-width:767px){
+ grid-template-columns:1fr 1fr;
+ margin:0;
+ }
+`
+
+// ------------- レイアウト--------------------
 
 export const Featured = styled.section `
   margin:0;
@@ -131,52 +242,32 @@ export const Content = styled.h1 `
 `;
 
 
-export const SubTitle = styled.div `
- font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
- font-weight: bold;
- margin-bottom:0px;
- text-align:center;
- font-size:2.5rem;
- padding:30px;
-`
-export const Description = styled.div `
- font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
-
- font-weight:bold;
- line-height: 2em;
- padding:30px 0 30px;
- width:${props => (props.space && "60%")};
-  font-size:${props => (props.large ? "1.1rem" : "1rem")};
- margin:0 auto;
- /* margin:${props => (props.both && "0 10px 0 10px")}; */
- @media(max-width:767px){
-  width:80%;
- }
+export const Figure = styled.figure `
+ margin:1%;
 `
 
 
-export const ImageText = styled.div `
- font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
- font-weight: bold;
- font-size:${props =>(props.large ? "1.4rem" : "3.5rem")};
-     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto auto 10%;
-    display: flex;
+export const SpaceS = styled.div `
+ margin: 10px 0 10px 0;
+  `
+export const SpaceM = styled.div `
+    margin: 30 px 0 30 px 0;
+  `
+export const SpaceL = styled.div `
+ margin: 50 px 0 50 px 0;
+  `;
+export const PaddingS = styled.div `
+padding: 20 px 0 20 px;
+  `;
 
-    flex-direction: column;
-    justify-content: center;
-    text-align:${props =>(props.left ? "left" : "center")} ;
-    color: #fff;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+export const PaddingM = styled.div `
+ padding: 50 px 0 50 px;
+  `;
 
-`
-    /* ===============================================
-    #  set css variables
-    =============================================== */
+
+/* ===============================================
+#  set css variables
+=============================================== */
 function setColor() {
     let styles = ""
     for (const key in colors) {

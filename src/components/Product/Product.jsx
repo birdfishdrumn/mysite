@@ -1,20 +1,22 @@
 import React from 'react'
 import Img from "gatsby-image"
-
+import {Link} from "gatsby"
 import { ProductImage, Content, Image, ProductText,ProductButton,ProductDescription } from "./style";
 
 
-const Product = ({img,title,description,noBtn}) => {
+const Product = ({img,title,description,noBtn,btnText,center,link}) => {
   return (
     <ProductImage>
 
-     <figure>
+     <figure >
 	   <Image fluid={img} alt="製品情報"/>
-        </figure>
+      </figure>
+           <div className="space-m"/>
       <ProductText large left>
         {title}
+
         <ProductDescription>{description}</ProductDescription>
-           <ProductButton noBtn={noBtn}>詳しく</ProductButton>
+        <Link to={link}><ProductButton noBtn={noBtn}>{btnText ? btnText : "詳しく"}</ProductButton></Link>
       </ProductText>
 
 

@@ -34,7 +34,13 @@ export default ({ data }) => {
       </section>
       <TabMenu/>
       <Featured>
+   <div >
 
+
+
+      {/* <Sironuki src={Siro} /> */}
+
+    </div>
       <Content>
         江戸風鈴とは
       </Content>

@@ -16,7 +16,7 @@ var _GlobalStyle = require("../../style/GlobalStyle");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\nmargin:0;\n  width:40%;\n @media(max-width:767px){\n      font-size:0.3em;\n      width:50%;\n      padding:10px 0 10px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\nfont-size:1.3rem;\nmargin:0;\n  width:40%;\n @media(max-width:767px){\n      font-size:0.7em;\n      line-height: 1.2em;\n      width:50%;\n      font-wight:lighter;\n      padding:10px 0 10px;\n    }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -26,7 +26,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display:", ";\n  width:100px;\n  background:transparent;\n   @media(max-width:767px){\n    width:70px;\n    line-height:2px;\n    font-size:.7rem;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display:", ";\n  width:100px;\n  background:transparent;\n   @media(max-width:767px){\n    width:70px;\n    line-height:2px;\n    font-size:1rem;\n    }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36,7 +36,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n font-family:'\u6E38\u660E\u671D','Yu Mincho','Hiragino Mincho Pro',sans-serif;\n font-weight: bold;\n font-size:3.0em;\n     position: absolute;\n    top: 30px;\n    right: 0;\n    bottom:0;\n    left: 0;\n    margin: auto auto 10%;\n    display: flex;\n    padding-left:15%;\n    flex-direction: column;\n    justify-content: center;\n    text-align:", " ;\n    color: black;\n    @media(max-width:767px){\n          top: 10px;\n        margin: auto auto 0 20px;\n      font-size:1.2em;\n      padding:10px;\n    }\n    /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */\n\n"]);
+  var data = _taggedTemplateLiteral(["\n font-family:'\u6E38\u660E\u671D','Yu Mincho','Hiragino Mincho Pro',sans-serif;\n font-weight: bold;\n font-size:3.0em;\n     position: absolute;\n    top: 70px;\n    right: 0;\n    bottom:0;\n    left: 0;\n    margin: auto auto 10%;\n    display: flex;\n    padding-left:15%;\n    flex-direction: column;\n    justify-content: center;\n    text-align:", " ;\n    color: black;\n    @media(max-width:767px){\n          top: 10px;\n        margin: auto auto 0 20px;\n      font-size:1.2em;\n      padding:10px;\n    }\n    /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -56,7 +56,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\nheight:460px;\n\n  object-fit:cover;\n  @media(max-width:767px){\n    height:200px;\n\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\nheight:460px;\n\n  object-fit:cover;\n  @media(max-width:767px){\n    width:100%;\n    height:auto;\n\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -66,7 +66,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n margin:0 10% 20px;\n position:relative;\n"]);
+  var data = _taggedTemplateLiteral(["\n margin:0 5% 20px;\n position:relative;\n    @media(max-width:767px){\n    margin:0;\n    }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

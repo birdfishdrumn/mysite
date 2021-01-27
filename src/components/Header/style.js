@@ -16,7 +16,7 @@ export const Bar = styled(Toolbar)
 `
 export const HeaderMenu = styled.div `
 width:100%;
-margin-top:20px;
+margin-top:10px;
    display:flex;
    justify-content:space-between;
 

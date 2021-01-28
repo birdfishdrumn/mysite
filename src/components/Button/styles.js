@@ -28,7 +28,7 @@ height: 44px;
  border: 1px solid black;
  white-space: nowrap;
 ${fullWidthStyles}
-
+transition:0.5s;
 &:hover:not(:disabled){
   color:white;
   background:black;

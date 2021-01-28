@@ -9,17 +9,29 @@ import BlogCard from "../components/Blog/blogCard"
 import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText } from "../style/GlobalStyle"
 import { Button } from "../components/Button"
 import CardList from "../components/CardList/CardList"
-import NewsCardList  from "../components/Blog/NewsCardList";
+import NewsCardList  from "../components/UI/NewsCard/NewsCardList";
 import FeatureList from "../components/FeatureList/FeatureList";
-import { TabMenu } from "../components/index";
-
+import { TabMenu,ProductCard } from "../components/index";
+import styled from "styled-components";
 // import News from  "../components/Blog/news"
+const ProductList = styled.div`
+ max-width:1040px;
+ margin:0 auto;
+ display:grid;
+ grid-template-columns:1fr 1fr 1fr;
+ @media(max-width:767px){
+   width:100%;
+    grid-template-columns:1fr;
+ }
+`
+
 
 export default ({ data }) => {
   console.log(data)
   return (
   <Layout>
-    <SEO />
+      <SEO />
+
     <section className="hero">
       <figure>
         <Img fluid={data.hero.childImageSharp.fluid} alt="" style={{ height: "100%" }} />
@@ -32,7 +44,7 @@ export default ({ data }) => {
 
 
       </section>
-      <TabMenu/>
+
       <Featured>
    <div >
 
@@ -50,6 +62,7 @@ export default ({ data }) => {
       <br /> <br />
           現在は篠原まるよし風鈴と、篠原風鈴本舗の二件のみしか江戸風鈴のみ製作を行なっておりません。
         </Description>
+            <div className="space-l" />
           <SubTitle>江戸風鈴の特徴</SubTitle>
           <div className="space-l" />
            <div className="space-l" />
@@ -64,20 +77,29 @@ export default ({ data }) => {
     </Featured>
     <div className="space-l" />
     <div className="space-l" />
-    {/* <News/> */}
-    <section className="center">
-      <SubTitle>篠原まるよし風鈴の仕事</SubTitle>
-        <Description space>篠原まるよし風鈴では、風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、また体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。</Description>
-        <CardList/>
-
-    </section>
-    <div className="space-l" />
-    <section className="photo">
+      {/* <News/> */}
+          <section className="photo">
       <h2 className="sr-only">Photo</h2>
       <figure>
         <Img fluid={data.berry.childImageSharp.fluid} alt="" style={{ height: "100%" }} />
       </figure>
+      </section>
+        <div className="space-l" />
+    <section className="center">
+      <SubTitle>篠原まるよし風鈴の仕事</SubTitle>
+        <Description space>篠原まるよし風鈴では、風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、また体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。</Description>
+          <div className="space-xl" />
+       <ProductList>
+
+      <ProductCard  img={data.sudare.childImageSharp.fluid} title="商品の紹介" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/fuurin"/>
+          <ProductCard img={data.kikyou.childImageSharp.fluid} title="風鈴制作体験" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/workshop" />
+             <ProductCard  img={data.online.childImageSharp.fluid} title="オンラインショップ" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/fuurin"/>
+
+        </ProductList>
+
     </section>
+    <div className="space-l" />
+
     <News >
       {/* <div className="space-l" />
       <div className="container">
@@ -124,7 +146,7 @@ query {
       }
     }
   }
-  gizagiza: file(relativePath: {eq: "gizagiza.png"}){
+  gizagiza: file(relativePath: {eq: "kirikuchi_square.jpg"}){
     childImageSharp {
       fluid(maxWidth: 320) {
 
@@ -134,9 +156,25 @@ query {
 }
 
 
-  berry: file(relativePath: {eq: "berry.jpg"}){
+  berry: file(relativePath: {eq: "kiriko_narabi_kumori.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
+
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+    }
+  }
+    sudare: file(relativePath: {eq: "sudare_fuurin.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 320) {
+
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+    }
+  }
+    online: file(relativePath: {eq: "iro.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 320) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

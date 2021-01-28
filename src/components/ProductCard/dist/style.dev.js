@@ -16,7 +16,7 @@ var _GlobalStyle = require("../../style/GlobalStyle");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\nfont-size:1.3rem;\nmargin:0;\n  width:40%;\n @media(max-width:767px){\n      font-size:0.7em;\n      line-height: 1.2em;\n      width:50%;\n      font-wight:lighter;\n      padding:10px 0 10px;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\nfont-size:1.0rem;\nmargin:5px;\n text-align:center;\n @media(max-width:767px){\n      font-size:0.7em;\n      line-height: 1.2em;\n\n      font-wight:lighter;\n      padding:10px 0 10px;\n      display:inline-box;\n    }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -36,7 +36,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n font-family:'\u6E38\u660E\u671D','Yu Mincho','Hiragino Mincho Pro',sans-serif;\n font-weight: bold;\n font-size:3.0em;\n     position: absolute;\n    top: 70px;\n    right: 0;\n    bottom:0;\n    left: 0;\n    margin: auto auto 10%;\n    display: flex;\n    padding-left:15%;\n    flex-direction: column;\n    justify-content: center;\n    text-align:", " ;\n    color: black;\n    @media(max-width:767px){\n          top: 10px;\n        margin: auto auto 0 20px;\n      font-size:1.2em;\n      padding:10px;\n    }\n    /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */\n\n"]);
+  var data = _taggedTemplateLiteral(["\n font-family:'\u6E38\u660E\u671D','Yu Mincho','Hiragino Mincho Pro',sans-serif;\n font-weight: bold;\n font-size:1.8rem;\n text-shadow: 1px 1px 2px black;\n     position: absolute;\n    top: 0px;\n    right: 0;\n    bottom:0;\n    left: 0;\n    margin: auto auto 10%;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    text-align:", " ;\n    color: white;\n    @media(max-width:767px){\n          top: 10px;\n\n      font-size:1.7rem;\n      padding:10px;\n    }\n    /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */\n\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -46,7 +46,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = _taggedTemplateLiteral(["\n    padding:20px;\n      padding: 5px 10px;\n      background:white;\n      border: 1px solid black;\n      font-weight: bold;\n      font-size:16px;\n      text-transform:uppercase;\n      display:inline-block;\n      color:black;\n      text-decoration:none;\n     cursor:pointer;\n      &:hover{\n        color:white;\n        background: black;\n      }\n"]);
+  var data = _taggedTemplateLiteral(["\n    padding:20px;\n      padding: 5px 10px;\n      background:white;\n      border: 1px solid black;\n      font-weight: bold;\n      font-size:1rem;\n      text-transform:uppercase;\n      display:inline-block;\n      color:black;\n      text-decoration:none;\n     cursor:pointer;\n      &:hover{\n        color:white;\n        background: black;\n      }\n"]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -56,7 +56,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\nheight:460px;\n\n  object-fit:cover;\n  @media(max-width:767px){\n    width:100%;\n    height:auto;\n\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\nheight:380px;\n\n  object-fit:cover;\n  @media(max-width:767px){\n    width:100%;\n    height:auto;\n\n  }\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -66,7 +66,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n margin:0 5% 20px;\n position:relative;\n\n    @media(max-width:767px){\n    margin:0;\n    }\n"]);
+  var data = _taggedTemplateLiteral(["\n margin:0 4% 20px;\n position:relative;\n transition:0.5s;\n    @media(max-width:767px){\n    margin:0;\n    }\n  &:hover{\n    opacity: 0.5;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;

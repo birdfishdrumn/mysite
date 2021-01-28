@@ -8,7 +8,9 @@ var _exportNames = {
   TabMenu: true,
   CarouselSlider: true,
   ProductGrid: true,
-  WindBellCard: true
+  ProductCard: true,
+  WindBellCard: true,
+  BottomNotice: true
 };
 Object.defineProperty(exports, "Product", {
   enumerable: true,
@@ -34,10 +36,22 @@ Object.defineProperty(exports, "ProductGrid", {
     return _ProductGrid["default"];
   }
 });
+Object.defineProperty(exports, "ProductCard", {
+  enumerable: true,
+  get: function get() {
+    return _ProductCard["default"];
+  }
+});
 Object.defineProperty(exports, "WindBellCard", {
   enumerable: true,
   get: function get() {
     return _WindBellCard["default"];
+  }
+});
+Object.defineProperty(exports, "BottomNotice", {
+  enumerable: true,
+  get: function get() {
+    return _BottomNotice["default"];
   }
 });
 
@@ -62,6 +76,10 @@ var _CarouselSlider = _interopRequireDefault(require("./CarouselSlider/CarouselS
 
 var _ProductGrid = _interopRequireDefault(require("./ProductGrid/ProductGrid"));
 
+var _ProductCard = _interopRequireDefault(require("./ProductCard/ProductCard"));
+
 var _WindBellCard = _interopRequireDefault(require("./WindBellCard/WindBellCard"));
+
+var _BottomNotice = _interopRequireDefault(require("./BottomNotice/BottomNotice"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }

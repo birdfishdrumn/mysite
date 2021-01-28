@@ -5,10 +5,10 @@ import Img from "gatsby-image"
 import Aos from "aos";
 import "aos/dist/aos.css";
 import styled from "styled-components";
-import { Product,BottomNotice } from "../components/index";
+import { Product } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import {TwoColumn,MaxTwoColumn,SubTitle,Figure,Description} from "../style/GlobalStyle"
+import {TwoColumn,SubTitle,Figure,Description} from "../style/GlobalStyle"
 
 
 
@@ -24,22 +24,23 @@ export default ({ data, location }) => {
         pagetitle="ESSENTIALSについて"
         pagedesc="食べ物の情報について発信しているサイトです"
         pagepath={location.pathname}
-        pageimg={data.taiken.childImageSharp.original.src}
-        pageimgw={data.taiken.childImageSharp.original.width}
-        pageimgh={data.taiken.childImageSharp.original.height}
+        pageimg={data.about.childImageSharp.original.src}
+        pageimgw={data.about.childImageSharp.original.width}
+        pageimgh={data.about.childImageSharp.original.height}
       />
       <div className="eyecatch">
         <figure>
-          <Img fluid={data.taiken.childImageSharp.fluid} alt="製品情報" />
+          <Img fluid={data.about.childImageSharp.fluid} alt="製品情報" />
         </figure>
       </div>
 
       <article className="content">
-        <SubTitle>篠原まるよし風鈴の仕事</SubTitle>
+        <SubTitle>江戸風鈴とは</SubTitle>
         <Description data-aos="fade-up" space>篠原まるよし風鈴では江戸風鈴の制作を行っており年間で12,000個ほど作ります。そうしてできた風鈴に絵を描いて販売、また体験学習に用います。</Description>
+        <div className="space-l"/>
         <TwoColumn>
           <div>
-            <SubTitle border noSpace>風鈴の制作</SubTitle>
+            <SubTitle  border noSpace>江戸風鈴とは</SubTitle>
           </div>
           <div>
             <Figure>
@@ -47,48 +48,16 @@ export default ({ data, location }) => {
             </Figure>
           </div>
         </TwoColumn>
-        <TwoColumn>
-          <div>
-            <Figure>
-              <Img fluid={data.works.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
-            </Figure>
-          </div>
-          <div>
-            <SubTitle border noSpace>体験指導</SubTitle>
-
-          </div>
-        </TwoColumn>
-        <MaxTwoColumn>
-          <div>
-            <SubTitle border noSpace>川崎大師風鈴市</SubTitle>
-          </div>
-          <div>
-            <Figure>
-              <Img fluid={data.daruma.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
-            </Figure>
-          </div>
-        </MaxTwoColumn>
-        <MaxTwoColumn>
-          <div>
-            <Figure>
-              <Img fluid={data.hikawa.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
-            </Figure>
-          </div>
-          <div>
-            <SubTitle border noSpace>川越氷川神社縁結び風鈴</SubTitle>
-
-          </div>
-        </MaxTwoColumn>
-
+      <SubTitle>江戸風鈴ができるまで</SubTitle>
       </article>
-     <BottomNotice/>
+
     </Layout>
   )
 }
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
-  taiken: file(relativePath: {eq: "taiken.jpg"}){
+  about: file(relativePath: {eq: "iro2.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 

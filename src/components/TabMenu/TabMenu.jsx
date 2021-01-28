@@ -62,25 +62,25 @@ export default function ScrollableTabsButtonForce() {
 
    const [isHeightOver, setIsHeightOver] = React.useState(false);
 
-  useEffect(() => {
-    const scrollAction = () => {
-      if (450 < window.scrollY) {
-        // 150の値は 判定したい高さに変更する
-        setIsHeightOver(true);
-      } else {
-        setIsHeightOver(false);
-      }
-    };
-    window.addEventListener("scroll", scrollAction, {
-      capture: false,
-      passive: true
-    });
-    scrollAction(); // 初期描画時に一度だけ判定する
+  // useEffect(() => {
+  //   const scrollAction = () => {
+  //     if (450 < window.scrollY) {
+  //       // 150の値は 判定したい高さに変更する
+  //       setIsHeightOver(true);
+  //     } else {
+  //       setIsHeightOver(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", scrollAction, {
+  //     capture: false,
+  //     passive: true
+  //   });
+  //   scrollAction(); // 初期描画時に一度だけ判定する
 
-    return () => {
-      window.removeEventListener("scroll", scrollAction);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", scrollAction);
+  //   };
+  // }, []);
 
   const classes = useStyles();
   const [value, setValue] = React.useState(0);

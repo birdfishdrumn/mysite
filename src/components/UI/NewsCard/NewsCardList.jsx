@@ -1,7 +1,7 @@
 import React from "react"
 import {graphql,useStaticQuery} from "gatsby"
-import BlogCard from "./blogCard"
-import  NewsCard from "../UI/NewsCard/NewsCard";
+import BlogCard from "../../Blog/blogCard"
+import  NewsCard from "./NewsCard";
 const NewsCardList = () => {
   const data = useStaticQuery(graphql`
 query NewsQuery {
@@ -35,14 +35,14 @@ query NewsQuery {
 }
 `)
     return(
-    < div className="container">
+    < div className="container center">
 
- <div className="posts">
-        {data.allContentfulWork.edges.map(({ node }) => (
+
+         {data.allContentfulWork.edges.map(({ node }) => (
           <NewsCard key={node.id} slug={node.slug} fluid={node.image.fluid} alt={node.image.description} dataTime={node.date}
             catname={node.category.name} title={node.title}  dateJP={node.dateJP} />
         ))}
-</div>
+
       </div >
     )
 }

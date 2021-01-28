@@ -130,7 +130,7 @@ function _templateObject13() {
 }
 
 function _templateObject12() {
-  var data = _taggedTemplateLiteral(["\n background: #eee;\n text-align:center;\n margin:0 auto;\n padding-bottom:30px;\n"]);
+  var data = _taggedTemplateLiteral(["\n background: #eee;\n text-align:center;\n margin:0 auto;\n\n padding-bottom:30px;\n"]);
 
   _templateObject12 = function _templateObject12() {
     return data;
@@ -190,7 +190,7 @@ function _templateObject7() {
 }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n font-family:'\u6E38\u660E\u671D','Yu Mincho','Hiragino Mincho Pro',sans-serif;;\ntext-align:left;\n font-weight:bold;\n line-height: 1.8em;\n padding:10px 0 30px;\n width:", ";\n  font-size:", ";\n margin:0 auto;\n /* margin:", "; */\n @media(max-width:767px){\n  width:90%;\n  font-size:", ";\n }\n"]);
+  var data = _taggedTemplateLiteral(["\n font-family:'\u6E38\u660E\u671D','Yu Mincho','Hiragino Mincho Pro',sans-serif;;\ntext-align:left;\n font-weight:bold;\n line-height: 1.8em;\n padding:", ";\n width:", ";\n  font-size:", ";\n margin:0 auto;\n /* margin:", "; */\n @media(max-width:767px){\n  width:90%;\n  font-size:", ";\n }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -301,6 +301,8 @@ var SubTitle = _styledComponents["default"].div(_templateObject5(), function (pr
 exports.SubTitle = SubTitle;
 
 var Description = _styledComponents["default"].div(_templateObject6(), function (props) {
+  return props.padding ? "30px 0 30px" : "10px 0 10px";
+}, function (props) {
   return props.space && "50%";
 }, function (props) {
   return props.large ? "1.1rem" : "1rem";

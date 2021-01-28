@@ -1,15 +1,17 @@
 import React from "react"
 import {graphql,useStaticQuery,Link} from "gatsby"
 import Img from "gatsby-image"
-import { Logo } from "./index"
-
-
+import { Logo } from "../index"
+import {FooterWrapper,FooterContainer,SNS,ContactIcon} from "./style"
+import { Description } from "../../style/GlobalStyle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
   faFacebookSquare,
 faInstagram
 } from "@fortawesome/free-brands-svg-icons"
+import PhoneIcon from '@material-ui/icons/Phone';
+import MailIcon from '@material-ui/icons/Mail';
 const Footer = () => {
 
   const data = useStaticQuery(graphql`
@@ -26,15 +28,19 @@ query{
 `)
 
   return (
-      <footer className="footer">
-	<div className="container">
+ <FooterWrapper>
+  	<FooterContainer>
 		<div className="site">
 		<Link to = "/">
         <Logo/>
-		</Link>
+					</Link>
+					<Description color="black">東京都台東区台東4-25-10</Description>
 		</div>
-
-		<ul className="sns">
+				<ContactIcon>
+					<p><PhoneIcon />03-3832-0227</p>
+				<p>	<MailIcon/>mail: maruyosi@sam.hi-ho.ne.jp</p>
+		</ContactIcon>
+		<SNS>
 			<li>
 				<a href="https://twitter.com/">
 					<FontAwesomeIcon icon={ faTwitter} />
@@ -53,12 +59,12 @@ query{
 					<span className="sr-only">Instagram</span>
 				</a>
 			</li>
-		</ul>
-      </div>
+		</SNS>
+  </FooterContainer>
       <div className="back">
 
       </div>
-</footer>
+</FooterWrapper>
 )
 }
 

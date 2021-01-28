@@ -32,7 +32,7 @@ export default ({data,location}) => (
     </div>
     <div className="space-l" />
     <div className="center">
-       <div className="space-m"/>
+
     <SubTitle>商品の紹介</SubTitle>
       <Description space>篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。<br/>またこちらのオンラインショップでは各商品もご購入可能です。
     </Description>

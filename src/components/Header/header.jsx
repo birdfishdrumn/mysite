@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState,useEffect,useCallback} from "react"
 import PropTypes from 'prop-types';
 import { Link } from "gatsby";
 import Search from "../Search/search"
@@ -10,12 +10,17 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Slide from '@material-ui/core/Slide';
 import {HeaderBar,Bar,Nav,HeaderMenu} from "./style"
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
+import ClosableDrawer from "./ClosableDrawer";
 
 const Hamburger = styled(IconButton)`
-  @media(min-width:767px){
-    display:none;
+  display:none;
+  @media(max-width:768px){
+    display:block
   }
 `
+
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -27,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
+
 function HideOnScroll(props) {
 
   const { children, window } = props;
@@ -34,6 +40,8 @@ function HideOnScroll(props) {
   // will default to window.
   // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
+
+
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
@@ -53,6 +61,21 @@ HideOnScroll.propTypes = {
 
 const Header = (props) => {
   const classes = useStyles()
+  const [sm, setSm] = useState(false)
+    const [open, setOpen] = useState(false);
+   const handleDrawerToggle = useCallback((event) => {
+    if (event.type === "keydown" || (event.key === "Tab" || event.key === "Shift")) {
+      return;
+    }
+    setOpen(!open)
+  },[setOpen,open])
+
+//  useEffect(() => {
+//    if (window.matchMedia('(max-width: 768px)').matches) {
+//       setSm(true)
+//     }
+//  }, [window.matchMedia('(max-width: 768px)').matches])
+
   return (
     <div>
           <header className="header">
@@ -66,36 +89,38 @@ const Header = (props) => {
                 </Link>
                 </div>
              <div>
+                   <Hamburger className={classes.menuButton} color="inherit">
+                    <IconButton onClick={handleDrawerToggle}>
+                            <MenuIcon style={{ fontSize: 50 }} />
+                    </IconButton>
 
-                      <Hamburger className={classes.menuButton} color="inherit">
-                     <MenuIcon  style={{ fontSize: 50 }}/>
                   </Hamburger>
 
+                    <Nav>
+                      <ul>
+                        <li>
+                          <Link to="/about/">江戸風鈴とは</Link>
+                        </li>
 
-      <Nav>
-        <ul>
-          <li>
-            <Link to="/">江戸風鈴とは</Link>
-          </li>
+                        <li>
+                          <Link to="/product/">商品の紹介</Link>
+                        </li>
+                        <li>
+                          <Link to="/workshop/">体験</Link>
+                        </li>
+                        <li>
+                          <Link to="/works/">仕事の紹介</Link>
+                        </li>
+                        <li>
+                          <Link to="/shop/">お店、家族の紹介</Link>
+                        </li>
+                        <li>
+                          <Link to="/contact/">お問い合わせ</Link>
+                        </li>
 
-                <li>
-            <Link to="/product/">商品の紹介</Link>
-              </li>
-                    <li>
-            <Link to="/workshop/">体験</Link>
-                                          </li>
-                                              <li>
-            <Link to="/works/">仕事の紹介</Link>
-                                          </li>
-                                              <li>
-            <Link to="/contact/">お店、家族の紹介</Link>
-              </li>
-                                                 <li>
-            <Link to="/contact/">お問い合わせ</Link>
-              </li>
+                      </ul>
+                    </Nav>
 
-        </ul>
-                  </Nav>
 
            </div>
                           </HeaderMenu>
@@ -103,7 +128,8 @@ const Header = (props) => {
         </Bar>
 
                   </HeaderBar>
-                  </HideOnScroll>
+        </HideOnScroll>
+        <ClosableDrawer open={open} onClose={handleDrawerToggle} />
     </header>
     </div>
 

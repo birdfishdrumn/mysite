@@ -62,6 +62,21 @@ export const size = {
 
 // ==========テキストデザイン===========
 
+export const Content = styled.h1 `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+ font-weight: bold;
+ margin:100px;
+ text-align:center;
+ font-size:3.5rem;
+
+   @media(max-width:768px){
+     margin:50px;
+    font-size:2.0rem;
+  }
+`;
+
+
+
 export const Title = styled.h1 `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  font-weight: bold;
@@ -77,7 +92,9 @@ export const Title = styled.h1 `
     text-align: center;
     color: #fff;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-
+     @media(max-width:767px){
+ font-size:1.7rem;
+   }
 `;
 
 
@@ -118,7 +135,10 @@ export const SubTitle = styled.div `
  text-align:center;
  font-size:${props=>(props.small ? "1.8rem" : "2.2rem")};
  border:${props=>(props.border && "1px solid black")};
- padding:${props=>(props.noSpace ? "10px": "30px")};
+ padding:${props => (props.noSpace ? "10px" : "30px")};
+ @media(max-width:768px){
+   font-size:1.7rem;
+ }
 `
 
 
@@ -126,12 +146,21 @@ export const SubTitle = styled.div `
 export const Description = styled.div `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
 text-align:left;
- font-weight:bold;
+ font-weight:normal;
  line-height: 1.8em;
- padding:10px 0 30px;
+ padding:${props => (props.padding ? "30px 0 30px" : "10px 0 10px")};
  width:${props => (props.space && "50%")};
   font-size:${props => (props.large ? "1.1rem" : "1rem")};
  margin:0 auto;
+ ${props => {
+  switch (props.color) {
+    case "white":
+      return `color: white;`
+    case "black":
+      return  `color:black;`
+  }
+  return "color:gray;"
+ }}
  /* margin:${props => (props.both && "0 10px 0 10px")}; */
  @media(max-width:767px){
   width:90%;
@@ -161,7 +190,7 @@ export const ImageText = styled.div `
 export const MinTitle = styled.div `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  font-weight: bold;
- font-size:1rem;
+ font-size:1.3rem;
  margin:10px;
   `
     // ==========テキストデザイン===========
@@ -177,6 +206,28 @@ export const TwoColumn = styled.h1 `
    max-width:1000px;
    >div{
     margin:40px;
+   }
+   >div:last-child{
+    text-align:center;
+   }
+
+   @media(max-width:1024px){
+     margin:10px;
+     grid-gap:10px;
+     grid-template-columns:1fr;
+      >div{
+    margin:5x;
+   }
+   }
+`
+export const MaxTwoColumn = styled.h1 `
+   display: grid;
+   grid-gap:50px;
+   margin:0;
+   grid-template-columns:1fr 1fr;
+   max-width:100%;
+   >div{
+    margin:0px;
    }
    >div:last-child{
     text-align:center;
@@ -220,6 +271,7 @@ export const News = styled.section `
  background: #eee;
  text-align:center;
  margin:0 auto;
+
  padding-bottom:30px;
 `;
 
@@ -228,22 +280,9 @@ export const Gallery = styled.div `
 
 `
 
-export const Content = styled.h1 `
- font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
- font-weight: bold;
- margin:100px;
- text-align:center;
- font-size:3.5rem;
-
-   @media(max-width:768px){
-     margin:50px;
-    font-size:2.5rem;
-  }
-`;
-
 
 export const Figure = styled.figure `
- margin:1%;
+ margin:0;
 `
 
 

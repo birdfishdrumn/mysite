@@ -37,7 +37,7 @@ const WindBellCard = ({windBellImage,name,description}) =>{
       <WindBellImage fluid={windBellImage}
       />
       <MinTitle>{name}</MinTitle>
-      <Description small>{description}</Description>
+      <Description color="grey" small>{description}</Description>
    </WindBellWrapper>
  )
 }

@@ -2,18 +2,23 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Button } from "../Button";
 import { Description } from "../../style/GlobalStyle";
+
 export const ProductImage = styled.div `
- margin:0 5% 20px;
+ margin:0 4% 20px;
  position:relative;
+ transition:0.5s;
 
     @media(max-width:767px){
     margin:0;
     }
+  &:hover{
+    opacity: 0.5;
+  }
 `;
 
 export const Image = styled(Img)
 `
-height:460px;
+height:380px;
 
   object-fit:cover;
   @media(max-width:767px){
@@ -28,7 +33,7 @@ export const Content = styled.div `
       background:white;
       border: 1px solid black;
       font-weight: bold;
-      font-size:16px;
+      font-size:1rem;
       text-transform:uppercase;
       display:inline-block;
       color:black;
@@ -44,23 +49,23 @@ export const Content = styled.div `
 export const ProductText = styled.div `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  font-weight: bold;
- font-size:3.0em;
+ font-size:1.8rem;
+ text-shadow: 1px 1px 2px black;
      position: absolute;
-    top: 70px;
+    top: 0px;
     right: 0;
     bottom:0;
     left: 0;
     margin: auto auto 10%;
     display: flex;
-    padding-left:15%;
     flex-direction: column;
     justify-content: center;
     text-align:${props =>(props.left ? "left" : "center")} ;
-    color: black;
+    color: white;
     @media(max-width:767px){
           top: 10px;
-        margin: auto auto 0 20px;
-      font-size:1.2em;
+
+      font-size:1.7rem;
       padding:10px;
     }
     /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
@@ -79,15 +84,16 @@ export const ProductButton = styled(Button)
 `
 export const ProductDescription = styled(Description)
 `
-font-size:1.1rem;
-margin:0;
-color:black;
-  width:40%;
+font-size:1.0rem;
+margin:5px;
+color:white;
+ text-align:center;
  @media(max-width:767px){
-      font-size:0.7rem;
+      font-size:0.7em;
       line-height: 1.2em;
-      width:50%;
+
       font-wight:lighter;
       padding:10px 0 10px;
+      display:inline-box;
     }
 `

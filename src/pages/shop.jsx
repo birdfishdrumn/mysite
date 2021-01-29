@@ -1,21 +1,24 @@
-import React,{useEffect} from "react"
+import React,{useEffect,useState} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import Aos from "aos";
+import { IconButton } from "@material-ui/core";
+import StoreIcon from '@material-ui/icons/Store';
+import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+
 import "aos/dist/aos.css";
 import styled from "styled-components";
 import { Product } from "../components/index";
+import { Access,Family}from "../components/PageComponents/index"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import {TwoColumn,SubTitle,Figure,Description,MinTitle} from "../style/GlobalStyle"
+import {TwoColumn,SubTitle,Figure,Description,MinTitle,FlexNav} from "../style/GlobalStyle"
 
-const AccessMap = styled.div`
- margin:0 auto;
- width:60%;
-`
+
 
 export default ({ data, location }) => {
+  const [active,setActive] = useState(false)
   useEffect(() => {
     Aos.init({ duration: 1000, startEvent: 'DOMContentLoaded', once: true });
 
@@ -38,31 +41,16 @@ export default ({ data, location }) => {
 
       <article className="content center">
         <SubTitle>お店・家族の紹介</SubTitle>
+        <FlexNav small>
+          <li><IconButton onClick={()=>setActive(false)}><StoreIcon/></IconButton><br/>お店</li>
+          <li><IconButton onClick={()=>setActive(true)}><SupervisedUserCircleIcon/></IconButton><br/>職人の紹介</li>
+        </FlexNav>
+        {active ? <Family data={data}/>:
+          (
+            <Access data={data}/>
 
-
-        <TwoColumn>
-          <div>
-            <SubTitle noSpace>お店について</SubTitle>
-            <Description>
-              お店は佐竹商店街の中にあります。普段からお店の前には風鈴を飾っております。 一階は基本的には仕事場で作業中なので少し入り辛いと思いますが、風鈴の販売もやっておりますので、 是非お気軽にご来店下さい。<br/>またガラス吹き体験では一階奥の工房で最初にガラスを吹いていただきます。
-
-二階は主に絵付け体験の会場となっております。
-            </Description>
-          </div>
-          <div>
-            <Figure>
-              <Img fluid={data.shop.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
-            </Figure>
-          </div>
-        </TwoColumn>
-        <section className="center">
-          <SubTitle>アクセス</SubTitle>
-        <AccessMap>
-            <Img fluid={data.map.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
-          </AccessMap>
-
-       <SubTitle>電車でお越しの方</SubTitle>
-        </section>
+         )
+        }
 
       </article>
 
@@ -111,7 +99,7 @@ query {
       }
     }
   }
-      hikawa: file(relativePath: {eq: "hikawa.jpg"}){
+      kingyo: file(relativePath: {eq: "kingyo.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 

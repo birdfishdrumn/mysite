@@ -1,7 +1,7 @@
 const config = require('gatsby-plugin-config');
 
 require('dotenv').config({
-    path: `.env.${process.env.NODE_ENV}`, // or '.env'
+    path: ".env"
 });
 
 
@@ -53,7 +53,30 @@ module.exports = {
         {
             resolve: 'gatsby-firesource', //プラグイン名
             options: {
-                credential: require("./firebase.json"), //認証情報
+                // credential: require("./firebase.json"),
+                // "type": process.env.FIREBASE_TYPE,
+                // "project_id": process.env.FIREBASE_PROJECT_ID,
+                // "private_key_id": process.env.FIREBASE_PRIVATE_KEY_ID,
+                // "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+                // "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+                // "client_id": process.env.FIREBASE_CLIENT_ID,
+                // "auth_uri": process.env.FIREBASE_AUTH_URI,
+                // "token_uri": process.env.FIREBASE_TOKEN_URI,
+                // "auth_provider_x509_cert_url": process.env.FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
+                // "client_x509_cert_url": process.env.FIREBASE_CLIENT_X509_CERT_URL,
+                credential: {
+                    "type": process.env.FIREBASE_TYPE,
+                    "project_id": process.env.FIREBASE_PROJECT_ID,
+                    "private_key_id": process.env.FIREBASE_PRIVATE_KEY_ID,
+                    "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+                    "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+                    "client_id": process.env.FIREBASE_CLIENT_ID,
+                    "auth_uri": process.env.FIREBASE_AUTH_URI,
+                    "token_uri": process.env.FIREBASE_TOKEN_URI,
+                    "auth_provider_x509_cert_url": process.env.FIREBASE_AUTH_PROVIDER_X509_CERT_URL,
+                    "client_x509_cert_url": process.env.FIREBASE_CLIENT_X509_CERT_URL,
+                },
+                //認証情報
                 types: [{
                     type: 'Products', // GraphQL上で表示される名前
                     collection: 'products', // 作成したコレクション名

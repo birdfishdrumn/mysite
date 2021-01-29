@@ -150,7 +150,7 @@ text-align:${props => (props.left ? "left" : "center")};
  line-height: 1.8em;
  padding:${props => (props.padding ? "30px 0 30px" : "10px 0 10px")};
  width:${props => (props.space && "50%")};
-  font-size:${props => (props.large ? "1.1rem" : "1rem")};
+  font-size:${props => (props.large ? "1.4rem" : "1rem")};
  margin:0 auto;
  ${props => {
   switch (props.color) {
@@ -261,15 +261,17 @@ export const GridList = styled.figure `
  }
 `
 export const FlexNav = styled.nav`
+z-index:999;
 text-align:center;
 display:inline-block;
-margin:30px auto;
+margin:${props => (props.small ? "10px auto" : "30px auto")};
 list-style:none;
  display:flex;
+ color:grey;
   flex-wrap: wrap;
   justify-content:center;
   >li{
-    margin:10px;
+    margin:20px;
   }
 `
 // ------------- レイアウト--------------------

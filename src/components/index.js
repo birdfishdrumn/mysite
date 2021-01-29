@@ -17,3 +17,7 @@ export { default as Contact }
 from "./Contact/Contact"
 export { default as FloatingAction }
 from "./FloatingAction/FloatingAction"
+export { default as Access }
+from "./PageComponents/Access"
+    // export { default as QuestionAccordion }
+    // from "./QuestionAccordion/QuestionAccordion"

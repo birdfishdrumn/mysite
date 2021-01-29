@@ -113,6 +113,9 @@ const Header = (props) => {
                         </li>
                         <li>
                           <Link to="/shop/">お店、家族の紹介</Link>
+                      </li>
+                         <li>
+                          <Link to="/question/">よくある質問</Link>
                         </li>
                         <li>
                           <Link to="/contact/">お問い合わせ</Link>

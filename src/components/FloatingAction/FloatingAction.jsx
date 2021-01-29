@@ -12,6 +12,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { useTheme } from '@material-ui/core/styles';
 // import HelpModal from "../Dialog/HelpModal";
 import { Contact } from "../index";
+import Reserve from "../Reserve/Reserve"
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,11 +66,11 @@ const FloatingAction = ({title,reserve}) => {
    <div>
 
         <Dialog      fullScreen={fullScreen} open={open} className={classes.dialog} onClose={handleClose} aria-labelledby="form-dialog-title">
-          <DialogTitle id="form-dialog-title" className="center">{title}</DialogTitle>
+          {/* <DialogTitle id="form-dialog-title" className="center">{title}</DialogTitle> */}
           <DialogContent>
             {reserve ?
               (
-              <p>体験</p>
+              <Reserve/>
             )
             : <Contact />}
 

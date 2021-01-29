@@ -14,7 +14,7 @@ from "./WindBellCard/WindBellCard"
 export { default as BottomNotice }
 from "./BottomNotice/BottomNotice"
 export { default as Contact }
-from "./Contact/Contact"
+from "./Contact/contact"
 export { default as FloatingAction }
 from "./FloatingAction/FloatingAction"
 export { default as Access }

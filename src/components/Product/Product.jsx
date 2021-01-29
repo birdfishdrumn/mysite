@@ -15,7 +15,7 @@ const Product = ({img,title,description,noBtn,btnText,center,link}) => {
       <ProductText large left>
         {title}
 
-        <ProductDescription>{description}</ProductDescription>
+        <ProductDescription left>{description}</ProductDescription>
         <Link to={link}><ProductButton noBtn={noBtn}>{btnText ? btnText : "詳しく"}</ProductButton></Link>
       </ProductText>
 

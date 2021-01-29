@@ -13,3 +13,7 @@ export { default as WindBellCard }
 from "./WindBellCard/WindBellCard"
 export { default as BottomNotice }
 from "./BottomNotice/BottomNotice"
+export { default as Contact }
+from "./Contact/Contact"
+export { default as FloatingAction }
+from "./FloatingAction/FloatingAction"

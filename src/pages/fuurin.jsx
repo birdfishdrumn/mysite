@@ -1,4 +1,4 @@
-import React from "react"
+import React,{useState} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
 import Img from "gatsby-image"
@@ -7,11 +7,16 @@ import styled from "styled-components";
 import { Product,WindBellCard } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { SubTitle, Description,GridList } from "../style/GlobalStyle";
+import { SubTitle, Description,GridList,FlexNav} from "../style/GlobalStyle";
 import { Button } from "../components/Button";
+import ViewColumnIcon from '@material-ui/icons/ViewColumn';
+import GridOnIcon from '@material-ui/icons/GridOn';
+import Tooltip from '@material-ui/core/Tooltip';
+import { IconButton } from "@material-ui/core";
 
 
 export default ({ data, location }) => {
+    const [change,setChange] = useState(false)
   console.log(data)
     return (
   <Layout>
@@ -33,6 +38,21 @@ export default ({ data, location }) => {
       <SubTitle>小丸型風鈴</SubTitle>
       <Description space>篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。<br />またこちらのオンラインショップでは各商品もご購入可能です。
     </Description>
+
+          <FlexNav>
+            <Tooltip title="グリッド" interactive>
+              <IconButton  onClick={() => setChange(false)} >
+                <li><GridOnIcon fontSize="large"/></li>
+                </IconButton>
+        </Tooltip>
+            <Tooltip title="短冊まで" interactive>
+               <IconButton  onClick={() => setChange(true)} >
+                <li ><ViewColumnIcon fontSize="large" /></li>
+                </IconButton>
+          </Tooltip>
+          </FlexNav>
+
+
           <SubTitle small>金運上昇の柄</SubTitle>
           <div className="space-l"/>
           <GridList>
@@ -41,6 +61,8 @@ export default ({ data, location }) => {
               windBellImage={edge.node.localImage.childImageSharp.fluid}
               name={edge.node.name}
               description={edge.node.description}
+              change={change}
+              src={edge.node.allImage}
             />
           ))}
             </GridList>
@@ -74,6 +96,7 @@ query {
       node {
         name
         description
+        allImage
          localImage {
           childImageSharp{
             fluid(maxWidth:220){

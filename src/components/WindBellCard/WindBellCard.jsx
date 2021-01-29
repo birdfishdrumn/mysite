@@ -30,12 +30,12 @@ const WindBellImage = styled(Img)`
 `
 
 
-const WindBellCard = ({windBellImage,name,description}) =>{
+const WindBellCard = ({windBellImage,name,description,src,change}) =>{
   return (
     <WindBellWrapper>
+   {change ? <img src={src}/> : <WindBellImage fluid={windBellImage} /> }
 
-      <WindBellImage fluid={windBellImage}
-      />
+
       <MinTitle>{name}</MinTitle>
       <Description color="grey" small>{description}</Description>
    </WindBellWrapper>

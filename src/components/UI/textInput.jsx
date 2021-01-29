@@ -14,7 +14,7 @@ const TextInput = (props) => {
       type={props.type}
       onChange={props.onChange}
       id={props.id}
-      variant="outlined"
+      variant={props.variant}
       name={props.name}
     />
   );

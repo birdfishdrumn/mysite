@@ -61,7 +61,8 @@ module.exports = {
                         name: doc.name,
                         imageUrl: doc.imageUrl, // ドキ
                         category: doc.category,
-                        description: doc.description
+                        description: doc.description,
+                        allImage: doc.allImage
                     }),
                 }, ],
             }
@@ -72,6 +73,7 @@ module.exports = {
                 nodeType: 'Products',
                 imagePath: 'imageUrl',
             },
+
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline

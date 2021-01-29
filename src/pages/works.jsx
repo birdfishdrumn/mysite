@@ -1,22 +1,24 @@
-import React,{useEffect} from "react"
+import React, { useEffect } from "react"
 // import {Header} from "../components/Header/Header"
-import {graphql} from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import Aos from "aos";
-import "aos/dist/aos.css";
-import styled from "styled-components";
-import { Product,BottomNotice } from "../components/index";
+import Aos from "aos"
+import "aos/dist/aos.css"
+import styled from "styled-components"
+import { Product, BottomNotice,Contact,FloatingAction } from "../components/index"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import {TwoColumn,MaxTwoColumn,SubTitle,Figure,Description} from "../style/GlobalStyle"
-
-
-
+import {
+  TwoColumn,
+  MaxTwoColumn,
+  SubTitle,
+  Figure,
+  Description,
+} from "../style/GlobalStyle"
 
 export default ({ data, location }) => {
   useEffect(() => {
-    Aos.init({ duration: 1000, startEvent: 'DOMContentLoaded', once: true });
-
+    Aos.init({ duration: 1000, startEvent: "DOMContentLoaded", once: true })
   }, [])
   return (
     <Layout>
@@ -36,109 +38,126 @@ export default ({ data, location }) => {
 
       <article className="content">
         <SubTitle>篠原まるよし風鈴の仕事</SubTitle>
-        <Description data-aos="fade-up" space>篠原まるよし風鈴では江戸風鈴の制作を行っており年間で12,000個ほど作ります。そうしてできた風鈴に絵を描いて販売、また体験学習に用います。</Description>
+        <Description data-aos="fade-up" space>
+          篠原まるよし風鈴では江戸風鈴の制作を行っており年間で12,000個ほど作ります。そうしてできた風鈴に絵を描いて販売、また体験学習に用います。
+        </Description>
         <TwoColumn>
           <div>
-            <SubTitle border noSpace>風鈴の制作</SubTitle>
+            <SubTitle noSpace>風鈴の制作</SubTitle>
           </div>
           <div>
             <Figure>
-              <Img fluid={data.works.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+              <Img
+                fluid={data.works.childImageSharp.fluid}
+                alt=""
+                style={{ width: "100%" }}
+              />
             </Figure>
           </div>
         </TwoColumn>
         <TwoColumn>
           <div>
             <Figure>
-              <Img fluid={data.works.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+              <Img
+                fluid={data.works.childImageSharp.fluid}
+                alt=""
+                style={{ width: "100%" }}
+              />
             </Figure>
           </div>
           <div>
-            <SubTitle border noSpace>体験指導</SubTitle>
-
+            <SubTitle noSpace>体験指導</SubTitle>
           </div>
         </TwoColumn>
         <MaxTwoColumn>
           <div>
-            <SubTitle border noSpace>川崎大師風鈴市</SubTitle>
+            <SubTitle noSpace>川崎大師風鈴市</SubTitle>
           </div>
           <div>
             <Figure>
-              <Img fluid={data.daruma.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+              <Img
+                fluid={data.daruma.childImageSharp.fluid}
+                alt=""
+                style={{ width: "100%" }}
+              />
             </Figure>
           </div>
         </MaxTwoColumn>
         <MaxTwoColumn>
           <div>
             <Figure>
-              <Img fluid={data.hikawa.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+              <Img
+                fluid={data.hikawa.childImageSharp.fluid}
+                alt=""
+                style={{ width: "100%" }}
+              />
             </Figure>
           </div>
           <div>
-            <SubTitle border noSpace>川越氷川神社縁結び風鈴</SubTitle>
-
+            <SubTitle noSpace>川越氷川神社縁結び風鈴</SubTitle>
           </div>
         </MaxTwoColumn>
+        <div className="space-xl" />
+          <div className = "space-xl"/>
+        <div className="up-sm">
+        <SubTitle>お仕事のご依頼</SubTitle>
+<Contact/></div>
 
       </article>
-     <BottomNotice/>
+  <FloatingAction title="お問い合わせする"/>
     </Layout>
   )
 }
-        //スプレッド構文で配列を展開する。
+//スプレッド構文で配列を展開する。
 export const query = graphql`
-query {
-  taiken: file(relativePath: {eq: "taiken.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
-
-...GatsbyImageSharpFluid_withWebp_tracedSVG
+  query {
+    taiken: file(relativePath: { eq: "taiken.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+        original {
+          src
+          height
+          width
+        }
       }
-      original{
-        src
-        height
-        width
+    }
+    works: file(relativePath: { eq: "kingyo_re.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+        original {
+          src
+          height
+          width
+        }
+      }
+    }
+    daruma: file(relativePath: { eq: "darumadaishi.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+        original {
+          src
+          height
+          width
+        }
+      }
+    }
+    hikawa: file(relativePath: { eq: "hikawa.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+        original {
+          src
+          height
+          width
+        }
       }
     }
   }
-    works: file(relativePath: {eq: "kingyo_re.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
-
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
-    daruma: file(relativePath: {eq: "darumadaishi.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
-
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
-      hikawa: file(relativePath: {eq: "hikawa.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
-
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
-}
 `

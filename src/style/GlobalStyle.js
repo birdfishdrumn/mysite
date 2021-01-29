@@ -145,7 +145,7 @@ export const SubTitle = styled.div `
 
 export const Description = styled.div `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
-text-align:left;
+text-align:${props => (props.left ? "left" : "center")};
  font-weight:normal;
  line-height: 1.8em;
  padding:${props => (props.padding ? "30px 0 30px" : "10px 0 10px")};
@@ -260,7 +260,18 @@ export const GridList = styled.figure `
  margin:0;
  }
 `
-
+export const FlexNav = styled.nav`
+text-align:center;
+display:inline-block;
+margin:30px auto;
+list-style:none;
+ display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  >li{
+    margin:10px;
+  }
+`
 // ------------- レイアウト--------------------
 
 export const Featured = styled.section `

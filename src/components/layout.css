@@ -536,11 +536,10 @@ svg {
 /* Contact */
 
 .contact {
-    margin: 0 auto;
+    margin: 0;
     max-width: 500px;
     padding: 1rem;
     height: auto;
-    width: calc(100% - 2rem);
 }
 
 
@@ -642,4 +641,27 @@ svg {
 
 .CarouselItem .div .div {
     margin-left: 0 !important;
+}
+
+
+/* -----スマホのみ-------- */
+
+.sm-only {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .sm-only {
+        display: block;
+    }
+}
+
+.up-sm {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .up-sm {
+        display: block;
+    }
 }

@@ -39,7 +39,7 @@ export default ({ data, location }) => {
       <article className="content center">
         <SubTitle>お店・家族の紹介</SubTitle>
 
-        <div className="space-l"/>
+
         <TwoColumn>
           <div>
             <SubTitle noSpace>お店について</SubTitle>

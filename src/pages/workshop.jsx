@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { Product } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { CarouselSlider }  from "../components/index";
+import { CarouselSlider,FloatingAction}  from "../components/index";
 
 
 const ProductList = styled.div`
@@ -72,7 +72,8 @@ export default ({data,location}) => (
           </Nav>
 
         </ProductList>
-</article>
+    </article>
+      <FloatingAction title="予約する" reserve/>
 
 </Layout>
 

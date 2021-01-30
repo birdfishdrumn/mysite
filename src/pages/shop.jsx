@@ -42,8 +42,8 @@ export default ({ data, location }) => {
       <article className="content center">
         <SubTitle>お店・家族の紹介</SubTitle>
         <FlexNav small>
-          <li><IconButton onClick={()=>setActive(false)}><StoreIcon/></IconButton><br/>お店</li>
-          <li><IconButton onClick={()=>setActive(true)}><SupervisedUserCircleIcon/></IconButton><br/>職人の紹介</li>
+          <li onClick={()=>setActive(false)}><IconButton><StoreIcon/></IconButton><br/>お店</li>
+          <li  onClick={()=>setActive(true)}><IconButton><SupervisedUserCircleIcon/></IconButton><br/>職人の紹介</li>
         </FlexNav>
         {active ? <Family data={data}/>:
           (

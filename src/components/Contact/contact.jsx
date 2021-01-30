@@ -1,14 +1,27 @@
  import React, { useState,useCallback } from "react"
 import TextField from "@material-ui/core/TextField";
+import 'date-fns';
 import TextInput from "../UI/textInput"
 import Button from "@material-ui/core/Button";
+import DateFnsUtils from '@date-io/date-fns';
+import {
+  MuiPickersUtilsProvider,
+  KeyboardTimePicker,
+  KeyboardDatePicker,
+} from '@material-ui/pickers';
 
-const Contact = ({outline}) => {
+const Contact = ({outline,workshop}) => {
 
    const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
+  };
 
   const inputName = useCallback(
     (event) => {
@@ -79,7 +92,7 @@ const Contact = ({outline}) => {
           variant="outlined"
           value={name}
           type={"text"}
-          name={name}
+          name="name"
         />
         <div className="space-s" />
         <TextInput
@@ -109,8 +122,44 @@ const Contact = ({outline}) => {
           type={"text"}
           name="subject"
         />
+        {workshop &&
+          <TextInput
+          id={subject}
+          fullWidth={true}
+          label={"人数"}
+          multiline={false}
+          required={true}
+          onChange={inputSubject}
+          rows={1}
+          variant="outlined"
+          value={subject}
+          type={"number"}
+          name="subject"
+        />
+       }
         <div className="space-s" />
-        <TextInput
+
+        {/* 体験かどうか */}
+        {workshop ?
+          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        <KeyboardDatePicker
+          disableToolbar
+          variant="inline"
+          format="MM/dd/yyyy"
+          margin="normal"
+          id="date-picker-inline"
+          label="体験希望日"
+          type="text"
+          name="message"
+          value={selectedDate}
+          onChange={handleDateChange}
+          KeyboardButtonProps={{
+            'aria-label': 'change date',
+          }}
+            />
+            </MuiPickersUtilsProvider>
+          :
+           <TextInput
           id={message}
           fullWidth={true}
           label={"お問い合わせ内容"}
@@ -123,6 +172,7 @@ const Contact = ({outline}) => {
           type={"text"}
           name="message"
         />
+        }
         <div className="space-s" />
         <div className="contact__btn">
           <Button

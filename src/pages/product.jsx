@@ -43,9 +43,9 @@ export default ({data,location}) => (
       <ProductList>
 
       <Product img={data.komaru.childImageSharp.fluid} title="風鈴" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/fuurin"/>
-      <Product img={data.earring.childImageSharp.fluid} title="イヤリング" description=""/>
-      <Product img={data.poppen.childImageSharp.fluid} title="ポッペン" description=""/>
-        <Product img={data.product.childImageSharp.fluid} title="釣り台" description=""/>
+      <Product img={data.earring.childImageSharp.fluid} title="イヤリング" description="" link="/earring"/>
+      <Product img={data.poppen.childImageSharp.fluid} title="ポッペン" description="" link="/poppen"/>
+        <Product img={data.product.childImageSharp.fluid} title="釣り台" description="" link="/tsuridai"/>
         </ProductList>
 </article>
 

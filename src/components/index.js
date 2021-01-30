@@ -19,5 +19,7 @@ export { default as FloatingAction }
 from "./FloatingAction/FloatingAction"
 export { default as Access }
 from "./PageComponents/Access"
-    // export { default as QuestionAccordion }
-    // from "./QuestionAccordion/QuestionAccordion"
+export { default as QuestionAccordion }
+from "./QuestionAccordion/QuestionAccordion"
+export { default as Process }
+from "./Process/Process"

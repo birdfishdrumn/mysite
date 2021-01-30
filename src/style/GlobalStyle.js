@@ -151,7 +151,7 @@ text-align:${props => (props.left ? "left" : "center")};
  padding:${props => (props.padding ? "30px 0 30px" : "10px 0 10px")};
  width:${props => (props.space && "50%")};
   font-size:${props => (props.large ? "1.4rem" : "1rem")};
- margin:0 auto;
+ margin:${props => (props.noneMargin ? "0" : "0 auto")};
  ${props => {
   switch (props.color) {
     case "white":
@@ -160,7 +160,7 @@ text-align:${props => (props.left ? "left" : "center")};
       return  `color:black;`
   }
   return "color:gray;"
- }}
+ }};
  /* margin:${props => (props.both && "0 10px 0 10px")}; */
  @media(max-width:767px){
   width:90%;
@@ -243,15 +243,37 @@ export const MaxTwoColumn = styled.h1 `
    }
 `
 
+export const Scroll = styled.figure `
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+`
+export const ScrollItem = styled.li `
+     display: inline-block;
+`
 
 export const GridList = styled.figure `
+
+  ${({ change }) => change ? `
+
+   @media(max-width:767px){
+    overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+   }
+  `
+
+  : `
+
  display:grid;
  grid-template-columns:1fr 1fr 1fr;
  grid-gap:0px;
  max-width:1024px;
  text-align:center;
  margin:0 auto;
+  `
 
+  };
  @media(max-width:1024px){
  grid-template-columns:1fr 1fr 1fr;
  }

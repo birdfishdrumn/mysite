@@ -28,12 +28,14 @@ const WindBellImage = styled(Img)`
     margin:0;
   }
 `
+const ScrollImage = styled.img`
+   width:200px;
+`
 
-
-const WindBellCard = ({windBellImage,name,description,src,change}) =>{
+const WindBellCard = ({windBellImage,name,description,src,change,key}) =>{
   return (
-    <WindBellWrapper>
-   {change ? <img src={src}/> : <WindBellImage fluid={windBellImage} /> }
+    <WindBellWrapper key={key}>
+   {change ? <ScrollImage src={src}/> : <WindBellImage fluid={windBellImage} /> }
 
 
       <MinTitle>{name}</MinTitle>

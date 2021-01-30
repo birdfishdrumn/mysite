@@ -7,7 +7,7 @@ export const FooterWrapper = styled.footer `
 
     background-image: none;
     background-size: cover;
-    background-color: #477294;
+    background-color: #00695B;
     @media(min-width:768px){
       padding-top: 120 px;
         padding-bottom: 120 px;

@@ -5,10 +5,10 @@ import Img from "gatsby-image"
 import Aos from "aos";
 import "aos/dist/aos.css";
 import styled from "styled-components";
-import { Product } from "../components/index";
+import { Product,Process } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import {TwoColumn,SubTitle,Figure,Description} from "../style/GlobalStyle"
+import {TwoColumn,SubTitle,Figure,Description,MinTitle} from "../style/GlobalStyle"
 
 
 
@@ -48,7 +48,19 @@ export default ({ data, location }) => {
             </Figure>
           </div>
         </TwoColumn>
-      <SubTitle>江戸風鈴ができるまで</SubTitle>
+        <section className="center">
+        <SubTitle>江戸風鈴ができるまで</SubTitle>
+       <MinTitle>ガラス吹き</MinTitle>
+        <div className="space-l"/>
+        <Process data={data} />
+
+
+        <SubTitle>動画で確認</SubTitle>
+          <MinTitle>絵付け</MinTitle>
+
+          <Process data={data} />
+                      </section>
+        <SubTitle>江戸風鈴の歴史</SubTitle>
       </article>
 
     </Layout>
@@ -83,7 +95,20 @@ query {
       }
     }
   }
-    daruma: file(relativePath: {eq: "darumadaishi.jpg"}){
+    kikyou: file(relativePath: {eq: "kikyou.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 1600) {
+
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+      original{
+        src
+        height
+        width
+      }
+    }
+  }
+      daruma: file(relativePath: {eq: ".jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 

@@ -4,7 +4,8 @@ import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description } from "../style/GlobalStyle";
-// import {QuestionAccordion} from "../components/index"
+import { QuestionAccordion } from "../components/index"
+
 
 import TextInput from "../components/UI/textInput"
 
@@ -35,7 +36,7 @@ export default ({data})=>{
 
         </div>
         <div className="space-l"/>
-        {/* <QuestionAccordion/> */}
+        <QuestionAccordion/>
    </article>
       </Layout>
     </div>

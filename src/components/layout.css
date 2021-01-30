@@ -542,6 +542,17 @@ svg {
     height: auto;
 }
 
+.icon:after {
+    position: absolute;
+    content: "new";
+    top: -10px;
+    left: -10px;
+    background: #00DE94;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px 5px;
+}
+
 
 /* ページネーション */
 

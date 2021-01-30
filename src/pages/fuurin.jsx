@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { Product,WindBellCard } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { SubTitle, Description,GridList,FlexNav} from "../style/GlobalStyle";
+import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem} from "../style/GlobalStyle";
 import { Button } from "../components/Button";
 import ViewColumnIcon from '@material-ui/icons/ViewColumn';
 import GridOnIcon from '@material-ui/icons/GridOn';
@@ -36,15 +36,15 @@ export default ({ data, location }) => {
     <div className="space-l" />
     <section className="center">
       <SubTitle>小丸型風鈴</SubTitle>
-      <Description space>篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。<br />またこちらのオンラインショップでは各商品もご購入可能です。
+          <Description space>篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。
+      <br/>またこちらのオンラインショップでは各商品もご購入可能です。
     </Description>
-
           <FlexNav>
             <Tooltip title="グリッド" interactive>
               <IconButton  onClick={() => setChange(false)} >
                 <li><GridOnIcon fontSize="large"/></li>
                 </IconButton>
-        </Tooltip>
+            </Tooltip>
             <Tooltip title="短冊まで" interactive>
                <IconButton  onClick={() => setChange(true)} >
                 <li ><ViewColumnIcon fontSize="large" /></li>
@@ -54,16 +54,20 @@ export default ({ data, location }) => {
 
 
           <SubTitle small>金運上昇の柄</SubTitle>
-          <div className="space-l"/>
-          <GridList>
-          {data.allProducts.edges.map(edge => (
-            <WindBellCard
+          <div className="space-l" />
+           {/* <div className={change ? styles.p_grid__scroll : styles.p_grid__row }></div> */}
+          <GridList change={change}>
+            {data.allProducts.edges.map(edge => (
+            <ScrollItem>
+                <WindBellCard
+              key={edge.node.id}
               windBellImage={edge.node.localImage.childImageSharp.fluid}
               name={edge.node.name}
               description={edge.node.description}
               change={change}
               src={edge.node.allImage}
             />
+                </ScrollItem>
           ))}
             </GridList>
       <SubTitle>新子丸、釣鐘型風鈴</SubTitle>
@@ -76,7 +80,6 @@ export default ({ data, location }) => {
 }
         //スプレッド構文で配列を展開する。
 export const query = graphql`
-
 query {
   product: file(relativePath: {eq: "ayame4.jpg"}){
     childImageSharp {
@@ -93,8 +96,10 @@ query {
   }
    allProducts {
     edges {
+
       node {
         name
+        id
         description
         allImage
          localImage {

@@ -43,10 +43,10 @@ export default ({ data, location }) => {
         </Description>
         <TwoColumn>
           <div>
-            <SubTitle noSpace>風鈴の制作</SubTitle>
+            <SubTitle  data-aos="fade-up" noSpace>風鈴の制作</SubTitle>
           </div>
           <div>
-            <Figure>
+            <Figure data-aos="fade-up">
               <Img
                 fluid={data.works.childImageSharp.fluid}
                 alt=""
@@ -57,7 +57,7 @@ export default ({ data, location }) => {
         </TwoColumn>
         <TwoColumn>
           <div>
-            <Figure>
+            <Figure  data-aos="fade-up">
               <Img
                 fluid={data.works.childImageSharp.fluid}
                 alt=""
@@ -74,7 +74,7 @@ export default ({ data, location }) => {
             <SubTitle noSpace>川崎大師風鈴市</SubTitle>
           </div>
           <div>
-            <Figure>
+            <Figure  data-aos="fade-up" >
               <Img
                 fluid={data.daruma.childImageSharp.fluid}
                 alt=""
@@ -85,7 +85,7 @@ export default ({ data, location }) => {
         </MaxTwoColumn>
         <MaxTwoColumn>
           <div>
-            <Figure>
+            <Figure  data-aos="fade-up" >
               <Img
                 fluid={data.hikawa.childImageSharp.fluid}
                 alt=""

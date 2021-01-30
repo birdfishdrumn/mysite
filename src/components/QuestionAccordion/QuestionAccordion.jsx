@@ -4,7 +4,9 @@ import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
-
+import { data } from "./questionData";
+import ContactSupportIcon from '@material-ui/icons/ContactSupport';
+import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
  //   [theme.breakpoints.up('sm')]: {
     //   width:"90%",
     // },
@@ -14,7 +16,8 @@ const Accordion = withStyles({
 
     border: '1px solid rgba(0, 0, 0, .125)',
     boxShadow: 'none',
-    width: "70%",
+    width: "90%",
+    maxWidth:1024,
 
     margin:"0 auto",
     '&:not(:last-child)': {
@@ -63,34 +66,16 @@ const  QuestionAccordion = () =>{
     setExpanded(newExpanded ? panel : false);
   };
 
-  const data = [{
-    id: 1,
-    title: "huuta",
-    description: "kawaii"
-  }, {
-       id: 2,
-      title: "neko",
-      description: "daisuki"
-    }]
-
-const styles = theme => ({
-
-    [theme.breakpoints.down('sm')]: {
-      width: "90%"
-
-    },
-
-});
   return (
     <div>
       {data.map(item => (
-        <Accordion square className={styles} expanded={expanded === item.id} onChange={handleChange(item.id)}>
+        <Accordion key={item.id} square expanded={expanded === item.id} onChange={handleChange(item.id)}>
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-            <Typography>{item.title}</Typography>
+            <Typography><ContactSupportIcon/> {item.title}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              {item.description}
+              <QuestionAnswerIcon/> {item.description}
           </Typography>
           </AccordionDetails>
         </Accordion>

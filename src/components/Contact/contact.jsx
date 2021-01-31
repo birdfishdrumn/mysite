@@ -41,7 +41,7 @@ const Contact = ({outline,workshop}) => {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState(1);
   const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [comments, setComments] = useState("");
   const dt = new Date()
   // const week = dt.setDate(dt.getDate() + 7)
   const minDate =dt.setDate(dt.getDate() + 3)
@@ -70,11 +70,11 @@ const Contact = ({outline,workshop}) => {
     },
     [setSubject]
     );
-    const inputMessage = useCallback(
+    const inputComments = useCallback(
     (event) => {
-      setMessage(event.target.value);
+      setComments(event.target.value);
     },
-      [setMessage]
+      [setComments]
     );
     const inputNumber = useCallback(
     (event) => {
@@ -90,7 +90,7 @@ const Contact = ({outline,workshop}) => {
     if (workshop) {
       if (selectedDate === "") return true;
     } else {
-      if (message === "") return true;
+      if (comments === "") return true;
     }
     return false;
   };
@@ -160,7 +160,7 @@ console.log(number)
           type={"text"}
           name="subject"
         />
-        {workshop &&
+        {/* {workshop &&
           <TextInput
           fullWidth={true}
           id="outlined-number"
@@ -169,10 +169,22 @@ console.log(number)
           variant="outlined"
           value={number.toLocaleString()}
           onChange={inputNumber}
-          name="role[]"
+          name="role"
         />
-       }
-
+       } */}
+               <TextInput
+          id={comments}
+          fullWidth={true}
+          label={"お問い合わせ内容"}
+          multiline={true}
+          required={true}
+          onChange={inputComments}
+          rows={5}
+          variant="outlined"
+          value={comments}
+          type={"text"}
+          name="comments"
+        />
 
         {/* 体験かどうか  */}
         {workshop ?
@@ -195,17 +207,17 @@ console.log(number)
             </MuiPickersUtilsProvider>
           :
            <TextInput
-          id={message}
+          id={comments}
           fullWidth={true}
           label={"お問い合わせ内容"}
           multiline={true}
           required={true}
-          onChange={inputMessage}
+          onChange={inputComments}
           rows={5}
           variant="outlined"
-          value={message}
+          value={comments}
           type={"text"}
-          name="message"
+          name="comments"
         />
         }
         <div className="space-s" />

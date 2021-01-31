@@ -160,7 +160,7 @@ console.log(number)
           type={"text"}
           name="subject"
         />
-        {/* {workshop &&
+        {workshop &&
           <TextInput
           fullWidth={true}
           id="outlined-number"
@@ -169,23 +169,10 @@ console.log(number)
           variant="outlined"
           value={number.toLocaleString()}
           onChange={inputNumber}
-          name="order"
+          name="role[]"
         />
-       } */}
-              <TextInput
-          id={message}
-          fullWidth={true}
-          label={"お問い合わせ内容"}
-          multiline={true}
-          required={true}
-          onChange={inputMessage}
-          rows={5}
-          variant="outlined"
-          value={message}
-          type={"text"}
-          name="message"
-        />
-        <div className="space-s" />
+       }
+
 
         {/* 体験かどうか  */}
         {workshop ?

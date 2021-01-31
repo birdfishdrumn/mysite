@@ -70,7 +70,7 @@ const Contact = ({outline,workshop}) => {
     return false;
   };
 
-
+console.log(selectedDate)
   return (
     <div className="contact center">
       <form
@@ -154,19 +154,20 @@ const Contact = ({outline,workshop}) => {
 
         {/* 体験かどうか  */}
         {workshop ?
-               <TextField
-        id="datetime-local"
-        label="Next appointment"
-        type="datetime-local"
-            defaultValue={selectedDate}
-            onChange={handleDateChange}
-            className={classes.textField}
-            // value={selectedDate}
-               name="selectedDate"
-        InputLabelProps={{
-          shrink: true,
-        }}
-      />
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+         <KeyboardDatePicker
+          margin="normal"
+          id="date-picker-dialog"
+          label="Date picker dialog"
+          format="MM/dd/yyyy"
+              value={selectedDate}
+              name="message"
+          onChange={handleDateChange}
+          KeyboardButtonProps={{
+            'aria-label': 'change date',
+          }}
+            />
+            </MuiPickersUtilsProvider>
           :
            <TextInput
           id={message}

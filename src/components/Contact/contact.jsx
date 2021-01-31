@@ -169,7 +169,7 @@ console.log(number)
           variant="outlined"
           value={number}
           onChange={inputNumber}
-          name="number"
+          name="message"
           InputLabelProps={{
             shrink: true,
           }}

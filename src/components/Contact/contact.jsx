@@ -5,6 +5,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextInput from "../UI/textInput"
 import Button from "@material-ui/core/Button";
 import DateFnsUtils from '@date-io/date-fns';
+import jaLocale from "date-fns/locale/ja";
+
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
@@ -21,13 +23,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Contact = ({outline,workshop}) => {
+ const disableMonday = (date) =>{
+
+    // const dateInterditesRaw = [
+    //   new Date(date.getFullYear(),0,3),
+
+    // ];
+
+
+    // const dateInterdites = dateInterditesRaw.map((arrVal) => {return
+    // arrVal.getTime()});
+
+    return date.getDay() === 1;
+ }
 
    const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [number, setNumber] = useState(1);
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const dt = new Date()
+  // const week = dt.setDate(dt.getDate() + 7)
+  const minDate =dt.setDate(dt.getDate() + 3)
   const classes = useStyles()
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = useState(dt.setDate(dt.getDate() + 3));
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -43,19 +62,25 @@ const Contact = ({outline,workshop}) => {
     (event) => {
       setEmail(event.target.value);
     },
-    [setName]
+    [setEmail]
     );
     const inputSubject = useCallback(
     (event) => {
       setSubject(event.target.value);
     },
-    [setName]
+    [setSubject]
     );
     const inputMessage = useCallback(
     (event) => {
       setMessage(event.target.value);
     },
-    [setName]
+      [setMessage]
+    );
+    const inputNumber = useCallback(
+    (event) => {
+      setNumber(event.target.value);
+    },
+      [setNumber]
   );
 
   const canSubmit = () => {
@@ -70,7 +95,7 @@ const Contact = ({outline,workshop}) => {
     return false;
   };
 
-console.log(selectedDate)
+console.log(number)
   return (
     <div className="contact center">
       <form
@@ -135,31 +160,34 @@ console.log(selectedDate)
           type={"text"}
           name="subject"
         />
-        {/* {workshop &&
+        {workshop &&
           <TextInput
-          id={subject}
           fullWidth={true}
-          label={"人数"}
-          multiline={false}
-          required={true}
-          onChange={inputSubject}
-          rows={1}
+          id="outlined-number"
+          label="人数"
+          type="number"
           variant="outlined"
-          value={subject}
-          type={"number"}
-          name="subject"
+          value={number}
+          onChange={inputNumber}
+          name="number"
+          InputLabelProps={{
+            shrink: true,
+          }}
         />
-       } */}
+       }
         <div className="space-s" />
 
         {/* 体験かどうか  */}
         {workshop ?
-      <MuiPickersUtilsProvider utils={DateFnsUtils}>
-         <KeyboardDatePicker
+      <MuiPickersUtilsProvider utils={DateFnsUtils}   locale={jaLocale}>
+            <KeyboardDatePicker
+              disablePast
+              shouldDisableDate={disableMonday}
+              minDate = {minDate}
           margin="normal"
           id="date-picker-dialog"
-          label="Date picker dialog"
-          format="MM/dd/yyyy"
+          label="体験希望日"
+          format="yyyy/MM/dd"
               value={selectedDate}
               name="message"
           onChange={handleDateChange}

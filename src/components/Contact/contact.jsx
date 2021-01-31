@@ -167,9 +167,9 @@ console.log(number)
           label="人数"
           type="number"
           variant="outlined"
-          value={number}
+          value={number.toLocaleString()}
           onChange={inputNumber}
-          name="message"
+          name="order"
           InputLabelProps={{
             shrink: true,
           }}

@@ -1,6 +1,7 @@
  import React, { useState,useCallback } from "react"
 import TextField from "@material-ui/core/TextField";
 import 'date-fns';
+import { makeStyles } from '@material-ui/core/styles';
 import TextInput from "../UI/textInput"
 import Button from "@material-ui/core/Button";
 import DateFnsUtils from '@date-io/date-fns';
@@ -10,13 +11,22 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 
+const useStyles = makeStyles((theme) => ({
+
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200,
+  },
+}));
+
 const Contact = ({outline,workshop}) => {
 
    const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-
+  const classes = useStyles()
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = (date) => {
@@ -52,8 +62,11 @@ const Contact = ({outline,workshop}) => {
     if (name === "") return true;
     if (email === "") return true;
     if (subject === "") return true;
-    if (message === "") return true;
-
+    if (workshop) {
+      if (selectedDate === "") return true;
+    } else {
+      if (message === "") return true;
+    }
     return false;
   };
 
@@ -122,7 +135,7 @@ const Contact = ({outline,workshop}) => {
           type={"text"}
           name="subject"
         />
-        {workshop &&
+        {/* {workshop &&
           <TextInput
           id={subject}
           fullWidth={true}
@@ -136,28 +149,24 @@ const Contact = ({outline,workshop}) => {
           type={"number"}
           name="subject"
         />
-       }
+       } */}
         <div className="space-s" />
 
-        {/* 体験かどうか */}
+        {/* 体験かどうか  */}
         {workshop ?
-          <MuiPickersUtilsProvider utils={DateFnsUtils}>
-        <KeyboardDatePicker
-          disableToolbar
-          variant="inline"
-          format="MM/dd/yyyy"
-          margin="normal"
-          id="date-picker-inline"
-          label="体験希望日"
-          type="text"
-          name="message"
-          value={selectedDate}
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-            />
-            </MuiPickersUtilsProvider>
+               <TextField
+        id="datetime-local"
+        label="Next appointment"
+        type="datetime-local"
+            defaultValue={selectedDate}
+            onChange={handleDateChange}
+            className={classes.textField}
+            // value={selectedDate}
+               name="selectedDate"
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
           :
            <TextInput
           id={message}

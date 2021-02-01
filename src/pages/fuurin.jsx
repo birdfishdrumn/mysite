@@ -24,7 +24,7 @@ export default ({ data, location,number }) => {
       setChange(false)
     })
 
-  console.log(location.state.number)
+
     return (
   <Layout>
     <SEO
@@ -40,7 +40,7 @@ export default ({ data, location,number }) => {
         <Img fluid={data.product.childImageSharp.fluid} alt="製品情報" />
       </figure>
         </div>
-        <ProductTab num={location.state.number}/>
+        <ProductTab num={number && location.state.number}/>
     <div className="space-l" />
 
 

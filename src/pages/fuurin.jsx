@@ -15,7 +15,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { IconButton } from "@material-ui/core";
 import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower } from "../components/WindBellList/index";
 
-export default ({ data, location,number }) => {
+export default ({ data, location }) => {
     const [change,setChange] = useState(false)
   const handleOn = useCallback(()=>{
       setChange(true)
@@ -40,7 +40,7 @@ export default ({ data, location,number }) => {
         <Img fluid={data.product.childImageSharp.fluid} alt="製品情報" />
       </figure>
         </div>
-        <ProductTab num={number && location.state.number}/>
+        <ProductTab num={location.state.number && location.state.number}/>
     <div className="space-l" />
 
 

@@ -38,7 +38,7 @@ export default ({ data }) => {
       </figure>
 
         <ImageText>
-          風を音に変える
+          風を音に
         </ImageText>
 
 

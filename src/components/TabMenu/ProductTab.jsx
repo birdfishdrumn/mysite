@@ -88,7 +88,7 @@ export default function ScrollableTabsButtonForce({num}) {
   // }, []);
 const number=Number(num)
   const classes = useStyles();
-  const [value, setValue] = React.useState(number || 0);
+  const [value, setValue] = React.useState(number ? number : 0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

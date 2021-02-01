@@ -87,7 +87,7 @@ module.exports = {
                         description: doc.description,
                         allImage: doc.allImage
                     }),
-                }, ],
+                }],
             }
         },
         {

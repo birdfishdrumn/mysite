@@ -41,7 +41,7 @@ marked.setOptions({
       />
       <div className="eyecatch">
         <figure>
-          <Img fluid={data.contentfulWork.image.fluid} alt={data.contentfulWork.image.description} />
+          <Img fluid={data.glass_plane.childImageSharp.fluid} alt="" />
         </figure>
       </div>
 
@@ -110,16 +110,7 @@ marked.setOptions({
           <div className="space-l" />
           {/* <h2 className="bar center">
             Related Post
-        </h2>
-          <div className="posts">
 
-
-
-            {data.allContentfulWork.edges.map(({ node }) => (
-              <BlogCard key={node.id} slug={node.slug} fluid={node.image.fluid} alt={node.image.description} dataTime={node.date}
-                catname={node.category.name} title={node.title} dateJP={node.dateJP} />
-            ))}
-          </div> */}
           <RandomPosts a_number={4} id ={pageContext.id}/>
           {/* 関連記事の取得 */}
         </div>
@@ -130,6 +121,18 @@ marked.setOptions({
 }
 export const query = graphql`
   query($id: String!, $tagid: String!){
+        glass_plane: file(relativePath: { eq: "glass_plane.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+        original {
+          src
+          height
+          width
+        }
+      }
+    }
      allContentfulWork(
     sort: {fields: date,order: DESC}
     skip: 0

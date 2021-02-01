@@ -4,18 +4,18 @@ import BlogCard from "../../Blog/blogCard"
 import  NewsCard from "./NewsCard";
 const NewsCardList = () => {
   const data = useStaticQuery(graphql`
-query NewsQuery {
+query NewsQuery{
     allContentfulWork(
     sort: {fields: date,order: DESC}
     skip: 0
     limit: 3
     filter: {category:
-    {name: {eq:"可愛い" }}})
+    {name: {eq:"思い出"}}})
     {
     edges{
       node{
       title
-      dateJP:date(formatString: "YYYY年MM月DD日")
+      dateJP:date(formatString: "YYYY.MM.DD")
       date
       category{
         name

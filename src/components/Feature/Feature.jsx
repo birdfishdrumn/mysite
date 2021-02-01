@@ -10,7 +10,7 @@ export default ({data,description}) => {
       <FeatureCard>
         <Img fluid={data.childImageSharp.fluid} style={{ borderRadius: "50%" }}/>
       </FeatureCard>
-      <Description padding  both space>{description}</Description>
+      <Description padding  both width="half">{description}</Description>
     </div>
   )
 }

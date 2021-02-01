@@ -8,6 +8,7 @@ import styled from "styled-components";
 import { Product,Process } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
+import { History } from "../components/PageComponents/index";
 import {TwoColumn,SubTitle,Figure,Description,MinTitle} from "../style/GlobalStyle"
 
 
@@ -36,7 +37,7 @@ export default ({ data, location }) => {
 
       <article className="content">
         <SubTitle>江戸風鈴とは</SubTitle>
-        <Description data-aos="fade-up" space>篠原まるよし風鈴では江戸風鈴の制作を行っており年間で12,000個ほど作ります。そうしてできた風鈴に絵を描いて販売、また体験学習に用います。</Description>
+        <Description data-aos="fade-up"  width="half">篠原まるよし風鈴では江戸風鈴の制作を行っており年間で12,000個ほど作ります。そうしてできた風鈴に絵を描いて販売、また体験学習に用います。</Description>
         <div className="space-l"/>
         <TwoColumn>
           <div>
@@ -59,8 +60,11 @@ export default ({ data, location }) => {
           <MinTitle>絵付け</MinTitle>
 
           <Process data={data} />
-                      </section>
+        </section>
+
         <SubTitle>江戸風鈴の歴史</SubTitle>
+        <div className="space-xl"/>
+        <History data={data}/>
       </article>
 
     </Layout>
@@ -108,9 +112,9 @@ query {
       }
     }
   }
-      daruma: file(relativePath: {eq: ".jpg"}){
+      history: file(relativePath: {eq: "garasuhuki.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 800) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

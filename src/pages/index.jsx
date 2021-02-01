@@ -57,7 +57,7 @@ export default ({ data }) => {
         江戸風鈴とは
       </Content>
       <div className="center">
-          <Description space>江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。<br /><br/>
+          <Description width="half">江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。<br /><br/>
          一つ一つ職人が気持ちを込めて作った風鈴は、ガラスならではの涼しげでリラックスできる軽やかな音と、直接描かれた絵柄で見る人を癒してくれるでしょう。
       <br /> <br />
           現在は篠原まるよし風鈴と、篠原風鈴本舗の二件のみしか江戸風鈴のみ製作を行なっておりません。
@@ -87,7 +87,7 @@ export default ({ data }) => {
         <div className="space-l" />
     <section className="center">
       <SubTitle>篠原まるよし風鈴の仕事</SubTitle>
-        <Description space>篠原まるよし風鈴では、風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、また体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。</Description>
+        <Description width="half">篠原まるよし風鈴では、風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、また体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。</Description>
           <div className="space-xl" />
        <ProductList>
 
@@ -113,9 +113,10 @@ export default ({ data }) => {
           </div>
 
 
-      </div> */}
-         <SubTitle>お知らせ</SubTitle>
-        <NewsCardList image={data}/>
+      </div> */} <div className="space-l" />
+        <SubTitle>お知らせ</SubTitle>
+         <div className="space-l" />
+        <NewsCardList catName="思い出" image={data}/>
       </News>
 
       <Gallery>

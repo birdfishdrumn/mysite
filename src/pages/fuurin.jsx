@@ -1,10 +1,10 @@
-import React,{useState} from "react"
+import React,{useState,useCallback} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import {ProductGrid} from "../components/index"
 import styled from "styled-components";
-import { Product,WindBellCard } from "../components/index";
+import { Product,WindBellCard,ProductTab } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem} from "../style/GlobalStyle";
@@ -13,11 +13,18 @@ import ViewColumnIcon from '@material-ui/icons/ViewColumn';
 import GridOnIcon from '@material-ui/icons/GridOn';
 import Tooltip from '@material-ui/core/Tooltip';
 import { IconButton } from "@material-ui/core";
-
+import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower } from "../components/WindBellList/index";
 
 export default ({ data, location }) => {
     const [change,setChange] = useState(false)
-  console.log(data)
+  const handleOn = useCallback(()=>{
+      setChange(true)
+  })
+    const handleOff = useCallback(()=>{
+      setChange(false)
+    })
+
+  console.log(location.state.number)
     return (
   <Layout>
     <SEO
@@ -32,52 +39,16 @@ export default ({ data, location }) => {
       <figure>
         <Img fluid={data.product.childImageSharp.fluid} alt="製品情報" />
       </figure>
-    </div>
+        </div>
+        <ProductTab num={location.state.number}/>
     <div className="space-l" />
-    <section className="center">
-      <SubTitle>小丸型風鈴</SubTitle>
-          <Description space>篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。
-      <br/>またこちらのオンラインショップでは各商品もご購入可能です。
-    </Description>
-          <FlexNav>
-            <Tooltip title="グリッド" interactive>
-              <IconButton  onClick={() => setChange(false)} >
-                <li><GridOnIcon fontSize="large"/></li>
-                </IconButton>
-            </Tooltip>
-            <Tooltip title="短冊まで" interactive>
-               <IconButton  onClick={() => setChange(true)} >
-                <li ><ViewColumnIcon fontSize="large" /></li>
-                </IconButton>
-          </Tooltip>
-          </FlexNav>
 
-
-          <SubTitle small>金運上昇の柄</SubTitle>
-          <div className="space-l" />
-           {/* <div className={change ? styles.p_grid__scroll : styles.p_grid__row }></div> */}
-          <GridList change={change}>
-            {data.allProducts.edges.map(edge => (
-            <ScrollItem>
-                <WindBellCard
-              key={edge.node.id}
-              windBellImage={edge.node.localImage.childImageSharp.fluid}
-              name={edge.node.name}
-              description={edge.node.description}
-              change={change}
-              src={edge.node.allImage}
-            />
-                </ScrollItem>
-          ))}
-            </GridList>
-      <SubTitle>新子丸、釣鐘型風鈴</SubTitle>
-      <SubTitle>風琴</SubTitle>
-    </section>
-    <div className="space-l" />
 
   </Layout>
     )
 }
+
+// (filter:{category: {eq:"目標達成" }})
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
@@ -94,17 +65,18 @@ query {
       }
     }
   }
-   allProducts {
+   allProducts
+   {
     edges {
 
       node {
         name
         id
+        category
         description
-        allImage
          localImage {
           childImageSharp{
-            fluid(maxWidth:220){
+            fluid(maxWidth:300){
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

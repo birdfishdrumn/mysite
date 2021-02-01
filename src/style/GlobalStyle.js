@@ -100,7 +100,7 @@ export const Title = styled.h1 `
 
 export const Nav = styled.ul `
    font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
- font-weight: bold;
+ font-weight: normal;
  margin:0 auto;
  text-align:center;
  font-size:1.8rem;
@@ -129,7 +129,7 @@ width:90%;
 
 
 export const SubTitle = styled.div `
- font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
+ font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: bold;
  margin-bottom:0px;
  text-align:center;
@@ -149,7 +149,16 @@ text-align:${props => (props.left ? "left" : "center")};
  font-weight:normal;
  line-height: 1.8em;
  padding:${props => (props.padding ? "30px 0 30px" : "10px 0 10px")};
- width:${props => (props.space && "50%")};
+
+  ${props => {
+  switch (props.width) {
+    case "half":
+      return `width:50%;`
+    case "more":
+      return  `width:70%;`
+  }
+  return "width:100%;"
+ }};
   font-size:${props => (props.large ? "1.4rem" : "1rem")};
  margin:${props => (props.noneMargin ? "0" : "0 auto")};
  ${props => {
@@ -188,7 +197,7 @@ export const ImageText = styled.div `
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 `
 export const MinTitle = styled.div `
- font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+  font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: bold;
  font-size:1.3rem;
  margin:10px;
@@ -231,12 +240,14 @@ export const MaxTwoColumn = styled.h1 `
    }
    >div:last-child{
     text-align:center;
+
    }
 
    @media(max-width:1024px){
-     margin:10px;
+     margin:10px auto;
      grid-gap:10px;
      grid-template-columns:1fr;
+
       >div{
     margin:5x;
    }
@@ -283,7 +294,7 @@ export const GridList = styled.figure `
  }
 `
 export const FlexNav = styled.nav`
-z-index:999;
+
 text-align:center;
 display:inline-block;
 margin:${props => (props.small ? "10px auto" : "30px auto")};
@@ -296,6 +307,8 @@ list-style:none;
     margin:20px;
   }
 `
+
+
 // ------------- レイアウト--------------------
 
 export const Featured = styled.section `

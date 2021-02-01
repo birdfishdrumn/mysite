@@ -4,7 +4,7 @@ import {Link} from "gatsby"
 import { ProductImage, Content, Image, ProductText,ProductButton,ProductDescription } from "./style";
 
 
-const Product = ({img,title,description,noBtn,btnText,center,link}) => {
+const Product = ({img,title,description,noBtn,btnText,center,link,num}) => {
   return (
     <ProductImage>
 
@@ -16,7 +16,7 @@ const Product = ({img,title,description,noBtn,btnText,center,link}) => {
         {title}
 
         <ProductDescription left>{description}</ProductDescription>
-        <Link to={link}><ProductButton noBtn={noBtn}>{btnText ? btnText : "詳しく"}</ProductButton></Link>
+        <Link to={link}  state={{ number: num }}><ProductButton noBtn={noBtn}>{btnText ? btnText : "詳しく"}</ProductButton></Link>
       </ProductText>
 
 

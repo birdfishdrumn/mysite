@@ -1,8 +1,8 @@
 import React from 'react'
-import { TwoColumn, SubTitle, Description ,Figure} from "../../style/GlobalStyle";
+import { TwoColumn, SubTitle, Description ,Figure,Nav} from "../../style/GlobalStyle";
 import Img from "gatsby-image"
 import styled from "styled-components"
-
+import {accessData} from "./accessData"
 const AccessMap = styled.div`
  margin:0 auto;
  width:60%;
@@ -34,7 +34,15 @@ const Access = ({data}) => {
             <Img fluid={data.map.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
           </AccessMap>
 
-       <SubTitle>電車でお越しの方</SubTitle>
+        <SubTitle>電車でお越しの方</SubTitle>
+        <Nav>
+          {accessData.map((item) => (
+            <>
+              <li>{item.place}</li>
+              <p>{item.description}</p>
+              </>
+          )) }
+        </Nav>
           </section>
     </div>
   )

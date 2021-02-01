@@ -89,10 +89,10 @@ const Header = (props) => {
                 </Link>
                 </div>
              <div>
-                   <Hamburger className={classes.menuButton} color="inherit">
-                    <IconButton onClick={handleDrawerToggle}>
+                   <Hamburger className={classes.menuButton} color="inherit" onClick={handleDrawerToggle}>
+
                             <MenuIcon style={{ fontSize: 50 }} />
-                    </IconButton>
+
 
                   </Hamburger>
 
@@ -109,7 +109,7 @@ const Header = (props) => {
                           <Link to="/workshop/">体験</Link>
                         </li>
                         <li>
-                          <Link to="/works/">仕事の紹介</Link>
+                          <Link to="/works/">私たちの仕事</Link>
                         </li>
                         <li>
                           <Link to="/shop/">お店、家族の紹介</Link>

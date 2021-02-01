@@ -29,3 +29,10 @@ export const FamilyImage = styled(Img)
     margin:0;
   }
 `
+export const HistoryImage = styled(Img)
+`
+ width:60%;
+ @media(max-width:1024px){
+  margin:0 auto;
+ }
+`

@@ -10,7 +10,7 @@ from "./ProductGrid/ProductGrid"
 export { default as ProductCard }
 from "./ProductCard/ProductCard"
 export { default as WindBellCard }
-from "./WindBellCard/WindBellCard"
+from "./WindBellList/WindBellCard"
 export { default as BottomNotice }
 from "./BottomNotice/BottomNotice"
 export { default as Contact }
@@ -23,3 +23,5 @@ export { default as QuestionAccordion }
 from "./QuestionAccordion/QuestionAccordion"
 export { default as Process }
 from "./Process/Process"
+export { default as ProductTab }
+from "./TabMenu/ProductTab"

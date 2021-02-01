@@ -28,18 +28,25 @@ const WindBellImage = styled(Img)`
     margin:0;
   }
 `
-const ScrollImage = styled.img`
-   width:200px;
+const ScrollImage = styled(Img)`
+   height:350px;
+
+   margin:10px;
+   @media(max-width:768px){
+  width:200px;
+   }
 `
 
-const WindBellCard = ({windBellImage,name,description,src,change,key}) =>{
+const WindBellCard = ({windBellImage,name,description,allImage,change,key}) =>{
   return (
     <WindBellWrapper key={key}>
-   {change ? <ScrollImage src={src}/> : <WindBellImage fluid={windBellImage} /> }
+      {change ? <ScrollImage fluid={allImage}/> : <WindBellImage fluid={windBellImage} /> }
 
 
-      <MinTitle>{name}</MinTitle>
-      <Description color="grey" small>{description}</Description>
+      {!change && <><MinTitle hannari>{name}</MinTitle>
+        <Description color="grey" small>{description}</Description>
+       </>
+      }
    </WindBellWrapper>
  )
 }

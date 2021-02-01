@@ -38,23 +38,24 @@ export default ({ data, location }) => {
 
       <article className="content">
         <SubTitle>篠原まるよし風鈴の仕事</SubTitle>
-        <Description data-aos="fade-up" space>
+        <Description data-aos="fade-up" width="half">
           篠原まるよし風鈴では江戸風鈴の制作を行っており年間で12,000個ほど作ります。そうしてできた風鈴に絵を描いて販売、また体験学習に用います。
         </Description>
-        <TwoColumn>
+        <div className="space-xl"/>
+        <MaxTwoColumn>
           <div>
             <SubTitle  data-aos="fade-up" noSpace>風鈴の制作</SubTitle>
           </div>
           <div>
             <Figure data-aos="fade-up">
               <Img
-                fluid={data.works.childImageSharp.fluid}
+                fluid={data.glass_plane.childImageSharp.fluid}
                 alt=""
                 style={{ width: "100%" }}
               />
             </Figure>
           </div>
-        </TwoColumn>
+        </MaxTwoColumn>
         <TwoColumn>
           <div>
             <Figure  data-aos="fade-up">
@@ -124,6 +125,18 @@ export const query = graphql`
       }
     }
     works: file(relativePath: { eq: "kingyo_re.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+        original {
+          src
+          height
+          width
+        }
+      }
+    }
+       glass_plane: file(relativePath: { eq: "glass_plane.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG

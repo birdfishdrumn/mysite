@@ -172,19 +172,7 @@ console.log(number)
           name="role"
         />
        } */}
-               <TextInput
-          id={comments}
-          fullWidth={true}
-          label={"お問い合わせ内容"}
-          multiline={true}
-          required={true}
-          onChange={inputComments}
-          rows={5}
-          variant="outlined"
-          value={comments}
-          type={"text"}
-          name="comments"
-        />
+
 
         {/* 体験かどうか  */}
         {workshop ?

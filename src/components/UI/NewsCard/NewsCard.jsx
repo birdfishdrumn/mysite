@@ -1,10 +1,10 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import { ListCard,NewsImage } from "./style";
+import { Information,InfoTitle} from "./style";
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock } from "@fortawesome/free-solid-svg-icons"
-
+import { Description } from "../../../style/GlobalStyle";
 const  NewsCard = (props) =>{
 
   return (
@@ -29,17 +29,12 @@ const  NewsCard = (props) =>{
 
     // </Card>
 
-      <ListCard>
-        <div>
-          <NewsImage fluid={props.fluid}/>
-        </div>
-        <div>
-        <h3>{props.title}</h3>
-            <p>{props.dataTime && (<time dataTime={props.dataTime}> <FontAwesomeIcon icon={faClock} />
- {props.dateJP}</time>)}</p>
-    </div>
-
-        </ListCard>
+    <Information>
+      <dl>
+<dt> {props.dataTime && (<time dataTime={props.dataTime}> <FontAwesomeIcon icon={faClock} />    {props.dateJP}</time>)}</dt>
+<InfoTitle>{props.title}</InfoTitle>
+</dl>
+      </Information>
 
 
   );

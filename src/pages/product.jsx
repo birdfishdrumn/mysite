@@ -34,7 +34,7 @@ export default ({data,location}) => (
     <div className="center">
 
     <SubTitle>商品の紹介</SubTitle>
-      <Description space>篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。<br/>またこちらのオンラインショップでは各商品もご購入可能です。
+      <Description  width="half">篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。<br/>またこちらのオンラインショップでは各商品もご購入可能です。
     </Description>
       <Button>オンラインショップ</Button>
     </div>
@@ -42,10 +42,10 @@ export default ({data,location}) => (
     <article className="content">
       <ProductList>
 
-      <Product img={data.komaru.childImageSharp.fluid} title="風鈴" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/fuurin"/>
-      <Product img={data.earring.childImageSharp.fluid} title="イヤリング" description="" link="/earring"/>
-      <Product img={data.poppen.childImageSharp.fluid} title="ポッペン" description="" link="/poppen"/>
-        <Product img={data.product.childImageSharp.fluid} title="釣り台" description="" link="/tsuridai"/>
+        <Product img={data.komaru.childImageSharp.fluid} title="風鈴" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/fuurin" num="0"/>
+      <Product img={data.earring.childImageSharp.fluid} title="イヤリング" description="" link="/fuurin" num="1"/>
+      <Product img={data.poppen.childImageSharp.fluid} title="ポッペン" description="" link="/fuurin" num="2"/>
+        <Product img={data.product.childImageSharp.fluid} title="釣り台" description="" link="/fuurin" num="3"/>
         </ProductList>
 </article>
 

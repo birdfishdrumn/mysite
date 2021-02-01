@@ -15,7 +15,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { IconButton } from "@material-ui/core";
 import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower } from "../components/WindBellList/index";
 
-export default ({ data, location }) => {
+export default ({ data, location,number }) => {
     const [change,setChange] = useState(false)
   const handleOn = useCallback(()=>{
       setChange(true)

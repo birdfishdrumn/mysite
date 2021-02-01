@@ -40,7 +40,7 @@ export default ({ data, location }) => {
         <Img fluid={data.product.childImageSharp.fluid} alt="製品情報" />
       </figure>
         </div>
-        <ProductTab num={location.state.number && location.state.number}/>
+        <ProductTab num={location.state && location.state.number}/>
     <div className="space-l" />
 
 

@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const FloatingAction = ({title,reserve}) => {
+const FloatingAction = ({title,reserve,online}) => {
   const classes = useStyles();
 
     const [open, setOpen] = useState(false);
@@ -37,7 +37,9 @@ const FloatingAction = ({title,reserve}) => {
   const handleClickOpen = () => {
     setOpen(true);
   };
-
+  const onlineOpen = () => {
+  window.location.href="https://maruyosi.theshop.jp/"
+}
   const handleClose = () => {
     setOpen(false);
   };
@@ -51,11 +53,12 @@ const FloatingAction = ({title,reserve}) => {
     position: 'fixed',
 
   };
+
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <>
-    <div className="sm-only" onClick={handleClickOpen}>
+    <div className="sm-only" onClick={online ? onlineOpen : handleClickOpen}>
       <Fab  variant="extended" style={style} color="primary" aria-label="add" >
         {title}
       </Fab>

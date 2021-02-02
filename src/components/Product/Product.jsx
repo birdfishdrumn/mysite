@@ -13,8 +13,8 @@ const Product = ({img,title,description,noBtn,btnText,center,link,num}) => {
       </figure>
            <div className="space-m"/>
       <ProductText large left>
-        {title}
-
+        <h4>{title}</h4>
+      <h5>風鈴の基本形</h5>
         <ProductDescription left>{description}</ProductDescription>
         <Link to={link}  state={{ number: num }}><ProductButton noBtn={noBtn}>{btnText ? btnText : "詳しく"}</ProductButton></Link>
       </ProductText>

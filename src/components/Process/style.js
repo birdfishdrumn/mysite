@@ -5,7 +5,7 @@ import { Description } from '../../style/GlobalStyle'
 export const ProcessWrapper = styled.div `
  display:flex;
 justify-content:center;
-
+margin:0 10px;
  margin-bottom:60px;
  @media(max-width:768px){
  flex-direction:${props => (props.reverse && "row-reverse")};
@@ -23,7 +23,7 @@ export const ProcessGrid = styled.div `
 `
 export const ImageContainer = styled.div `
   height:auto;
-  width:220px;
+  width:230px;
   position:relative;
   height:auto;
 
@@ -32,28 +32,40 @@ export const ImageContainer = styled.div `
 
   &::after {
      font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
-    content: ${props=>(props.content)};
-    font-size:1.9rem;
-   top:0;
-    left: 0;
+    /* content: "カービィ"; */
+    /* ''で囲む必要がある */
+    content:'${props => props.content}';
+    font-size:1.6rem;
+   top:-30px;
+    left: -15px;
     z-index:999;
-    background:black;
-    color:white;
-    width:50px;
-    height:50px;
+   font-weight:bold;
+    color:black;
+   -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
     padding:auto;
+    /* background:black; */
+    text-shadow:1px 1px 5px white;
+    background: -moz-linear-gradient(to bottom,#F89174,#FFF 30%,#99CC33);
+background: -webkit-linear-gradient(to bottom,#F89174,#FFF 30%,#99CC33);
+background: linear-gradient(to bottom,#F89174,#FFF 50%,#99CC33);
+
     align-items:center;
-    border-radius:50%;
+    padding:10px 0;
     position:absolute;
 
     z-index:9999;
+      @media(max-width:768px){
+    font-size:1.3rem;
+
+  }
   }
   @media(max-width:1024px){
     width:220px;
 
   }
    @media(max-width:767px){
-    width:160px;
+    width:180px;
 
     margin:auto 30px;
 
@@ -72,7 +84,7 @@ font-size:1.2rem;
  width:50%;
  @media(max-width:768px){
    font-size:1rem;
-   width:40%;
+   width:45%;
    margin:auto 0px;
    padding:10px;
  }

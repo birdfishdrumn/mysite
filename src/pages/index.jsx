@@ -1,10 +1,11 @@
 import React from "react"
 // import {Header} from "../components/Header/Header"
-import {graphql} from "gatsby"
+import {graphql,Link} from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import BlogCard from "../components/Blog/blogCard"
+
 
 import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText } from "../style/GlobalStyle"
 import { Button } from "../components/Button"
@@ -72,7 +73,7 @@ export default ({ data }) => {
 
 
 
-        <Button>詳しく見る</Button>
+        <Link to="/about"><Button>詳しく見る</Button></Link>
       </div>
     </Featured>
     <div className="space-l" />

@@ -59,7 +59,7 @@ export default ({ data, location }) => {
         <SubTitle>動画で確認</SubTitle>
           <MinTitle>絵付け</MinTitle>
 
-          <Process data={data} />
+          <Process paint data={data} />
         </section>
 
         <SubTitle>江戸風鈴の歴史</SubTitle>

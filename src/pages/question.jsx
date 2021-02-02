@@ -3,7 +3,7 @@ import TextField from "@material-ui/core/TextField";
 import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { SubTitle, Description } from "../style/GlobalStyle";
+import { SubTitle, Description, MinTitle } from "../style/GlobalStyle";
 import { QuestionAccordion } from "../components/index"
 
 
@@ -28,15 +28,20 @@ export default ({data})=>{
         <div className="space-m" />
 
           <div className="center">
-            <Description>
-                 各種お問い合わせはこちらのフォームよりお願いいたします。
-          <br></br>
-          お名前・メールアドレス・件名・問い合わせ内容を記載して送信ボタンをクリックしてください。
-            </Description>
+            <MinTitle hannari>仕事に関して</MinTitle>
 
-        </div>
+
         <div className="space-l"/>
-        <QuestionAccordion/>
+          <QuestionAccordion business />
+          <div className="space-l" />
+          <MinTitle hannari>江戸風鈴に関して</MinTitle>
+           <div className="space-l" />
+            <QuestionAccordion fuurin />
+                <div className="space-l" />
+          <MinTitle hannari>江戸風鈴の歴史</MinTitle>
+           <div className="space-l" />
+            <QuestionAccordion history />
+             </div>
    </article>
       </Layout>
     </div>

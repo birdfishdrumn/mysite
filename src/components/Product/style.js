@@ -13,7 +13,7 @@ export const ProductImage = styled.div `
 
 export const Image = styled(Img)
 `
-height:460px;
+height:520px;
 
   object-fit:cover;
   @media(max-width:767px){
@@ -57,11 +57,24 @@ export const ProductText = styled.div `
     justify-content: center;
     text-align:${props =>(props.left ? "left" : "center")} ;
     color: black;
+    >h4{
+      margin-bottom:15px;
+    }
+    >h5{
+      padding:5px 0;
+      font-size:1.7rem;
+       font-weight: normal;
+    }
     @media(max-width:767px){
           top: 10px;
         margin: auto auto 0 20px;
-      font-size:1.2em;
+      font-size:1.7em;
+
       padding:10px;
+          >h5{
+      padding:10px 0;
+      font-size:1.4rem;
+    }
     }
     /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.5); */
 
@@ -84,10 +97,6 @@ margin:0;
 color:black;
   width:40%;
  @media(max-width:767px){
-      font-size:0.7rem;
-      line-height: 1.2em;
-      width:50%;
-      font-wight:lighter;
-      padding:10px 0 10px;
+   display:none;
     }
 `

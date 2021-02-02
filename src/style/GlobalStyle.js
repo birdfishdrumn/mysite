@@ -199,7 +199,7 @@ export const ImageText = styled.div `
 export const MinTitle = styled.div `
   font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: bold;
- font-size:1.3rem;
+ font-size:1.5rem;
  margin:10px;
   `
     // ==========テキストデザイン===========

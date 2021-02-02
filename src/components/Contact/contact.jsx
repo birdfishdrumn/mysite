@@ -41,7 +41,7 @@ const Contact = ({outline,workshop}) => {
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState(1);
   const [subject, setSubject] = useState("");
-  const [comments, setComments] = useState("");
+  const [message, setMessage] = useState("");
   const dt = new Date()
   // const week = dt.setDate(dt.getDate() + 7)
   const minDate =dt.setDate(dt.getDate() + 3)
@@ -70,11 +70,11 @@ const Contact = ({outline,workshop}) => {
     },
     [setSubject]
     );
-    const inputComments = useCallback(
+    const inputMessage = useCallback(
     (event) => {
-      setComments(event.target.value);
+      setMessage(event.target.value);
     },
-      [setComments]
+      [setMessage]
     );
     const inputNumber = useCallback(
     (event) => {
@@ -90,7 +90,7 @@ const Contact = ({outline,workshop}) => {
     if (workshop) {
       if (selectedDate === "") return true;
     } else {
-      if (comments === "") return true;
+      if (message === "") return true;
     }
     return false;
   };
@@ -198,17 +198,17 @@ console.log(number)
             </MuiPickersUtilsProvider>
           :
            <TextInput
-          id={comments}
+          id={message}
           fullWidth={true}
           label={"お問い合わせ内容"}
           multiline={true}
           required={true}
-          onChange={inputComments}
+          onChange={inputMessage}
           rows={5}
           variant="outlined"
-          value={comments}
+          value={message}
           type={"text"}
-          name="comments"
+          name="message"
         />
         }
         <div className="space-s" />

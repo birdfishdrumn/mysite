@@ -10,7 +10,7 @@ import jaLocale from "date-fns/locale/ja";
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
-  KeyboardDatePicker,
+  KeyboardDateTimePicker,
 } from '@material-ui/pickers';
 
 const useStyles = makeStyles((theme) => ({
@@ -150,16 +150,19 @@ console.log(number)
         <TextInput
           id={subject}
           fullWidth={true}
-          label={"件名"}
-          multiline={false}
+          label={"体験内容 体験人数"}
+          multiline={true}
           required={true}
           onChange={inputSubject}
-          rows={1}
+          rows={2}
           variant="outlined"
           value={subject}
           type={"text"}
           name="subject"
         />
+        <span style={{color:"red"}}>※ガラス吹き,絵付けどちらか、また体験人数を入力ください。
+
+        </span>
         {/* {workshop &&
           <TextInput
           fullWidth={true}
@@ -177,14 +180,14 @@ console.log(number)
         {/* 体験かどうか  */}
         {workshop ?
       <MuiPickersUtilsProvider utils={DateFnsUtils}   locale={jaLocale}>
-            <KeyboardDatePicker
+            <KeyboardDateTimePicker
               disablePast
               shouldDisableDate={disableMonday}
               minDate = {minDate}
           margin="normal"
           id="date-picker-dialog"
           label="体験希望日"
-          format="yyyy/MM/dd"
+          format="yyyy/MM/dd HH:mm"
               value={selectedDate}
               name="message"
           onChange={handleDateChange}

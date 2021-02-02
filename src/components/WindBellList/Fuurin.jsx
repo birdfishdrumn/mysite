@@ -1,7 +1,7 @@
 import React,{useState,useCallback}  from 'react'
 import {graphql} from "gatsby"
 import Img from "gatsby-image"
-import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower } from "./index";
+import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower,KirikoFilter,TsuriganeFilter,FuukinFilter } from "./index";
 import Layout from "../../components/layout"
 import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem} from "../../style/GlobalStyle";
 import { Button } from "../../components/Button";
@@ -63,10 +63,13 @@ const Fuurin = ({location}) => {
           <AchievementFilter change={change} />
           <DiseaseFree change={change} />
            <AmuletFilter change={change}/>
-          <SeasonFlower change={change}/>
+        <SeasonFlower change={change} />
+        <KirikoFilter change={change}/>
 
-      <SubTitle>新子丸、釣鐘型風鈴</SubTitle>
-      <SubTitle>風琴</SubTitle>
+        <SubTitle>新子丸、釣鐘型風鈴</SubTitle>
+        <TsuriganeFilter change={change}/>
+        <SubTitle>風琴</SubTitle>
+        <FuukinFilter change={change}/>
     </section>
     <div className="space-l" />
     </div>

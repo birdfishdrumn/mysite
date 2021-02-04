@@ -38,13 +38,14 @@ const FloatingAction = ({title,reserve,online}) => {
     setOpen(true);
   };
   const onlineOpen = () => {
-  window.location.href="https://maruyosi.theshop.jp/"
+    const url = "https://maruyosi.theshop.jp/"
+window.open(url, '_blank')
 }
   const handleClose = () => {
     setOpen(false);
   };
 
-　 const style = {
+ const style = {
 
     top: 'auto',
     right: 20,

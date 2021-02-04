@@ -48,7 +48,7 @@ export default ({data,location}) => (
           <li>持ち物</li>
             <p>特にありませんが、デザインなどを考えていただきますとスムーズに描けると思います。</p>
           </Nav>
-        <Product img={data.earring.childImageSharp.fluid} title="ガラス拭き体験" noBtn description="" />
+        <Product data={data.earring} title="ガラス拭き体験" noBtn description="" />
               <Nav>
           <li>料金</li>
           <p>2,200円</p>
@@ -59,7 +59,7 @@ export default ({data,location}) => (
           <li>持ち物</li>
             <p>特にありませんが、デザインなどを考えていただきますとスムーズに描けると思います。</p>
           </Nav>
-        <Product img={data.poppen.childImageSharp.fluid} noBtn title="オンライン体験" description="" />
+        <Product data={data.poppen} noBtn title="オンライン体験" description="" />
               <Nav>
           <li>料金</li>
           <p>1,650円</p>

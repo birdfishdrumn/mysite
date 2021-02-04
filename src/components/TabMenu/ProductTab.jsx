@@ -104,13 +104,15 @@ const number=Number(num)
          className={classes.tab}
           indicatorColor="transparent"
           textColor="primary"
-          aria-label="scrollable force tabs example"
+        aria-label="scrollable force tabs example"
+         variant="scrollable"
               centered
         >
           <Tab label="風鈴"  {...a11yProps(0)} />
         <Tab label="イヤリング" {...a11yProps(1)}/>
-          <Tab label="ぽっぺん"  {...a11yProps(2)} />
-          <Tab label="吊り代" {...a11yProps(3)} />
+          <Tab label="ポッペン"  {...a11yProps(2)} />
+        <Tab label="体験キット" {...a11yProps(3)} />
+         <Tab label="吊り台" {...a11yProps(3)} />
         </Tabs>
 
       <TabPanel value={value} index={0}>

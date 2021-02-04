@@ -207,7 +207,31 @@ export const MinTitle = styled.div `
 
 // ------------- レイアウト--------------------
 
-export const TwoColumn = styled.h1 `
+export const TextFlex = styled.div`
+  display:flex;
+  width:80%;
+     height:300px;
+  >div:first-child{
+    flex-basis: 75%;
+    line-height:2.2rem;
+    /* height:300px; */
+    margin:0 40px;
+     -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-align:left;
+  }
+  >div:last-child{
+    font-size:2.0rem;
+    height:80%;
+    padding:10px;
+    flex-basis: 10%;
+    @media(max-width:768px){
+
+    }
+  }
+`
+
+export const TwoColumn = styled.div `
    display: grid;
    grid-gap:50px;
    margin:0 10% 0;
@@ -229,6 +253,42 @@ export const TwoColumn = styled.h1 `
    }
    }
 `
+export const ProductColumn = styled.div `
+   display: grid;
+   grid-gap:0px;
+   margin:0 auto;
+   grid-template-columns:1fr 1fr;
+   max-width:808px;
+   >div{
+    margin:20px;
+
+   }
+   >div:first-child{
+      @media(min-width:768px){
+         order:${props=>props.reverse ? 2 : 1};
+    }
+
+   }
+   >div:last-child{
+    text-align:center;
+    @media(min-width:768px){
+  order:${props => props.reverse ? 1 : 2};
+
+    }
+
+   }
+
+   @media(max-width:768px){
+     margin:10px;
+     grid-gap:0px;
+     grid-template-columns:1fr;
+
+      >div{
+    margin:5x;
+   }
+   }
+`
+
 export const MaxTwoColumn = styled.h1 `
    display: grid;
    grid-gap:50px;

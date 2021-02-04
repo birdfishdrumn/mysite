@@ -24,6 +24,7 @@ height: 44px;
  text-transform: uppercase;
  text-decoration:none;
  background:white;
+
  color:black;
  border: 1px solid black;
  white-space: nowrap;

@@ -25,3 +25,5 @@ export { default as Process }
 from "./Process/Process"
 export { default as ProductTab }
 from "./TabMenu/ProductTab"
+export { default as Map }
+from "./Map/Map"

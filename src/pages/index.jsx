@@ -6,13 +6,12 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import BlogCard from "../components/Blog/blogCard"
 
-
 import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText } from "../style/GlobalStyle"
 import { Button } from "../components/Button"
 import CardList from "../components/CardList/CardList"
 import NewsCardList  from "../components/UI/NewsCard/NewsCardList";
 import FeatureList from "../components/FeatureList/FeatureList";
-import { TabMenu,ProductCard } from "../components/index";
+import { TabMenu,ProductCard ,Map} from "../components/index";
 import styled from "styled-components";
 // import News from  "../components/Blog/news"
 const ProductList = styled.div`
@@ -63,17 +62,17 @@ export default ({ data }) => {
       <br /> <br />
           現在は篠原まるよし風鈴と、篠原風鈴本舗の二件のみしか江戸風鈴のみ製作を行なっておりません。
         </Description>
-            <div className="space-l" />
+            <div className="space-xl" />
+
           <SubTitle>江戸風鈴の特徴</SubTitle>
           <div className="space-l" />
            <div className="space-l" />
           <div className="center">
                    <FeatureList data={data} />
           </div>
-
-
-
-        <Link to="/about"><Button>詳しく見る</Button></Link>
+            <div className="space-l" />
+          <Link to="/about"><Button>詳しく見る</Button></Link>
+            <div className="space-l" />
       </div>
     </Featured>
     <div className="space-l" />
@@ -102,28 +101,23 @@ export default ({ data }) => {
     <div className="space-l" />
 
     <News >
-      {/* <div className="space-l" />
-      <div className="container">
-
-        <SubTitle>お知らせ</SubTitle>
-        <div className="posts">
-          {data.allContentfulWork.edges.map(({ node }) => (
-            <BlogCard key={node.id} slug={node.slug} fluid={node.image.fluid} alt={node.image.description} dataTime={node.date}
-              catname={node.category.name} title={node.title} dateJP={node.dateJP} />
-          ))}
-          </div>
-
-
-      </div> */} <div className="space-l" />
+   <div className="space-l" />
         <SubTitle>お知らせ</SubTitle>
          <div className="space-l" />
         <NewsCardList catName="思い出" image={data}/>
       </News>
 
-      <Gallery>
+      {/* <Gallery>
         <SubTitle>Gallery</SubTitle>
 
-      </Gallery>
+      </Gallery> */}
+       <div className="space-l" />
+      <section >
+        <SubTitle>店舗情報</SubTitle>
+          <div className="space-l" />
+        <Map/>
+      </section>
+         <div className="space-l" />
 
 
   </Layout>

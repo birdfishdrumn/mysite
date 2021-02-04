@@ -16,6 +16,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/pickers": "^3.2.10",
     "@material-ui/styles": "^4.10.0",
+    "@react-google-maps/api": "^2.1.1",
     "@types/styled-components": "^5.1.4",
     "aos": "^2.3.4",
     "babel-plugin-styled-components": "^1.11.1",

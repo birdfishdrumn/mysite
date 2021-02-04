@@ -45,3 +45,22 @@ export const Nav = styled.nav `
 }
 }
 `
+
+export const MobileNav = styled.nav `
+
+ >ul {
+    justify-content: center;
+    list-style: none;
+    margin-top: 18px;
+    font-weight:bold;
+    font-size:1.2rem;
+     text-align:center;
+    color: black;
+
+    >li{
+   margin:30px 0;
+   font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+    }
+
+}
+`

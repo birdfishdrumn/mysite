@@ -51,6 +51,9 @@ const Contact = ({outline,workshop}) => {
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+  //   const handleDateChange = (event) => {
+  //   setSelectedDate(event.target.value);
+  // };
 
   const inputName = useCallback(
     (event) => {
@@ -147,22 +150,39 @@ console.log(number)
           name="email"
         />
         <div className="space-s" />
-        <TextInput
+        {workshop ?
+          <>
+          <TextInput
           id={subject}
           fullWidth={true}
-          label={"体験内容 体験人数"}
+          label={"体験内容 体験人数 備考"}
           multiline={true}
           required={true}
           onChange={inputSubject}
-          rows={2}
+          rows={5}
           variant="outlined"
           value={subject}
           type={"text"}
           name="subject"
         />
-        <span style={{color:"red"}}>※ガラス吹き,絵付けどちらか、また体験人数を入力ください。
+             <span style={{color:"red"}}>※ガラス吹き,絵付けどちらか、体験人数を入力ください。また何か備考があれば続けて追記お願い致します。 </span></>
+          :
+           <TextInput
+          id={subject}
+          fullWidth={true}
+          label={"件名"}
+          multiline={false}
+          required={true}
+          onChange={inputSubject}
+          rows={1}
+          variant="outlined"
+          value={subject}
+          type={"text"}
+          name="subject"
+        />
+      }
 
-        </span>
+
         {/* {workshop &&
           <TextInput
           fullWidth={true}
@@ -183,7 +203,8 @@ console.log(number)
             <KeyboardDateTimePicker
               disablePast
               shouldDisableDate={disableMonday}
-              minDate = {minDate}
+              minDate={minDate}
+              minHour="10"
           margin="normal"
           id="date-picker-dialog"
           label="体験希望日"
@@ -196,6 +217,19 @@ console.log(number)
           }}
             />
             </MuiPickersUtilsProvider>
+  //         <TextField
+  //            disablePast
+  // id="datetime-local"
+  // label="Select Date & Time"
+  // type="datetime-local"
+  // defaultValue="2017-05-24T03:30"
+  //           value={selectedDate}
+  //           minDate = {minDate}
+  // onChange={handleDateChange}
+  // InputProps={{
+  //  min: "2020-02-01T03:30"
+  // }}
+// />
           :
            <TextInput
           id={message}

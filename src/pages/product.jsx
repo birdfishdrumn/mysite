@@ -1,22 +1,39 @@
-import React from "react"
+import React,{useEffect} from "react"
 // import {Header} from "../components/Header/Header"
-import {graphql} from "gatsby"
+import {graphql,Link} from "gatsby"
 import Img from "gatsby-image"
-
+import Aos from "aos"
 import styled from "styled-components";
 import { Product } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { SubTitle,Description } from "../style/GlobalStyle";
+import { SubTitle,Description,ProductColumn,Figure,TextFlex} from "../style/GlobalStyle";
 import { Button } from "../components/Button";
-const ProductList = styled.div`
 
+
+const ProductImg = styled(Img)`
+    width:90%;
+    margin:0 auto;
+`
+const TextButton = styled.div`
+ text-align:right;
+ border:1px solid #ccc;
+ padding:10px 0;
+height:90px;
+ cursor: pointer;
+ transition:0.3s;
+ margin:auto auto 0 0;
+ &:hover:not(:disabled){
+  color:white;
+  background:black;
+  border:1px solid rgba(0,0,0,0)
+}
 `
 
+export default ({ data, location }) => {
 
-
-export default ({data,location}) => (
-  <Layout>
+    return (
+    < Layout >
     <SEO
       pagetitle="ESSENTIALSについて"
       pagedesc="食べ物の情報について発信しているサイトです"
@@ -40,18 +57,26 @@ export default ({data,location}) => (
     </div>
      <div className="space-l" />
     <article className="content">
-      <ProductList>
 
-        <Product img={data.komaru.childImageSharp.fluid} title="風鈴" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/fuurin" num="0"/>
-      <Product img={data.earring.childImageSharp.fluid} title="イヤリング" description="" link="/fuurin" num="1"/>
-      <Product img={data.poppen.childImageSharp.fluid} title="ポッペン" description="" link="/fuurin" num="2"/>
-        <Product img={data.product.childImageSharp.fluid} title="釣り台" description="" link="/fuurin" num="3"/>
-        </ProductList>
+
+          <Product data={data.fuurin} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="江戸風鈴" destination="/fuurin" num="0" />
+             <div className="space-l" />
+          <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="イヤリング" destination="/fuurin" num="1" reverse="true" />
+             <div className="space-l" />
+          <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="ポッペン" destination="/fuurin" num="2" />
+          <div className="space-l" />
+          <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="体験キット" destination="/fuurin" num="3" reverse="true" />
+           <div className="space-l" />
+           <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="吊り台" destination="/fuurin" num="4" />
+
+
+
+            <div className="space-l" />
 </article>
 
-</Layout>
-
-)
+</Layout >
+    )
+}
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
@@ -81,7 +106,7 @@ query {
       }
     }
   }
-    komaru: file(relativePath: {eq: "jinbee3.jpg"}){
+    fuurin: file(relativePath: {eq: "kingyo4.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 

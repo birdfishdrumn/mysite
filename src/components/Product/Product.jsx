@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Img from "gatsby-image"
 import {graphql,Link} from "gatsby"
 const ProductImg = styled(Img)`
-    width:90%;
+    /* width:90%; */
     margin:0 auto;
 `
 const TextButton = styled.div`

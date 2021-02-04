@@ -47,18 +47,18 @@ export default ({ data, location }) => {
 	   <Img fluid={data.product.childImageSharp.fluid} alt="製品情報"/>
     </figure>
     </div>
-    <div className="space-l" />
+
+     <div className="space-l" />
+        <article className="content">
+
     <div className="center">
 
     <SubTitle>商品の紹介</SubTitle>
       <Description  width="half">篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。<br/>またこちらのオンラインショップでは各商品もご購入可能です。
     </Description>
-      <Button>オンラインショップ</Button>
+            <Button>オンラインショップ</Button>
+                  <div className="space-l" />
     </div>
-     <div className="space-l" />
-    <article className="content">
-
-
           <Product data={data.fuurin} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="江戸風鈴" destination="/fuurin" num="0" />
              <div className="space-l" />
           <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="イヤリング" destination="/fuurin" num="1" reverse="true" />
@@ -68,8 +68,6 @@ export default ({ data, location }) => {
           <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="体験キット" destination="/fuurin" num="3" reverse="true" />
            <div className="space-l" />
            <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="吊り台" destination="/fuurin" num="4" />
-
-
 
             <div className="space-l" />
 </article>

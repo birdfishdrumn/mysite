@@ -106,7 +106,7 @@ query {
   }
     fuurin: file(relativePath: {eq: "kingyo4.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 800) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -119,7 +119,7 @@ query {
   }
     earring: file(relativePath: {eq: "earring.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 800) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -132,7 +132,7 @@ query {
   }
       poppen: file(relativePath: {eq: "poppen_kikyou.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 800) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

@@ -6,7 +6,10 @@ import Img from "gatsby-image"
 import {graphql,Link} from "gatsby"
 const ProductImg = styled(Img)`
     /* width:90%; */
-    /* margin:0 auto; */
+    margin:0 auto;
+    @media(max-width:768px){
+      width:80%;
+    }
 `
 const TextButton = styled.div`
  text-align:right;

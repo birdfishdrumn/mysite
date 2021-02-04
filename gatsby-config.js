@@ -1,13 +1,14 @@
-const config = require('gatsby-plugin-config');
+// const config = require('gatsby-plugin-config');
 
 require('dotenv').config({
     path: ".env"
 });
 
-
+console.log(process.env)
 
 
 module.exports = {
+
     siteMetadata: {
         title: `篠原まるよし風鈴`,
         description: `江戸時代から続く江戸風鈴を制作している篠原まるよし風鈴です。`,

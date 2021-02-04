@@ -49,7 +49,7 @@ const options = {
 
 const  Map = () =>{
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey:process.env.REACT_APP_googleMapsApiKey,
+    googleMapsApiKey:process.env.GATSBY_googleMapsApiKey,
     // ここにAPIキーを入力します。今回は.envに保存しています。
     libraries,
   });
@@ -62,7 +62,7 @@ const  Map = () =>{
 
   if (loadError) return "Error";
   if (!isLoaded) return "Loading...";
-
+  console.log(process.env.GATSBY_googleMapsApiKey)
   return (
     <MapFlex>
       <Container>

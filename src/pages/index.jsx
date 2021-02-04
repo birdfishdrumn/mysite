@@ -53,7 +53,7 @@ export default ({ data }) => {
       {/* <Sironuki src={Siro} /> */}
 
     </div>
-      <Content>
+        <Content>
         江戸風鈴とは
       </Content>
       <div className="center">

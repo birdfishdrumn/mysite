@@ -40,7 +40,7 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
-        `gatsby-plugin-material-ui`,
+
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-offline`,
         {

@@ -258,7 +258,7 @@ export const ProductColumn = styled.div `
    /* grid-gap:0px; */
    margin:0 auto;
    grid-template-columns:1fr 1fr;
-   max-width:768px;
+   max-width:767px;
    >div{
     margin:20px;
 
@@ -277,12 +277,14 @@ export const ProductColumn = styled.div `
     }
 
    }
-
-   @media(max-width:768px){
-     /* margin:10px; */
+    @media(min-width:380px){
+      width:100%;
+    }
+   @media(max-width:767px){
      grid-gap:0px;
      grid-template-columns:1fr;
     width:100%;
+
    }
 `
 

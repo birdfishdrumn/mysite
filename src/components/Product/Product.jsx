@@ -23,7 +23,6 @@ height:90px;
 }
 `
 
-
 const Product = ({data,description,title,destination,num,reverse}) => {
  useEffect(() => {
     Aos.init({ duration: 1000, startEvent: "DOMContentLoaded", once: true })

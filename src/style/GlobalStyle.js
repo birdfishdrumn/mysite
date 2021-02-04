@@ -212,7 +212,7 @@ export const TextFlex = styled.div`
   width:80%;
      height:300px;
   >div:first-child{
-    flex-basis: 75%;
+    /* flex-basis: 75%; */
     line-height:2.2rem;
     /* height:300px; */
     margin:0 40px;
@@ -224,9 +224,9 @@ export const TextFlex = styled.div`
     font-size:2.0rem;
     height:80%;
     padding:10px;
-    flex-basis: 10%;
+    flex-basis: 15%;
     @media(max-width:768px){
-
+     width:100%;
     }
   }
 `

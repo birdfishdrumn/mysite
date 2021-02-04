@@ -207,31 +207,34 @@ export const MinTitle = styled.div `
 
 // ------------- レイアウト--------------------
 
-export const TextFlex = styled.div`
-  display:flex;
-  width:80%;
-     height:300px;
-  >div:first-child{
-    /* flex-basis: 75%; */
-    line-height:2.2rem;
-    /* height:300px; */
-    margin:0 40px;
-     -ms-writing-mode: tb-rl;
-  writing-mode: vertical-rl;
-  text-align:left;
-  }
-  >div:last-child{
-    font-size:2.0rem;
-    height:80%;
-    padding:10px;
-    flex-basis: 15%;
-    @media(max-width:768px){
-     width:100%;
-          height:250px;
-    }
-  }
-`
+// export const TextFlex = styled.div`
+//   display:flex;
+//   width:80%;
+//      height:300px;
+//   >div:first-child{
+//     /* flex-basis: 75%; */
+//     line-height:2.2rem;
+//     /* height:300px; */
+//     margin:0 40px;
+//      -ms-writing-mode: tb-rl;
+//   writing-mode: vertical-rl;
+//   text-align:left;
+//   }
+//   >div:last-child{
+//     font-size:2.0rem;
+//     height:80%;
+//     padding:10px;
+//     flex-basis: 15%;
+//     @media(max-width:768px){
+//      width:100%;
+//           height:250px;
+//     }
+//   }
+// `
 
+export const TextFlex = styled.div`
+ display:flex;
+`
 export const TwoColumn = styled.div `
    display: grid;
    grid-gap:50px;

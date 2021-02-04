@@ -279,10 +279,10 @@ export const ProductColumn = styled.div `
    }
 
    @media(max-width:768px){
-     margin:10px;
+     /* margin:10px; */
      grid-gap:0px;
      grid-template-columns:1fr;
-
+    width:100%;
    }
 `
 

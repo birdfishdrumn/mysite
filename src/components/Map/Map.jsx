@@ -6,9 +6,10 @@ import { Description, MinTitle } from "../../style/GlobalStyle";
 import PlaceInfo from "./PlaceInfo";
 import styled from "styled-components";
 import { Button } from "../Button";
-// import mapStyles from "./mapUtils/mapStyles";
-// 地図のデザインを指定することができます。
-// デザインは https://snazzymaps.com からインポートすることができます。
+
+// const config = require('gatsby-plugin-config');
+
+
 
 const Container = styled.div`
 

@@ -1,5 +1,5 @@
 import React,{useEffect} from "react";
-import { ProductTitle, Description, ProductColumn, Figure, TextFlex } from "../../style/GlobalStyle";
+import { SubTitle, Description, ProductColumn, Figure, TextFlex } from "../../style/GlobalStyle";
 import Aos from "aos"
 import styled from "styled-components";
 import Img from "gatsby-image"
@@ -12,6 +12,13 @@ const ProductImg = styled(Img)`
     }
 `
 const TextButton = styled.div`
+ margin-top:10px;
+ padding:5px;
+ width:100px;
+ margin:20px auto;
+  border:1px solid #ccc;
+  @media(min-width:768px){
+    width:35px;
  text-align:right;
  border:1px solid #ccc;
  padding:10px 0;
@@ -22,7 +29,8 @@ height:90px;
  &:hover:not(:disabled){
   color:white;
   background:black;
-  border:1px solid rgba(0,0,0,0)
+  border:1px solid rgba(0,0,0,0);
+  }
 }
 `
 
@@ -41,14 +49,14 @@ const Product = ({data,description,title,destination,num,reverse}) => {
             </Figure>
             </div>
           <TextFlex>
-        <Description change>
-           <ProductTitle border>{title}</ProductTitle>
+        <Description>
           {description}
+
                 <Link to={destination} state={{ number: num}}><TextButton>詳しく見る</TextButton></Link>
             </Description>
-                {/* <SubTitle hannari noSpace border>
-
-            </SubTitle> */}
+                <SubTitle hannari noSpace border>
+                {title}
+            </SubTitle>
           </TextFlex>
         </ProductColumn>
   )

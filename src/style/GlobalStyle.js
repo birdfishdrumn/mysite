@@ -229,61 +229,74 @@ export const ProductTitle = styled.div `
  }
 `
 
-export const TextFlex = styled.div`
-  /* display:flex; */
+// export const TextFlex = styled.div`
+//   display:flex;
 
+//   width:70%;
+//      height:270px;
+//   >div{
+//      /* display: inline-block; */
+//     flex-basis: 75%;
+//     line-height:2.2rem;
+//     /* height:300px; */
+//     margin:0 40px;
+//      -ms-writing-mode: tb-rl;
+//   writing-mode: vertical-rl;
+//     -webkit-writing-mode: vertical-rl;
+
+//   text-align:left;
+//   }
+//    >div:last-child{
+//     font-size:2.0rem;
+//     height:80%;
+//     padding:10px;
+//     flex-basis: 15%;
+//     @media(max-width:768px){
+//      width:100%;
+//           height:250px;
+//     }
+//   }
+// `
+
+export const TextFlex = styled.div`
+ display:flex;
   width:80%;
-     height:270px;
-  >div{
-     display: inline-block;
-    /* flex-basis: 75%; */
+   height:270px;
+    /* -ms-writing-mode: tb-rl;
+   writing-mode: vertical-rl; */
+
+  >div:first-child{
+     @media(min-width:768px){
+      flex-basis: 75%;
     line-height:2.2rem;
-    /* height:300px; */
+    height:300px;
     margin:0 40px;
      -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-    -webkit-writing-mode: vertical-rl;
-
   text-align:left;
-  }
+  width:100%;
+    }
 
-  /* >div:last-child{
+     width:70%;
+          height:250px;
+  }
+  >div:last-child{
+     -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+flex-basis: 15%;
+ width:100%;
+          height:250px;
+    @media(max-width:768px){
+    text-align:left;
     font-size:2.0rem;
     height:80%;
-    padding:10px;
-    flex-basis: 15%;
-    @media(max-width:768px){
-     width:100%;
-          height:250px;
+    padding:5px;
+    margin-left:20px;
+    width:50px;
     }
-  } */
-`
 
-// export const TextFlex = styled.div`
-//  display:flex;
-//     -ms-writing-mode: tb-rl;
-//    writing-mode: vertical-rl;
-//    display: inline-block;
-  // >div:first-child{
-  //   /* flex-basis: 75%; */
-  //   line-height:2.2rem;
-  //   /* height:300px; */
-  //   margin:0 40px;
-  //    -ms-writing-mode: tb-rl;
-  // writing-mode: vertical-rl;
-  // text-align:left;
-  // }
-  // >div:last-child{
-  //   font-size:2.0rem;
-  //   height:80%;
-  //   padding:10px;
-  //   flex-basis: 15%;
-  //   @media(max-width:768px){
-  //    width:100%;
-  //         height:250px;
-  //   }
-  // }
-// `
+  }
+`
 export const TwoColumn = styled.div `
    display: grid;
    grid-gap:50px;

@@ -255,10 +255,10 @@ export const TwoColumn = styled.div `
 `
 export const ProductColumn = styled.div `
    display: grid;
-   grid-gap:0px;
+   /* grid-gap:0px; */
    margin:0 auto;
    grid-template-columns:1fr 1fr;
-   max-width:808px;
+   max-width:768px;
    >div{
     margin:20px;
 
@@ -283,9 +283,6 @@ export const ProductColumn = styled.div `
      grid-gap:0px;
      grid-template-columns:1fr;
 
-      >div{
-    margin:5x;
-   }
    }
 `
 

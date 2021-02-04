@@ -90,13 +90,13 @@ export const ProductButton = styled(Button)
     font-size:1rem;
     }
 `
-export const ProductDescription = styled(Description)
-`
-font-size:1.1rem;
-margin:0;
-color:black;
-  width:40%;
- @media(max-width:767px){
-   display:none;
-    }
-`
+// export const ProductDescription = styled(Description)
+// `
+// font-size:1.1rem;
+// margin:0;
+// color:black;
+//   width:40%;
+//  @media(max-width:767px){
+//    display:none;
+//     }
+// `

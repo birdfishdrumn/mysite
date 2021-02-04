@@ -112,7 +112,7 @@ const number=Number(num)
         <Tab label="イヤリング" {...a11yProps(1)}/>
           <Tab label="ポッペン"  {...a11yProps(2)} />
         <Tab label="体験キット" {...a11yProps(3)} />
-         <Tab label="吊り台" {...a11yProps(3)} />
+         <Tab label="吊り台" {...a11yProps(4)} />
         </Tabs>
 
       <TabPanel value={value} index={0}>
@@ -125,6 +125,9 @@ const number=Number(num)
         <Poppen/>
       </TabPanel>
       <TabPanel value={value} index={3}>
+         体験キット
+      </TabPanel>
+          <TabPanel value={value} index={4}>
         <Tsuridai/>
       </TabPanel>
     </div>

@@ -150,31 +150,35 @@ text-align:${props => (props.left ? "left" : "center")};
  line-height: 1.8em;
  padding:${props => (props.padding ? "30px 0 30px" : "10px 0 10px")};
 
+
   ${props => {
-  switch (props.width) {
-    case "half":
-      return `width:50%;`
-    case "more":
-      return  `width:70%;`
-  }
-  return "width:100%;"
- }};
+    switch (props.width) {
+      case "half":
+        return `width:50%;`
+      case "more":
+        return `width:70%;`
+    }
+    return "width:100%;"
+  }};
   font-size:${props => (props.large ? "1.4rem" : "1rem")};
  margin:${props => (props.noneMargin ? "0" : "0 auto")};
  ${props => {
-  switch (props.color) {
-    case "white":
-      return `color: white;`
-    case "black":
-      return  `color:black;`
-  }
-  return "color:gray;"
- }};
+    switch (props.color) {
+      case "white":
+        return `color: white;`
+      case "black":
+        return `color:black;`
+    }
+    return "color:gray;"
+  }};
  /* margin:${props => (props.both && "0 10px 0 10px")}; */
  @media(max-width:767px){
   width:90%;
   font-size:${props => (props.small &&  "0.8rem")};
  }
+
+
+
 `
 
 
@@ -216,6 +220,9 @@ export const ProductTitle = styled.div `
  font-size:${props=>(props.small ? "1.8rem" : "2.2rem")};
  border:${props=>(props.border && "1px solid black")};
  padding:10px;
+   -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
  margin-left:10px;
  @media(max-width:768px){
    font-size:1.7rem;
@@ -224,16 +231,19 @@ export const ProductTitle = styled.div `
 
 export const TextFlex = styled.div`
   /* display:flex; */
-   display: inline-block;
+
   width:80%;
      height:270px;
   >div{
+     display: inline-block;
     /* flex-basis: 75%; */
     line-height:2.2rem;
     /* height:300px; */
     margin:0 40px;
      -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+
   text-align:left;
   }
 

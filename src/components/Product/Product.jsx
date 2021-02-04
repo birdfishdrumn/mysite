@@ -41,7 +41,7 @@ const Product = ({data,description,title,destination,num,reverse}) => {
             </Figure>
             </div>
           <TextFlex>
-        <Description>
+        <Description change>
            <ProductTitle border>{title}</ProductTitle>
           {description}
                 <Link to={destination} state={{ number: num}}><TextButton>詳しく見る</TextButton></Link>

@@ -227,6 +227,7 @@ export const TextFlex = styled.div`
     flex-basis: 15%;
     @media(max-width:768px){
      width:100%;
+          height:250px;
     }
   }
 `
@@ -253,6 +254,7 @@ export const TwoColumn = styled.div `
    }
    }
 `
+
 export const ProductColumn = styled.div `
    display: grid;
    /* grid-gap:0px; */
@@ -261,15 +263,14 @@ export const ProductColumn = styled.div `
    max-width:767px;
    >div{
     margin:20px;
-
    }
-   >div:first-child{
+      >div:first-child{
       @media(min-width:768px){
          order:${props=>props.reverse ? 2 : 1};
     }
 
    }
-   >div:last-child{
+      >div:last-child{
     text-align:center;
     @media(min-width:768px){
   order:${props => props.reverse ? 1 : 2};
@@ -277,13 +278,16 @@ export const ProductColumn = styled.div `
     }
 
    }
-    @media(min-width:380px){
-      width:100%;
-    }
-   @media(max-width:767px){
-     grid-gap:0px;
+    @media(max-width:767px){
+     /* grid-gap:0px; */
      grid-template-columns:1fr;
     width:100%;
+
+   }
+       @media(max-width:380px){
+     /* grid-gap:0px; */
+     grid-template-columns:1fr;
+    width:95%;
 
    }
 `

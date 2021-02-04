@@ -59,13 +59,13 @@ export default ({ data, location }) => {
             <Button>オンラインショップ</Button>
                   <div className="space-l" />
     </div>
-          <Product data={data.fuurin} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="江戸風鈴" destination="/fuurin" num="0" />
+          {/* <Product data={data.fuurin} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="江戸風鈴" destination="/fuurin" num="0" />
              <div className="space-l" />
           <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="イヤリング" destination="/fuurin" num="1" reverse="true" />
              <div className="space-l" />
           <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="ポッペン" destination="/fuurin" num="2" />
           <div className="space-l" />
-          <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="体験キット" destination="/fuurin" num="3" reverse="true" />
+          <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="体験キット" destination="/fuurin" num="3" reverse="true" /> */}
            <div className="space-l" />
            <Product data={data.earring} description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" title="吊り台" destination="/fuurin" num="4" />
 
@@ -91,19 +91,7 @@ query {
       }
     }
   }
-   onrain: file(relativePath: {eq: "kiriko_narabi_kumori.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
     fuurin: file(relativePath: {eq: "kingyo4.jpg"}){
     childImageSharp {
       fluid(maxWidth: 800) {

@@ -206,35 +206,74 @@ export const MinTitle = styled.div `
 
 
 // ------------- レイアウト--------------------
-
-// export const TextFlex = styled.div`
-//   display:flex;
-//   width:80%;
-//      height:300px;
-//   >div:first-child{
-//     /* flex-basis: 75%; */
-//     line-height:2.2rem;
-//     /* height:300px; */
-//     margin:0 40px;
-//      -ms-writing-mode: tb-rl;
-//   writing-mode: vertical-rl;
-//   text-align:left;
-//   }
-//   >div:last-child{
-//     font-size:2.0rem;
-//     height:80%;
-//     padding:10px;
-//     flex-basis: 15%;
-//     @media(max-width:768px){
-//      width:100%;
-//           height:250px;
-//     }
-//   }
-// `
+export const ProductTitle = styled.div `
+ font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
+ font-weight: bold;
+ margin-bottom:0px;
+ text-align:left;
+ height:75%;
+ line-height:2rem;
+ font-size:${props=>(props.small ? "1.8rem" : "2.2rem")};
+ border:${props=>(props.border && "1px solid black")};
+ padding:10px;
+ margin-left:10px;
+ @media(max-width:768px){
+   font-size:1.7rem;
+ }
+`
 
 export const TextFlex = styled.div`
- display:flex;
+  /* display:flex; */
+   display: inline-block;
+  width:80%;
+     height:270px;
+  >div{
+    /* flex-basis: 75%; */
+    line-height:2.2rem;
+    /* height:300px; */
+    margin:0 40px;
+     -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  text-align:left;
+  }
+
+  /* >div:last-child{
+    font-size:2.0rem;
+    height:80%;
+    padding:10px;
+    flex-basis: 15%;
+    @media(max-width:768px){
+     width:100%;
+          height:250px;
+    }
+  } */
 `
+
+// export const TextFlex = styled.div`
+//  display:flex;
+//     -ms-writing-mode: tb-rl;
+//    writing-mode: vertical-rl;
+//    display: inline-block;
+  // >div:first-child{
+  //   /* flex-basis: 75%; */
+  //   line-height:2.2rem;
+  //   /* height:300px; */
+  //   margin:0 40px;
+  //    -ms-writing-mode: tb-rl;
+  // writing-mode: vertical-rl;
+  // text-align:left;
+  // }
+  // >div:last-child{
+  //   font-size:2.0rem;
+  //   height:80%;
+  //   padding:10px;
+  //   flex-basis: 15%;
+  //   @media(max-width:768px){
+  //    width:100%;
+  //         height:250px;
+  //   }
+  // }
+// `
 export const TwoColumn = styled.div `
    display: grid;
    grid-gap:50px;

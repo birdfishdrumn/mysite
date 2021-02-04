@@ -1,5 +1,5 @@
 import React,{useEffect} from "react";
-import { SubTitle, Description, ProductColumn, Figure, TextFlex } from "../../style/GlobalStyle";
+import { ProductTitle, Description, ProductColumn, Figure, TextFlex } from "../../style/GlobalStyle";
 import Aos from "aos"
 import styled from "styled-components";
 import Img from "gatsby-image"
@@ -42,14 +42,13 @@ const Product = ({data,description,title,destination,num,reverse}) => {
             </div>
           <TextFlex>
         <Description>
+           <ProductTitle border>{title}</ProductTitle>
           {description}
-                {/* 風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。
-              */}
                 <Link to={destination} state={{ number: num}}><TextButton>詳しく見る</TextButton></Link>
             </Description>
-                <SubTitle hannari noSpace border>
-                {title}
-            </SubTitle>
+                {/* <SubTitle hannari noSpace border>
+
+            </SubTitle> */}
           </TextFlex>
         </ProductColumn>
   )

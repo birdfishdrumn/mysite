@@ -4,7 +4,7 @@ import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import {ProductGrid} from "../components/index"
 import styled from "styled-components";
-import { Product,WindBellCard,WorkshopTab ,FloatingAction} from "../components/index";
+import { Product,WindBellCard,WorkshopTab ,FloatingAction,Reserve} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem} from "../style/GlobalStyle";
@@ -29,9 +29,10 @@ export default ({ data, location }) => {
       </figure>
         </div>
         <WorkshopTab num={location.state && location.state.number}/>
-    <div className="space-l" />
+        <div className="space-l" />
 
-    <FloatingAction online title="オンラインショップ"/>
+<Reserve/>
+    <FloatingAction reserve title="ご予約はこちら"/>
   </Layout>
     )
 }

@@ -88,7 +88,7 @@ query {
   }
     map: file(relativePath: {eq: "map.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 800) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

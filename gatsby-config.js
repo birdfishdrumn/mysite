@@ -4,7 +4,6 @@ require('dotenv').config({
     path: ".env"
 });
 
-console.log(process.env)
 
 
 module.exports = {
@@ -85,23 +84,36 @@ module.exports = {
             options: {
                 nodeType: 'Products',
                 imagePath: 'imageUrl',
-                type: 'array'
+                name: 'localImages',
+                type: 'array',
             },
         },
         {
             resolve: `gatsby-plugin-styled-components`,
             options: {
-                // Add any options here
+
             },
         },
         {
-            resolve: `gatsby-plugin-material-ui`,
+            resolve: `gatsby-plugin-react-i18next`,
             options: {
-                stylesProvider: {
-                    injectFirst: true,
+                path: `${__dirname}/locales`,
+                languages: [`ja`, `en`],
+                defaultLanguage: `ja`,
+                i18nextOptions: {
+                    debug: true,
+                    lowerCaseLng: true,
+                    saveMissing: false,
+                    interpolation: {
+                        escapeValue: false // not needed for react as it escapes by default
+                    },
+                    keySeparator: false,
+                    nsSeparator: false
                 },
+
             },
-        },
+
+        }
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,

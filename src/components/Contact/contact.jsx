@@ -165,7 +165,7 @@ console.log(number)
           type={"text"}
           name="subject"
         />
-             <span style={{color:"red"}}>※ガラス吹き,絵付けどちらか、体験人数を入力ください。また何か備考があれば続けて追記お願い致します。 </span></>
+             <span style={{color:"red"}}>※ガラス吹き,絵付けどちらか、体験人数を入力ください。また何か備考があれば続けて追記お願い致します。<br/></span></>
           :
            <TextInput
           id={subject}

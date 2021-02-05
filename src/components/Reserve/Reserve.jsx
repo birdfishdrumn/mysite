@@ -10,6 +10,8 @@ const Reserve = () => {
 
       <Description large color="black"><PhoneIcon style={{ fontSize: 50 }} />03-3832-0227</Description>
       <Description>※10:30〜18:00の受付になります。また月曜は定休日のため、月曜日以外にご連絡ください。</Description>
+      <SubTitle>ご予約フォーム</SubTitle>
+      
       <Contact workshop/>
     </div>
   )

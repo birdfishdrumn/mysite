@@ -99,30 +99,42 @@ export const Title = styled.h1 `
 
 
 export const Nav = styled.ul `
-   font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
+  font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: normal;
  margin:0 auto;
  text-align:center;
- font-size:1.8rem;
+ font-size:2.2rem;
  padding:30px;
- list-style:none;
-  @media(max-width:767px){
-　　font-size:1.4rem;
-   }
+max-width:824px;
+ @media(max-width:767px){
+  w
+ }
  >li{
   margin:10px;
-    text-align:center;
+   font-weight: bold;
+   text-align:${props=>(props.left ? "left" : "center")};
+       list-style:${props=>(props.square && "square")};
+
+        font-size:${props =>(props.small ? "1.2rem" : "1.7rem")};
+ @media(max-width:767px){
+/* font-size:1.7rem; */
+  width:100%;
+   }
  }
  >p{
+
+
+   font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
    display:inline-block;
-   font-size:1.2rem;
-    text-align:center;
+   font-size:1.1rem;
+    text-align:${props=>(props.left ? "left" : "center")};
    color:grey;
-  width:60%;
-   margin:10px;
+  width:80%;
+   line-height: 1.8em;
+   /* margin:10px; */
    @media(max-width:767px){
-width:90%;
- font-size:1.1rem;
+  width:100%;
+ font-size:1rem;
    }
  }
 `
@@ -144,7 +156,7 @@ export const SubTitle = styled.div `
 
 
 export const Description = styled.div `
- font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;;
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
 text-align:${props => (props.left ? "left" : "center")};
  font-weight:normal;
  line-height: 1.8em;
@@ -449,6 +461,24 @@ list-style:none;
 
 
 // ------------- レイアウト--------------------
+
+export const Allow = styled.div`
+margin:0 auto;
+    position:relative;
+    height:16px;
+    width:16px;
+    background-color:#697b91;
+   :before {
+    position:absolute;
+    content:"";
+    border:solid 16px transparent;
+    border-left:solid 16px #697b91;
+    top:16px;
+    left:-8px;
+      -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+   }
+`
 
 export const Featured = styled.section `
   margin:0;

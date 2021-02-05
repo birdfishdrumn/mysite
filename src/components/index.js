@@ -33,3 +33,5 @@ export { default as TopPageContent }
 from "./TopPageContent/TopPageContent"
 export { default as WorkshopList }
 from "./WorkshopList/WorkshopList"
+export { default as Reserve }
+from "./Reserve/Reserve"

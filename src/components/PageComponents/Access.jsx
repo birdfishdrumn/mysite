@@ -5,7 +5,10 @@ import styled from "styled-components"
 import {accessData} from "./accessData"
 const AccessMap = styled.div`
  margin:0 auto;
- width:60%;
+ max-width:924px;
+ @media(max-width:767px){
+   width:85%;
+ }
 `
 
 const Access = ({data}) => {

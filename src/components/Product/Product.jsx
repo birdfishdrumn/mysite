@@ -8,13 +8,14 @@ const ProductImg = styled(Img)`
     /* width:90%; */
     margin:0 auto;
     @media(max-width:768px){
-      width:80%;
+      width:85%;
     }
 `
 const TextButton = styled.div`
  margin-top:10px;
  padding:5px;
  width:100px;
+ text-align:center;
  margin:20px auto;
   border:1px solid #ccc;
   @media(min-width:768px){
@@ -49,11 +50,11 @@ const Product = ({data,description,title,destination,num,reverse}) => {
             </Figure>
             </div>
           <TextFlex>
-        <Description>
+        <Description left >
           {description}
 
                 <Link to={destination} state={{ number: num}}><TextButton>詳しく見る</TextButton></Link>
-            </Description>
+            </Description >
                 <SubTitle hannari noSpace border>
                 {title}
             </SubTitle>

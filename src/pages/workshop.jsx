@@ -1,13 +1,14 @@
 import React from "react"
 // import {Header} from "../components/Header/Header"
-import {graphql} from "gatsby"
+import {graphql,Link} from "gatsby"
 import Img from "gatsby-image"
-import { SubTitle,Nav } from "../style/GlobalStyle";
+import { SubTitle,Nav,ListColumn,Description,MinTitle} from "../style/GlobalStyle";
 import styled from "styled-components";
 import { Product } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { CarouselSlider,FloatingAction}  from "../components/index";
+import { CarouselSlider,FloatingAction,WorkshopList}  from "../components/index";
+
 
 
 const ProductList = styled.div`
@@ -33,45 +34,7 @@ export default ({data,location}) => (
 </div>
 
     <article className="content center">
-      <CarouselSlider img={data.komaru}/>
-      <ProductList>
-        {/* <Product img={data.komaru.childImageSharp.fluid} noBtn title="絵付け体験" description="風鈴の内側から絵を描いていただきます。初めてやる方は難しいですが、上手くかけてくると楽しいですよ！" /> */}
-        <SubTitle noSpace>絵付け体験</SubTitle>
-        <Nav>
-
-          <li>料金</li>
-          <p>1,650円</p>
-          <li>体験内容</li>
-           <p>篠原まるよし風鈴で用意した風鈴の中から絵を描いてただく体験です。デザインに関しては見本などもあるので、描きたい柄がない場合でもご安心ください。</p>
-          <li>所要時間</li>
-           <p>約30分〜90分</p>
-          <li>持ち物</li>
-            <p>特にありませんが、デザインなどを考えていただきますとスムーズに描けると思います。</p>
-          </Nav>
-        <Product data={data.earring} title="ガラス拭き体験" noBtn description="" />
-              <Nav>
-          <li>料金</li>
-          <p>2,200円</p>
-          <li>体験内容</li>
-           <p>篠原まるよし風鈴で用意した風鈴の中から絵を描いてただく体験です。デザインに関しては見本などもあるので、描きたい柄がない場合でもご安心ください。</p>
-          <li>所要時間</li>
-           <p>約45分〜120分</p>
-          <li>持ち物</li>
-            <p>特にありませんが、デザインなどを考えていただきますとスムーズに描けると思います。</p>
-          </Nav>
-        <Product data={data.poppen} noBtn title="オンライン体験" description="" />
-              <Nav>
-          <li>料金</li>
-          <p>1,650円</p>
-          <li>体験内容</li>
-           <p>篠原まるよし風鈴で用意した風鈴の中から絵を描いてただく体験です。デザインに関しては見本などもあるので、描きたい柄がない場合でもご安心ください。</p>
-          <li>所要時間</li>
-           <p>約30分〜90分</p>
-          <li>持ち物</li>
-            <p>特にありませんが、デザインなどを考えていただきますとスムーズに描けると思います。</p>
-          </Nav>
-
-        </ProductList>
+      <WorkshopList data={data}/>
     </article>
       <FloatingAction title="予約する" reserve/>
 
@@ -94,7 +57,7 @@ query {
       }
     }
   }
-    komaru: file(relativePath: {eq: "jinbee3.jpg"}){
+    komaru: file(relativePath: {eq: "kingyo4.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 

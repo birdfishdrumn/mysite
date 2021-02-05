@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Img from "gatsby-image"
 
-export const Image = styled(Img)
+export const CarouselImage = styled(Img)
 `
 height:460px;
-  margin:0 5% 0;
+  margin:0 auto;
+  max-width:1000px;
   object-fit:cover;
   @media(max-width:767px){
     width:100%;

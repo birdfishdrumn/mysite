@@ -1,8 +1,8 @@
 export { default as Product }
 from "./Product/Product"
 export * from "./Logo"
-export { default as TabMenu }
-from "./TabMenu/TabMenu"
+export { default as WorkshopTab }
+from "./TabMenu/WorkshopTab"
 export { default as CarouselSlider }
 from "./CarouselSlider/CarouselSlider"
 export { default as ProductGrid }
@@ -27,3 +27,9 @@ export { default as ProductTab }
 from "./TabMenu/ProductTab"
 export { default as Map }
 from "./Map/Map"
+export { default as Pickup }
+from "./Pickup/Pickup"
+export { default as TopPageContent }
+from "./TopPageContent/TopPageContent"
+export { default as WorkshopList }
+from "./WorkshopList/WorkshopList"

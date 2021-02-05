@@ -10,6 +10,7 @@ import { faChevronLeft, faChevronRight, faTags } from "@fortawesome/free-solid-s
 import RandomPosts from "../components/Blog/randomPosts"
 import SharingButtons from "../components/UI/shareButton"
 import marked from "marked";
+import { SubTitle } from "../style/GlobalStyle";
 
 // import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 
@@ -47,7 +48,7 @@ marked.setOptions({
 
       <article className="content">
         <div className="container">
-          <h1 className="bar">{data.contentfulWork.title}</h1>
+          <SubTitle noSpace left>{data.contentfulWork.title}</SubTitle>
 
           <aside className="info">
             <time dataTime={data.contentfulWork.date}><FontAwesomeIcon icon={faClock} />

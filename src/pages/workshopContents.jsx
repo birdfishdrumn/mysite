@@ -4,26 +4,14 @@ import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import {ProductGrid} from "../components/index"
 import styled from "styled-components";
-import { Product,WindBellCard,ProductTab ,FloatingAction} from "../components/index";
+import { Product,WindBellCard,WorkshopTab ,FloatingAction} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem} from "../style/GlobalStyle";
-import { Button } from "../components/Button";
-import ViewColumnIcon from '@material-ui/icons/ViewColumn';
-import GridOnIcon from '@material-ui/icons/GridOn';
-import Tooltip from '@material-ui/core/Tooltip';
-import { IconButton } from "@material-ui/core";
+
 import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower } from "../components/WindBellList/index";
 
 export default ({ data, location }) => {
-  //   const [change,setChange] = useState(false)
-  // const handleOn = useCallback(()=>{
-  //     setChange(true)
-  // })
-  //   const handleOff = useCallback(()=>{
-  //     setChange(false)
-  //   })
-
 
     return (
   <Layout>
@@ -40,7 +28,7 @@ export default ({ data, location }) => {
         <Img fluid={data.product.childImageSharp.fluid} alt="製品情報" />
       </figure>
         </div>
-        <ProductTab num={location.state && location.state.number}/>
+        <WorkshopTab num={location.state && location.state.number}/>
     <div className="space-l" />
 
     <FloatingAction online title="オンラインショップ"/>

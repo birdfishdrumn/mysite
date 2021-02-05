@@ -132,10 +132,10 @@ export const SubTitle = styled.div `
  font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: bold;
  margin-bottom:0px;
- text-align:center;
+ text-align:${props =>(props.left ? "left" : "center")};
  font-size:${props=>(props.small ? "1.8rem" : "2.2rem")};
  border:${props=>(props.border && "1px solid black")};
- padding:${props => (props.noSpace ? "10px" : "30px")};
+ padding:${props => (props.noSpace ? "10px 0 10px" : "30px")};
  @media(max-width:768px){
    font-size:1.7rem;
  }
@@ -149,7 +149,6 @@ text-align:${props => (props.left ? "left" : "center")};
  font-weight:normal;
  line-height: 1.8em;
  padding:${props => (props.padding ? "30px 0 30px" : "10px 0 10px")};
-
 
   ${props => {
     switch (props.width) {
@@ -203,8 +202,15 @@ export const ImageText = styled.div `
 export const MinTitle = styled.div `
   font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: bold;
- font-size:1.5rem;
+ /* text-align:left; */
+ /* width:75%; */
+ /* font-size:1.5rem; */
+ font-size:${props=>(props.large ? "1.8rem" : "1.5rem")};
  margin:10px;
+ ${props=>(props.first && `::first-letter{
+   font-size:2.8rem;
+ }`)}
+
   `
     // ==========テキストデザイン===========
 
@@ -229,34 +235,6 @@ export const ProductTitle = styled.div `
  }
 `
 
-// export const TextFlex = styled.div`
-//   display:flex;
-
-//   width:70%;
-//      height:270px;
-//   >div{
-//      /* display: inline-block; */
-//     flex-basis: 75%;
-//     line-height:2.2rem;
-//     /* height:300px; */
-//     margin:0 40px;
-//      -ms-writing-mode: tb-rl;
-//   writing-mode: vertical-rl;
-//     -webkit-writing-mode: vertical-rl;
-
-//   text-align:left;
-//   }
-//    >div:last-child{
-//     font-size:2.0rem;
-//     height:80%;
-//     padding:10px;
-//     flex-basis: 15%;
-//     @media(max-width:768px){
-//      width:100%;
-//           height:250px;
-//     }
-//   }
-// `
 
 export const TextFlex = styled.div`
  display:flex;
@@ -264,7 +242,9 @@ export const TextFlex = styled.div`
    height:270px;
     /* -ms-writing-mode: tb-rl;
    writing-mode: vertical-rl; */
-
+@media(max-width:767px){
+  width:87%;
+}
   >div:first-child{
      @media(min-width:768px){
       flex-basis: 75%;
@@ -276,21 +256,22 @@ export const TextFlex = styled.div`
   text-align:left;
   width:100%;
     }
-
+   margin:0 auto;
      width:70%;
           height:250px;
   }
   >div:last-child{
      -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-flex-basis: 15%;
- width:100%;
+/* flex-basis: 10%; */
+ /* width:50px; */
+ /* margin:auto 0; */
           height:250px;
     @media(max-width:768px){
-    text-align:left;
+    /* text-align:left; */
     font-size:2.0rem;
-    height:80%;
-    padding:5px;
+    height:60%;
+    padding:13px 5px 13px;
     margin-left:20px;
     width:50px;
     }
@@ -325,7 +306,8 @@ export const ProductColumn = styled.div `
    /* grid-gap:0px; */
    margin:0 auto;
    grid-template-columns:1fr 1fr;
-   max-width:767px;
+   /* max-width:807px; */
+   max-width:${props => (props.more ? "1024px" : "807px")};
    >div{
     margin:20px;
    }
@@ -347,6 +329,13 @@ export const ProductColumn = styled.div `
      /* grid-gap:0px; */
      grid-template-columns:1fr;
     width:100%;
+    >div:first-child{
+       @media(max-width:767px){
+
+   /* justify-content:center; */
+
+ }
+    }
 
    }
        @media(max-width:380px){
@@ -380,6 +369,28 @@ export const MaxTwoColumn = styled.h1 `
     margin:5x;
    }
    }
+`
+
+export const ListColumn = styled.div`
+ display:flex;
+max-width:880px;
+
+margin:0 auto;
+>div:first-child{
+  flex-basis:25%;
+   margin:0 auto;
+}
+>div:last-child{
+  margin:0 auto;
+  flex-basis:60%;
+}
+@media(max-width:767px){
+  flex-direction:column-reverse;
+  >div:first-child{
+  width:80%;
+  margin:30px auto 30px;
+}
+}
 `
 
 export const Scroll = styled.figure `

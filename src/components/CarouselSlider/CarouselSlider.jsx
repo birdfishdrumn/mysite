@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import {Paper} from '@material-ui/core'
 
-import { Image } from "./style";
+import { CarouselImage } from "./style";
 
 function Item(props)
 {
@@ -13,7 +13,7 @@ function Item(props)
             {/* <h2>{props.item.name}</h2> */}
 
 
-            <Image fluid={props.item.img.childImageSharp.fluid} />
+            <CarouselImage  fluid={props.item.img.childImageSharp.fluid} />
             </>
     )
 }
@@ -39,6 +39,7 @@ const CarouselSlider = ({img}) =>
             navButtonsAlwaysVisible="true"
             interval="8000"
             animation="slide"
+
         >
 
             {items.map( (item, i) => <Item key={i} item={item}  /> )}

@@ -5,6 +5,7 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock } from "@fortawesome/free-solid-svg-icons"
 import { Description } from "../../../style/GlobalStyle";
+import { Link } from "gatsby";
 const  NewsCard = (props) =>{
 
   return (
@@ -30,9 +31,9 @@ const  NewsCard = (props) =>{
     // </Card>
 
     <Information>
-      <dl>
+     <dl>
 <dt> {props.dataTime && (<time dataTime={props.dataTime}> <FontAwesomeIcon icon={faClock} />    {props.dateJP}</time>)}</dt>
-<InfoTitle>{props.title}</InfoTitle>
+<InfoTitle><Link to={`/blog/post/${props.slug}`}>{props.title}</Link></InfoTitle>
 </dl>
       </Information>
 

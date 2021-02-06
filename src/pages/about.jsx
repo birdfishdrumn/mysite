@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { History } from "../components/PageComponents/index";
 import {TwoColumn,SubTitle,Figure,Description,MinTitle} from "../style/GlobalStyle"
-
+import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 
 
 
@@ -36,7 +36,7 @@ export default ({ data, location }) => {
       </div>
 
       <article className="content">
-        <SubTitle>江戸風鈴とは</SubTitle>
+        <SubTitle><Trans>江戸風鈴とは</Trans></SubTitle>
         <Description data-aos="fade-up"  width="half">篠原まるよし風鈴では江戸風鈴の制作を行っており年間で12,000個ほど作ります。そうしてできた風鈴に絵を描いて販売、また体験学習に用います。</Description>
         <div className="space-l"/>
         <TwoColumn>

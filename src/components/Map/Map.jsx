@@ -47,7 +47,7 @@ const options = {
   zoomControl: true,
 };
 
-const  Map = () =>{
+const  Map = ({noBtn}) =>{
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey:process.env.GATSBY_googleMapsApiKey,
     // ここにAPIキーを入力します。今回は.envに保存しています。
@@ -76,7 +76,7 @@ const  Map = () =>{
 
 
         </Description>
-        <Link to="/shop"><Button>詳しく見る</Button></Link>
+        {!noBtn && <Link to="/shop"><Button>詳しく見る</Button></Link>}
       </Container>
       <GoogleMap
         id="map"

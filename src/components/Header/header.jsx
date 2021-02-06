@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useCallback} from "react"
 import PropTypes from 'prop-types';
-import { Link } from "gatsby";
+
 import Search from "../Search/search"
 import { Logo } from "../Logo"
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Slide from '@material-ui/core/Slide';
-import {HeaderBar,Bar,Nav,HeaderMenu,MobileNav} from "./style"
+import {HeaderBar,Bar,Nav,HeaderMenu,MobileNav,LangNav} from "./style"
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import ClosableDrawer from "./ClosableDrawer";
 import Dialog from '@material-ui/core/Dialog';
@@ -21,11 +21,15 @@ import { withStyles } from '@material-ui/core/styles';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
+import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import ToggleMenu from "../UI/ToggleMenu/ToggleMenu";
 
 
 const Hamburger = styled(IconButton)`
   display:none;
-  @media(max-width:768px){
+  @media(max-width:767px){
     display:block
   }
 `
@@ -55,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
+
 function HideOnScroll(props) {
 
   const { children, window } = props;
@@ -80,26 +85,26 @@ const NavItem = () => {
   return (
         <ul>
           <li>
-            <Link to="/about/">江戸風鈴とは</Link>
+            <Link to="/about/"><Trans>江戸風鈴とは</Trans></Link>
           </li>
 
           <li>
-            <Link to="/product/">商品の紹介</Link>
+            <Link to="/product/"><Trans>まるよしの風鈴</Trans></Link>
           </li>
           <li>
-            <Link to="/workshop/">体験</Link>
+            <Link to="/workshop/"><Trans>体験する</Trans></Link>
           </li>
           <li>
-            <Link to="/works/">私たちの仕事</Link>
+            <Link to="/works/"><Trans>私たちの仕事</Trans></Link>
           </li>
           <li>
-            <Link to="/shop/">お店、家族の紹介</Link>
+            <Link to="/shop/"><Trans>お店、家族の紹介</Trans></Link>
         </li>
             <li>
-            <Link to="/question/">よくある質問</Link>
+            <Link to="/question/"><Trans>よくある質問</Trans></Link>
           </li>
           <li>
-            <Link to="/contact/">お問い合わせ</Link>
+            <Link to="/contact/"><Trans>お問い合わせ</Trans></Link>
           </li>
 
         </ul>
@@ -125,6 +130,16 @@ const Header = (props) => {
   const classes = useStyles()
   const [sm, setSm] = useState(false)
   const [open, setOpen] = useState(false);
+  const { languages, changeLanguage } = useI18next();
+    const [anchorEl, setAnchorEl] = useState(null);
+
+  const OpenMenu= (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const CloseMenu = () => {
+    setAnchorEl(null);
+  };
     const handleClickOpen = () => {
     setOpen(true);
     };
@@ -142,8 +157,12 @@ const Header = (props) => {
               <div>
             <Link to="/">
         <Logo/>
-                </Link>
+                  </Link>
+
                 </div>
+
+                <ToggleMenu languages={languages} changeLanguage={changeLanguage}/>
+
              <div>
                    <Hamburger className={classes.menuButton} color="inherit" onClick={handleClickOpen}>
 

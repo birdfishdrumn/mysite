@@ -64,3 +64,17 @@ export const MobileNav = styled.nav `
 
 }
 `
+export const LangNav = styled.nav `
+text-align:center;
+display:inline-block;
+font-weight:bold;
+margin:${props => (props.small ? "5px auto" : "30px auto")};
+list-style:none;
+ display:flex;
+ color:${props=>(props.white ? "white" : "grey")};
+  flex-wrap: wrap;
+  justify-content:center;
+  >li{
+    margin:20px;
+  }
+  `

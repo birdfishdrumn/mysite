@@ -7,7 +7,7 @@ margin:0 auto;
 text-align:center;
 max-width:1100px;
 
-@media(max-width:1024px){
+@media(max-width:767px){
   grid-template-columns:1fr;
   margin:0 auto;
   text-align:center;

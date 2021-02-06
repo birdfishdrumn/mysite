@@ -7,8 +7,7 @@ import Layout from "../components/layout"
 import BlogCard from "../components/Blog/blogCard"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText,ProductColumn,Figure,MinTitle } from "../style/GlobalStyle"
-import { Button } from "../components/Button"
-import CardList from "../components/CardList/CardList"
+
 import NewsCardList  from "../components/UI/NewsCard/NewsCardList";
 import FeatureList from "../components/FeatureList/FeatureList";
 import { TabMenu,ProductCard ,Map,Pickup,TopPageContent} from "../components/index";
@@ -28,7 +27,7 @@ const ProductList = styled.div`
 
 export default ({ data }) => {
   const { t } = useTranslation();
-  console.log(t)
+  // console.log(t)
   console.log(data)
   return (
   <Layout>
@@ -63,14 +62,14 @@ export default ({ data }) => {
         </Description>
             <div className="space-xl" />
 
-          <SubTitle hannari>良い音のひみつ</SubTitle>
+          <SubTitle hannari><Trans>良い音のひみつ</Trans></SubTitle>
           <div className="space-l" />
            <div className="space-l" />
           <div className="center">
                    <FeatureList data={data} />
           </div>
             <div className="space-l" />
-          <Link to="/about"><Button>詳しく見る</Button></Link>
+          {/* <Link to="/about"><Button>詳しく見る</Button></Link> */}
             <div className="space-l" />
       </div>
     </Featured>
@@ -85,16 +84,10 @@ export default ({ data }) => {
       </section>
         <div className="space-l" />
     <section className="center">
-      <SubTitle>篠原まるよし風鈴の仕事</SubTitle>
-        <Description width="half">篠原まるよし風鈴では、風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、また体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。</Description>
+      <SubTitle><Trans>私たちの仕事</Trans></SubTitle>
+        <Description width="half"><Trans>篠原まるよし風鈴では風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。</Trans></Description>
           <div className="space-xl" />
-       {/* <ProductList>
 
-      <ProductCard  img={data.sudare.childImageSharp.fluid} title="商品の紹介" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/fuurin"/>
-          <ProductCard img={data.kikyou.childImageSharp.fluid} title="風鈴制作体験" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/workshop" />
-             <ProductCard  img={data.online.childImageSharp.fluid} title="オンラインショップ" description="風鈴には様々な縁起の良い絵柄が描かれます。小丸型、新子丸、中丸、釣鐘型のように大きさが違う種類のものもあります。" link="/fuurin"/>
-
-        </ProductList> */}
 <TopPageContent data={data}/>
     </section>
     <div className="space-l" />

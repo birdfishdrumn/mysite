@@ -448,10 +448,11 @@ export const FlexNav = styled.nav`
 
 text-align:center;
 display:inline-block;
-margin:${props => (props.small ? "10px auto" : "30px auto")};
+font-weight:bold;
+margin:${props => (props.small ? "5px auto" : "30px auto")};
 list-style:none;
  display:flex;
- color:grey;
+ color:${props=>(props.white ? "white" : "grey")};
   flex-wrap: wrap;
   justify-content:center;
   >li{

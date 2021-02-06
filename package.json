@@ -30,9 +30,8 @@
         "gatsby-plugin-material-ui": "^2.1.10",
         "gatsby-plugin-offline": "^3.2.37",
         "gatsby-plugin-react-helmet": "^3.3.12",
-        "gatsby-plugin-remote-images": "^2.2.0",
         "gatsby-plugin-react-i18next": "^0.0.27",
-
+        "gatsby-plugin-remote-images": "^2.2.0",
         "gatsby-plugin-sharp": "^2.6.37",
         "gatsby-plugin-styled-components": "^3.9.0",
         "gatsby-source-contentful": "^3.0.4",

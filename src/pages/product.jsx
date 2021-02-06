@@ -105,7 +105,7 @@ query {
       }
     }
   }
-    earring: file(relativePath: {eq: "earring.jpg"}){
+    earring: file(relativePath: {eq: "productImg/earring_top.jpg"}){
     childImageSharp {
       fluid(maxWidth: 800) {
 

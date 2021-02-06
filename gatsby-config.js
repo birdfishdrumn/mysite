@@ -39,7 +39,13 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
-
+        // {
+        //     resolve: `gatsby-source-filesystem`,
+        //     options: {
+        //         name: `locale`,
+        //         path: `${ __dirname }/locales`,
+        //     }
+        // },
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-offline`,
         {
@@ -74,7 +80,6 @@ module.exports = {
                         imageUrl: doc.imageUrl, // ドキ
                         category: doc.category,
                         description: doc.description,
-                        allImage: doc.allImage
                     }),
                 }],
             }
@@ -84,14 +89,7 @@ module.exports = {
             options: {
                 nodeType: 'Products',
                 imagePath: 'imageUrl',
-                name: 'localImages',
-                type: 'array',
-            },
-        },
-        {
-            resolve: `gatsby-plugin-styled-components`,
-            options: {
-
+                type: "array",
             },
         },
         {
@@ -103,7 +101,7 @@ module.exports = {
                 i18nextOptions: {
                     debug: true,
                     lowerCaseLng: true,
-                    saveMissing: false,
+                    saveMissing: true,
                     interpolation: {
                         escapeValue: false // not needed for react as it escapes by default
                     },
@@ -114,9 +112,6 @@ module.exports = {
             },
 
         }
-        // this (optional) plugin enables Progressive Web App + Offline functionality
-        // To learn more, visit: https://gatsby.dev/offline
-        // `gatsby-plugin-offline`,
     ],
 
 }

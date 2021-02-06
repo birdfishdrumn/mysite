@@ -2,7 +2,8 @@ import React from 'react'
 import { TwoColumn, SubTitle, Description ,Figure,Nav} from "../../style/GlobalStyle";
 import Img from "gatsby-image"
 import styled from "styled-components"
-import {accessData} from "./accessData"
+import { accessData } from "./accessData"
+import {Map} from "../index"
 const AccessMap = styled.div`
  margin:0 auto;
  max-width:924px;
@@ -55,7 +56,9 @@ const Access = ({data}) => {
           <Nav>
           <p>お店には駐車場がないので、申し訳ありませんが、お近くの白線などに駐車お願い致します。</p>
         </Nav>
-          </section>
+      </section>
+      <div className="space-l"/>
+      <Map noBtn/>
     </div>
   )
 }

@@ -22,3 +22,5 @@ export { default as TsuriganeFilter }
 from "./TsuriganeFilter"
 export { default as FuukinFilter }
 from "./FuukinFilter"
+export { default as AnimalFilter }
+from "./AnimalFilter"

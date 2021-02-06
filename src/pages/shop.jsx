@@ -52,6 +52,7 @@ export default ({ data, location }) => {
          )
         }
 
+
       </article>
 
     </Layout>

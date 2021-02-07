@@ -96,12 +96,12 @@ module.exports = {
             resolve: `gatsby-plugin-react-i18next`,
             options: {
                 path: `${__dirname}/locales`,
-                languages: [`ja`, `en`],
-                defaultLanguage: `ja`,
+                languages: [`日本語`, `en`],
+                defaultLanguage: `日本語`,
                 i18nextOptions: {
                     debug: true,
                     lowerCaseLng: true,
-                    saveMissing: true,
+                    saveMissing: false,
                     interpolation: {
                         escapeValue: false // not needed for react as it escapes by default
                     },

@@ -84,7 +84,7 @@ export default ({ data }) => {
       </section>
         <div className="space-l" />
     <section className="center">
-      <SubTitle><Trans>私たちの仕事</Trans></SubTitle>
+      <SubTitle><Trans>気持ちを込めてものを作る</Trans></SubTitle>
         <Description width="half"><Trans>篠原まるよし風鈴では風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。</Trans></Description>
           <div className="space-xl" />
 
@@ -96,7 +96,7 @@ export default ({ data }) => {
    </section>
     <News >
    <div className="space-l" />
-        <SubTitle>お知らせ</SubTitle>
+        <SubTitle><Trans>お知らせ</Trans></SubTitle>
          <div className="space-l" />
         <NewsCardList  image={data}/>
       </News>
@@ -107,7 +107,7 @@ export default ({ data }) => {
       </Gallery> */}
        <div className="space-l" />
       <section >
-        <SubTitle>店舗情報</SubTitle>
+        <SubTitle><Trans>店舗情報</Trans></SubTitle>
           <div className="space-l" />
         <Map/>
       </section>

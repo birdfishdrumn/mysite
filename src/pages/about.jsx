@@ -50,8 +50,8 @@ export default ({ data, location }) => {
           </div>
         </TwoColumn>
         <section className="center">
-        <SubTitle>江戸風鈴ができるまで</SubTitle>
-       <MinTitle>ガラス吹き</MinTitle>
+        <SubTitle><Trans>江戸風鈴ができるまで</Trans></SubTitle>
+       <MinTitle><Trans>ガラス吹き</Trans></MinTitle>
         <div className="space-l"/>
         <Process data={data} />
 

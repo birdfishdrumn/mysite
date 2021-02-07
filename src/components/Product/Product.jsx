@@ -1,9 +1,10 @@
 import React,{useEffect} from "react";
 import { SubTitle, Description, ProductColumn, Figure, TextFlex } from "../../style/GlobalStyle";
 import Aos from "aos"
+import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import styled from "styled-components";
 import Img from "gatsby-image"
-import {graphql,Link} from "gatsby"
+import {graphql} from "gatsby"
 const ProductImg = styled(Img)`
     /* width:90%; */
     margin:0 auto;
@@ -51,12 +52,12 @@ const Product = ({data,description,title,destination,num,reverse}) => {
             </div>
           <TextFlex>
         <Description left >
-          {description}
+          <Trans>{description}</Trans>
 
                 <Link to={destination} state={{ number: num}}><TextButton>詳しく見る</TextButton></Link>
             </Description >
                 <SubTitle hannari noSpace border>
-                {title}
+                <Trans>{title}</Trans>
             </SubTitle>
           </TextFlex>
         </ProductColumn>

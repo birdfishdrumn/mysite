@@ -26,7 +26,7 @@ height:20px;
 margin-top:30px;
 font-size:1.5rem;
 @media(max-width:767px){
-  display:none;
+
 }
 `
 const TransIcon = styled.div`
@@ -83,7 +83,7 @@ export default function MenuListComposition({languages,changeLanguage}) {
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          Language
+          Lang
         </MenuButton>
         {/* <TransIcon    ref={anchorRef}
           aria-controls={open ? 'menu-list-grow' : undefined}

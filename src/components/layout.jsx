@@ -2,9 +2,7 @@ import React from "react"
 
 import Header from "./Header/header"
 import Footer from "./Footer/footer"
-import CategoryFooter from "./categoryFooter"
-import TagFooter from "./tagFooter"
-import {  TabMenu} from "./index";
+
 import "./layout.css"
 
 import "@fortawesome/fontawesome-svg-core/styles.css"//FontawsomeCssを先読みにする設定

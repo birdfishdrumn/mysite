@@ -25,9 +25,9 @@ export default ({data,location})=>{
         <SEO pagetitle="お問い合わせフォーム"
          pagedesc="こちらでは様々な商品を紹介します。"
       pagepath={location.pathname}
-      pageimg={data.product.childImageSharp.original.src}
-      pageimgw={data.product.childImageSharp.original.width}
-      pageimgh={data.product.childImageSharp.original.height}/>
+      pageimg={data.contact.childImageSharp.original.src}
+      pageimgw={data.contact.childImageSharp.original.width}
+      pageimgh={data.contact.childImageSharp.original.height}/>
  <article className="content">
         <SubTitle>よくある質問</SubTitle>
         <div className="space-m" />

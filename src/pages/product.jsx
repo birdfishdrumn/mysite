@@ -1,4 +1,4 @@
-import React,{useEffect} from "react"
+import React,{useEffect,useState} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql,Link} from "gatsby"
 import Img from "gatsby-image"
@@ -31,6 +31,14 @@ height:90px;
 `
 
 export default ({ data, location }) => {
+  const [isEn,setIsEn] = useState(false)
+  console.log(location.pathname.split("/")[1])
+  // もしurlにenが存在したら。
+  useEffect(() => {
+    if (location.pathname.split("/")[1]==="en") {
+   setIsEn(true)
+  }
+  }, [])
 
     return (
     < Layout >
@@ -59,7 +67,7 @@ export default ({ data, location }) => {
             <Button>オンラインショップ</Button>
                   <div className="space-l" />
     </div>
-          <Product data={data.fuurin} description="風鈴には小丸、新子丸、釣鐘型のように大きさが違う種類のものがあり、様々な縁起の良い絵柄が描かれます。あなたのお部屋にあったものを豊富な品揃えの中からお探しください。" title="江戸風鈴" destination="/fuurin" num="0" />
+          <Product isEn={isEn} data={data.fuurin} description="風鈴には小丸、新子丸、釣鐘型のように大きさが違う種類のものがあり、様々な縁起の良い絵柄が描かれます。あなたのお部屋にあったものを豊富な品揃えの中からお探しください。" title="江戸風鈴" destination="/fuurin" num="0" />
              <div className="space-l" />
           <Product data={data.earring} description="イヤリング・ピアスは風鈴と同じように内側から絵が描かれます。音も少し鳴るものもあり、浴衣やお着物などには特に相性が良くおすすめの一品です。" title="イヤリング" destination="/fuurin" num="1" reverse="true" />
              <div className="space-l" />

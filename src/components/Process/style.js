@@ -53,8 +53,6 @@ background: linear-gradient(to bottom,#F89174,#FFF 50%,#99CC33);
     align-items:center;
     padding:10px 0;
     position:absolute;
-
-    z-index:9999;
       @media(max-width:768px){
     font-size:1.3rem;
 
@@ -83,7 +81,7 @@ font-size:1.2rem;
  align-items:center;
  width:50%;
  @media(max-width:768px){
-   font-size:1rem;
+   font-size:0.9rem;
    width:45%;
    margin:auto 0px;
    padding:10px;

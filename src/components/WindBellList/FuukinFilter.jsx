@@ -3,7 +3,7 @@ import {graphql,useStaticQuery} from "gatsby"
 import { GridList, FlexNav, Scroll,SubTitle, ScrollItem } from "../../style/GlobalStyle";
 import WindBellCard from "./WindBellCard";
 
-const FuukinFilter = ({change}) => {
+const FuukinFilter = ({change,language}) => {
   const data = useStaticQuery(graphql`
 query FuukinFilterQuery{
     allProducts(
@@ -14,6 +14,18 @@ query FuukinFilterQuery{
         id
         category
         description
+           translatedName {
+          en
+          fr
+          ko
+          zh_TW
+        }
+        translatedDescription {
+          en
+          ko
+          fr
+          zh_TW
+        }
          localImage {
           childImageSharp{
             fluid(maxWidth:300){

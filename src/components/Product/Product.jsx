@@ -36,12 +36,12 @@ height:90px;
 }
 `
 
-const Product = ({data,description,title,destination,num,reverse}) => {
+const Product = ({data,description,title,destination,num,reverse,isEn}) => {
  useEffect(() => {
     Aos.init({ duration: 1000, startEvent: "DOMContentLoaded", once: true })
   }, [])
   return (
-       <ProductColumn reverse={reverse}>
+       <ProductColumn  reverse={reverse}>
           <div>
             <Figure  data-aos="fade-up">
               <ProductImg
@@ -50,7 +50,7 @@ const Product = ({data,description,title,destination,num,reverse}) => {
               />
             </Figure>
             </div>
-          <TextFlex>
+          <TextFlex isEn>
         <Description left >
           <Trans>{description}</Trans>
 

@@ -14,6 +14,18 @@ query TsuriganeFilterQuery{
         id
         category
         description
+           translatedName {
+          en
+          fr
+          ko
+          zh_TW
+        }
+        translatedDescription {
+          en
+          ko
+          fr
+          zh_TW
+        }
          localImage {
           childImageSharp{
             fluid(maxWidth:300){

@@ -24,7 +24,7 @@ export default ({ data, location }) => {
   //     setChange(false)
   //   })
 
-
+  console.log(location)
     return (
   <Layout>
     <SEO
@@ -40,7 +40,7 @@ export default ({ data, location }) => {
         <Img fluid={data.product.childImageSharp.fluid} alt="製品情報" />
       </figure>
         </div>
-        <ProductTab num={location.state && location.state.number}/>
+        <ProductTab num={location.state && location.state.number} location={location}/>
     <div className="space-l" />
 
     <FloatingAction online title="オンラインショップ"/>

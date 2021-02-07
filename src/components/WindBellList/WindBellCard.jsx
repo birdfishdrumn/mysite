@@ -6,10 +6,10 @@ import { Description,MinTitle} from "../../style/GlobalStyle";
 const WindBellWrapper = styled.div`
  height:auto;
       width: 250px;
-      margin:0 auto;
+      margin:10px auto;
       text-align:center;
        @media(max-width:767px){
-    width: 85%;
+    width: 90%;
 
 
   }
@@ -44,7 +44,7 @@ const WindBellCard = ({windBellImage,name,description,allImage,change,key}) =>{
 
 
       {!change && <><MinTitle hannari>{name}</MinTitle>
-        <Description color="grey" small>{description}</Description>
+        <Description left color="grey" small>{description}</Description>
        </>
       }
    </WindBellWrapper>

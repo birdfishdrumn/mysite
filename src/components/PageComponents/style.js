@@ -36,8 +36,8 @@ export const FamilyImage = styled(Img)
   }
 `
 export const HistoryImage = styled(Img)
-`
- width:60%;
+`margin:auto;
+ width:80%;
  @media(max-width:1024px){
   margin:0 auto;
  }

@@ -1,12 +1,12 @@
 import React, { useCallback, useRef } from "react";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api"
-import {Link} from "gatsby"
+// import {Link} from "gatsby"
 import { mapStyle } from "./mapStyle";
 import { Description, MinTitle } from "../../style/GlobalStyle";
 import PlaceInfo from "./PlaceInfo";
 import styled from "styled-components";
 import { Button } from "../Button";
-
+import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 // const config = require('gatsby-plugin-config');
 
 
@@ -66,13 +66,13 @@ const  Map = ({noBtn}) =>{
   return (
     <MapFlex>
       <Container>
-        <MinTitle>篠原まるよし風鈴</MinTitle>
+        <MinTitle><Trans>篠原まるよし風鈴</Trans></MinTitle>
         <Description>
           <br />
-          東京都台東区台東4-25-10<br />
-          佐竹商店街内<br /><br />
-          営業時間:10:30〜18:00<br />
-          定休日:  毎週月曜日
+          <Trans>東京都台東区台東4-25-10</Trans><br />
+          <Trans>佐竹商店街内</Trans><br /><br />
+          <Trans>営業時間:10:30〜18:00</Trans><br />
+          <Trans>定休日:  毎週月曜日(※異なる場合もあります)</Trans>
 
 
         </Description>

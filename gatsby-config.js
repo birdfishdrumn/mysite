@@ -76,10 +76,13 @@ module.exports = {
                     type: 'Products', // GraphQL上で表示される名前
                     collection: 'products', // 作成したコレクション名
                     map: doc => ({ // ドキュメントデータ
-                        name: doc.name,
+                        name: doc.about.name,
                         imageUrl: doc.imageUrl, // ドキ
                         category: doc.category,
-                        description: doc.description,
+                        description: doc.about.description,
+                        translatedName: doc.translated.name,
+                        translatedDescription: doc.translated.description
+
                     }),
                 }],
             }
@@ -101,7 +104,7 @@ module.exports = {
                 i18nextOptions: {
                     debug: true,
                     lowerCaseLng: true,
-                    saveMissing: false,
+                    saveMissing: true,
                     interpolation: {
                         escapeValue: false // not needed for react as it escapes by default
                     },

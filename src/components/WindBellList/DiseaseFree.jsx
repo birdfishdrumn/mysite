@@ -1,9 +1,9 @@
 import React from "react"
 import {graphql,useStaticQuery} from "gatsby"
-import { GridList, FlexNav, Scroll,SubTitle, ScrollItem } from "../../style/GlobalStyle";
+import { GridList,SubTitle, ScrollItem } from "../../style/GlobalStyle";
 import WindBellCard from "./WindBellCard";
 
-const DiseaseFree = ({change}) => {
+const DiseaseFree = ({change,language}) => {
   const data = useStaticQuery(graphql`
 query DiseaseFreeQuery{
     allProducts(
@@ -14,6 +14,18 @@ query DiseaseFreeQuery{
         id
         category
         description
+           translatedName {
+          en
+          fr
+          ko
+          zh_TW
+        }
+        translatedDescription {
+          en
+          ko
+          fr
+          zh_TW
+        }
          localImage {
           childImageSharp{
             fluid(maxWidth:300){
@@ -26,9 +38,39 @@ query DiseaseFreeQuery{
     }
 }
 `)
+   const Name = ({ langName }) => {
+    switch (language) {
+      case "France":
+        return <div>{langName.translatedName.fr}</div>
+      case "English":
+        return <div>{langName.translatedName.en}</div>
+      case "Chinese":
+        return <div>{langName.translatedName.zh_TW}</div>
+       case "Korean":
+        return <div>{langName.translatedName.ko}</div>
+    }
+   return <div>{langName.name}</div>
+
+  }
+
+  const Language = ({ lang }) => {
+    switch (language) {
+      case "France":
+        return <div>{lang.translatedDescription.fr}</div>
+      case "English":
+        return <div>{lang.translatedDescription.en}</div>
+       case "Chinese":
+        return <div>{lang.translatedDescription.zh_TW}</div>
+      case "Korean":
+        return <div>{lang.translatedDescription.ko}</div>
+    }
+   return <div>{lang.description}</div>
+
+  }
+
   return (
     <>
-      <SubTitle hannari>無病息災</SubTitle>
+
         <GridList change={change}>
             {data.allProducts.edges.map(edge => (
             <ScrollItem>
@@ -36,8 +78,8 @@ query DiseaseFreeQuery{
               key={edge.node.id}
                   windBellImage={edge.node.localImage[0].childImageSharp.fluid}
                    allImage={edge.node.localImage[1].childImageSharp.fluid}
-              name={edge.node.name}
-              description={edge.node.description}
+              name={<Name langName={edge.node}/>}
+                  description={<Language lang={edge.node}/>}
               change={change}
             />
                 </ScrollItem>

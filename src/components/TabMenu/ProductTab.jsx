@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ScrollableTabsButtonForce({num}) {
+export default function ScrollableTabsButtonForce({num,location}) {
 
    const [isHeightOver, setIsHeightOver] = React.useState(false);
 
@@ -116,7 +116,7 @@ const number=Number(num)
         </Tabs>
 
       <TabPanel value={value} index={0}>
-       <Fuurin/>
+        <Fuurin location={location}/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <Earring/>

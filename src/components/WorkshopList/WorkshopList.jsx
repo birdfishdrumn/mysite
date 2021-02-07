@@ -1,6 +1,7 @@
 import React from 'react'
 import { SubTitle, Nav, ListColumn, Description, MinTitle } from "../../style/GlobalStyle";
-import { Link } from "gatsby";
+// import { Link } from "gatsby";
+import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import { Button } from "../Button";
 import Img from "gatsby-image"
 import {WorkshopData} from "./WorkshopData"
@@ -14,8 +15,8 @@ const WorkshopList = ({data}) => {
         </div>
         <div>
            <Link to = "/workshopContents" state={{number: item.num}}>
-              <MinTitle>{item.title}</MinTitle>
-              <Description left>{item.description}</Description>
+              <MinTitle><Trans>{item.title}</Trans></MinTitle>
+              <Description left><Trans>{item.description}</Trans></Description>
 
             <Button>詳しく</Button>
           </Link>

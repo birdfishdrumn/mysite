@@ -159,7 +159,7 @@ export const Description = styled.div `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
 text-align:${props => (props.left ? "left" : "center")};
  font-weight:normal;
- line-height: 1.8em;
+ line-height: 1.7em;
  padding:${props => (props.padding ? "30px 0 30px" : "10px 0 10px")};
 
   ${props => {
@@ -358,18 +358,19 @@ export const ProductColumn = styled.div `
    }
 `
 
-export const MaxTwoColumn = styled.h1 `
+export const MaxTwoColumn = styled.div `
    display: grid;
    grid-gap:50px;
-   margin:0;
+   margin:0 auto;
    grid-template-columns:1fr 1fr;
-   max-width:100%;
+   max-width:${props => (props.little ? "1224px": "100%")};
+
    >div{
     margin:0px;
    }
    >div:last-child{
     text-align:center;
-
+   margin:${props=>(props.auto && "auto 0")};
    }
 
    @media(max-width:1024px){

@@ -9,7 +9,7 @@ import { QuestionAccordion } from "../components/index"
 
 import TextInput from "../components/UI/textInput"
 
-export default ({data})=>{
+export default ({data,location})=>{
 
 
   return (
@@ -22,7 +22,12 @@ export default ({data})=>{
     </figure>
         </div>
 
-        <SEO  pagetitle="お問い合わせフォーム" />
+        <SEO pagetitle="お問い合わせフォーム"
+         pagedesc="こちらでは様々な商品を紹介します。"
+      pagepath={location.pathname}
+      pageimg={data.product.childImageSharp.original.src}
+      pageimgw={data.product.childImageSharp.original.width}
+      pageimgh={data.product.childImageSharp.original.height}/>
  <article className="content">
         <SubTitle>よくある質問</SubTitle>
         <div className="space-m" />

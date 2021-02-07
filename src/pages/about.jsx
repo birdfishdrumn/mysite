@@ -22,8 +22,8 @@ export default ({ data, location }) => {
   return (
     <Layout>
       <SEO
-        pagetitle="ESSENTIALSについて"
-        pagedesc="食べ物の情報について発信しているサイトです"
+        pagetitle="江戸風鈴とは"
+        pagedesc="江戸風鈴とは何かに付いて紹介いたします。"
         pagepath={location.pathname}
         pageimg={data.about.childImageSharp.original.src}
         pageimgw={data.about.childImageSharp.original.width}

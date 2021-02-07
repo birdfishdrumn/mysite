@@ -16,7 +16,15 @@ module.exports = {
         locale: `ja_JP`,
         fbappid: `XXXXXX`
     },
-    plugins: [
+    plugins: [{
+            resolve: `gatsby-plugin-material-ui`,
+            options: {
+                stylesProvider: {
+                    injectFirst: true,
+                },
+            },
+        },
+        `gatsby-plugin-styled-components`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-plugin-manifest`,
@@ -114,7 +122,8 @@ module.exports = {
 
             },
 
-        }
+        },
+
     ],
 
 }

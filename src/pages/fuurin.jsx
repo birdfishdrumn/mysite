@@ -28,8 +28,8 @@ export default ({ data, location }) => {
     return (
   <Layout>
     <SEO
-      pagetitle="ESSENTIALSについて"
-      pagedesc="食べ物の情報について発信しているサイトです"
+      pagetitle="まるよし風鈴の商品紹介"
+      pagedesc="こちらではまるよし風鈴の製作している商品を紹介いたします。"
       pagepath={location.pathname}
       pageimg={data.product.childImageSharp.original.src}
       pageimgw={data.product.childImageSharp.original.width}

@@ -66,15 +66,18 @@ export const MobileNav = styled.nav `
 `
 export const LangNav = styled.nav `
 text-align:center;
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
 display:inline-block;
 font-weight:bold;
-margin:${props => (props.small ? "5px auto" : "30px auto")};
+font-size:1.4rem;
+
+margin:20px auto;
 list-style:none;
  display:flex;
- color:${props=>(props.white ? "white" : "grey")};
+ color:"white";
   flex-wrap: wrap;
   justify-content:center;
   >li{
-    margin:20px;
+  margin:0 20px;
   }
   `

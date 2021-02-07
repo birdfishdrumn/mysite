@@ -132,7 +132,7 @@ const Header = (props) => {
   const [open, setOpen] = useState(false);
   const { languages, changeLanguage } = useI18next();
     const [anchorEl, setAnchorEl] = useState(null);
-
+console.log(props.location)
   const OpenMenu= (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -160,8 +160,20 @@ const Header = (props) => {
                   </Link>
 
                 </div>
-
-                <ToggleMenu languages={languages} changeLanguage={changeLanguage}/>
+                <LangNav small>
+                      {languages.map((lng) => (
+                      <li key={lng}>
+                         <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                changeLanguage(lng);
+              }}>
+              {lng}
+            </a>
+                    </li>
+                     ))}
+                </LangNav>
 
              <div>
                    <Hamburger className={classes.menuButton} color="inherit" onClick={handleClickOpen}>

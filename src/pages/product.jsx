@@ -43,8 +43,8 @@ export default ({ data, location }) => {
     return (
     < Layout >
     <SEO
-      pagetitle="ESSENTIALSについて"
-      pagedesc="食べ物の情報について発信しているサイトです"
+      pagetitle="商品の紹介"
+      pagedesc="こちらでは様々な商品を紹介します。"
       pagepath={location.pathname}
       pageimg={data.product.childImageSharp.original.src}
       pageimgw={data.product.childImageSharp.original.width}

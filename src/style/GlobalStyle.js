@@ -171,7 +171,7 @@ text-align:${props => (props.left ? "left" : "center")};
     }
     return "width:100%;"
   }};
-  font-size:${props => (props.large ? "1.4rem" : "1rem")};
+  font-size:${props => (props.large ? "1.1rem" : "1rem")};
  margin:${props => (props.noneMargin ? "0" : "0 auto")};
  ${props => {
     switch (props.color) {
@@ -293,14 +293,26 @@ export const TextFlex = styled.div`
 export const TwoColumn = styled.div `
    display: grid;
    grid-gap:50px;
-   margin:0 10% 0;
+   margin:0 auto;
    grid-template-columns:1fr 1fr;
    max-width:1000px;
    >div{
     margin:40px;
+    @media(max-width:767px){
+       margin:5px;
+    }
+   }
+   >div:first-child{
+        @media(max-width:767px){
+       order:${props => (props.reverse && 2)};
+    }
    }
    >div:last-child{
     text-align:center;
+        @media(max-width:767px){
+       margin:5px;
+      order:${props => (props.reverse && 1)};
+    }
    }
 
    @media(max-width:1024px){
@@ -381,6 +393,18 @@ export const MaxTwoColumn = styled.div `
       >div{
     margin:5x;
    }
+   }
+   >div:first-child{
+        @media(max-width:767px){
+       order:${props => (props.reverse && 2)};
+    }
+   }
+   >div:last-child{
+    text-align:center;
+        @media(max-width:767px){
+       margin:5px;
+      order:${props => (props.reverse && 1)};
+    }
    }
 `
 

@@ -31,7 +31,8 @@ export default ({ data, location }) => {
         <WorkshopTab num={location.state && location.state.number}/>
         <div className="space-l" />
 
-<Reserve/>
+        <Reserve />
+        <div className="space-xl" />
     <FloatingAction reserve title="ご予約はこちら"/>
   </Layout>
     )

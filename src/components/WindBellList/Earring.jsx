@@ -42,9 +42,8 @@ query EarringQuery{
 
         <div>
       <section className="center">
-              <SubTitle>イヤリング</SubTitle>
-          <Description  width="half">篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。
-      <br/>またこちらのオンラインショップでは各商品もご購入可能です。
+              <SubTitle>イヤリング・ピアス</SubTitle>
+          <Description  width="half">当店では風鈴の技術を応用して風鈴型のイヤリング、ピアスの製造も行っております。とても小さい商品でも、絵柄は内側から手描きで彩色してます。浴衣などと非常に相性が良いので夏のファッションとしていかがでしょうか。
     </Description>
            <FlexNav>
             <Tooltip title="グリッド" interactive>

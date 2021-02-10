@@ -4,7 +4,8 @@ import { Description } from "../../style/GlobalStyle";
 export const IntroduceContainer = styled.div `
  height:30%;
 max-width:700px;
- background: #eee;
+
+ border:3px solid black;
  margin:0 auto;
  padding:30px;
 display:flex;
@@ -18,6 +19,32 @@ display:flex;
 }
 
 `
+export const IntroduceAnimal = styled.div `
+ height:30%;
+max-width:325px;
+
+ border:3px solid black;
+ margin:0 30px;
+ padding:30px;
+
+>div:last-child{
+  margin:0 auto;
+}
+@media(max-width:768px){
+  flex-direction:column;
+
+  margin:0 20px;
+}
+
+`
+
+export const Flex = styled.div `
+display:flex;
+margin:0 auto;
+justify-content:center;
+margin:0;
+`
+
 export const FamilyImage = styled(Img)
 `
   height:auto;

@@ -642,6 +642,12 @@ svg {
     margin: 100px 0 100px 0;
 }
 
+@media(max-width:767px) {
+    .space-xl {
+        margin: 40px 0 40px 0;
+    }
+}
+
 .padding-s {
     padding: 20px 0 20px;
 }
@@ -682,4 +688,9 @@ svg {
 
 .Carousel-next-42 {
     right: 50px;
+}
+
+.MuiTimelineOppositeContent-root {
+    flex: 0;
+    padding: 6px 6px;
 }

@@ -98,22 +98,7 @@ event.target.value,
 
 
           <div className="space-l" />
-           {/* <div className={change ? styles.p_grid__scroll : styles.p_grid__row }></div> */}
-          {/* <GridList change={change}>
-            {data.allProducts.edges.map(edge => (
-            <ScrollItem>
-                <WindBellCard
-              key={edge.node.id}
-                  windBellImage={edge.node.localImage[0].childImageSharp.fluid}
-                   allImage={edge.node.localImage[1].childImageSharp.fluid}
-              name={edge.node.name}
-              description={edge.node.description}
-              change={change}
 
-            />
-                </ScrollItem>
-          ))}
-          </GridList> */}
           <SubTitle hannari><Trans>金運上昇</Trans></SubTitle>
         <MoneyLuckFilter change={change} language={language} />
          <SubTitle  hannari><Trans>目標達成</Trans></SubTitle>

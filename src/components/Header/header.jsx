@@ -25,11 +25,12 @@ import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import ToggleMenu from "../UI/ToggleMenu/ToggleMenu";
+import {NavItem} from "./NavItem"
 
 
 const Hamburger = styled(IconButton)`
   display:none;
-  @media(max-width:767px){
+  @media(max-width:1024px){
     display:block
   }
 `
@@ -54,6 +55,8 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(4),
+    color: "black",
+    textShadow:"1px 1px 2px white"
   },
 
 }));
@@ -81,35 +84,7 @@ HideOnScroll.propTypes = {
   window: PropTypes.func,
 };
 
-const NavItem = () => {
-  return (
-        <ul>
-          <li>
-            <Link to="/about/"><Trans>江戸風鈴とは</Trans></Link>
-          </li>
 
-          <li>
-            <Link to="/product/"><Trans>まるよしの風鈴</Trans></Link>
-          </li>
-          <li>
-            <Link to="/workshop/"><Trans>体験する</Trans></Link>
-          </li>
-          <li>
-            <Link to="/works/"><Trans>私たちの仕事</Trans></Link>
-          </li>
-          <li>
-            <Link to="/shop/"><Trans>お店、家族の紹介</Trans></Link>
-        </li>
-            <li>
-            <Link to="/question/"><Trans>よくある質問</Trans></Link>
-          </li>
-          <li>
-            <Link to="/contact/"><Trans>お問い合わせ</Trans></Link>
-          </li>
-
-        </ul>
-  )
-}
 
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
@@ -176,7 +151,7 @@ console.log(props.location)
                 </LangNav>
 
              <div>
-                   <Hamburger className={classes.menuButton} color="inherit" onClick={handleClickOpen}>
+                   <Hamburger className={classes.menuButton} onClick={handleClickOpen}>
 
                             <MenuIcon style={{ fontSize: 50 }} />
 
@@ -192,7 +167,7 @@ console.log(props.location)
             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
         </DialogTitle>
           <DialogContent>
-           <MobileNav> <NavItem/></MobileNav>
+           <MobileNav> <NavItem lang/></MobileNav>
         </DialogContent>
         <DialogActions>
 

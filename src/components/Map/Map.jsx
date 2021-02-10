@@ -23,9 +23,10 @@ const MapFlex = styled.div`
  margin:0 auto;
    max-width:1054px;
       grid-template-columns:1fr 2fr;
-      grid-gap:10px;
- @media(max-width:768px){
+      grid-gap:20px;
+ @media(max-width:1024px){
    grid-template-columns:1fr;
+
  }
 `
 
@@ -50,7 +51,6 @@ const options = {
 const  Map = ({noBtn}) =>{
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey:process.env.GATSBY_googleMapsApiKey,
-    // ここにAPIキーを入力します。今回は.envに保存しています。
     libraries,
   });
 
@@ -76,7 +76,7 @@ const  Map = ({noBtn}) =>{
 
 
         </Description>
-        {!noBtn && <Link to="/shop"><Button>詳しく見る</Button></Link>}
+        {!noBtn && <Link to="/shop"><Button><Trans>詳しく見る</Trans></Button></Link>}
       </Container>
       <GoogleMap
         id="map"

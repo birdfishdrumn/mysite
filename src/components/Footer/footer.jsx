@@ -2,7 +2,7 @@ import React from "react"
 import {graphql,useStaticQuery,Link} from "gatsby"
 import Img from "gatsby-image"
 import { Logo } from "../index"
-import {FooterWrapper,FooterContainer,SNS,ContactIcon} from "./style"
+import {FooterWrapper,FooterContainer,SNS,ContactIcon,FooterNav} from "./style"
 import { Description } from "../../style/GlobalStyle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,6 +12,9 @@ faInstagram
 } from "@fortawesome/free-brands-svg-icons"
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
+import { NavItem } from "../Header/NavItem"
+
+
 const Footer = () => {
 
   const data = useStaticQuery(graphql`
@@ -28,42 +31,59 @@ query{
 `)
 
   return (
- <FooterWrapper>
+		<FooterWrapper>
+						<div>	<FooterNav>
+    <NavItem lang/>
+			</FooterNav>
+			</div>
   	<FooterContainer>
-		<div className="site">
+		<div>
 		<Link to = "/">
-        <Logo/>
+						<Logo/>
 					</Link>
-					<Description color="black">東京都台東区台東4-25-10</Description>
-		</div>
-				<ContactIcon>
-					<p><PhoneIcon />03-3832-0227</p>
-				<p>	<MailIcon/>mail: maruyosi@sam.hi-ho.ne.jp</p>
-		</ContactIcon>
+					<div className="space-s"/>
+
+					<Description left color="white">
+						〒110-0016<br />
+						佐竹商店街内<br/>
+						東京都台東区台東4-25-10</Description>
+
+			</div>
+
+ <ContactIcon>
+					<Description  large color="white" left><PhoneIcon style={{ fontSize: 40 }} /> 03-3832-0227</Description>
+					<Description color="white" style={{fontSize:"0.9rem"}} small left>受付時間 10:30〜18:00</Description>
+					<Description  large color="white" left><MailIcon style={{ fontSize: 40 }} /> maruyosi@sam.hi-ho.ne.jp</Description>
+					<Description color="white" style={{fontSize:"0.9rem"}} small left>基本的に翌営業日にお返事</Description>
+
+					</ContactIcon>
+
+
+<div>
 		<SNS>
 			<li>
 				<a href="https://twitter.com/">
 					<FontAwesomeIcon icon={ faTwitter} />
-					<span className="sr-only">Twitter</span>
+					 <span>Twitter</span>
 				</a>
 			</li>
 			<li>
 				<a href="https://facebook.com/">
 					<FontAwesomeIcon icon={ faFacebookSquare} />
-					<span className="sr-only">Facebook</span>
+					 <span>Facebook</span>
 				</a>
 			</li>
 			<li>
 				<a href="http://instagram.com/">
 						<FontAwesomeIcon icon={ faInstagram} />
-					<span className="sr-only">Instagram</span>
+					 <span>Instagram</span>
 				</a>
 			</li>
-		</SNS>
-  </FooterContainer>
-      <div className="back">
+					</SNS>
+					</div>
 
-      </div>
+  </FooterContainer>
+
 </FooterWrapper>
 )
 }

@@ -4,10 +4,11 @@ import {graphql,Link} from "gatsby"
 import Img from "gatsby-image"
 import Aos from "aos"
 import styled from "styled-components";
-import { Product } from "../components/index";
+import { Product, IntroduceCircle} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { SubTitle,Description,ProductColumn,Figure,TextFlex} from "../style/GlobalStyle";
+import { SubTitle, Description, ProductColumn, Figure, TextFlex } from "../style/GlobalStyle";
+import {Trans} from "gatsby-plugin-react-i18next"
 import { Button } from "../components/Button";
 
 
@@ -43,7 +44,7 @@ export default ({ data, location }) => {
     return (
     < Layout >
     <SEO
-      pagetitle="商品の紹介"
+      pagetitle="まるよし風鈴の商品のs紹介"
       pagedesc="こちらでは様々な商品を紹介します。"
       pagepath={location.pathname}
       pageimg={data.product.childImageSharp.original.src}
@@ -61,10 +62,12 @@ export default ({ data, location }) => {
 
     <div className="center">
 
-    <SubTitle>商品の紹介</SubTitle>
-      <Description  change width="half">篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。<br/>またこちらのオンラインショップでは各商品もご購入可能です。
+    <SubTitle><Trans>商品の紹介</Trans></SubTitle>
+            <Description left change width="half"><Trans>篠原まるよし風鈴では江戸風鈴を中心に、その技術を応用してイヤリング、ぽっぺんなども制作しております。風鈴の絵柄の意味なども一つ一つ紹介しているので是非ご覧ください。</Trans><br /><br />
+              <Trans>直接お店に出向かなくても、オンラインショップもやっているのでご購入をご希望の方はこちらからよろしくお願い致します。</Trans>
+           <br/>
     </Description>
-            <Button>オンラインショップ</Button>
+            <Button><Trans>オンラインショップ</Trans></Button>
                   <div className="space-l" />
     </div>
           <Product isEn={isEn} data={data.fuurin} description="風鈴には小丸、新子丸、釣鐘型のように大きさが違う種類のものがあり、様々な縁起の良い絵柄が描かれます。あなたのお部屋にあったものを豊富な品揃えの中からお探しください。" title="江戸風鈴" destination="/fuurin" num="0" />
@@ -77,7 +80,8 @@ export default ({ data, location }) => {
            <div className="space-l" />
            <Product data={data.earring} description="風鈴を飾る場所がない、もう少しカッコ良く飾りたい方に吊り台はおすすめです。まるよし風鈴では照明とセットになった行灯型のものも販売しております。" title="吊り台" destination="/fuurin" num="4" />
 
-            <div className="space-l" />
+          <div className="space-xl" />
+           <IntroduceCircle product data={data} />
 </article>
 
 </Layout >
@@ -90,6 +94,18 @@ query {
     childImageSharp {
       fluid(maxWidth: 1600) {
 
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+      original{
+        src
+        height
+        width
+      }
+    }
+  }
+      naire: file(relativePath: {eq: "productImg/naire.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 1600) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
       original{

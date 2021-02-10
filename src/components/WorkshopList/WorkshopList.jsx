@@ -18,7 +18,7 @@ const WorkshopList = ({data}) => {
               <MinTitle><Trans>{item.title}</Trans></MinTitle>
               <Description left><Trans>{item.description}</Trans></Description>
 
-            <Button>詳しく</Button>
+            <Button><Trans>詳しく見る</Trans></Button>
           </Link>
         </div>
       </ListColumn>

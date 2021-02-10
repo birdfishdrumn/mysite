@@ -9,7 +9,7 @@ export function Logo() {
   {
     file(relativePath: {eq: "logo2.png"}) {
     childImageSharp{
-      fixed(width:160){
+      fixed(width:200){
         ...GatsbyImageSharpFixed_withWebp
       }
     }

@@ -15,12 +15,12 @@ export default ({data})=>{
     <div>
 
       <Layout>
-        <div>
+        {/* <div>
 	<figure>
 	   <Img fluid={data.contact.childImageSharp.fluid} alt="製品情報"/>
     </figure>
-        </div>
-
+        </div> */}
+<div className="space-xl"/>
         <SEO  pagetitle="お問い合わせフォーム" />
  <article className="content">
         <SubTitle>お問い合わせ</SubTitle>
@@ -34,8 +34,9 @@ export default ({data})=>{
             </Description>
 
         </div>
-        <div className="space-l"/>
-         <Contact/>
+
+          <Contact />
+             <div className="space-xl" />
    </article>
       </Layout>
     </div>

@@ -13,6 +13,7 @@
     "店舗情報": "Shop Information",
     "お知らせ": "News",
     "江戸風鈴ができるまで": "Making Process",
+    "詳しく見る": "View more",
     "ガラス吹き": "Blow Glass",
     "イヤリング": "Earring",
     "ポッペン": "Poppen",
@@ -36,21 +37,58 @@
     "季節の花": "Season Flower",
     "切子": "Cut Glass",
     "可愛い動物": "Cute Animal",
+    "商品の紹介": "Product introduction",
+    "料金": "Price",
+    "体験内容": "Workshop Contents",
+    "所要時間": "Time required",
+    "持ち物": "Things to prepare",
+    "-絵付け体験-": "-Painting Workshop-",
+    "-体験の流れ-": "-Flow-",
+    "-注意事項-": "Notes",
+    "①ご予約": "①Reservation",
+    "②ご来店": "②Visit",
+    "③風鈴を選ぶ(団体の場合は不可)": "③Select Wind chime(Not possible for groups)",
+    "④絵や道具の説明を受ける": "④Explanation of the picture and tool",
+    "⑤絵を描く": "⑤Draw a picture",
+    "③ガラスを吹く": "③Blow Glass",
+    "②体験キットのご購入": "②Purchase of workshop kit",
+    "③zoomの入ったPCを用意": "③Prepare a PC with zoom app",
+    "⑥糸を通す": "⑥Thread",
+    "⑥短冊を付けて完成！": "⑥Complete with a strip of paper!",
+    "⑦短冊を付けて完成！": "⑦Complete with a strip of paper!",
+    "1,650円(税込)": "1,650 yen (tax included)",
+    "当店で用意した江戸風鈴の中から絵を描いてただく体験です。デザインに関しては見本などもあるので、描きたい柄がない場合でもご安心ください。": "It is an workshop of drawing a picture from the Edo Fuurin prepared at our shop. There are also samples for the design, so don't worry if you don't have the pattern you want to draw.",
+    "約30分〜90分": "About 30 to 90 minutes",
+    "約60分〜90分": "About 30 to 90 minutes",
+    "特にありませんが、絵のデザインを考えていただきますとスムーズに描けると思います": "There is nothing in particular, but I think that you can draw smoothly if you think about the design of the picture.",
+    "風鈴の玉を作るガラス吹きから絵付け体験までの全ての工程をやります。": "The content of this workshop is to do all the processes from glass blowing to make a wind chime ball to painting workshop.",
+    "オンラインビデオ会議アプリのzoomを使い職人の指導を受けながら体験ができるコースです。": "This is a course where you can experience while receiving guidance from craftsmen using the online video conferencing application zoom.",
+    "体験キット、筆洗い、ティッシュ、zoomアプリの入ったPC": "workshop kit, brush wash, tissue, pc with zoom app",
+
 
     "一つ一つ型を使わず、宙で形を整えて作ります。そのため音も違います。": "Instead of using molds one by one, shape them in the air. Therefore, the sound is also different.",
     "風鈴の鳴り口にガラス管がスレただけで心地よい音が鳴ります。": "A comfortable sound is produced just by threading the glass tube on the sound of the wind chime.",
 
     "絵を内側から描くことで、ガラスの艶を生かした透明感のあるものに仕上がります。": "By drawing the picture from the inside, you can create a transparent object that makes the most of the luster of the glass.",
 
+
     "江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。": "Edo Fuurin are glass wind chimes that are produced by inheriting the techniques handed down from the Edo period.",
     "一つ一つ職人が気持ちを込めて作った風鈴は、ガラスならではの涼しげでリラックスできる軽やかな音と、直接描かれた絵柄で見る人を癒してくれるでしょう。": "The wind chimes made by craftsmen one by one will heal the viewer with the cool and relaxing light sound unique to glass and the directly drawn pattern.",
+
     "現在は日本中で篠原まるよし風鈴と、篠原風鈴本舗の二件しか江戸風鈴の製作を行なっておりません。": "Currently, only two Edo Fuurin are manufactured in Japan, Shinohara Maruyoshi Fuurin and Shinohara Fuurin Honpo.",
+
     "良い音のひみつ": "The secret of good sound",
+
     "篠原まるよし風鈴では風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。": "At Shinohara Maruyoshi Fuurin, we carry out all the processes from the production of the glass ball, which is the main body of the wind chime, to the painting. We are also focusing on selling wind chimes and hands-on learning. Click here for product purchases and hands-on learning.",
+
     "篠原まるよし風鈴では主に小丸型と呼ばれる風鈴を中心に、少し形の変わった釣鐘型や風琴、またその技術を応用してイヤリングやポッペンなども制作しております。": "Shinohara Maruyoshi Fuurin, we mainly produce wind chimes called `komaru`, bell-shaped and wind kotos with slightly different shapes, and earrings and poppen by applying the technology.",
+
     "まるよし風鈴では絵付け体験、ガラス吹体験、リモート絵付け体験など、体験も充実しています。世界で一つだけの風鈴を制作してみませんか？": "At Maruyoshi Fuurin, there are plenty of experiences such as painting experience, glass blowing experience, remote painting experience. Why don't you make only one wind chime in the world?",
+
     "まるよし風鈴の商品はこちらのオンラインショップよりどうぞ。プレゼント用のラッピングもできますのでお気軽にお伝えください。": "For Maruyoshi wind chimes,please visit this online shop.You can also wrap itfor gifts,so please feel free to tell us.",
 
+    "篠原まるよし風鈴では江戸風鈴を中心に、その技術を応用してイヤリング、ぽっぺんなども制作しております。風鈴の絵柄の意味なども一つ一つ紹介しているので是非ご覧ください。": "Shinohara Maruyoshi Fuurin mainly produce Edo Fuurin, and apply their technology to produce earrings and poppen. We also introduce the meaning of the wind chimes one by one, so please have a look.",
+    "直接お店に出向かなくても、オンラインショップもやっているのでご購入をご希望の方はこちらからよろしくお願い致します。": "Even if you don't go to the store directly, we also have an online shop, so if you would like to purchase it, please click here.",
     "1300℃で溶けたガラスを小さく巻き取る。これが風鈴の鳴り口部分となり、口玉と言います。": "Wind the glass melted at 1300 ° C into small pieces. This is the ringing part of the wind chime and is called the small glass ball .",
     "500円玉くらいの大きさに口玉を膨らます。厚みを均等にできるように気をつけます。": "Inflate the small glass ball to the size of a 500-yen coin. Be careful to make the thickness even.",
     "口玉の上にもう一度ガラスを巻き取ります。これが風鈴本体になります。": "Wind the glass over the small glass ball again. This is the wind chime body.",
@@ -70,6 +108,7 @@
     "風鈴を飾る場所がない、もう少しカッコ良く飾りたい方に吊り台はおすすめです。まるよし風鈴では照明とセットになった行灯型のものも販売しております。": "The hanging stand is recommended for those who do not have a place to decorate the wind chimes and want to decorate it a little more coolly. Maruyoshi Fuurin also sells a lantern type that comes with lighting.",
 
 
+
     "篠原まるよし風鈴で用意した風鈴の中から絵を描いてただく体験です。デザインに関しては見本などもあるので、描きたい柄がない場合でもご安心ください。": "It is an Workshop of drawing a picture from the wind chimes prepared by our shop. There are also samples for the design, so don't worry if you don't have the pattern you want to draw.",
     "風鈴の玉の部分を、一からお客様に吹いていただきます(職人も手伝います)。ガラスが冷めた後口を切り落として、内側から絵付け をしていただきます。": "Customers will blow the ball part of the wind chime from scratch (the craftsmen will also help). After the glass has cooled, cut off the mouth and paint from the inside.",
     "新型コロナウイルス感染拡大で遠くから来れない方などのために、オンラインでの体験を期間限定で実施しております。ご希望の方はこちらのページからどうぞ。": "For those who cannot come from afar due to the spread of the COVID-19, we are offering an online Workshop for a limited time. If you wish, please visit this page.",
@@ -80,6 +119,23 @@
     "江戸風鈴の名称はその道の第一人者・篠原儀治（しのはら よしはる）がひとつひとつ宙吹きで作られたｶﾞﾗｽの風鈴を”江戸風鈴”と命名しました。江戸時代の末期から庶民に知られるようになったｶﾞﾗｽの風鈴、それ以前は、庶民が手の届かない程高価なものでした。": "The name of the Edo wind chime is `Edo Fuurin` which is a glass wind chime made by the leading person of the road, Yoshiharu Shinohara, one by one. Glass wind chimes, which became known to the common people from the end of the Edo period, were too expensive for the common people to reach before that.",
     "大名や豪商たちの中で珍品として崇め奉られ、”風琴”と呼ばれお屋敷の部屋の中に下げられていました。風の琴なんて、名前も上品でした。": "It was worshiped as a rare item among daimyo and wealthy merchants, and was called `Fukoto` and was hung in the room of the mansion. The name of the wind koto was also elegant.",
     "現代のように、クーラーや扇風機などがない時にどうやって、暑い夏を楽しく過ごそう？・・・創意・工夫で色々なものを 作り出しました。その中に自然の風を利用した”江戸風鈴”が生まれるのです。": "How do you enjoy the hot summer when you don't have a cooler or fan like you do today? ... I created various things with creativity and ingenuity. The `Edo Fuurin` that uses the natural wind is born in it.",
-    "大昔は、自分の心を占うために、中国より伝来の宝石と宝石をぶつけて、その音色で吉凶を占う”占風鐸”を考慮したものでしたが、だんだん変化して行き、まったく四季に関係の無い物が夏の風物詩として頭角をあらわします。透明なガラスを使用した風鈴の輝きやここちよい音色に庶民は心を奪われていったのです。": "In the olden days, in order to fortune-telling one's heart, the `fortune-telling`(fortune-telling by hitting jewels and jewels and fortune-telling with the tone), which was introduced from China, was taken into consideration, but it gradually changed. Things that have nothing to do with the four seasons stand out as a summer tradition. The common people were fascinated by the brilliance of the wind chimes made of transparent glass and the pleasant tone."
+    "大昔は、自分の心を占うために、中国より伝来の宝石と宝石をぶつけて、その音色で吉凶を占う”占風鐸”を考慮したものでしたが、だんだん変化して行き、まったく四季に関係の無い物が夏の風物詩として頭角をあらわします。透明なガラスを使用した風鈴の輝きやここちよい音色に庶民は心を奪われていったのです。": "In the olden days, in order to fortune-telling one's heart, the `fortune-telling`(fortune-telling by hitting jewels and jewels and fortune-telling with the tone), which was introduced from China, was taken into consideration, but it gradually changed. Things that have nothing to do with the four seasons stand out as a summer tradition. The common people were fascinated by the brilliance of the wind chimes made of transparent glass and the pleasant tone.",
+    "お店は佐竹商店街の中にあります。普段からお店の前には風鈴を飾っております。 一階は基本的には仕事場で作業中なので少し入り辛いと思いますが、風鈴の販売もやっておりますので、 是非お気軽にご来店下さい。": "The shop is located in the Satake shopping street. Wind chimes are usually displayed in front of the shop. The first floor is basically working at the workplace, so it may be a little difficult to enter, but we also sell wind chimes, so please feel free to visit us.",
+    "またガラス吹き体験では一階奥の工房で最初にガラスを吹いていただきます。二階は主に絵付け体験の会場となっております": "In the glass blowing experience, you will first blow the glass at the workshop at the back of the first floor. The second floor is mainly the venue for painting experience.",
+
+    "基本的に体験は予約制になりますので、下記のフォーム、または電話にてご予約ください。": "Basically, the workshop is a reservation system, so please make a reservation using the form below or by phone.",
+    "佐竹商店街内の店舗にご来店ください。絵付け体験は2階になりますがまずは一階の店のものにお声がけ下さい。": "Please come to the store in the Satake shopping street. The painting experience will be on the 2nd floor, but first of all, please talk to the shop on the 1st floor.",
+    "いくつかの風鈴の中から気に入った音のものを選びましょう。": "Choose the one with your favorite sound from several wind chimes.",
+    "職人や女将が風鈴の絵の描き方に対する説明をいたします。": "Craftsmen or landlady will explain how to draw a wind chime.",
+    "実際に風鈴の中に絵を描きましょう。気持ちを込めて集中してやるときっと良いものが出来ますよ。": "Let's actually draw a picture in the wind chime. If you concentrate with all your heart, you will surely be able to make good things.",
+    "佐竹商店街内の店舗にご来店ください。ガラス吹き体験は一階奥になりますのでそのまま一階へどうぞ。": "Please come to the store in the Satake shopping street. The glass blowing experience will be on the back of the first floor, so please go straight to the first floor.",
+    "職人のサポートの上、実際に風鈴をつくりしょう！この時できた風鈴は熱いので冷ました後に口玉を切ってお客様のもとへお渡しします。": "Let's actually make a wind chime with the support of craftsmen! What kind of sound can you make? The wind chime made at this time is hot, so after cooling it, cut the small glass ball and hand it to the customer.",
+    "絵が描き終わったら風鈴の穴の部分に糸を通します。": "After drawing the picture, thread the thread through the hole in the wind chime.",
+    "オンラインショップより体験キットをご購入ください。その時に備考欄より体験日時をご予約していただいてもOKです。キットが届くには遅くて3〜4日かかりますので、余裕を持ってお買い求めください。": "Please purchase the workshop kit from the online shop. At that time, you can reserve the workshop date and time from the remarks column. It will take 3-4 days at the latest for the kit to arrive, so please purchase with plenty of time.",
+    "リモート体験に必要なPCなどをを用意します。スマホでも出来ますが画面が小さいのであまりオススメしません。": "Prepare the PC etc. required for the remote experience. You can do it on your smartphone, but I don't recommend it because the screen is small.",
+    "職人がオンライン上で絵の描き方の指導をいたします。": "A craftsman will teach you how to draw a picture online.",
+    "説明を聞いたら実際に絵を描いていきましょう。絵の描き方など質問は大丈夫ですのでどんどん質問してください。": "After listening to the explanation, let's actually draw a picture. Questions such as how to draw a picture are okay, so please ask more and more.",
+    "絵付け体験では、こちらで用意する江戸風鈴の内側からお好きに絵を描いていただけます。私たちが絵の描き方を説明しますので、絵の苦手な方でもご安心ください。一人でもお友達同士でも夢中になって楽しむことができますよ。": "In the painting workshop, you can draw as you like from the inside of the Edo wind chime prepared here. We will explain how to draw, so please be assured even if you are not good at drawing. You can enjoy yourself or with your friends.",
+    "現在リモート体験は予約フォームではなくメール、またお電話からよろしくお願い致します。": "Currently, please use the remote workshop by email or phone instead of the reservation form."
 
 }

@@ -44,7 +44,12 @@ export default ({ data, location }) => {
         <div className="space-xl"/>
         <MaxTwoColumn>
           <div>
-            <SubTitle  data-aos="fade-up" noSpace>風鈴の制作</SubTitle>
+            <SubTitle data-aos="fade-up" noSpace>風鈴の制作</SubTitle>
+            <Description width="more" left>
+              まるよし風鈴では家族4人で主に江戸風鈴の
+              製作をしております。年間で12000個ほど職人の手作業によって作られます。
+              職人は技術的に成熟してくると、
+            </Description>
           </div>
           <div>
             <Figure data-aos="fade-up">
@@ -70,7 +75,10 @@ export default ({ data, location }) => {
             <SubTitle noSpace>体験指導</SubTitle>
           </div>
         </TwoColumn>
-        <MaxTwoColumn>
+            <div className="space-l"/>
+        <SubTitle>お世話になってる方々</SubTitle>
+        <div className="space-l"/>
+        <MaxTwoColumn reverse>
           <div>
             <SubTitle noSpace>川崎大師風鈴市</SubTitle>
           </div>
@@ -84,6 +92,7 @@ export default ({ data, location }) => {
             </Figure>
           </div>
         </MaxTwoColumn>
+                <div className="space-xl"/>
         <MaxTwoColumn>
           <div>
             <Figure  data-aos="fade-up" >

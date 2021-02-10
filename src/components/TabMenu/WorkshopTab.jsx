@@ -12,7 +12,7 @@ import ThumbUp from '@material-ui/icons/ThumbUp';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Link } from "gatsby";
-import { PaintWorkshop,RemoteWorkshop,BlowGlassWorkshop} from "../WorkshopList/index";
+import { PaintWorkshop,RemoteWorkshop,BlowGlassWorkshop,GroupWorkshop} from "../WorkshopList/index";
 
 
 function TabPanel(props) {
@@ -88,8 +88,9 @@ const number=Number(num)
               centered
         >
           <Tab label="絵付け"  {...a11yProps(0)} />
-        <Tab label="ガラス吹" {...a11yProps(1)}/>
-          <Tab label="リモート"  {...a11yProps(2)} />
+        <Tab label="ガラス吹き" {...a11yProps(1)}/>
+        <Tab label="リモート"  {...a11yProps(2)} />
+         <Tab label="団体・学校"  {...a11yProps(3)} />
 
         </Tabs>
 
@@ -101,6 +102,9 @@ const number=Number(num)
       </TabPanel>
       <TabPanel value={value} index={2}>
        <RemoteWorkshop/>
+      </TabPanel>
+         <TabPanel value={value} index={3}>
+       <GroupWorkshop/>
       </TabPanel>
 
     </div>

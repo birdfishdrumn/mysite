@@ -23,7 +23,7 @@ margin-top:10px;
 `
 
 export const Nav = styled.nav `
- @media(max-width:767px){
+ @media(max-width:1024px){
    display:none;
  }
  >ul {
@@ -65,6 +65,9 @@ export const MobileNav = styled.nav `
 }
 `
 export const LangNav = styled.nav `
+@media(max-width:767px){
+   display:none;
+}
 text-align:center;
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
 display:inline-block;

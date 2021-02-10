@@ -13,6 +13,14 @@ import {TwoColumn,SubTitle,Figure,Description,MinTitle} from "../style/GlobalSty
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 
 
+const Youtube = styled.iframe`
+width:560px;
+height:310px;
+@media(max-width:767px){
+  width:98%;
+}
+`
+
 
 export default ({ data, location }) => {
   useEffect(() => {
@@ -36,12 +44,23 @@ export default ({ data, location }) => {
       </div>
 
       <article className="content">
-        <SubTitle><Trans>江戸風鈴とは</Trans></SubTitle>
-        <Description data-aos="fade-up"  width="half">篠原まるよし風鈴では江戸風鈴の制作を行っており年間で12,000個ほど作ります。そうしてできた風鈴に絵を描いて販売、また体験学習に用います。</Description>
+        <SubTitle><Trans>江戸風鈴のつくり方・歴史</Trans></SubTitle>
+
         <div className="space-l"/>
         <TwoColumn>
           <div>
-            <SubTitle  border noSpace>江戸風鈴とは</SubTitle>
+            <SubTitle border noSpace>江戸風鈴とは</SubTitle>
+            <Description left><br/>江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。<br /><br />
+              <br />
+              型を使わずに宙吹きで作られ、絵は全て職人の手によって一つ一つ彩色されています。柄も明るい夏にぴったりの金魚や花火、可愛いじんべえ鮫や招き猫など多くの種類のものがあり,一つ一つ縁起の良い意味があります。
+
+            <br />   <br /> <br />
+
+              短冊のデザインは上が赤、下が緑の「天地ぼかし」になっており、太陽に照らされて地上の生命が繁栄するという摂理を表しています。
+
+
+
+            </Description>
           </div>
           <div>
             <Figure>
@@ -56,12 +75,17 @@ export default ({ data, location }) => {
         <Process data={data} />
 
 
-        <SubTitle>動画で確認</SubTitle>
+          <SubTitle>動画で確認</SubTitle>
+          <Youtube src="https://www.youtube.com/embed/yYWowTXguP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
+          <div className="space-xl"/>
+
           <MinTitle>絵付け</MinTitle>
 
           <Process paint data={data} />
+            <SubTitle>動画で確認</SubTitle>
+          <Youtube src="https://www.youtube.com/embed/LbyTq_nvdBg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
         </section>
-
+          <div className="space-xl"/>
         <SubTitle>江戸風鈴の歴史</SubTitle>
         <div className="space-xl"/>
         <History data={data}/>

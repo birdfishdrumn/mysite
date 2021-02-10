@@ -14,7 +14,7 @@ import ThumbUp from '@material-ui/icons/ThumbUp';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { Link } from "gatsby";
-import { Fuurin,Earring,Poppen,Tsuridai } from "../WindBellList/index";
+import { Fuurin,Earring,Poppen,Tsuridai,WorkshopKit } from "../WindBellList/index";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -29,7 +29,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -125,7 +125,7 @@ const number=Number(num)
         <Poppen/>
       </TabPanel>
       <TabPanel value={value} index={3}>
-         体験キット
+       <WorkshopKit/>
       </TabPanel>
           <TabPanel value={value} index={4}>
         <Tsuridai/>

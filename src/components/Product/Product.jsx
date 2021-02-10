@@ -54,7 +54,7 @@ const Product = ({data,description,title,destination,num,reverse,isEn}) => {
         <Description left >
           <Trans>{description}</Trans>
 
-                <Link to={destination} state={{ number: num}}><TextButton>詳しく見る</TextButton></Link>
+                <Link to={destination} state={{ number: num}}><TextButton><Trans>詳しく見る</Trans></TextButton></Link>
             </Description >
                 <SubTitle hannari noSpace border>
                 <Trans>{title}</Trans>

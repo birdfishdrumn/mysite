@@ -40,10 +40,5 @@ background: linear-gradient(to bottom,#F89174,#FFF 50%,#99CC33);
     width:220px;
 
   }
-   @media(max-width:767px){
-    width:180px;
 
-
-
-  }
 `

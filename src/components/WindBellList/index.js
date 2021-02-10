@@ -24,3 +24,5 @@ export { default as FuukinFilter }
 from "./FuukinFilter"
 export { default as AnimalFilter }
 from "./AnimalFilter"
+export { default as WorkshopKit }
+from "./WorkshopKit"

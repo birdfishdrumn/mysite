@@ -4,10 +4,10 @@ import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import BlogCard from "../components/Blog/blogCard"
+
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText,ProductColumn,Figure,MinTitle } from "../style/GlobalStyle"
-
+import { Button } from "../components/Button/styles";
 import NewsCardList  from "../components/UI/NewsCard/NewsCardList";
 import FeatureList from "../components/FeatureList/FeatureList";
 import { TabMenu,ProductCard ,Map,Pickup,TopPageContent} from "../components/index";
@@ -69,7 +69,7 @@ export default ({ data }) => {
                    <FeatureList data={data} />
           </div>
             <div className="space-l" />
-          {/* <Link to="/about"><Button>詳しく見る</Button></Link> */}
+          <Link to="/about"><Button><Trans>詳しく見る</Trans></Button></Link>
             <div className="space-l" />
       </div>
     </Featured>
@@ -111,7 +111,7 @@ export default ({ data }) => {
           <div className="space-l" />
         <Map/>
       </section>
-         <div className="space-l" />
+         <div className="space-xl" />
 
 
   </Layout>

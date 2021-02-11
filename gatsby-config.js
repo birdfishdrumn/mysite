@@ -24,6 +24,12 @@ module.exports = {
                 },
             },
         },
+        {
+            resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+            options: {
+                devMode: true,
+            },
+        },
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-react-helmet`,
         {

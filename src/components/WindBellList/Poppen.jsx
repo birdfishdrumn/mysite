@@ -21,7 +21,7 @@ query PoppenQuery{
         description
          localImage {
           childImageSharp{
-            fluid(maxWidth:300){
+            fluid(maxWidth:200){
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
@@ -31,7 +31,7 @@ query PoppenQuery{
     }
         utamaro: file(relativePath: { eq: "Introduce/utamaro005_main.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
         original {

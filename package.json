@@ -73,5 +73,8 @@
     },
     "bugs": {
         "url": "https://github.com/gatsbyjs/gatsby/issues"
+    },
+    "devDependencies": {
+        "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.20"
     }
 }

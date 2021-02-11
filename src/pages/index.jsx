@@ -82,7 +82,7 @@ export default ({ data }) => {
           <section className="photo">
       <h2 className="sr-only">Photo</h2>
       <figure>
-        <Img fluid={data.berry.childImageSharp.fluid} alt="" style={{ height: "100%" }} />
+        <Img fluid={data.narabi.childImageSharp.fluid} alt="" style={{ height: "100%" }} />
       </figure>
       </section>
         <div className="space-l" />
@@ -149,9 +149,9 @@ query {
 }
 
 
-  berry: file(relativePath: {eq: "kiriko_narabi_kumori.jpg"}){
+  narabi: file(relativePath: {eq: "kiriko_narabi_kumori.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 800) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

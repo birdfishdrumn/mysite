@@ -28,7 +28,7 @@ query FlowerQuery{
         }
          localImage {
           childImageSharp{
-            fluid(maxWidth:300){
+            fluid(maxWidth:200){
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

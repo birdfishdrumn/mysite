@@ -106,7 +106,7 @@ query {
   }
       naire: file(relativePath: {eq: "productImg/naire.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 400) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
       original{
@@ -119,7 +119,7 @@ query {
 
     fuurin: file(relativePath: {eq: "kingyo4.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 800) {
+      fluid(maxWidth: 400) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -132,7 +132,7 @@ query {
   }
     earring: file(relativePath: {eq: "productImg/earring_top.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 800) {
+      fluid(maxWidth: 400) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -145,7 +145,7 @@ query {
   }
       poppen: file(relativePath: {eq: "productImg/poppen_top.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 800) {
+      fluid(maxWidth: 400) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

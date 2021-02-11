@@ -18,7 +18,7 @@ window.open(url, '_blank')
           </div>
           <div>
             <Figure>
-              <Img fluid={data.berry.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+              <Img fluid={data.narabi.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
             </Figure>
           </div>
       </ProductColumn>
@@ -31,7 +31,7 @@ window.open(url, '_blank')
           </div>
           <div>
             <Figure>
-              <Img fluid={data.berry.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+              <Img fluid={data.narabi.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
             </Figure>
           </div>
       </ProductColumn>
@@ -44,7 +44,7 @@ window.open(url, '_blank')
           </div>
           <div>
             <Figure>
-              <Img fluid={data.berry.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+              <Img fluid={data.narabi.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
             </Figure>
           </div>
         </ProductColumn>

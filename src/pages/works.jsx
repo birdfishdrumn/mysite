@@ -184,7 +184,7 @@ export const query = graphql`
     }
     works: file(relativePath: { eq: "kingyo_re.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
         original {
@@ -196,7 +196,7 @@ export const query = graphql`
     }
        glass_plane: file(relativePath: { eq: "glass_plane.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
         original {
@@ -208,7 +208,7 @@ export const query = graphql`
     }
     daruma: file(relativePath: { eq: "darumadaishi.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
         original {
@@ -220,7 +220,7 @@ export const query = graphql`
     }
     hikawa: file(relativePath: { eq: "hikawa.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
         original {

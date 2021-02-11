@@ -12,7 +12,7 @@ const  WorkshopKit= ({}) => {
 query kitQuery{
     kikyou: file(relativePath: {eq: "iro2.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 800) {
+      fluid(maxWidth: 400) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

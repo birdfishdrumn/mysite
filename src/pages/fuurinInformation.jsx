@@ -96,7 +96,7 @@ query {
   }
     naire: file(relativePath: {eq: "productImg/naire.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 200) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
       original{

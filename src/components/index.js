@@ -5,14 +5,10 @@ export { default as WorkshopTab }
 from "./TabMenu/WorkshopTab"
 export { default as CarouselSlider }
 from "./CarouselSlider/CarouselSlider"
-export { default as ProductGrid }
-from "./ProductGrid/ProductGrid"
 export { default as ProductCard }
 from "./ProductCard/ProductCard"
 export { default as WindBellCard }
 from "./WindBellList/WindBellCard"
-export { default as BottomNotice }
-from "./BottomNotice/BottomNotice"
 export { default as Contact }
 from "./Contact/contact"
 export { default as FloatingAction }

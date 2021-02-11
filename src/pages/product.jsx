@@ -58,7 +58,7 @@ export default ({ data, location }) => {
     </figure>
     </div>
 
-     <div className="space-l" />
+
         <article className="content">
 
     <div className="center">

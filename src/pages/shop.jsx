@@ -76,7 +76,7 @@ query {
   }
     shop: file(relativePath: {eq: "shop.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 400) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -100,18 +100,6 @@ query {
       }
     }
   }
-      kingyo: file(relativePath: {eq: "kingyo.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
 }
 `

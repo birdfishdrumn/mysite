@@ -112,7 +112,7 @@ query {
   }
     works: file(relativePath: {eq: "kingyo_re.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 800) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -125,7 +125,7 @@ query {
   }
     kikyou: file(relativePath: {eq: "kikyou.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 200) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -149,18 +149,6 @@ query {
       }
     }
   }
-      hikawa: file(relativePath: {eq: "hikawa.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
 }
 `

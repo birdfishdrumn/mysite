@@ -29,6 +29,7 @@
         "gatsby-plugin-config": "^1.0.7",
         "gatsby-plugin-manifest": "^2.4.32",
         "gatsby-plugin-material-ui": "^2.1.10",
+        "gatsby-plugin-nprogress": "^2.10.0",
         "gatsby-plugin-offline": "^3.2.37",
         "gatsby-plugin-react-helmet": "^3.3.12",
         "gatsby-plugin-react-i18next": "^0.0.27",

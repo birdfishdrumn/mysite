@@ -118,7 +118,7 @@ module.exports = {
                 i18nextOptions: {
                     debug: true,
                     lowerCaseLng: true,
-                    saveMissing: true,
+                    saveMissing: false,
                     interpolation: {
                         escapeValue: false // not needed for react as it escapes by default
                     },
@@ -128,6 +128,15 @@ module.exports = {
 
             },
 
+        },
+        {
+            resolve: `gatsby-plugin-nprogress`,
+            options: {
+                // Setting a color is optional.
+                color: `tomato`,
+                // Disable the loading spinner.
+                showSpinner: true,
+            },
         },
 
     ],

@@ -13,16 +13,16 @@ import FeatureList from "../components/FeatureList/FeatureList";
 import { TabMenu,ProductCard ,Map,Pickup,TopPageContent,COVID_19} from "../components/index";
 import styled from "styled-components";
 // import News from  "../components/Blog/news"
-const ProductList = styled.div`
- max-width:1040px;
- margin:0 auto;
- display:grid;
- grid-template-columns:1fr 1fr 1fr;
- @media(max-width:767px){
-   width:100%;
-    grid-template-columns:1fr;
- }
-`
+// const ProductList = styled.div`
+//  max-width:1040px;
+//  margin:0 auto;
+//  display:grid;
+//  grid-template-columns:1fr 1fr 1fr;
+//  @media(max-width:767px){
+//    width:100%;
+//     grid-template-columns:1fr;
+//  }
+// `
 
 
 export default ({ data }) => {

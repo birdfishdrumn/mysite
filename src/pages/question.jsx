@@ -6,9 +6,6 @@ import SEO from "../components/seo";
 import { SubTitle, Description, MinTitle } from "../style/GlobalStyle";
 import { QuestionAccordion } from "../components/index"
 
-
-import TextInput from "../components/UI/textInput"
-
 export default ({data,location})=>{
 
 

@@ -7,7 +7,7 @@ import styled from "styled-components";
 import { Product } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { CarouselSlider,FloatingAction,WorkshopList}  from "../components/index";
+import { CarouselSlider,FloatingAction,WorkshopList,COVID_19}  from "../components/index";
 
 
 
@@ -20,8 +20,8 @@ const ProductList = styled.div`
 export default ({data,location}) => (
   <Layout>
     <SEO
-      pagetitle="ESSENTIALSについて"
-      pagedesc="食べ物の情報について発信しているサイトです"
+      pagetitle="江戸風鈴製作体験につきまして"
+      pagedesc="篠原まるよし風鈴の風鈴製作体験のページです。"
       pagepath={location.pathname}
       pageimg={data.taiken.childImageSharp.original.src}
       pageimgw={data.taiken.childImageSharp.original.width}
@@ -34,6 +34,9 @@ export default ({data,location}) => (
 </div>
 
     <article className="content center">
+      <div className="space-l"/>
+      <COVID_19 />
+      <div className="space-xl"/>
       <WorkshopList data={data}/>
     </article>
       <FloatingAction title="予約する" reserve/>

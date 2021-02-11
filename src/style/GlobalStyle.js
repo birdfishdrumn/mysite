@@ -106,29 +106,29 @@ export const Nav = styled.ul `
  font-size:2.2rem;
  padding:30px;
 max-width:824px;
- @media(max-width:767px){
+ /* @media(max-width:767px){
   w
- }
+ } */
  >li{
-  margin:10px;
+  margin:${props =>(props.noSpace ? "0" : "10px")};
    font-weight: bold;
    text-align:${props=>(props.left ? "left" : "center")};
        list-style:${props=>(props.square && "square")};
 
-        font-size:${props =>(props.small ? "1.2rem" : "1.7rem")};
+        font-size:${props =>(props.small ? "1.3rem" : "1.7rem")};
  @media(max-width:767px){
 /* font-size:1.7rem; */
   width:100%;
    }
  }
  >p{
-
-
    font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
    display:inline-block;
    font-size:1.1rem;
     text-align:${props=>(props.left ? "left" : "center")};
    color:grey;
+   margin-bottom:10px;
+   padding:0;
   width:80%;
    line-height: 1.8em;
    /* margin:10px; */
@@ -153,7 +153,12 @@ export const SubTitle = styled.div `
  }
 `
 
+export const MinDescription = styled.p `
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+ padding:5px 0 5px;
+ color:gray;
 
+`
 
 export const Description = styled.div `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
@@ -211,18 +216,23 @@ export const ImageText = styled.div `
     color: #fff;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 `
+
+
 export const MinTitle = styled.div `
   font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: bold;
  /* text-align:left; */
  /* width:75%; */
  /* font-size:1.5rem; */
+ text-align:${props => (props.left ? "left" : "center")};
  font-size:${props=>(props.large ? "1.8rem" : "1.5rem")};
- margin:10px;
+ margin:10px auto;
  ${props=>(props.first && `::first-letter{
    font-size:2.8rem;
  }`)}
-
+ @media(max-width:767px){
+    font-size:${props=>(props.small && "1.1rem")};
+ }
   `
     // ==========テキストデザイン===========
 
@@ -461,6 +471,7 @@ export const GridList = styled.figure `
   `
 
   };
+    grid-gap:${props => (props.gap && "20px")};
  @media(max-width:1024px){
  grid-template-columns:1fr 1fr 1fr;
  }

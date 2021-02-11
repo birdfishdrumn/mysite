@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import { businessQuestion,fuurinQuestion,historyQuestion} from "./questionData";
 import ContactSupportIcon from '@material-ui/icons/ContactSupport';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
+import { Description } from "../../style/GlobalStyle";
  //   [theme.breakpoints.up('sm')]: {
     //   width:"90%",
     // },
@@ -97,11 +98,11 @@ const  QuestionAccordion = ({business,fuurin,history}) =>{
             <Typography><ContactSupportIcon/> {item.title}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography style={{display:"flex"}}>
-              <QuestionAnswerIcon />
-              <div className="body-text" dangerouslySetInnerHTML={{ __html: item.description}} />
 
-          </Typography>
+              <QuestionAnswerIcon />
+              <Description left style={{padding:"0 5px"}}dangerouslySetInnerHTML={{ __html: item.description}} />
+
+
           </AccordionDetails>
         </Accordion>
       ))}

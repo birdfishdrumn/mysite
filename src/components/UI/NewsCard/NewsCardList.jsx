@@ -10,7 +10,7 @@ query NewsQuery{
     skip: 0
     limit: 3
     filter: {category:
-    {name: {eq:"お知らせ"}}})
+    {name: {eq:"pickup"}}})
     {
     edges{
       node{

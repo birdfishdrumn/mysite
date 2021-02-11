@@ -30,7 +30,7 @@ background: linear-gradient(to bottom,#F89174,#FFF 50%,#99CC33);
     padding:10px 0;
     position:absolute;
 
-    z-index:9999;
+    z-index:999;
       @media(max-width:768px){
     font-size:1.3rem;
 

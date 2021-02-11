@@ -17,7 +17,14 @@ export const mapStyle = [{
     },
     {
         "featureType": "road",
-        "elementType": "labels.icon"
+        "elementType": "labels.icon",
+        "stylers": [{
+                "hue": "#ccc"
+            },
+            {
+                "gamma": 3.1
+            }
+        ]
     },
     {
         "featureType": "landscape.man_made",

@@ -63,7 +63,7 @@ query PoppenQuery{
 
     </Description>
         <div className="space-l"/>
-          <TwoColumn>
+          <TwoColumn reverse>
           <div>
             <Description left noSpace>ポッペンは底の部分がとても薄くなっていて、細い棒の部分を咥えて息を入れると”ポッ”凸咥えている口を放すと”ペン”凹と音が出ます(底の部分が弾力で凸凹になる)。したがって”ポッペン”といいます。
                <br /><br /><br /><br />

@@ -39,3 +39,5 @@ export { default as IntroduceCircle }
 from "./IntroduceCircle/IntroduceCircle"
 export { default as TimeLine }
 from "./TimeLine/TimeLine"
+export { default as COVID_19 }
+from "./COVID_19/COVID_19"

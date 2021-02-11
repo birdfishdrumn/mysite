@@ -6,11 +6,11 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
-import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText,ProductColumn,Figure,MinTitle } from "../style/GlobalStyle"
+import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText} from "../style/GlobalStyle"
 import { Button } from "../components/Button/styles";
 import NewsCardList  from "../components/UI/NewsCard/NewsCardList";
 import FeatureList from "../components/FeatureList/FeatureList";
-import { TabMenu,ProductCard ,Map,Pickup,TopPageContent} from "../components/index";
+import { TabMenu,ProductCard ,Map,Pickup,TopPageContent,COVID_19} from "../components/index";
 import styled from "styled-components";
 // import News from  "../components/Blog/news"
 const ProductList = styled.div`
@@ -59,9 +59,12 @@ export default ({ data }) => {
          <Trans>一つ一つ職人が気持ちを込めて作った風鈴は、ガラスならではの涼しげでリラックスできる軽やかな音と、直接描かれた絵柄で見る人を癒してくれるでしょう。</Trans>
       <br /> <br />
           <Trans>現在は日本中で篠原まるよし風鈴と、篠原風鈴本舗の二件しか江戸風鈴の製作を行なっておりません。</Trans>
-        </Description>
-            <div className="space-xl" />
+          </Description>
 
+          <div className="space-xl" />
+          <COVID_19/>
+
+          <div className="space-xl" />
           <SubTitle hannari><Trans>良い音のひみつ</Trans></SubTitle>
           <div className="space-l" />
            <div className="space-l" />

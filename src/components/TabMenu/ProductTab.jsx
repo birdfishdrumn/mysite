@@ -103,7 +103,8 @@ const number=Number(num)
           onChange={handleChange}
          className={classes.tab}
           indicatorColor="transparent"
-          textColor="primary"
+        textColor="primary"
+         scrollButtons="on"
         aria-label="scrollable force tabs example"
          variant="scrollable"
               centered

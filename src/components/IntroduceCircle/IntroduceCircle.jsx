@@ -4,8 +4,8 @@ import { List } from "./style"
 
 const FeatureList = ({ data,product}) => {
   const Product = [
-    { image: data.naire, description: "まるよし風鈴では風鈴に特別な名入れをしています。プレゼントにもおすすめです。",title:"名入れ" },
-    { image: data.naire, description: "風鈴の吊るし方などこちらからどうぞ。",title:"風鈴の吊るし方"},
+    { image: data.naire, description: "まるよし風鈴では風鈴に特別な名入れをしています。大切な方のプレゼントにお勧めいたします。",title:"名入れ" },
+    { image: data.naire, description: "風鈴の吊るし場所、割れてしまった場合、オーダーメイドのことなどはこちらからどうぞ。",title:"風鈴のあれこれ"},
 
   ]
   const WorkshopKit = [

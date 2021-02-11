@@ -43,7 +43,7 @@ const WindBellCard = ({windBellImage,name,description,allImage,change,key}) =>{
       {change ? <ScrollImage fluid={allImage}/> : <WindBellImage fluid={windBellImage} /> }
 
 
-      {!change && <><MinTitle hannari>{name}</MinTitle>
+      {!change && <><MinTitle small hannari>{name}</MinTitle>
         <Description left color="grey" small>{description}</Description>
        </>
       }

@@ -23,16 +23,16 @@ height: 44px;
  font-weight:bold;
  text-transform: uppercase;
  text-decoration:none;
- background:white;
+ background:${props => (props.caution ? "black" : "white")};
 
- color:black;
+ color:${props => (props.caution ? "white" : "black")};
  border: 1px solid black;
  white-space: nowrap;
 ${fullWidthStyles}
 transition:0.5s;
 &:hover:not(:disabled){
-  color:white;
-  background:black;
+  color:${props => (props.caution ? "black" : "white")};
+  background:${props => (props.caution ? "white" : "black")};
   border:1px solid rgba(0,0,0,0)
 }
 

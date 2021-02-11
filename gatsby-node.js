@@ -111,7 +111,7 @@ exports.createPages = async({ graphql, actions, reporter }) => {
     // カテゴリー一覧ページのページネーションの設定
     blogresult.data.allContentfulCategory.edges.forEach(({ node }) => {
         const catPostsPerPage = 2
-        const catPosts = node.work.length //カテゴリーに属した記事の件数
+        const catPosts = node.work && node.work.length //カテゴリーに属した記事の件数
         const catPages = Math.ceil(catPosts / catPostsPerPage) //カテゴリーページの総数
         Array.from({ length: catPages }).forEach((_, i) => {
             createPage({
@@ -137,7 +137,7 @@ exports.createPages = async({ graphql, actions, reporter }) => {
     // タグ一覧ページのページネーションの設定
     blogresult.data.allContentfulTag.edges.forEach(({ node }) => {
         const tagPostsPerPage = 2
-        const tagPosts = node.work.length //カテゴリーに属した記事の件数
+        const tagPosts = node.work && node.work.length //カテゴリーに属した記事の件数
         const tagPages = Math.ceil(tagPosts / tagPostsPerPage) //カテゴリーページの総数
         Array.from({ length: tagPages }).forEach((_, i) => {
             createPage({

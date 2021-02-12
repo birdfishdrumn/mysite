@@ -39,7 +39,7 @@ const Access = ({data}) => {
           </AccessMap>
 
         <SubTitle>電車でお越しの方</SubTitle>
-        <Nav>
+        <Nav small>
           {accessData.map((item) => (
             <>
               <li>{item.place}</li>
@@ -48,12 +48,12 @@ const Access = ({data}) => {
           )) }
         </Nav>
          <SubTitle>バスでお越しの方</SubTitle>
-           <Nav>
+           <Nav small>
           <li>都バス 系統・都０２(大塚ー錦糸町) 新御徒町駅前下車１分</li>
           <p>大塚駅　⇄　錦糸町駅(経由・春日駅・御徒町駅都バス )のバスにお乗り頂き、新御徒町前で下車してください。</p>
         </Nav>
         <SubTitle>車でお越しの方</SubTitle>
-          <Nav>
+          <Nav small>
           <p>お店には駐車場がないので、申し訳ありませんが、お近くの白線などに駐車お願い致します。</p>
         </Nav>
       </section>

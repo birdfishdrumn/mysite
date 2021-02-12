@@ -141,7 +141,7 @@ export default ({ data, location }) => {
         </MaxTwoColumn>
         <div className="space-xl" />
 
-        <MaxTwoColumn>
+        <MaxTwoColumn auto>
           <div>
             <Figure  data-aos="fade-up" >
               <Img
@@ -152,8 +152,8 @@ export default ({ data, location }) => {
             </Figure>
           </div>
           <div>
-            <DescriptionFlex reverse>
-               <Description width="more" left>
+            <DescriptionFlex hikawa >
+              <Description width="more" noneMargin left>
               <br />
               この神社の境内に風が吹いた時は”神様が御出でになったことを表す”という言い伝えがあります。
               <br /><br />
@@ -171,7 +171,7 @@ export default ({ data, location }) => {
           </div>
         </MaxTwoColumn>
         <div className="space-xl" />
-          <div className = "space-xl"/>
+
         <div className="up-sm">
         <SubTitle>お仕事のご依頼</SubTitle>
 <Contact/></div>

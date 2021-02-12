@@ -1,6 +1,6 @@
 import styled, { css, createGlobalStyle, keyframes } from "styled-components"
 import Img from "gatsby";
-import { rgba } from "polished"
+import { important, rgba } from "polished"
 
 /* ===============================================
 #  color setting
@@ -170,12 +170,23 @@ text-align:${props => (props.left ? "left" : "center")};
   ${props => {
     switch (props.width) {
       case "half":
-        return `width:50%;`
+        return `width:50% !important;`
       case "more":
-        return `width:70%;`
+        return `width:70% !important;`
     }
     return "width:100%;"
-  }};
+}};
+  @media(max-width:767px){
+      ${props => {
+    switch (props.width) {
+      case "half":
+        return `width:80% !important;`
+      case "more":
+        return `width:70% !important;`
+    }
+    return "width:100%;"
+}};
+  }
   font-size:${props => (props.large ? "1.1rem" : "1rem")};
  margin:${props => (props.noneMargin ? "auto 0" : "0 auto")};
  ${props => {
@@ -304,7 +315,10 @@ export const TextFlex = styled.div`
 export const DescriptionFlex = styled.div`
  display:flex;
   /* width:80%; */
-  flex-direction:${props=>(props.reverse && "row-reverse" )};
+  flex-direction:${props => (props.reverse && "row-reverse")};
+   ${props => (props.hikawa && `
+    flex-direction:row-reverse;
+ `)}
 @media(max-width:767px){
   /* width:87%; */
 }
@@ -325,11 +339,16 @@ export const DescriptionFlex = styled.div`
      -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
  font-size:2.9rem;
+height:400px;
  text-align:left;
- margin:${props=>(props.reverse ? "0 0 0 auto" : "0 auto 0 0")};
+ margin:${props => (props.reverse ? "0 0 0 auto" : "0 auto 0 0")} !important;
+ ${props => (props.hikawa && `
+   margin: 0 0 0 20px !important;
+   height:600px;
+ `)}
     @media(max-width:768px){
     /* text-align:left; */
-    font-size:2.7rem;
+    font-size:2.6rem;
 
     /* padding:13px 5px 13px; */
     /* width:50px; */
@@ -431,6 +450,7 @@ export const MaxTwoColumn = styled.div `
    }
    >div:last-child{
     text-align:center;
+    /* height:100%; */
    margin:${props=>(props.auto && "auto 0")};
    }
 

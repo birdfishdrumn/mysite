@@ -59,7 +59,7 @@ const family = ({data}) => {
 
           </div>
         </IntroduceAnimal>
-              <div className="space-l"/>
+              <div className="space-s"/>
             <IntroduceAnimal>
         <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
         <div>

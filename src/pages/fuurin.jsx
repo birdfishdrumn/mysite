@@ -7,13 +7,7 @@ import styled from "styled-components";
 import { Product,WindBellCard,ProductTab ,FloatingAction} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem} from "../style/GlobalStyle";
-import { Button } from "../components/Button";
-import ViewColumnIcon from '@material-ui/icons/ViewColumn';
-import GridOnIcon from '@material-ui/icons/GridOn';
-import Tooltip from '@material-ui/core/Tooltip';
-import { IconButton } from "@material-ui/core";
-import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower } from "../components/WindBellList/index";
+
 
 export default ({ data, location }) => {
   //   const [change,setChange] = useState(false)

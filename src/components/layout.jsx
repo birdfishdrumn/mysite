@@ -2,7 +2,7 @@ import React from "react"
 
 import Header from "./Header/header"
 import Footer from "./Footer/footer"
-
+import "nprogress/nprogress.css";
 import "./layout.css"
 
 import "@fortawesome/fontawesome-svg-core/styles.css"//FontawsomeCssを先読みにする設定

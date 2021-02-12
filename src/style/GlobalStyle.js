@@ -177,7 +177,7 @@ text-align:${props => (props.left ? "left" : "center")};
     return "width:100%;"
   }};
   font-size:${props => (props.large ? "1.1rem" : "1rem")};
- margin:${props => (props.noneMargin ? "0" : "0 auto")};
+ margin:${props => (props.noneMargin ? "auto 0" : "0 auto")};
  ${props => {
     switch (props.color) {
       case "white":
@@ -300,6 +300,44 @@ export const TextFlex = styled.div`
 
   }
 `
+
+export const DescriptionFlex = styled.div`
+ display:flex;
+  /* width:80%; */
+  flex-direction:${props=>(props.reverse && "row-reverse" )};
+@media(max-width:767px){
+  /* width:87%; */
+}
+  >div:first-child{
+     @media(min-width:768px){
+      flex-basis: 75%;
+    line-height:2.2rem;
+    height:500px;
+    margin:auto 40px;
+  text-align:left;
+  width:100%;
+    }
+   margin:0 auto;
+     width:70%;
+
+  }
+  >div:last-child{
+     -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+ font-size:2.9rem;
+ text-align:left;
+ margin:${props=>(props.reverse ? "0 0 0 auto" : "0 auto 0 0")};
+    @media(max-width:768px){
+    /* text-align:left; */
+    font-size:2.7rem;
+
+    /* padding:13px 5px 13px; */
+    /* width:50px; */
+    }
+
+  }
+`
+
 export const TwoColumn = styled.div `
    display: grid;
    grid-gap:50px;
@@ -389,6 +427,7 @@ export const MaxTwoColumn = styled.div `
 
    >div{
     margin:0px;
+
    }
    >div:last-child{
     text-align:center;
@@ -405,13 +444,14 @@ export const MaxTwoColumn = styled.div `
    }
    }
    >div:first-child{
-        @media(max-width:767px){
+     margin:${props=>(props.auto && "auto 0")};
+        @media(max-width:1024px){
        order:${props => (props.reverse && 2)};
     }
    }
    >div:last-child{
     text-align:center;
-        @media(max-width:767px){
+        @media(max-width:1024px){
        margin:5px;
       order:${props => (props.reverse && 1)};
     }

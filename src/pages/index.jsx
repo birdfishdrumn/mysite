@@ -1,10 +1,10 @@
-import React from "react"
+import React,{useEffect} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-
+import Aos from "aos";
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText} from "../style/GlobalStyle"
 import { Button } from "../components/Button/styles";
@@ -29,6 +29,10 @@ export default ({ data }) => {
   const { t } = useTranslation();
   // console.log(t)
   console.log(data)
+    useEffect(() => {
+    Aos.init({ duration: 1200, startEvent: 'DOMContentLoaded', once: true });
+
+  }, [])
   return (
   <Layout>
       <SEO />
@@ -55,7 +59,7 @@ export default ({ data }) => {
        <Trans>江戸風鈴</Trans>
       </Content>
       <div className="center">
-          <Description width="half"><Trans>江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。</Trans><br /><br/>
+          <Description  data-aos="fade-up" width="half"><Trans>江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。</Trans><br /><br/>
          <Trans>一つ一つ職人が気持ちを込めて作った風鈴は、ガラスならではの涼しげでリラックスできる軽やかな音と、直接描かれた絵柄で見る人を癒してくれるでしょう。</Trans>
       <br /> <br />
           <Trans>現在は日本中で篠原まるよし風鈴と、篠原風鈴本舗の二件しか江戸風鈴の製作を行なっておりません。</Trans>
@@ -65,7 +69,7 @@ export default ({ data }) => {
           <COVID_19/>
 
           <div className="space-xl" />
-          <SubTitle hannari><Trans>良い音のひみつ</Trans></SubTitle>
+          <SubTitle  data-aos="fade-up" hannari><Trans>良い音のひみつ</Trans></SubTitle>
           <div className="space-l" />
            <div className="space-l" />
           <div className="center">
@@ -87,7 +91,7 @@ export default ({ data }) => {
       </section>
         <div className="space-l" />
     <section className="center">
-      <SubTitle><Trans>気持ちを込めてものを作る</Trans></SubTitle>
+      <SubTitle><Trans>気持ちを込める</Trans></SubTitle>
         <Description width="half"><Trans>篠原まるよし風鈴では風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。</Trans></Description>
           <div className="space-xl" />
 

@@ -43,6 +43,9 @@ display:flex;
 margin:0 auto;
 justify-content:center;
 margin:0;
+@media(max-width:767px){
+  flex-direction:column;
+}
 `
 
 export const FamilyImage = styled(Img)

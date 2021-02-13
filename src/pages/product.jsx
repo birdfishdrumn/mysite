@@ -52,10 +52,12 @@ export default ({ data, location }) => {
       pageimgw={data.product.childImageSharp.original.width}
       pageimgh={data.product.childImageSharp.original.height}
     />
-<div>
+        <div>
+           <section className="hero">
 	<figure>
-	   <Img fluid={data.product.childImageSharp.fluid} alt="製品情報"/>
-    </figure>
+	   <Img fluid={data.product.childImageSharp.fluid} style={{ height: "100%" }}alt="製品情報"/>
+            </figure>
+            </section>
     </div>
 
 
@@ -77,9 +79,9 @@ export default ({ data, location }) => {
              <div className="space-l" />
           <Product data={data.poppen} description="ポッペンはビードロともう呼ばれ、ガラスの弾力性を使った唯一の工芸品です。 単純なガラスの玩具ではなく、お正月に吹いて一年の厄を祓うという意味もあります" title="ポッペン" destination="/fuurin" num="2" />
           <div className="space-l" />
-          <Product data={data.earring} description="体験キットがあれば自宅にいても江戸風鈴の体験が楽しむことができます。絵の描き方なども説明してあるので充実した体験を提供いたします。" title="体験キット" destination="/fuurin" num="3" reverse="true" />
+          <Product data={data.kit} description="体験キットがあれば自宅にいても江戸風鈴の体験が楽しむことができます。絵の描き方なども説明してあるので充実した体験を提供いたします。" title="体験キット" destination="/fuurin" num="3" reverse="true" />
            <div className="space-l" />
-           <Product data={data.earring} description="風鈴を飾る場所がない、もう少しカッコ良く飾りたい方に吊り台はおすすめです。まるよし風鈴では照明とセットになった行灯型のものも販売しております。" title="吊り台" destination="/fuurin" num="4" />
+           <Product data={data.tsuridai} description="風鈴を飾る場所がない、もう少しカッコ良く飾りたい方に吊り台はおすすめです。まるよし風鈴では照明とセットになった行灯型のものも販売しております。" title="吊り台" destination="/fuurin" num="4" />
 
           <div className="space-xl" />
            <IntroduceCircle  product data={data} />
@@ -91,7 +93,7 @@ export default ({ data, location }) => {
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
-  product: file(relativePath: {eq: "ayame4.jpg"}){
+  product: file(relativePath: {eq: "Introduce/huurin_narabi.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 
@@ -144,6 +146,32 @@ query {
     }
   }
       poppen: file(relativePath: {eq: "productImg/poppen_top.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 400) {
+
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+      original{
+        src
+        height
+        width
+      }
+    }
+  }
+     kit: file(relativePath: {eq: "Introduce/taiken_kit.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 400) {
+
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+      original{
+        src
+        height
+        width
+      }
+    }
+  }
+        tsuridai: file(relativePath: {eq: "Introduce/tsuridai_kingyo.jpg"}){
     childImageSharp {
       fluid(maxWidth: 400) {
 

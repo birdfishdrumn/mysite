@@ -60,7 +60,7 @@ event.target.value,
 
     <div>
          <section className="center">
-      <SubTitle><Trans>まるよし風鈴の江戸風鈴</Trans></SubTitle>
+      <SubTitle><Trans>江戸風鈴</Trans></SubTitle>
           <Description  left width="half"><Trans>風鈴と聞いた時、金魚や花火、あさがおなど夏の柄が多く浮かびますが実は一つ一つ基本的には意味があります。こちらでは風鈴の意味を写真と共に紹介いたします。また現在4カ国語に翻訳もできますので海外の方もご覧になれます。</Trans>
     </Description>
         <FlexNav>

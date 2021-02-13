@@ -16,6 +16,7 @@ import {
   Description,
   DescriptionFlex
 } from "../style/GlobalStyle"
+import Image from "../components/image"
 
 export default ({ data, location }) => {
   useEffect(() => {
@@ -65,8 +66,8 @@ export default ({ data, location }) => {
           </div>
           <div>
             <Figure data-aos="fade-up">
-              <Img
-                fluid={data.glass_plane.childImageSharp.fluid}
+              <Image
+                filename="glass_plane.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
@@ -77,8 +78,8 @@ export default ({ data, location }) => {
         <MaxTwoColumn auto>
           <div>
             <Figure  data-aos="fade-up">
-              <Img
-                fluid={data.glass_plane.childImageSharp.fluid}
+               <Image
+                filename="glass_plane.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
@@ -131,8 +132,8 @@ export default ({ data, location }) => {
           </div>
           <div>
             <Figure  data-aos="fade-up" >
-              <Img
-                fluid={data.daruma.childImageSharp.fluid}
+              <Image
+                filename="darumadaishi.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
@@ -144,8 +145,8 @@ export default ({ data, location }) => {
         <MaxTwoColumn auto>
           <div>
             <Figure  data-aos="fade-up" >
-              <Img
-                fluid={data.hikawa.childImageSharp.fluid}
+              <Image
+                filename="hikawa.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />
@@ -208,41 +209,6 @@ export const query = graphql`
         }
       }
     }
-       glass_plane: file(relativePath: { eq: "glass_plane.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-        original {
-          src
-          height
-          width
-        }
-      }
-    }
-    daruma: file(relativePath: { eq: "darumadaishi.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-        original {
-          src
-          height
-          width
-        }
-      }
-    }
-    hikawa: file(relativePath: { eq: "hikawa.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-        original {
-          src
-          height
-          width
-        }
-      }
-    }
+
   }
 `

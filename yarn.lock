@@ -13713,6 +13713,11 @@ react-overlays@^4.1.0:
     uncontrollable "^7.0.0"
     warning "^4.0.3"
 
+react-parallax@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-3.2.0.tgz#1285c25945fd17fbb9072e5443f688bb595a3720"
+  integrity sha512-IXHYhoqXhqSdg59/9DbeGh6E8CJ8UKl0ZxyxoqpLOPQJfOtvRdud6j/XccajLo0snxRGxDpJ/oLHtIaABAlaOQ==
+
 react-reconciler@^0.24.0:
   version "0.24.0"
   resolved "https://registry.yarnpkg.com/react-reconciler/-/react-reconciler-0.24.0.tgz#5a396b2c2f5efe8554134a5935f49f546723f2dd"

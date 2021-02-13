@@ -11,7 +11,7 @@ import Layout from "../components/layout"
 import { History } from "../components/PageComponents/index";
 import {TwoColumn,SubTitle,Figure,Description,MinTitle} from "../style/GlobalStyle"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
-
+import Image from "../components/image";
 
 const Youtube = styled.iframe`
 width:560px;
@@ -37,14 +37,14 @@ export default ({ data, location }) => {
         pageimgw={data.about.childImageSharp.original.width}
         pageimgh={data.about.childImageSharp.original.height}
       />
-      <div className="eyecatch">
+      <section className="hero">
         <figure>
-          <Img fluid={data.about.childImageSharp.fluid} alt="製品情報" />
+          <Img fluid={data.about.childImageSharp.fluid}  style={{ height: "100%" }} alt="製品情報" />
         </figure>
-      </div>
+      </section>
 
       <article className="content">
-        <SubTitle><Trans>江戸風鈴のつくり方・歴史</Trans></SubTitle>
+        <SubTitle><Trans>江戸風鈴のこと</Trans></SubTitle>
 
         <div className="space-l"/>
         <TwoColumn>
@@ -68,6 +68,7 @@ export default ({ data, location }) => {
             </Figure>
           </div>
         </TwoColumn>
+
         <section className="center">
         <SubTitle><Trans>江戸風鈴ができるまで</Trans></SubTitle>
        <MinTitle><Trans>ガラス吹き</Trans></MinTitle>
@@ -97,7 +98,7 @@ export default ({ data, location }) => {
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
-  about: file(relativePath: {eq: "iro2.jpg"}){
+  about: file(relativePath: {eq: "Introduce/glass_plane_top.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 
@@ -149,6 +150,31 @@ query {
       }
     }
   }
+     makitori: file(relativePath: {eq: "process/makitori.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 200) {
 
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+      original{
+        src
+        height
+        width
+      }
+    }
+  }
+     kuchidama: file(relativePath: {eq: "process/kuchidama.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 200) {
+
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+      original{
+        src
+        height
+        width
+      }
+    }
+  }
 }
 `

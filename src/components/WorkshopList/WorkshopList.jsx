@@ -4,6 +4,7 @@ import { SubTitle, Nav, ListColumn, Description, MinTitle } from "../../style/Gl
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import { Button } from "../Button";
 import Img from "gatsby-image"
+import Image from "../image"
 import {WorkshopData} from "./WorkshopData"
 const WorkshopList = ({data}) => {
   return (
@@ -11,7 +12,7 @@ const WorkshopList = ({data}) => {
       {WorkshopData.map((item) => (<>
        <ListColumn>
         <div>
-          <Img fluid={data.komaru.childImageSharp.fluid} alt="製品情報"/>
+          <Image filename={item.image} alt="製品情報"/>
         </div>
         <div>
            <Link to = "/workshopContents" state={{number: item.num}}>

@@ -3,32 +3,35 @@ import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower } from "./index";
 import Layout from "../../components/layout"
-import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem} from "../../style/GlobalStyle";
-import { Button } from "../../components/Button";
-import ViewColumnIcon from '@material-ui/icons/ViewColumn';
-import GridOnIcon from '@material-ui/icons/GridOn';
-import Tooltip from '@material-ui/core/Tooltip';
-import { IconButton } from "@material-ui/core";
+import { SubTitle, Description, GridList, MinTitle, Scroll, ScrollItem } from "../../style/GlobalStyle";
+import { TsuridaiData } from "./TsuridaiData";
+import Image from "../image"
 
-const  　Tsuridai= ({}) => {
-    const [change,setChange] = useState(false)
-  const handleOn = useCallback(()=>{
-      setChange(true)
-  })
-    const handleOff = useCallback(()=>{
-      setChange(false)
-    })
+const  Tsuridai= () => {
+
   // console.log(location.state.number)
   return (
 
     <div>
         <section className="center">
-      <SubTitle>吊り台</SubTitle>
-          <Description  width="half">篠原まるよし風鈴では江戸風鈴を主として、その技術を応用してイヤリング、ぽっぺんなどを制作しております。また風鈴を吊るす台も販売していますので飾る場所がない方にはお勧めです。
-      <br/>またこちらのオンラインショップでは各商品もご購入可能です。
+      <SubTitle hannari>吊り台</SubTitle>
+        <Description width="half">つり台は家の中で飾る場所があまり無い方や、かっこよく飾りたい方におすすめです。まるよし風鈴では行灯型の吊り台も製作しており、照明としてお使いいただくことも可能です。
+
     </Description>
-    </section>
-    <div className="space-l" />
+      </section>
+      <div className="space-l" />
+      <section>
+              <GridList  gap >
+          {TsuridaiData.map(item => (
+            <div>
+              <Image filename={item.image} />
+              <MinTitle hannari>{item.title}</MinTitle>
+              <Description>{item.description}</Description>
+            </div>
+              ))}
+
+            </GridList>
+      </section>
     </div>
   )
 }

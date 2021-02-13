@@ -18,7 +18,7 @@ window.open(url, '_blank')
           </div>
           <div>
             <Figure>
-              <Img fluid={data.narabi.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+              <Img fluid={data.shouhin.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
             </Figure>
           </div>
       </ProductColumn>
@@ -44,7 +44,7 @@ window.open(url, '_blank')
           </div>
           <div>
             <Figure>
-              <Img fluid={data.narabi.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+              <Img fluid={data.online.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
             </Figure>
           </div>
         </ProductColumn>
@@ -53,3 +53,23 @@ window.open(url, '_blank')
 }
 
 export default TopPageContent
+
+   // <ProductColumn more >
+    //     <DescriptionFlex>
+
+
+    //          <div>
+
+    //         <Description left width="more"><Trans>篠原まるよし風鈴では主に小丸型と呼ばれる風鈴を中心に、少し形の変わった釣鐘型や風琴、またその技術を応用してイヤリングやポッペンなども制作しております。</Trans></Description>
+    //           <Link to="/product"><Button><Trans>詳しく見る</Trans></Button></Link>
+    //       </div>
+    //        <MinTitle first large><Trans>まるよしの風鈴</Trans></MinTitle>
+
+    //     </DescriptionFlex>
+
+    //       <div>
+    //         <Figure>
+    //           <Img fluid={data.shouhin.childImageSharp.fluid} alt="" style={{ width: "100%" }} />
+    //         </Figure>
+    //       </div>
+    //   </ProductColumn>

@@ -33,9 +33,9 @@ export default ({ data, location }) => {
         pageimgw={data.about.childImageSharp.original.width}
         pageimgh={data.about.childImageSharp.original.height}
       />
-      <div className="eyecatch">
+      <div className="hero">
         <figure>
-          <Img fluid={data.about.childImageSharp.fluid} alt="製品情報" />
+          <Img fluid={data.about.childImageSharp.fluid} style={{height:"100%"}} alt="製品情報" />
         </figure>
       </div>
 
@@ -61,7 +61,7 @@ export default ({ data, location }) => {
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
-  about: file(relativePath: {eq: "iro2.jpg"}){
+  about: file(relativePath: {eq: "Introduce/huurin_zaru_top.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 

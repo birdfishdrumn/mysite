@@ -51,12 +51,14 @@ function a11yProps(index) {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 2,
     width: '100%',
 
   },
   tab: {
-    padding:"15px"
+    padding: "15px",
+    margin: "0 auto",
+    justifyContent:"center"
   },
   bar: {
     position:"fixed"
@@ -107,7 +109,7 @@ const number=Number(num)
          scrollButtons="on"
         aria-label="scrollable force tabs example"
          variant="scrollable"
-              centered
+              // centered
         >
           <Tab label="風鈴"  {...a11yProps(0)} />
         <Tab label="イヤリング" {...a11yProps(1)}/>

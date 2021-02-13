@@ -12,17 +12,9 @@ import NewsCardList  from "../components/UI/NewsCard/NewsCardList";
 import FeatureList from "../components/FeatureList/FeatureList";
 import { TabMenu,ProductCard ,Map,Pickup,TopPageContent,COVID_19} from "../components/index";
 import styled from "styled-components";
-// import News from  "../components/Blog/news"
-// const ProductList = styled.div`
-//  max-width:1040px;
-//  margin:0 auto;
-//  display:grid;
-//  grid-template-columns:1fr 1fr 1fr;
-//  @media(max-width:767px){
-//    width:100%;
-//     grid-template-columns:1fr;
-//  }
-// `
+import Image from "../components/image";
+import {Parallax} from "react-parallax"
+
 
 
 export default ({ data }) => {
@@ -39,7 +31,7 @@ export default ({ data }) => {
 
     <section className="hero">
       <figure>
-        <Img fluid={data.hero.childImageSharp.fluid} alt="" style={{ height: "100%" }} />
+        <Image filename="uniqlo_poster.jpg" alt=""style={{ height: "100%" }} />
       </figure>
 
         <ImageText>
@@ -84,9 +76,10 @@ export default ({ data }) => {
     <div className="space-l" />
       {/* <News/> */}
           <section className="photo">
-      <h2 className="sr-only">Photo</h2>
+
       <figure>
-        <Img fluid={data.narabi.childImageSharp.fluid} alt="" style={{ height: "100%" }} />
+          {/* <Img fluid={data.narabi.childImageSharp.fluid} alt="" style={{ height: "100%" }} /> */}
+          <Parallax bgImage={data.narabi.publicURL} alt="" strong={500} style={{ height: "100%" }}/>
       </figure>
       </section>
         <div className="space-l" />
@@ -127,14 +120,7 @@ export default ({ data }) => {
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
-  hero: file(relativePath: {eq: "uniqlo_poster.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-    }
-  }
   kikyou: file(relativePath: {eq: "kikyou.jpg"}){
     childImageSharp {
       fluid(maxWidth: 320) {
@@ -153,7 +139,8 @@ query {
 }
 
 
-  narabi: file(relativePath: {eq: "kiriko_narabi_kumori.jpg"}){
+  narabi: file(relativePath: {eq: "Introduce/huurin_narabi.jpg"}){
+    publicURL
     childImageSharp {
       fluid(maxWidth: 800) {
 
@@ -169,7 +156,15 @@ query {
       }
     }
   }
-    online: file(relativePath: {eq: "iro.jpg"}){
+    online: file(relativePath: {eq: "Introduce/onlineshop_top.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 320) {
+
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+    }
+  }
+      shouhin: file(relativePath: {eq: "Introduce/shouhin_top.jpg"}){
     childImageSharp {
       fluid(maxWidth: 320) {
 

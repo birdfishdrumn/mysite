@@ -31,7 +31,7 @@ const family = ({data}) => {
         <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
         <div>
         <MinTitle hannari>篠原 延子</MinTitle>
-          <FamilyDescription left >中学時代から数えて職人歴49年。普段はガラス吹き、絵付け、体験指導を行っております。 風鈴の事ならお任せ下さい。</FamilyDescription>
+          <FamilyDescription left >主に接客や糸付けなどを担当させていただいておりますのでよろしくお願い致します。</FamilyDescription>
           </div>
         </IntroduceContainer>
              <div className="space-l"/>
@@ -39,7 +39,7 @@ const family = ({data}) => {
         <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
         <div>
         <MinTitle hannari>篠原 孝通</MinTitle>
-          <FamilyDescription left >中学時代から数えて職人歴49年。普段はガラス吹き、絵付け、体験指導を行っております。 風鈴の事ならお任せ下さい。</FamilyDescription>
+          <FamilyDescription left >主にガラス吹きや、風鈴の口を砥石で削ったりしています。</FamilyDescription>
           </div>
         </IntroduceContainer>
              <div className="space-l"/>
@@ -47,7 +47,7 @@ const family = ({data}) => {
         <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
         <div>
         <MinTitle hannari>篠原 通宏</MinTitle>
-          <FamilyDescription left >中学時代から数えて職人歴49年。普段はガラス吹き、絵付け、体験指導を行っております。 風鈴の事ならお任せ下さい。</FamilyDescription>
+          <FamilyDescription left > 主にガラス吹き、風鈴の絵付けや体験指導もしております。</FamilyDescription>
           </div>
         </IntroduceContainer>
         <div className="space-l" />

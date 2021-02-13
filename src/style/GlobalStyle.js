@@ -600,23 +600,6 @@ export const Figure = styled.figure `
 `
 
 
-export const SpaceS = styled.div `
- margin: 10px 0 10px 0;
-  `
-export const SpaceM = styled.div `
-    margin: 30 px 0 30 px 0;
-  `
-export const SpaceL = styled.div `
- margin: 50 px 0 50 px 0;
-  `;
-export const PaddingS = styled.div `
-padding: 20 px 0 20 px;
-  `;
-
-export const PaddingM = styled.div `
- padding: 50 px 0 50 px;
-  `;
-
 
 /* ===============================================
 #  set css variables

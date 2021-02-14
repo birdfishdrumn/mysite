@@ -31,7 +31,7 @@ export default ({ data, location }) => {
     <Layout>
       <SEO
         pagetitle="江戸風鈴とは"
-        pagedesc="江戸風鈴とは何かに付いて紹介いたします。"
+        pagedesc="江戸風鈴の特徴、ガラスの玉が作られる流れ、絵付けの流れ、また江戸風鈴の歴史について紹介いたします。"
         pagepath={location.pathname}
         pageimg={data.about.childImageSharp.original.src}
         pageimgw={data.about.childImageSharp.original.width}

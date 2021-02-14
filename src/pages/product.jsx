@@ -45,7 +45,7 @@ export default ({ data, location }) => {
     return (
     < Layout >
     <SEO
-      pagetitle="まるよし風鈴の商品のs紹介"
+      pagetitle="まるよし風鈴の商品の紹介"
       pagedesc="こちらでは様々な商品を紹介します。"
       pagepath={location.pathname}
       pageimg={data.product.childImageSharp.original.src}

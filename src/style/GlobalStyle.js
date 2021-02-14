@@ -357,6 +357,9 @@ height:400px;
   }
 `
 
+
+
+
 export const TwoColumn = styled.div `
    display: grid;
    grid-gap:50px;
@@ -509,6 +512,56 @@ export const ScrollItem = styled.li `
      display: inline-block;
 `
 
+//---------- grid---------------
+
+export const GridContainer = styled.div`
+  display: grid;
+  padding: 10px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    width:700px;
+
+    margin:0 auto;
+    @media(max-width:768px){
+      width:100%;
+    }
+
+`
+
+
+export const ItemA = styled.div`
+
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+    grid-row: 1/3;
+    grid-column: 1/2;
+
+`
+
+export const ItemB = styled.div`
+
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+   grid-row: 1/3;
+    grid-column: 2/3;
+
+`
+
+export const ItemC = styled.div`
+
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+     grid-row: 2/3;
+    grid-column: 2/3;
+    /* background: #88f; */
+`
+
+
+
+
 export const GridList = styled.figure `
 
   ${({ change }) => change ? `
@@ -536,10 +589,11 @@ export const GridList = styled.figure `
  grid-template-columns:1fr 1fr 1fr;
  }
  @media(max-width:767px){
- grid-template-columns:1fr 1fr;
+ grid-template-columns:${props=>(props.single ? "1fr":"1fr 1fr")};
  margin:0;
  }
 `
+// ---------grid-------------
 export const FlexNav = styled.nav`
 
 text-align:center;

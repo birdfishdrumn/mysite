@@ -3,10 +3,10 @@ import TextField from "@material-ui/core/TextField";
 import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { SubTitle, Description,TwoColumn,Figure,Nav } from "../style/GlobalStyle";
+import { SubTitle, Description,TwoColumn,Figure,Nav,ItemA,ItemB,ItemC,GridContainer} from "../style/GlobalStyle";
 import { Contact } from "../components/index"
 import styled from "styled-components"
-
+import Image from "../components/image";
 import TextInput from "../components/UI/textInput"
 
 
@@ -28,27 +28,38 @@ text-align:center;
 
 `
 
-const ConflictImageWrapper = styled.div`
-position:relative;
+// const ConflictImageWrapper = styled.div`
+// position:relative;
 
-`
+// `
 
-const ConflictImage = styled(Img)`
-position:absolute;
-top:0;
-right:0;
-  z-index:0;
-`
-const AbsoluteImage = styled(Img)`
-position:absolute;
-top:10;
-right:10;
-  z-index:2;
-
-`
+// const ImageA = styled(Img)`
 
 
-export default ({data})=>{
+//     position:    absolute;
+//     z-index:    0;
+//     top:        0px;
+//     left:        0px;
+
+//   display:block;
+// `
+
+
+// const ImageB = styled(Img)`
+
+
+//       position:    absolute;
+//     z-index:    999;
+//     top:        -120px;
+//     right:        70px;
+
+//     display:block;
+//     width:200px;
+
+
+// `
+
+export default ({data,location})=>{
 
 
   return (
@@ -61,7 +72,13 @@ export default ({data})=>{
     </figure>
         </div>
 
-        <SEO  pagetitle="お問い合わせフォーム" />
+        <SEO
+           pagetitle="風鈴の名入れ・あれこれ"
+      pagedesc="こちらでは江戸風鈴の名入れ、吊るし方、オーダーメイドや修理に関することなど、風鈴のあれこれについてご紹介いたします。"
+      pagepath={location.pathname}
+      pageimg={data.naire.childImageSharp.original.src}
+      pageimgw={data.naire.childImageSharp.original.width}
+        />
  <article className="content">
           <SubTitle>江戸風鈴の名入れ</SubTitle>
           <Description left width="half">ただ今江戸風鈴の名入れを承っております。ご希望のお名前を職人が一つ一つ墨で書き、背景にぼかしの入った短冊模様を入れて制作致します。大切な方のへのプレゼント、何か企画のお名前を入れたりイベントなどにもオススメです。<br/></Description>
@@ -131,7 +148,7 @@ export default ({data})=>{
             <SubTitle>風鈴のオーダーメイドについて</SubTitle>
             <TwoColumn>
               <div>
-              <Description large left >
+              <Description  left >
                   新しい模様はデザインを決めたり、内側から描くのに大丈夫かな？
                   なんてことを準備しなくてはなりません。したがって通常のものより
                   高価になります。<br/><br/>
@@ -146,20 +163,15 @@ export default ({data})=>{
           </div>
           <div>
 
-              <ConflictImage
-                fluid={data.naire.childImageSharp.fluid}
-                alt=""
-
-                  />
-                   <AbsoluteImage
-                fluid={data.naire.childImageSharp.fluid}
-                alt=""
-              />
-
+                  <GridContainer>
+      <ItemA><Image filename="taiken_kit_contents.jpg"/></ItemA>
+       <ItemB><Image filename="taiken_kit_contents.jpg"/></ItemB>
+        <ItemC><Image filename="taiken_kit_contents.jpg"/></ItemC>
+    </GridContainer>
           </div>
             </TwoColumn>
           </section>
-           <div className="space-l"/>
+
            <section>
             <SubTitle>風鈴が壊れてしまった時</SubTitle>
             <Description left width="half">

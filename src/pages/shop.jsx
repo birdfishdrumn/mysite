@@ -26,8 +26,8 @@ export default ({ data, location }) => {
   return (
     <Layout>
       <SEO
-        pagetitle="ESSENTIALSについて"
-        pagedesc="食べ物の情報について発信しているサイトです"
+        pagetitle="お店・スタッフの紹介"
+        pagedesc="こちらは篠原まるよし風鈴のお店、また職人の紹介をいたします。"
         pagepath={location.pathname}
         pageimg={data.about.childImageSharp.original.src}
         pageimgw={data.about.childImageSharp.original.width}

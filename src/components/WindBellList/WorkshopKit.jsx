@@ -3,54 +3,13 @@ import {graphql,useStaticQuery} from "gatsby"
 import Img from "gatsby-image"
 import { IntroduceCircle,Process } from "../index";
 import styled from "styled-components"
-import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem, MinTitle} from "../../style/GlobalStyle";
+import { SubTitle, Description,GridList,ItemA,ItemB,ItemC,GridContainer,MinTitle} from "../../style/GlobalStyle";
 import { Button } from "../../components/Button";
 import Image from "../image"
 import { WorkshopKitFlow } from "./TsuridaiData";
 
-const GridContainer = styled.div`
-  display: grid;
-  padding: 10px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 2fr 1fr;
-    width:700px;
 
-    margin:0 auto;
-    @media(max-width:768px){
-      width:100%;
-    }
 
-`
-
-const ItemA = styled.div`
-
-  padding: 5px;
-  font-size: 30px;
-  text-align: center;
-    grid-row: 1/3;
-    grid-column: 1/2;
-    /* background: #f88; */
-`
-
-const ItemB = styled.div`
-
-  padding: 5px;
-  font-size: 30px;
-  text-align: center;
-   grid-row: 1/3;
-    grid-column: 2/3;
-    /* background: #8f8; */
-`
-
-const ItemC = styled.div`
-
-  padding: 5px;
-  font-size: 30px;
-  text-align: center;
-     grid-row: 2/3;
-    grid-column: 2/3;
-    /* background: #88f; */
-`
 
 const ImageContainer = styled.div`
  width: 70% !important;
@@ -84,14 +43,15 @@ query kitQuery{
         <section className="center">
       <SubTitle hannari>体験キット</SubTitle>
         <Description left width="half">自宅でも江戸風鈴の体験ができるように、江戸風鈴の体験キットをご用意いたしました。
-         こちらがあればお簡単な筆洗いを用意する以外がすぐに江戸風鈴の絵付け体験を楽しむことができます。
+         こちらがあれば筆洗いと紙を用意して、すぐに江戸風鈴の絵付け体験を楽しむことができます。
     </Description>
       </section>
+      <div className="space-m"/>
       <section>
         <GridContainer>
       <ItemA><Image filename="taiken_kit_contents.jpg"/></ItemA>
-       <ItemB><Img fluid={data.kikyou.childImageSharp.fluid}/></ItemB>
-        <ItemC><Img fluid={data.kikyou.childImageSharp.fluid}/></ItemC>
+       <ItemB><Image filename="fuurin_tansaku.jpg"/></ItemB>
+        <ItemC><Image filename="brush_paint.jpg"/></ItemC>
     </GridContainer>
       </section>
       <section className="center">
@@ -106,7 +66,7 @@ query kitQuery{
       <section>
           <div className="space-l" />
         <MinTitle>体験の流れ</MinTitle>
-          <div className="space-l" />
+   c
         <GridList>
           {WorkshopKitFlow.map(item => (
             <div>
@@ -120,6 +80,15 @@ query kitQuery{
               </div>
          ))}
         </GridList>
+      </section>
+          <div className="space-l" />
+      <section>
+        <SubTitle hannari>絵の描き方</SubTitle>
+        <Description>申し訳ありません。ただいま準備中です。</Description>
+      </section>
+         <section>
+        <SubTitle hannari>短冊の付け方</SubTitle>
+                <Description>申し訳ありません。ただいま準備中です。</Description>
       </section>
     <div className="space-l" />
     </div>

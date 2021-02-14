@@ -106,7 +106,7 @@ const number=Number(num)
          className={classes.tab}
           indicatorColor="transparent"
         textColor="primary"
-         scrollButtons="on"
+          scrollButtons="off"
         aria-label="scrollable force tabs example"
          variant="scrollable"
               // centered

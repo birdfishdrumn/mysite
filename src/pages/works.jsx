@@ -25,8 +25,8 @@ export default ({ data, location }) => {
   return (
     <Layout>
       <SEO
-        pagetitle="ESSENTIALSについて"
-        pagedesc="食べ物の情報について発信しているサイトです"
+        pagetitle="わたしたちの仕事"
+        pagedesc="こちらでは篠原まるよし風鈴の仕事内容、またお世話になっている川崎大師風鈴市や川越氷川神社縁結び風鈴に関する仕事をご紹介いたします。"
         pagepath={location.pathname}
         pageimg={data.taiken.childImageSharp.original.src}
         pageimgw={data.taiken.childImageSharp.original.width}
@@ -67,7 +67,7 @@ export default ({ data, location }) => {
           <div>
             <Figure data-aos="fade-up">
               <Image
-                filename="glass_plane.jpg"
+                filename="huurin_etsuke.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />

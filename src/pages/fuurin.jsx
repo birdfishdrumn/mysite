@@ -2,8 +2,7 @@ import React,{useState,useCallback} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
 import Img from "gatsby-image"
-import {ProductGrid} from "../components/index"
-import styled from "styled-components";
+
 import { Product,WindBellCard,ProductTab ,FloatingAction} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -23,7 +22,7 @@ export default ({ data, location }) => {
   <Layout>
     <SEO
       pagetitle="まるよし風鈴の商品紹介"
-      pagedesc="こちらではまるよし風鈴の製作している商品を紹介いたします。"
+      pagedesc="こちらではより詳しくまるよし風鈴の製品である、江戸風鈴、体験キット、風鈴のイヤリングやピアス、ポッペン、体験キットなどについてご紹介いたします。"
       pagepath={location.pathname}
       pageimg={data.product.childImageSharp.original.src}
       pageimgw={data.product.childImageSharp.original.width}

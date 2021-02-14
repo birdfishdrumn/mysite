@@ -16,8 +16,8 @@ export default ({ data, location }) => {
     return (
   <Layout>
     <SEO
-      pagetitle="ESSENTIALSについて"
-      pagedesc="食べ物の情報について発信しているサイトです"
+      pagetitle="風鈴製作体験の内容"
+      pagedesc="ガラス吹き、絵付け、リモート、団体の体験について詳しく紹介いたします。"
       pagepath={location.pathname}
       pageimg={data.product.childImageSharp.original.src}
       pageimgw={data.product.childImageSharp.original.width}

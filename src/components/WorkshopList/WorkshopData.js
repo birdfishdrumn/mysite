@@ -2,7 +2,7 @@ export const WorkshopData = [{
         title: "絵付け体験",
         description: "篠原まるよし風鈴で用意した風鈴の中から絵を描いてただく体験です。デザインに関しては見本などもあるので、描きたい柄がない場合でもご安心ください。",
         num: 0,
-        image: "maruyosi.jpg"
+        image: "paint_workshop.jpg"
     },
     {
         title: "ガラス吹き体験",

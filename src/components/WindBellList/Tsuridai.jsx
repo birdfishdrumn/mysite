@@ -21,7 +21,7 @@ const  Tsuridai= () => {
       </section>
       <div className="space-l" />
       <section>
-              <GridList  gap >
+              <GridList single gap >
           {TsuridaiData.map(item => (
             <div>
               <Image filename={item.image} />

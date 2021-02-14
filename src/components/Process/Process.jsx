@@ -44,32 +44,32 @@ const Process = ({ data, paint }) => {
 const paintProcessData = [{
         description: "絵を描くのに必要な、油性の顔料、水性の絵の具、筆を用意します。",
         content: "道具を用意",
-        image: "makitori.jpg"
+        image: "ganryou.jpg"
     },
     {
         description: "気持ちを込めながら、最初に水性の絵の具で金魚の目や模様を丁寧に書いていきます。",
         content: "模様を描く",
-        image: "makitori.jpg"
+        image: "moyou.jpg"
     },
     {
         description: "次に油性の顔料でこの金魚の体の色を塗っていきます。最初に赤で体の上部を塗り、お腹を白で塗ります。",
         content: "色ぬり",
-        image: "makitori.jpg"
+        image: "kingyo_body.jpg"
     },
     {
         description: "金魚の体を塗り終えたら、一番の見せ所である尾びれを勢いよく書いていき、胸ビレを描きます。",
         content: "ヒレを描く",
-        image: "makitori.jpg"
+        image: "kingyo_hire.jpg"
     },
     {
-        description: "これで金魚が一匹できました！この調子で三匹描いていきます。",
-        content: "金魚の完成",
-        image: "makitori.jpg"
+        description: "次に水引きという金魚の泳いでいる水を表すグラデーションの線をいれます。",
+        content: "水引き",
+        image: "kingyo_mizuhiki.jpg"
     },
     {
-        description: "藻を描き、下に水面を表すグラデーションの線を入れました。これを描く事で金魚の住む環境が整い、絵柄の完成です!",
+        description: "更に水草を描き金魚の住む環境を整えます。これで金魚の絵柄の完成です!",
         content: "全体の仕上げ",
-        image: "makitori.jpg"
+        image: "kingyo_last.jpg"
     }
 
 ]

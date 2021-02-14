@@ -2,7 +2,7 @@ import React from 'react'
 import {graphql,useStaticQuery,Link} from "gatsby"
 import { PickupContainer } from "./style"
 import Img from "gatsby-image";
-import {SubTitle,Description} from "../../style/GlobalStyle"
+import {SubTitle,Description,MinTitle} from "../../style/GlobalStyle"
 const Pickup = () => {
   const data = useStaticQuery(graphql`
 query PickupQuery{
@@ -35,7 +35,8 @@ query PickupQuery{
 
         <Img fluid={pickup.image.fluid} style={{margin:"0 auto"}}/>
       </div>
-       <Description>{pickup.title}</Description>
+        <MinTitle hannari>{pickup.title}</MinTitle>
+         <Description hannari>{pickup.content.content.slice(0,40)}</Description>
       {/* <div key={pickup.id} slug={pickup.slug} fluid={pickup.image.fluid} alt={pickup.image.description} dataTime={pickup.date}
             catname={pickup.category.name} title={pickup.title}  /> */}
         </Link>

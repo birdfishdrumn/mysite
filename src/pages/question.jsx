@@ -19,8 +19,8 @@ export default ({data,location})=>{
     </figure>
         </div>
 
-        <SEO pagetitle="お問い合わせフォーム"
-         pagedesc="こちらでは様々な商品を紹介します。"
+        <SEO pagetitle="よくある質問"
+         pagedesc="こちらでは風鈴の仕事に関してよくある質問をご回答いたします。"
       pagepath={location.pathname}
       pageimg={data.contact.childImageSharp.original.src}
       pageimgw={data.contact.childImageSharp.original.width}

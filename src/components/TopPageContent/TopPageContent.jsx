@@ -35,7 +35,7 @@ window.open(url, '_blank')
 }
   return (
     <div>
-       <ProductColumn more >
+       <ProductColumn responsive more >
          <ProductTextFlex>
              <div className="center">
 
@@ -53,16 +53,16 @@ window.open(url, '_blank')
             </Figure>
           </div>
       </ProductColumn>
-      <div className="space-l"/>
-          <ProductColumn more reverse>
+      <div className="space-m"/>
+          <ProductColumn responsive right more reverse>
         <ProductTextFlex reverse>
 
 
              <div className="center">
 
-            <Description left ><Trans>まるよし風鈴では絵付け体験、ガラス吹体験、リモート絵付け体験など、体験も充実しています。世界で一つだけの風鈴を制作してみませんか？</Trans></Description>
+            <Description left ><Trans><br/>まるよし風鈴では絵付け体験、ガラス吹体験、リモート絵付け体験など、体験も充実しています。世界で一つだけの風鈴を制作してみませんか？</Trans></Description>
             <div className="space-l"/>
-              <Link to="/product" ><Button ><Trans>詳しく見る</Trans></Button></Link>
+              <Link to="/workshop" ><Button ><Trans>詳しく見る</Trans></Button></Link>
           </div>
            <MinTitle first hannari large><Trans>体験学習</Trans></MinTitle>
 
@@ -74,14 +74,14 @@ window.open(url, '_blank')
             </Figure>
           </div>
       </ProductColumn>
-       <div className="space-l"/>
-         <ProductColumn more>
+       <div className="space-m"/>
+         <ProductColumn responsive more>
                 <ProductTextFlex>
              <div className="center">
 
             <Description left ><Trans><br/>篠原まるよし風鈴では主に小丸型と呼ばれる風鈴を中心に、少し形の変わった釣鐘型や風琴、またその技術を応用してイヤリングやポッペンなども制作しております。</Trans></Description>
             <div className="space-l"/>
-              <Link to="/product" ><Button ><Trans>詳しく見る</Trans></Button></Link>
+              <Button onClick={onlineOpen}><Trans>詳しく見る</Trans></Button>
           </div>
            <MinTitle first hannari large><Trans>ネットショップ</Trans></MinTitle>
 

@@ -3,8 +3,8 @@ import { IntroduceContainer,IntroduceAnimal,FamilyImage,FamilyDescription,Flex }
 import huurin from "../../images/kingyo.jpg"
 import { MinTitle } from "../../style/GlobalStyle";
 import {TimeLine} from "../index";
-
-
+import {familyData} from "./familyData"
+import Image from "../image"
 
 const family = ({data}) => {
 
@@ -14,7 +14,7 @@ const family = ({data}) => {
       <div className="space-l"/>
       <section>
       <IntroduceContainer>
-        <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
+       <FamilyImage><Image filename="maruyosi.jpg" style={{borderRadius:"50%"}}/></FamilyImage>
         <div>
         <MinTitle hannari>篠原 正義</MinTitle>
           <FamilyDescription left >中学時代から数えて職人歴49年。普段はガラス吹き、絵付け、体験指導を行っております。 風鈴の事ならお任せ下さい。</FamilyDescription>
@@ -25,35 +25,28 @@ const family = ({data}) => {
       <section>
       <TimeLine/>
       </section>
+      <div className="space-l"/>
       <section>
-         <div className="space-l"/>
-         <IntroduceContainer>
-        <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
+        {familyData.map(item => (
+          <>
+            <IntroduceContainer>
+
+              <FamilyImage><Image filename="naire.jpg" style={{borderRadius:"50%"}}/></FamilyImage>
         <div>
-        <MinTitle hannari>篠原 延子</MinTitle>
-          <FamilyDescription left >主に接客や糸付けなどを担当させていただいておりますのでよろしくお願い致します。</FamilyDescription>
+              <MinTitle hannari>{item.name}</MinTitle>
+              <FamilyDescription left >{item.description}</FamilyDescription>
           </div>
-        </IntroduceContainer>
-             <div className="space-l"/>
-         <IntroduceContainer>
-        <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
-        <div>
-        <MinTitle hannari>篠原 孝通</MinTitle>
-          <FamilyDescription left >主にガラス吹きや、風鈴の口を砥石で削ったりしています。</FamilyDescription>
-          </div>
-        </IntroduceContainer>
-             <div className="space-l"/>
-         <IntroduceContainer>
-        <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
-        <div>
-        <MinTitle hannari>篠原 通宏</MinTitle>
-          <FamilyDescription left > 主にガラス吹き、風鈴の絵付けや体験指導もしております。</FamilyDescription>
-          </div>
-        </IntroduceContainer>
+          </IntroduceContainer>
+           <div className="space-m" />
+            </>
+        ))}
+
+      </section>
+     <section>
         <div className="space-l" />
         <Flex>
             <IntroduceAnimal>
-        <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
+           <FamilyImage><Image filename="naire.jpg" style={{borderRadius:"50%"}}/></FamilyImage>
         <div>
         <MinTitle hannari>ふうた</MinTitle>
 
@@ -61,7 +54,7 @@ const family = ({data}) => {
         </IntroduceAnimal>
               <div className="space-s"/>
             <IntroduceAnimal>
-        <div><FamilyImage fluid={data.about.childImageSharp.fluid} /></div>
+       <FamilyImage><Image filename="naire.jpg" style={{borderRadius:"50%"}}/></FamilyImage>
         <div>
         <MinTitle hannari>カメ男</MinTitle>
 

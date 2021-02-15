@@ -48,7 +48,7 @@ query kitQuery{
       </section>
       <div className="space-m"/>
       <section>
-        <GridContainer>
+        <GridContainer style={{margin:"0 auto"}}>
       <ItemA><Image filename="taiken_kit_contents.jpg"/></ItemA>
        <ItemB><Image filename="fuurin_tansaku.jpg"/></ItemB>
         <ItemC><Image filename="brush_paint.jpg"/></ItemC>
@@ -66,7 +66,6 @@ query kitQuery{
       <section>
           <div className="space-l" />
         <MinTitle>体験の流れ</MinTitle>
-   c
         <GridList>
           {WorkshopKitFlow.map(item => (
             <div>

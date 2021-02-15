@@ -88,7 +88,7 @@ export default ({ data, location }) => {
         </section>
           <div className="space-xl"/>
         <SubTitle>江戸風鈴の歴史</SubTitle>
-        <div className="space-xl"/>
+        <div className="space-m"/>
         <History data={data}/>
       </article>
 

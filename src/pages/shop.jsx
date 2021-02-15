@@ -14,7 +14,7 @@ import { Access,Family}from "../components/PageComponents/index"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import {TwoColumn,SubTitle,Figure,Description,MinTitle,FlexNav} from "../style/GlobalStyle"
-
+import Image from "../components/image"
 
 
 export default ({ data, location }) => {
@@ -35,7 +35,7 @@ export default ({ data, location }) => {
       />
       <div className="hero">
         <figure>
-          <Img fluid={data.about.childImageSharp.fluid} style={{height:"100%"}} alt="製品情報" />
+          <Image filename="kiriko_narabi.jpg" style={{height:"100%"}} alt="製品情報" />
         </figure>
       </div>
 

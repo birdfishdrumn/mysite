@@ -3,15 +3,18 @@ import React from 'react'
 import { Description,MinTitle,MaxTwoColumn,SubTitle,Figure,} from '../../style/GlobalStyle'
 import Img from "gatsby-image"
 import {HistoryImage } from "./style"
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+import { Trans, useTranslation, Link } from 'gatsby-plugin-react-i18next';
+import Image from "../image"
 const History = ({data}) => {
+
 
 
   return (
     <div className="center">
-         <MaxTwoColumn auto little>
-          <div>
+         <MaxTwoColumn auto reverse little>
+        <div>
 
+     <MinTitle >江戸風鈴の誕生</MinTitle>
             <Description left width="more">
  <Trans>江戸風鈴の名称はその道の第一人者・篠原儀治（しのはら よしはる）がひとつひとつ宙吹きで作られたｶﾞﾗｽの風鈴を”江戸風鈴”と命名しました。江戸時代の末期から庶民に知られるようになったｶﾞﾗｽの風鈴、それ以前は、庶民が手の届かない程高価なものでした。</Trans>
 <br/>
@@ -28,16 +31,19 @@ const History = ({data}) => {
           </div>
           <div>
             <Figure  data-aos="fade-up" >
-              <HistoryImage
-                fluid={data.history.childImageSharp.fluid}
+            <HistoryImage>
+               <Image filename="garasuhuki.jpg"
                 alt=""
                 // style={{ width: "60%",margin:"0 auto" }}
               />
+              </HistoryImage>
+
             </Figure>
           </div>
       </MaxTwoColumn>
+      <div className="space-l"/>
        <Description width="half">
-<span>『売り声もなくて買い手の数あるは、音にしられる風鈴の徳』</span>
+<span style={{fontSize:"1.2rem",fontWeight:"bold"}}>『売り声もなくて買い手の数あるは、音にしられる風鈴の徳』</span>
 
           <br/>
           <br/>
@@ -49,9 +55,23 @@ const History = ({data}) => {
           響かせるので、始終売り声をあげることが無かったといわれています。
           <br/><br/>
       </Description>
+      <div className="space-l" />
+      <MaxTwoColumn auto  little>
+            <div>
+            <Figure  data-aos="fade-up" >
+             <HistoryImage>
+               <Image filename="fuurin_arekore.jpg"
+                alt=""
+                // style={{ width: "60%",margin:"0 auto" }}
+              />
+              </HistoryImage>
+            </Figure>
+          </div>
+          <div>
 
-       <MinTitle >魔除けとしての風鈴</MinTitle>
-      <Description width="half">
+
+     <MinTitle >魔除けとしての風鈴</MinTitle>
+      <Description left width="more">
 
           日本人は、音に対する信仰がつよく「鈴」を魔除けにしているのは有名です。
 
@@ -65,6 +85,12 @@ const History = ({data}) => {
           <br/><br/>
           江戸風鈴は、昔から人々の心を癒す（いやす）役目をしていたのです。
     </Description>
+
+
+          </div>
+
+      </MaxTwoColumn>
+
     </div>
   )
 }

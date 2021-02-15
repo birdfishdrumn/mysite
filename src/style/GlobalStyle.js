@@ -373,19 +373,25 @@ export const TwoColumn = styled.div `
     }
    }
    >div:first-child{
+
+     @media(max-width:1024px){
+
+     }
         @media(max-width:767px){
        order:${props => (props.reverse && 2)};
     }
+
    }
    >div:last-child{
     text-align:center;
+    margin:auto 0;
         @media(max-width:767px){
        margin:5px;
       order:${props => (props.reverse && 1)};
     }
    }
 
-   @media(max-width:1024px){
+   @media(max-width:767px){
      margin:10px;
      grid-gap:10px;
      grid-template-columns:1fr;
@@ -403,13 +409,14 @@ export const ProductColumn = styled.div `
    /* max-width:807px; */
    max-width:${props => (props.more ? "1024px" : "807px")};
    >div{
-    margin:20px;
+    margin:${props => (props.right ?  "0 20px 0 0":"0 0 0 20px")};
    }
       >div:first-child{
       @media(min-width:768px){
          order:${props=>props.reverse ? 2 : 1};
     }
-
+    margin-bottom:20px;
+     order: ${props =>(props.responsive && 2)};
    }
       >div:last-child{
     text-align:center;
@@ -417,6 +424,8 @@ export const ProductColumn = styled.div `
   order:${props => props.reverse ? 1 : 2};
 
     }
+     order: ${props =>(props.responsive && 1)};
+    margin-bottom: ${props =>(props.responsive && "20px")};
 
    }
     @media(max-width:767px){
@@ -435,7 +444,7 @@ export const ProductColumn = styled.div `
        @media(max-width:380px){
      /* grid-gap:0px; */
      grid-template-columns:1fr;
-    width:95%;
+    width:  100%;
 
    }
 `

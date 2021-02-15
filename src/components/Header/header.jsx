@@ -167,7 +167,7 @@ console.log(props.location)
             <DialogTitle id="customized-dialog-title" onClose={handleClose}>
         </DialogTitle>
           <DialogContent>
-           <MobileNav> <NavItem lang/></MobileNav>
+           <MobileNav> <NavItem mobile lang/></MobileNav>
         </DialogContent>
         <DialogActions>
 

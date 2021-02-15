@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Img from "gatsby-image"
 import { Description } from "../../style/GlobalStyle";
+
+
 export const IntroduceContainer = styled.div `
  height:30%;
 max-width:700px;
@@ -11,6 +13,7 @@ max-width:700px;
 display:flex;
 >div:last-child{
   margin:0 auto;
+  width:80%;
 }
 @media(max-width:768px){
   flex-direction:column;
@@ -21,7 +24,7 @@ display:flex;
 `
 export const IntroduceAnimal = styled.div `
  height:30%;
-max-width:325px;
+max-width:305px;
 
  border:3px solid black;
  margin:0 30px;
@@ -48,13 +51,12 @@ margin:0;
 }
 `
 
-export const FamilyImage = styled(Img)
-`
-  height:auto;
-  width:250px;
-  height:auto;
+export const FamilyImage = styled.div `
+
+  width:250px !important;
+
        margin:0 auto;
-  border-radius:50%;
+
   @media(max-width:1024px){
     width:220px;
 
@@ -65,12 +67,13 @@ export const FamilyImage = styled(Img)
     margin:0 auto;
   }
 `
-export const HistoryImage = styled(Img)
-`margin:auto;
- width:80%;
+export const HistoryImage = styled.div `
+margin:auto;
+ width:250px;
  @media(max-width:1024px){
   margin:0 auto;
  }
+
 `
 
 export const FamilyDescription = styled(Description)

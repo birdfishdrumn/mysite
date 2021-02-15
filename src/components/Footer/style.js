@@ -82,13 +82,18 @@ export const SNS = styled.ul `
     list-style: none;
     font-size: 30px;
     text-align:left;
+    display:${props=>(props.flex && "inline-flex")};
+
     >li:not(last-child){
      margin:20px;
 
     }
     >li{
+       /* background:${props=>(props.color && "black")}; */
       display:flex;
+
       >a{
+
         >span{
           font-size:1rem;
           margin-left:10px;

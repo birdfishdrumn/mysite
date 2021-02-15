@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description, MinTitle } from "../style/GlobalStyle";
 import { QuestionAccordion } from "../components/index"
-
+import Image from "../components/image"
 export default ({data,location})=>{
 
 
@@ -13,18 +13,19 @@ export default ({data,location})=>{
     <div>
 
       <Layout>
-        <div>
-	<figure>
-	   <Img fluid={data.contact.childImageSharp.fluid} alt="製品情報"/>
-    </figure>
-        </div>
-
         <SEO pagetitle="よくある質問"
          pagedesc="こちらでは風鈴の仕事に関してよくある質問をご回答いたします。"
       pagepath={location.pathname}
       pageimg={data.contact.childImageSharp.original.src}
       pageimgw={data.contact.childImageSharp.original.width}
       pageimgh={data.contact.childImageSharp.original.height}/>
+           <section className="hero">
+	<figure>
+	   <Image filename="huurin_zaru_top.jpg" style={{ height: "100%" }}  alt="製品情報"/>
+    </figure>
+        </section>
+
+
  <article className="content">
         <SubTitle>よくある質問</SubTitle>
         <div className="space-m" />

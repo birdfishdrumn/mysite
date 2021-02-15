@@ -41,7 +41,7 @@ const Product = ({data,description,title,destination,num,reverse,isEn}) => {
     Aos.init({ duration: 1000, startEvent: "DOMContentLoaded", once: true })
   }, [])
   return (
-       <ProductColumn  reverse={reverse}>
+       <ProductColumn   reverse={reverse}>
           <div>
             <Figure  data-aos="fade-up">
               <ProductImg

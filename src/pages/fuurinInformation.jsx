@@ -33,31 +33,37 @@ text-align:center;
 
 // `
 
-// const ImageA = styled(Img)`
+const ImageA = styled(Img)`
 
 
-//     position:    absolute;
-//     z-index:    0;
-//     top:        0px;
-//     left:        0px;
-
-//   display:block;
-// `
-
-
-// const ImageB = styled(Img)`
-
-
-//       position:    absolute;
-//     z-index:    999;
-//     top:        -120px;
-//     right:        70px;
-
-//     display:block;
-//     width:200px;
+    position:    absolute;
+    z-index:    0;
+    top:        0px;
+    left:        0px;
+  display:block;
+   width:350px;
+   margin-top:20px;
+       @media(max-width:767px){
+      width:270px;
+    }
+`
 
 
-// `
+const ImageB = styled(Img)`
+
+
+      position:    absolute;
+    z-index:    999;
+    top:        -80px;
+    right:        40px;
+    display:block;
+    width:200px;
+    @media(max-width:767px){
+      width:150px;
+       top:        -50px;
+    right:        20px;
+    }
+`
 
 export default ({data,location})=>{
 
@@ -66,46 +72,22 @@ export default ({data,location})=>{
     <div>
 
       <Layout>
-        <div>
-	<figure>
-	   <Img fluid={data.contact.childImageSharp.fluid} alt="製品情報"/>
-    </figure>
-        </div>
-
-        <SEO
-           pagetitle="風鈴の名入れ・あれこれ"
-      pagedesc="こちらでは江戸風鈴の名入れ、吊るし方、オーダーメイドや修理に関することなど、風鈴のあれこれについてご紹介いたします。"
+              <SEO
+           pagetitle="風鈴のあれこれ"
+      pagedesc="こちらでは江戸風鈴の吊るし方や修理に関することなど、風鈴のあれこれについてご紹介いたします。"
       pagepath={location.pathname}
       pageimg={data.naire.childImageSharp.original.src}
       pageimgw={data.naire.childImageSharp.original.width}
         />
+        <section className="hero">
+	<figure>
+            <Image filename="naire_top.jpg" style={{height:"100%"}} alt="製品情報"/>
+    </figure>
+        </section>
+
+
  <article className="content">
-          <SubTitle>江戸風鈴の名入れ</SubTitle>
-          <Description left width="half">ただ今江戸風鈴の名入れを承っております。ご希望のお名前を職人が一つ一つ墨で書き、背景にぼかしの入った短冊模様を入れて制作致します。大切な方のへのプレゼント、何か企画のお名前を入れたりイベントなどにもオススメです。<br/></Description>
-           <TwoColumn reverse>
-          <div>
-              <Description large left >
 
-                <TextNav style={{ marginTop: "30px"}} className="center">
-                  <li >料金</li>
-                  <p>¥300(税抜き)<br/><span >※それ以上は一文字増えるごとに+100円になります</span>。</p>
-                  <li>注文方法</li>
-                  <p>オンラインショップよりご購入希望の商品と名入れの商品を一緒にお入れください。ご希望の名前は備考欄にお書きください。</p>
-                 </TextNav>
-            </Description>
-
-          </div>
-          <div>
-                <Figure>
-              <Img
-                fluid={data.naire.childImageSharp.fluid}
-                alt=""
-                style={{ width: "80%" ,borderRadius:"50%",margin:"0 auto"}}
-              />
-            </Figure>
-          </div>
-          </TwoColumn>
-           <div className="space-l"/>
           <SubTitle>江戸風鈴の吊るし方</SubTitle>
           <section>
             <TwoColumn>
@@ -144,33 +126,6 @@ export default ({data,location})=>{
         </TwoColumn>
           </section>
            <div className="space-l"/>
-          <section>
-            <SubTitle>風鈴のオーダーメイドについて</SubTitle>
-            <TwoColumn>
-              <div>
-              <Description  left >
-                  新しい模様はデザインを決めたり、内側から描くのに大丈夫かな？
-                  なんてことを準備しなくてはなりません。したがって通常のものより
-                  高価になります。<br/><br/>
-
-                  ５個前後の場合は一つ約3000〜4000円ほど、また一点ものの場合はもう少し高くなります。
-<br/>
-                  オーダーに関しましてはメールやお電話で詳しくはお問い合わせ下さいませ。
-                  <br />
-                  またオーダー時にはキャンセルがないように前金も頂いておりますのでご了承ください。
-            </Description>
-
-          </div>
-          <div>
-
-                  <GridContainer>
-      <ItemA><Image filename="taiken_kit_contents.jpg"/></ItemA>
-       <ItemB><Image filename="taiken_kit_contents.jpg"/></ItemB>
-        <ItemC><Image filename="taiken_kit_contents.jpg"/></ItemC>
-    </GridContainer>
-          </div>
-            </TwoColumn>
-          </section>
 
            <section>
             <SubTitle>風鈴が壊れてしまった時</SubTitle>

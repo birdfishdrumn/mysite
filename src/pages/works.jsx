@@ -32,9 +32,9 @@ export default ({ data, location }) => {
         pageimgw={data.taiken.childImageSharp.original.width}
         pageimgh={data.taiken.childImageSharp.original.height}
       />
-      <div className="eyecatch">
+      <div className="hero">
         <figure>
-          <Img fluid={data.taiken.childImageSharp.fluid} alt="製品情報" />
+          <Img fluid={data.taiken.childImageSharp.fluid} style={{height:"100%"}}alt="製品情報" />
         </figure>
       </div>
 

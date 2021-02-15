@@ -40,7 +40,6 @@ query FuukinFilterQuery{
 `)
   return (
     <>
-      <SubTitle hannari>釣鐘型</SubTitle>
         <GridList change={change}>
             {data.allProducts.edges.map(edge => (
             <ScrollItem>

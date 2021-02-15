@@ -68,12 +68,6 @@ query{
 				</a>
 			</li>
 			<li>
-				<a href="https://facebook.com/">
-					<FontAwesomeIcon icon={ faFacebookSquare} />
-					 <span>Facebook</span>
-				</a>
-			</li>
-			<li>
 				<a href="http://instagram.com/">
 						<FontAwesomeIcon icon={ faInstagram} />
 					 <span>Instagram</span>

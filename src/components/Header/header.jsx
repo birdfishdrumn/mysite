@@ -44,7 +44,7 @@ const styles = (theme) => ({
     right: theme.spacing(2.5),
     top: theme.spacing(2),
     color: theme.palette.grey[500],
-    fontSize: theme.spacing(3)
+    fontSize: theme.spacing(5)
   },
 });
 
@@ -93,7 +93,7 @@ const DialogTitle = withStyles(styles)((props) => {
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
         <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-          <CloseIcon  style={{ fontSize: 40 }}/>
+          <CloseIcon  />
         </IconButton>
       ) : null}
     </MuiDialogTitle>
@@ -152,10 +152,7 @@ console.log(props.location)
 
              <div>
                    <Hamburger className={classes.menuButton} onClick={handleClickOpen}>
-
                             <MenuIcon style={{ fontSize: 50 }} />
-
-
                   </Hamburger>
 
                     <Nav>
@@ -183,7 +180,7 @@ console.log(props.location)
 
                   </HeaderBar>
         </HideOnScroll>
-        {/* <ClosableDrawer open={open} onClose={handleDrawerToggle} /> */}
+
     </header>
     </div>
 

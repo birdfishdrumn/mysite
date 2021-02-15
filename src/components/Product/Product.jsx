@@ -13,7 +13,7 @@ const ProductImg = styled(Img)`
     }
 `
 const TextButton = styled.div`
- margin-top:10px;
+
  padding:5px;
  width:100px;
  text-align:center;
@@ -27,7 +27,7 @@ const TextButton = styled.div`
 height:90px;
  cursor: pointer;
  transition:0.3s;
- margin:auto auto 0 0;
+ margin:auto 20px 0 0;
  &:hover:not(:disabled){
   color:white;
   background:black;
@@ -50,12 +50,15 @@ const Product = ({data,description,title,destination,num,reverse,isEn}) => {
               />
             </Figure>
             </div>
-          <TextFlex isEn>
-        <Description left >
+      <TextFlex isEn>
+        <div>
+        <Description style={{width:"auto"}} left >
           <Trans>{description}</Trans>
 
-                <Link to={destination} state={{ number: num}}><TextButton><Trans>詳しく見る</Trans></TextButton></Link>
-            </Description >
+
+        </Description >
+          <Link to={destination} state={{ number: num }}><TextButton><Trans>詳しく見る</Trans></TextButton></Link>
+          </div>
                 <SubTitle hannari noSpace border>
                 <Trans>{title}</Trans>
             </SubTitle>
@@ -65,3 +68,25 @@ const Product = ({data,description,title,destination,num,reverse,isEn}) => {
 }
 
 export default Product
+
+
+      //  <ProductColumn   reverse={reverse}>
+      //     <div>
+      //       <Figure  data-aos="fade-up">
+      //         <ProductImg
+      //           fluid={data.childImageSharp.fluid}
+      //           alt=""
+      //         />
+      //       </Figure>
+      //       </div>
+      //     <TextFlex isEn>
+      //   <Description left >
+      //     <Trans>{description}</Trans>
+
+      //           <Link to={destination} state={{ number: num}}><TextButton><Trans>詳しく見る</Trans></TextButton></Link>
+      //       </Description >
+      //           <SubTitle hannari noSpace border>
+      //           <Trans>{title}</Trans>
+      //       </SubTitle>
+      //     </TextFlex>
+      //   </ProductColumn>

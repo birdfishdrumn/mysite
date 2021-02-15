@@ -8,8 +8,9 @@
     "風を音に": "wind change sound",
     "お店、家族の紹介": "Shop & Staff",
     "お問い合わせ": "Contact",
+    "江戸風鈴のこと": "The Edo Fuurin",
     "江戸風鈴": "Fuurin",
-    "オンラインショップ": "Online Shop",
+    "ネットショップ": "Online Shop",
     "店舗情報": "Shop Information",
     "お知らせ": "News",
     "江戸風鈴ができるまで": "Making Process",
@@ -28,7 +29,7 @@
     "佐竹商店街内": "Inside Satake Shopping Stree",
     "営業時間:10:30〜18:00": "Opening hours: 10: 30-18: 00",
     "定休日:  毎週月曜日(※異なる場合もあります)": "Regular holiday: Every Monday (* may vary)",
-    "気持ちを込めてものを作る": "We make every single wind chimes with all our hearts",
+    "気持ちを込める": "We make every single wind chimes with all our hearts",
     "まるよし風鈴の江戸風鈴": "Maruyoshi Fuurin Edo Fuurin",
     "金運上昇": "Rising fortune",
     "目標達成": "Achievement",
@@ -41,10 +42,14 @@
     "料金": "Price",
     "体験内容": "Workshop Contents",
     "所要時間": "Time required",
+    "江戸風鈴の歴史": "History",
+    "江戸風鈴の誕生": "Birth of Edo Fuurin",
     "持ち物": "Things to prepare",
     "-絵付け体験-": "-Painting Workshop-",
     "-体験の流れ-": "-Flow-",
     "-注意事項-": "Notes",
+    "動画で確認": "Check with video",
+    "絵付け": "Drawing Picture",
     "①ご予約": "①Reservation",
     "②ご来店": "②Visit",
     "③風鈴を選ぶ(団体の場合は不可)": "③Select Wind chime(Not possible for groups)",
@@ -70,14 +75,16 @@
     "風鈴の鳴り口にガラス管がスレただけで心地よい音が鳴ります。": "A comfortable sound is produced just by threading the glass tube on the sound of the wind chime.",
 
     "絵を内側から描くことで、ガラスの艶を生かした透明感のあるものに仕上がります。": "By drawing the picture from the inside, you can create a transparent object that makes the most of the luster of the glass.",
-
-
+    "型を使わずに宙吹きで作られ、絵は全て職人の手によって一つ一つ彩色されています。柄も明るい夏にぴったりの金魚や花火、可愛いじんべえ鮫や招き猫など多くの種類のものがあり,一つ一つ縁起の良い意味があります。": "It is made by air blowing without using a mold, and all the paintings are painted by craftsmen one by one. There are many kinds of goldfish and fireworks that are perfect for the bright summer, cute sharks and beckoning cats, and each one has auspicious meaning.",
+    "篠原まるよし風鈴で主に製作している短冊のデザインは上が朱色、下が緑の「天地ぼかし」になっており、太陽の恵みと地上の生命の繁栄を表しています。": "The design of the strips mainly produced by Shinohara Maruyoshi Fuurin is vermilion on the top and green on the bottom, showing the blessings of the sun and the prosperity of life on earth.",
     "江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。": "Edo Fuurin are glass wind chimes that are produced by inheriting the techniques handed down from the Edo period.",
     "一つ一つ職人が気持ちを込めて作った風鈴は、ガラスならではの涼しげでリラックスできる軽やかな音と、直接描かれた絵柄で見る人を癒してくれるでしょう。": "The wind chimes made by craftsmen one by one will heal the viewer with the cool and relaxing light sound unique to glass and the directly drawn pattern.",
 
     "現在は日本中で篠原まるよし風鈴と、篠原風鈴本舗の二件しか江戸風鈴の製作を行なっておりません。": "Currently, only two Edo Fuurin are manufactured in Japan, Shinohara Maruyoshi Fuurin and Shinohara Fuurin Honpo.",
 
     "良い音のひみつ": "The secret of good sound",
+
+
 
     "篠原まるよし風鈴では風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、体験学習にも力を入れております。商品のご購入や体験学習はこちらからご覧ください。": "At Shinohara Maruyoshi Fuurin, we carry out all the processes from the production of the glass ball, which is the main body of the wind chime, to the painting. We are also focusing on selling wind chimes and hands-on learning. Click here for product purchases and hands-on learning.",
 
@@ -88,7 +95,7 @@
     "まるよし風鈴の商品はこちらのオンラインショップよりどうぞ。プレゼント用のラッピングもできますのでお気軽にお伝えください。": "For Maruyoshi wind chimes,please visit this online shop.You can also wrap itfor gifts,so please feel free to tell us.",
 
     "篠原まるよし風鈴では江戸風鈴を中心に、その技術を応用してイヤリング、ぽっぺんなども制作しております。風鈴の絵柄の意味なども一つ一つ紹介しているので是非ご覧ください。": "Shinohara Maruyoshi Fuurin mainly produce Edo Fuurin, and apply their technology to produce earrings and poppen. We also introduce the meaning of the wind chimes one by one, so please have a look.",
-    "直接お店に出向かなくても、オンラインショップもやっているのでご購入をご希望の方はこちらからよろしくお願い致します。": "Even if you don't go to the store directly, we also have an online shop, so if you would like to purchase it, please click here.",
+    "こちらでは直接お店に来なくても、たくさんの種類の中から風鈴のご購入が可能です。割れないようにしっかり箱に入れて梱包し、プレゼント用の包装もできますので是非ご利用ください。": "Even if you don't go to the store directly, we also have an online shop, so if you would like to purchase it, please click here.",
     "1300℃で溶けたガラスを小さく巻き取る。これが風鈴の鳴り口部分となり、口玉と言います。": "Wind the glass melted at 1300 ° C into small pieces. This is the ringing part of the wind chime and is called the small glass ball .",
     "500円玉くらいの大きさに口玉を膨らます。厚みを均等にできるように気をつけます。": "Inflate the small glass ball to the size of a 500-yen coin. Be careful to make the thickness even.",
     "口玉の上にもう一度ガラスを巻き取ります。これが風鈴本体になります。": "Wind the glass over the small glass ball again. This is the wind chime body.",
@@ -99,8 +106,8 @@
     "気持ちを込めながら、最初に水性の絵の具で金魚の目や模様を丁寧に書いていきます。": "We will carefully write the eyes and patterns of the goldfish with water-based paint with all our heart",
     "次に油性の顔料でこの金魚の体の色を塗っていきます。最初に赤で体の上部を塗り、お腹を白で塗ります。": "Next, I will paint the body color of this goldfish with an oil-based pigment. First, paint the upper part of the body with red and then the belly with white.",
     "金魚の体を塗り終えたら、一番の見せ所である尾びれを勢いよく書いていき、胸ビレを描きます。": "After painting the body of the goldfish, write the tail fin, which is the best showcase, vigorously and draw the chest fin.",
-    "これで金魚が一匹できました！この調子で三匹描いていきます。": "This completes drawing one goldfish! I will draw three goldfish in this condition.",
-    "藻を描き、下に水面を表すグラデーションの線を入れました。これを描く事で金魚の住む環境が整い、絵柄の完成です!": "I drew algae and put a gradation line below to show the water surface. This completes the goldfish pattern!",
+    "次に水引きという金魚の泳いでいる水を表すグラデーションの線をいれます。": "Next, add a gradation line that represents the water in which the goldfish is swimming, called Mizuhiki.",
+    "最後に水草を描き金魚の住む環境を整えます。これで金魚の絵柄の完成です!": "Finally, draw aquatic plants to prepare the environment for goldfish to live in. This completes the goldfish pattern!",
     "風鈴には小丸、新子丸、釣鐘型のように大きさが違う種類のものがあり、様々な縁起の良い絵柄が描かれます。あなたのお部屋にあったものを豊富な品揃えの中からお探しください。": "There are different types of wind chimes, such as Komaru, Shinkomaru, and Tsurigane shaped, and various auspicious patterns are drawn. Please find the one that suits your room from our wide selection.",
     "イヤリング・ピアスは風鈴と同じように内側から絵が描かれます。音も少し鳴るものもあり、浴衣やお着物などには特に相性が良くおすすめの一品です。": "Earrings and earrings are painted from the inside, just like wind chimes. Some of them make a little noise, so they are especially compatible with yukata and kimono, and are recommended.",
     "ポッペンはビードロともう呼ばれ、ガラスの弾力性を使った唯一の工芸品です。 単純なガラスの玩具ではなく、お正月に吹いて一年の厄を祓うという意味もあります": "Poppen, also known as beadro, is the only craft that uses the elasticity of glass. It's not a simple glass toy, but it also means to blow it on New Year's Day to eliminate the troubles of the year.",
@@ -120,6 +127,12 @@
     "大名や豪商たちの中で珍品として崇め奉られ、”風琴”と呼ばれお屋敷の部屋の中に下げられていました。風の琴なんて、名前も上品でした。": "It was worshiped as a rare item among daimyo and wealthy merchants, and was called `Fukoto` and was hung in the room of the mansion. The name of the wind koto was also elegant.",
     "現代のように、クーラーや扇風機などがない時にどうやって、暑い夏を楽しく過ごそう？・・・創意・工夫で色々なものを 作り出しました。その中に自然の風を利用した”江戸風鈴”が生まれるのです。": "How do you enjoy the hot summer when you don't have a cooler or fan like you do today? ... I created various things with creativity and ingenuity. The `Edo Fuurin` that uses the natural wind is born in it.",
     "大昔は、自分の心を占うために、中国より伝来の宝石と宝石をぶつけて、その音色で吉凶を占う”占風鐸”を考慮したものでしたが、だんだん変化して行き、まったく四季に関係の無い物が夏の風物詩として頭角をあらわします。透明なガラスを使用した風鈴の輝きやここちよい音色に庶民は心を奪われていったのです。": "In the olden days, in order to fortune-telling one's heart, the `fortune-telling`(fortune-telling by hitting jewels and jewels and fortune-telling with the tone), which was introduced from China, was taken into consideration, but it gradually changed. Things that have nothing to do with the four seasons stand out as a summer tradition. The common people were fascinated by the brilliance of the wind chimes made of transparent glass and the pleasant tone.",
+
+    "『売り声もなくて買い手の数あるは、音にしられる風鈴の徳』": "There are many buyers without a sales voice, but the virtue of wind chimes that can be made into sound",
+    "この狂歌は、江戸時代の末期に風鈴売りの様子を詠んだものです。 この時代の物売りには珍しく、風鈴がそよ風を受けて軽やかな音を 響かせるので、始終売り声をあげることが無かったといわれています。": "This Kyoka is a poem about the sale of wind chimes at the end of the Edo period. It is said that the wind chimes did not make a selling voice from beginning to end because the wind chimes received a breeze and made a light sound, which is rare for selling goods in this era.",
+    "魔除けとしての風鈴": "Wind chime as a talisman",
+    "日本人は、音に対する信仰がつよく「鈴」を魔除けにしているのは有名です。 また、昔から朱色（あか）を魔除けにしており１９７０年代まで朱色の風鈴が 過半数をしめていました。ガラス風鈴は”赤”があたりまえだったのです。 (この頃売られていた風鈴に「朱色は、魔除け」と表示はしてないので、 魔除けを意識して買われたのか不明です。)": "It is well known that Japanese people have a strong belief in sound and use `bells` as a talisman. In addition, vermilion (red) has been used as an amulet for a long time, and until the 1970s, vermilion wind chimes were the majority. `Red` was the norm for glass wind chimes. (Since the wind chimes sold around this time do not indicate `Vermilion is a talisman,` it is unknown whether they were bought with the talisman in mind.)",
+    "江戸風鈴は、昔から人々の心を癒す役目をしていたのです。": "",
     "お店は佐竹商店街の中にあります。普段からお店の前には風鈴を飾っております。 一階は基本的には仕事場で作業中なので少し入り辛いと思いますが、風鈴の販売もやっておりますので、 是非お気軽にご来店下さい。": "The shop is located in the Satake shopping street. Wind chimes are usually displayed in front of the shop. The first floor is basically working at the workplace, so it may be a little difficult to enter, but we also sell wind chimes, so please feel free to visit us.",
     "またガラス吹き体験では一階奥の工房で最初にガラスを吹いていただきます。二階は主に絵付け体験の会場となっております": "In the glass blowing experience, you will first blow the glass at the workshop at the back of the first floor. The second floor is mainly the venue for painting experience.",
 

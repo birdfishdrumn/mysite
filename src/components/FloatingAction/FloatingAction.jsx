@@ -77,7 +77,7 @@ window.open(url, '_blank')
               (
               <Reserve/>
             )
-            : <Contact />}
+            : <Contact dialog/>}
 
         </DialogContent>
         <DialogActions>

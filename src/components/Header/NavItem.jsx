@@ -9,7 +9,8 @@ import {
 faInstagram
 } from "@fortawesome/free-brands-svg-icons"
 import {SNS} from "../Footer/style"
-const MobileLang = styled.li`
+const MobileLang = styled.ul`
+font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  display: flex;
  margin:0 auto;
  justify-content:center;
@@ -51,7 +52,7 @@ export const NavItem = ({ lang,mobile }) => {
           <li>
             <Link to="/contact/"><Trans>お問い合わせ</Trans></Link>
       </li>
-
+     <li>
       {lang && (
         <MobileLang>
           {languages.map((lng) => (
@@ -68,7 +69,8 @@ export const NavItem = ({ lang,mobile }) => {
           ))}
         </MobileLang>
       )
-      }
+        }
+        </li>
       {mobile && <li>
         <SNS color flex>
           <li>

@@ -4,8 +4,8 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Aos from "aos"
 import "aos/dist/aos.css"
-import styled from "styled-components"
-import { Product, BottomNotice,Contact,FloatingAction } from "../components/index"
+
+import { Contact,FloatingAction } from "../components/index"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import {
@@ -105,7 +105,7 @@ export default ({ data, location }) => {
               <br />
 
               </Description>
-                <SubTitle noSpace>体験学習</SubTitle>
+                <SubTitle  data-aos="fade-up"noSpace>体験学習</SubTitle>
               </DescriptionFlex>
           </div>
         </MaxTwoColumn>
@@ -127,7 +127,7 @@ export default ({ data, location }) => {
               色々な思いで川崎大師に来られ、お参りした方がこのだるま風鈴を目当てに買って帰ります。
               <br/>その思いが叶い、無事に一年を過ごされるように心を込めて製作しています。
             </Description>
-                     <SubTitle noSpace>川崎大師風鈴市</SubTitle>
+                     <SubTitle  data-aos="fade-up" noSpace>川崎大師風鈴市</SubTitle>
               </DescriptionFlex>
           </div>
           <div>
@@ -167,7 +167,7 @@ export default ({ data, location }) => {
               こちらの縁結び風鈴は氷川神社様へ参拝される方に頒布(販売)もしております。
 
             </Description>
-              <SubTitle noSpace>川越氷川神社縁結び風鈴</SubTitle>
+              <SubTitle  data-aos="fade-up" noSpace>川越氷川神社縁結び風鈴</SubTitle>
               </DescriptionFlex>
           </div>
         </MaxTwoColumn>

@@ -134,7 +134,7 @@ export default ({data,location})=>{
           </div>
           <div style={{margin:"0 auto"}}>
                 <ImageA fluid={data.naire.childImageSharp.fluid}/>
-       <ImageB fluid={data.naire.childImageSharp.fluid}/>
+       <ImageB fluid={data.order2.childImageSharp.fluid}/>
           </div>
             </TwoColumn>
           </section>
@@ -174,7 +174,7 @@ query {
       }
     }
   }
-      hang: file(relativePath: {eq: "productImg/huurin_hang_kiriko.jpg"}){
+      order2: file(relativePath: {eq: "productImg/order_sakana.jpg"}){
     childImageSharp {
       fluid(maxWidth: 400) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG

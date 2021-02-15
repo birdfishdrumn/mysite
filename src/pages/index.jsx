@@ -35,7 +35,7 @@ export default ({ data }) => {
       </figure>
 
         <ImageText>
-        <Trans>風を音に</Trans>
+        <Trans>売り声もなくて買い手の数あるは、<br/>       音にしられる風鈴の徳</Trans>
         </ImageText>
       </section>
 

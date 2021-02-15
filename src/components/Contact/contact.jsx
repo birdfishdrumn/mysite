@@ -6,7 +6,7 @@ import TextInput from "../UI/textInput"
 import Button from "@material-ui/core/Button";
 import DateFnsUtils from '@date-io/date-fns';
 import jaLocale from "date-fns/locale/ja";
-
+import {SubTitle} from "../../style/GlobalStyle"
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Contact = ({outline,workshop}) => {
+const Contact = ({workshop,dialog}) => {
  const disableMonday = (date) =>{
 
     // const dateInterditesRaw = [
@@ -101,8 +101,9 @@ const Contact = ({outline,workshop}) => {
 console.log(number)
   return (
     <div className="contact center">
+      {dialog && <SubTitle>お問い合わせ</SubTitle>}
       <form
-        name="contact"
+        name={workshop ? "workshop" : "contact"}
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
@@ -110,18 +111,6 @@ console.log(number)
       >
         <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" />
-        {/* <div className="contact__area">
-              <TextField
-                id="name"
-                className="contact__field"
-                name="name"
-                label="お名前"
-                type="text"
-                variant="outlined"
-                value={name}
-                onChange={inputName}
-              />
-            </div> */}
 
         <TextInput
           id={name}

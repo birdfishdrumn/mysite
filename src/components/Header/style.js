@@ -73,8 +73,8 @@ text-align:center;
 display:inline-block;
 font-weight:bold;
 font-size:1.4rem;
-
-margin:20px auto;
+text-shadow:1px 1px 2px black;
+margin:25px auto;
 list-style:none;
  display:flex;
  color:"white";

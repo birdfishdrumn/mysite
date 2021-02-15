@@ -3,14 +3,13 @@ import { SubTitle, Nav, ListColumn, Description, MinTitle } from "../../style/Gl
 // import { Link } from "gatsby";
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import { Button } from "../Button";
-import Img from "gatsby-image"
 import Image from "../image"
 import {WorkshopData} from "./WorkshopData"
-const WorkshopList = ({data}) => {
+const WorkshopList = () => {
   return (
     <>
-      {WorkshopData.map((item) => (<>
-       <ListColumn>
+      {WorkshopData.map((item,index) => (<>
+       <ListColumn key={index}>
         <div>
           <Image filename={item.image} alt="製品情報"/>
         </div>

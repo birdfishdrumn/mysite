@@ -69,7 +69,7 @@ export const FamilyImage = styled.div `
 `
 export const HistoryImage = styled.div `
 margin:auto;
- width:250px;
+width:80%;
  @media(max-width:1024px){
   margin:0 auto;
  }

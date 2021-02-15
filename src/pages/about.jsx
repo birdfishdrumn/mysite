@@ -49,17 +49,12 @@ export default ({ data, location }) => {
         <div className="space-l"/>
         <TwoColumn>
           <div>
-            <SubTitle border noSpace>江戸風鈴とは</SubTitle>
-            <Description left><br/>江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。<br /><br />
+            <SubTitle border noSpace><Trans>江戸風鈴とは</Trans></SubTitle>
+            <Description left><br/><Trans>江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。</Trans><br /><br />
               <br />
-              型を使わずに宙吹きで作られ、絵は全て職人の手によって一つ一つ彩色されています。柄も明るい夏にぴったりの金魚や花火、可愛いじんべえ鮫や招き猫など多くの種類のものがあり,一つ一つ縁起の良い意味があります。
-
+              <Trans>型を使わずに宙吹きで作られ、絵は全て職人の手によって一つ一つ彩色されています。柄も明るい夏にぴったりの金魚や花火、可愛いじんべえ鮫や招き猫など多くの種類のものがあり,一つ一つ縁起の良い意味があります。</Trans>
             <br />   <br /> <br />
-
-              短冊のデザインは上が赤、下が緑の「天地ぼかし」になっており、太陽に照らされて地上の生命が繁栄するという摂理を表しています。
-
-
-
+<Trans>篠原まるよし風鈴で主に製作している短冊のデザインは上が朱色、下が緑の「天地ぼかし」になっており、太陽の恵みと地上の生命の繁栄を表しています。</Trans>
             </Description>
           </div>
           <div>
@@ -76,18 +71,18 @@ export default ({ data, location }) => {
         <Process data={data} />
 
 
-          <SubTitle>動画で確認</SubTitle>
+          <SubTitle><Trans>動画で確認</Trans></SubTitle>
           <Youtube src="https://www.youtube.com/embed/yYWowTXguP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
           <div className="space-xl"/>
 
-          <MinTitle>絵付け</MinTitle>
+          <MinTitle><Trans>絵付け</Trans></MinTitle>
 
           <Process paint data={data} />
-            <SubTitle>動画で確認</SubTitle>
+           <SubTitle><Trans>動画で確認</Trans></SubTitle>
           <Youtube src="https://www.youtube.com/embed/LbyTq_nvdBg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
         </section>
           <div className="space-xl"/>
-        <SubTitle>江戸風鈴の歴史</SubTitle>
+        <SubTitle><Trans>江戸風鈴の歴史</Trans></SubTitle>
         <div className="space-m"/>
         <History data={data}/>
       </article>

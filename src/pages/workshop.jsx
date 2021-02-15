@@ -2,12 +2,12 @@ import React from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql,Link} from "gatsby"
 import Img from "gatsby-image"
-import { SubTitle,Nav,ListColumn,Description,MinTitle} from "../style/GlobalStyle";
+
 import styled from "styled-components";
-import { Product } from "../components/index";
+
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { CarouselSlider,FloatingAction,WorkshopList,COVID_19}  from "../components/index";
+import { FloatingAction,WorkshopList,COVID_19}  from "../components/index";
 
 
 

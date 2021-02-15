@@ -14,7 +14,7 @@ const History = ({data}) => {
          <MaxTwoColumn auto reverse little>
         <div>
 
-     <MinTitle >江戸風鈴の誕生</MinTitle>
+     <MinTitle ><Trans>江戸風鈴の誕生</Trans></MinTitle>
             <Description left width="more">
  <Trans>江戸風鈴の名称はその道の第一人者・篠原儀治（しのはら よしはる）がひとつひとつ宙吹きで作られたｶﾞﾗｽの風鈴を”江戸風鈴”と命名しました。江戸時代の末期から庶民に知られるようになったｶﾞﾗｽの風鈴、それ以前は、庶民が手の届かない程高価なものでした。</Trans>
 <br/>
@@ -43,16 +43,13 @@ const History = ({data}) => {
       </MaxTwoColumn>
       <div className="space-l"/>
        <Description width="half">
-<span style={{fontSize:"1.2rem",fontWeight:"bold"}}>『売り声もなくて買い手の数あるは、音にしられる風鈴の徳』</span>
+<span style={{fontSize:"1.2rem",fontWeight:"bold"}}><Trans>『売り声もなくて買い手の数あるは、音にしられる風鈴の徳』</Trans></span>
 
           <br/>
           <br/>
-
-          この狂歌は、江戸時代の末期に風鈴売りの様子を詠んだものです。
-
+          <Trans>この狂歌は、江戸時代の末期に風鈴売りの様子を詠んだものです。
           この時代の物売りには珍しく、風鈴がそよ風を受けて軽やかな音を
-
-          響かせるので、始終売り声をあげることが無かったといわれています。
+          響かせるので、始終売り声をあげることが無かったといわれています。</Trans>
           <br/><br/>
       </Description>
       <div className="space-l" />
@@ -70,20 +67,16 @@ const History = ({data}) => {
           <div>
 
 
-     <MinTitle >魔除けとしての風鈴</MinTitle>
+     <MinTitle ><Trans>魔除けとしての風鈴</Trans></MinTitle>
       <Description left width="more">
 
-          日本人は、音に対する信仰がつよく「鈴」を魔除けにしているのは有名です。
-
+          <Trans>日本人は、音に対する信仰がつよく「鈴」を魔除けにしているのは有名です。
           また、昔から朱色（あか）を魔除けにしており１９７０年代まで朱色の風鈴が
-
           過半数をしめていました。ガラス風鈴は”赤”があたりまえだったのです。
-
           (この頃売られていた風鈴に「朱色は、魔除け」と表示はしてないので、
-
-          魔除けを意識して買われたのか不明です。)
+          魔除けを意識して買われたのか不明です。)</Trans>
           <br/><br/>
-          江戸風鈴は、昔から人々の心を癒す（いやす）役目をしていたのです。
+          <Trans>江戸風鈴は、昔から人々の心を癒す役目をしていたのです。</Trans>
     </Description>
 
 

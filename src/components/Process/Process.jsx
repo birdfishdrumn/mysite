@@ -67,7 +67,7 @@ const paintProcessData = [{
         image: "kingyo_mizuhiki.jpg"
     },
     {
-        description: "更に水草を描き金魚の住む環境を整えます。これで金魚の絵柄の完成です!",
+        description: "最後に水草を描き金魚の住む環境を整えます。これで金魚の絵柄の完成です!",
         content: "全体の仕上げ",
         image: "kingyo_last.jpg"
     }
@@ -86,9 +86,9 @@ const paintProcessData = [{
       <ProcessGrid>
         {process.map((item, index) => {
           if(index % 2 !== 0){
-            return <ProcessCard data={data} reverse="true" image={item.image}content={item.content} description={item.description}/>
+            return <ProcessCard key={index} data={data} reverse="true" image={item.image}content={item.content} description={item.description}/>
           } else {
-              return <ProcessCard data={data} image={item.image} content={item.content} description={item.description}/>
+              return <ProcessCard key={index}  data={data} image={item.image} content={item.content} description={item.description}/>
           }
 
         })}

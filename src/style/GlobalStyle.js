@@ -212,20 +212,29 @@ text-align:${props => (props.left ? "left" : "center")};
 export const ImageText = styled.div `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  font-weight: bold;
- font-size:${props =>(props.large ? "1.4rem" : "3.5rem")};
+   -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+
+  height:390px;
+ font-size:${props =>(props.large ? "1.4rem" : "1.5rem")};
      position: absolute;
-    top: 0;
+    top: -15rem;
     right: 0;
     bottom: 0;
     left: 0;
-    margin: auto auto 10%;
+    margin: 500px auto 10%;
     display: flex;
 
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     text-align:${props =>(props.left ? "left" : "center")} ;
     color: #fff;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    @media(max-width:767px){
+      font-size:1.1rem;
+      top: -27rem;
+
+    }
 `
 
 
@@ -409,24 +418,33 @@ export const ProductColumn = styled.div `
    /* max-width:807px; */
    max-width:${props => (props.more ? "1024px" : "807px")};
    >div{
-    margin:${props => (props.right ?  "0 20px 0 0":"0 0 0 20px")};
+     ${props => {
+    switch (props.margin) {
+      case "left":
+        return `margin:0 20px 20px 0 !important;`
+      case "right":
+        return `margin:0 0 20px 20px !important;`
+    }
+  }};
    }
       >div:first-child{
+
       @media(min-width:768px){
+        width:90%;
+        margin:auto;
          order:${props=>props.reverse ? 2 : 1};
     }
     margin-bottom:20px;
      order: ${props =>(props.responsive && 2)};
    }
       >div:last-child{
+          margin:auto;
     text-align:center;
     @media(min-width:768px){
   order:${props => props.reverse ? 1 : 2};
-
     }
      order: ${props =>(props.responsive && 1)};
     margin-bottom: ${props =>(props.responsive && "20px")};
-
    }
     @media(max-width:767px){
      /* grid-gap:0px; */
@@ -434,20 +452,18 @@ export const ProductColumn = styled.div `
     width:100%;
     >div:first-child{
        @media(max-width:767px){
-
    /* justify-content:center; */
-
  }
     }
-
    }
        @media(max-width:380px){
      /* grid-gap:0px; */
      grid-template-columns:1fr;
     width:  100%;
-
    }
 `
+
+
 
 export const MaxTwoColumn = styled.div `
    display: grid;
@@ -532,7 +548,8 @@ export const GridContainer = styled.div`
 
     margin:0 auto;
     @media(max-width:768px){
-      width:100%;
+      width:auto;
+      text-align:center;
     }
 
 `

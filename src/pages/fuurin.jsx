@@ -1,9 +1,9 @@
-import React,{useState,useCallback} from "react"
+import React from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
 import Img from "gatsby-image"
 
-import { Product,WindBellCard,ProductTab ,FloatingAction} from "../components/index";
+import {ProductTab ,FloatingAction} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
@@ -33,7 +33,7 @@ export default ({ data, location }) => {
         <Img fluid={data.product.childImageSharp.fluid} alt="製品情報" />
       </figure>
         </div>
-        <ProductTab num={location.state && location.state.number} location={location}/>
+        <ProductTab data={data.allProducts} num={location.state && location.state.number} location={location}/>
     <div className="space-l" />
 
     <FloatingAction online title="オンラインショップ"/>

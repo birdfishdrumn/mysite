@@ -60,12 +60,7 @@ const DialogContent = withStyles((theme) => ({
   },
 }))(MuiDialogContent);
 
-const DialogActions = withStyles((theme) => ({
-  root: {
-    margin: 0,
-    padding: theme.spacing(1),
-  },
-}))(MuiDialogActions);
+
 
 export default function CustomizedDialogs() {
   const [open, setOpen] = React.useState(false);
@@ -88,22 +83,9 @@ export default function CustomizedDialogs() {
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-           <Description left>私達のお店は従業員も少なく、お店も小さいですが、私達なりに感染の不安を少しでも和らげて風鈴のご購入や、体験を楽しんでいただけますようにいくつか対策を考えました。まだまだ肩の力を抜けない世の中が続きますが、少しでもこの状況を脱したいと一人一人が協力していけば、いつか終わりが見えてくると思うので感染対策のご協力をお願い致します。</Description>
+           <Description left>私達なりに感染の不安を少しでも和らげて風鈴のご購入や、体験を楽しんでいただけますようにいくつか対策を考えました。もうコロナが広がってから1年以上たって慣れてしまいましたが、引き続き感染対策のご協力をお願い致します。</Description>
           </Typography>
-          {/* <Typography gutterBottom>
-           <MinTitle>お店の対策</MinTitle>
-          </Typography>
-          <Typography gutterBottom>
-            <Nav small noSpace>
-              {shopPlan.map(item => (
-                <>
-                <li><FontAwesomeIcon icon={item.icon} /> {item.title}</li>
-                  <p>{item.description}</p>
-                  </>
-              ))}
 
-            </Nav>
-          </Typography> */}
                <div className="space-l"/>
             <Typography gutterBottom>
            <MinTitle>お店の対策</MinTitle>

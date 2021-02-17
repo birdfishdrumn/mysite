@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Aos from "aos"
 import "aos/dist/aos.css"
-
+import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import { Contact,FloatingAction } from "../components/index"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
@@ -39,27 +39,23 @@ export default ({ data, location }) => {
       </div>
 
       <article className="content">
-        <SubTitle>篠原まるよし風鈴の仕事</SubTitle>
-        <Description data-aos="fade-up" width="half">
-          篠原まるよし風鈴では江戸風鈴の制作を行っており年間で12,000個ほど作ります。そうしてできた風鈴に絵を描いて販売、また体験学習に用います。
-        </Description>
-        <div className="space-xl"/>
+        <SubTitle><Trans>私たちの仕事</Trans></SubTitle>
+
+        <div className="space-l"/>
         <MaxTwoColumn auto reverse>
           <div>
             <DescriptionFlex>
 
             <Description noneMargin width="more" left>
               <br />  <br />
-              まるよし風鈴では家族4人で主に江戸風鈴の
-              製作をしております。年間で12000個ほど職人の手作業によって作られます。
+              <Trans>まるよし風鈴では家族4人で主に江戸風鈴の製作をしております。年間で12000個ほど職人の手作業によって作られます。</Trans>
               <br />
-
-             私どもの作る江戸風鈴は、江戸時代の享保(300年前)より現代まで受け継がれた技術で作り続けております。<br /><br />
-              この風鈴が家に飾られ少しでも皆様の心を癒す、そんな時間を感じていただけるように作り続けております。
+             <Trans>私どもの作る江戸風鈴は、江戸時代の享保(300年前)より現代まで受け継がれた技術で作り続けております。</Trans><br /><br />
+              <Trans>この風鈴が家に飾られ少しでも皆様の心を癒す、そんな時間を感じていただけるように作り続けております。</Trans>
               <br /><br />
-              この風鈴技術は日本のガラス工芸最古の技術であり、日本中でたった二軒が継承しているのみであります。
+              <Trans>この風鈴技術は日本のガラス工芸で最も古い技術の一つであり、日本中でたった二軒が継承しているのみであります。</Trans>
             </Description>
-                 <SubTitle data-aos="fade-up" noSpace>江戸風鈴の製作</SubTitle>
+                 <SubTitle data-aos="fade-up" noSpace><Trans>江戸風鈴の製作</Trans></SubTitle>
 
             </DescriptionFlex>
 
@@ -90,27 +86,27 @@ export default ({ data, location }) => {
 
                <Description width="more" left>
               <br />
-              まるよし風鈴では、毎年たくさんのお客様が制作体験を楽しんでいかれます。その中で小学生、中学生、高校生、日本語学校の方達など学生さんたちがよく団体で来られます。
+              <Trans>まるよし風鈴では、毎年たくさんのお客様が制作体験を楽しんでいかれます。その中で小学生、中学生、高校生、日本語学校の方達など学生さんたちがよく団体で来られます。</Trans>
               <br />
               <br />
-              この江戸風鈴の制作体験で
+              <Trans>この江戸風鈴の制作体験で</Trans>
              <br /><br />
-              ものを作ることの楽しみ
+              <Trans>ものを作ることの楽しみ</Trans>
                <br /><br />
-              作ったものに思いを入れること
+              <Trans>作ったものに思いを入れること</Trans>
                 <br /><br />
-              家に飾った時、作ったものから作り手の思いが音になって感じられる事
+              <Trans>家に飾った時、作ったものから作り手の思いが音になって感じられる事</Trans>
               <br /><br />
-              などを実感して欲しいのです。
+              <Trans>などを実感して欲しいのです。</Trans>
               <br />
 
               </Description>
-                <SubTitle  data-aos="fade-up"noSpace>体験学習</SubTitle>
+                <SubTitle  data-aos="fade-up"noSpace><Trans>体験学習</Trans></SubTitle>
               </DescriptionFlex>
           </div>
         </MaxTwoColumn>
             <div className="space-xl"/>
-        <SubTitle>昔からお世話になってる方々</SubTitle>
+        <SubTitle><Trans>昔からお世話になってる方々</Trans></SubTitle>
         <div className="space-xl"/>
         <MaxTwoColumn auto reverse>
           <div>
@@ -118,16 +114,15 @@ export default ({ data, location }) => {
 
                <Description width="more" left>
               <br />
-              この風鈴市では、日本全国から集まった色々な風鈴が販売されます。
-              ここではたくさんの風鈴たちが訪れたお客様を癒してくれるでしょう。
+              <Trans>この風鈴市では、日本全国から集まった色々な風鈴が販売されます。ここではたくさんの風鈴たちが訪れたお客様を癒してくれるでしょう。</Trans>
               <br /><br />
-             もともとは風鈴には夏の暑い日にその音色で風を楽しむ、といった使い方があります。<br /><br />
-              また、音のなる近辺に悪いものを寄せ付けないという意味もあります。その中でメインの「厄除けだるま」を当社が担っています。
+             <Trans>もともとは風鈴には夏の暑い日にその音色で風を楽しむ、といった使い方があります。</Trans><br /><br />
+              <Trans>また、音のなる近辺に悪いものを寄せ付けないという意味もあります。その中でメインの「厄除けだるま」を当社が担っています。</Trans>
               <br /><br />
-              色々な思いで川崎大師に来られ、お参りした方がこのだるま風鈴を目当てに買って帰ります。
-              <br/>その思いが叶い、無事に一年を過ごされるように心を込めて製作しています。
+              <Trans>色々な思いで川崎大師に来られ、お参りした方がこのだるま風鈴を目当てに買って帰ります。</Trans>
+              <br/><Trans>その思いが叶い、無事に一年を過ごされるように心を込めて製作しています。</Trans>
             </Description>
-                     <SubTitle  data-aos="fade-up" noSpace>川崎大師風鈴市</SubTitle>
+                     <SubTitle  data-aos="fade-up" noSpace><Trans>川崎大師風鈴市</Trans></SubTitle>
               </DescriptionFlex>
           </div>
           <div>
@@ -156,25 +151,25 @@ export default ({ data, location }) => {
             <DescriptionFlex hikawa >
               <Description width="more" noneMargin left>
               <br />
-              この神社の境内に風が吹いた時は”神様が御出でになったことを表す”という言い伝えがあります。
+              <Trans>この神社の境内に風が吹いた時は”神様が御出でになったことを表す”という言い伝えがあります。</Trans>
               <br /><br />
-             この時にたくさんの風鈴を飾り、参拝した方に風鈴の音でお知らせするという大役を当社が製作した「縁結び風鈴」が果たしています。
+             <Trans>この時にたくさんの風鈴を飾り、参拝した方に風鈴の音でお知らせするという大役を当社が製作した「縁結び風鈴」が果たしています。</Trans>
               <br /><br /><br />
-             ”縁”には恋人と結ばれるだけではなく、仕事の縁など人との繋がりなどいろいろあります。
+            <Trans>”縁”には恋人と結ばれるだけではなく、仕事の縁など人との繋がりなどいろいろあります。</Trans>
               <br /><br /><br />
-              この風鈴を作るにあたり、自分達も精進して製作しております。
+              <Trans>この風鈴を作るにあたり、自分達も精進して製作しております。</Trans>
               <br /><br />
-              こちらの縁結び風鈴は氷川神社様へ参拝される方に頒布(販売)もしております。
+              <Trans>こちらの縁結び風鈴は氷川神社様へ参拝される方に頒布(販売)もしております。</Trans>
 
             </Description>
-              <SubTitle  data-aos="fade-up" noSpace>川越氷川神社縁結び風鈴</SubTitle>
+              <SubTitle  data-aos="fade-up" noSpace><Trans>川越氷川神社縁結び風鈴</Trans></SubTitle>
               </DescriptionFlex>
           </div>
         </MaxTwoColumn>
         <div className="space-xl" />
 
         <div className="up-sm">
-        <SubTitle>お仕事のご依頼</SubTitle>
+        <SubTitle><Trans>お仕事のご依頼</Trans></SubTitle>
 <Contact/></div>
 
       </article>

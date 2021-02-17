@@ -31,26 +31,26 @@ export const NavItem = ({ lang,mobile }) => {
   return (
         <ul>
           <li>
-            <Link to="/about/"><Trans>江戸風鈴とは</Trans></Link>
+            <Link to="/about"><Trans>江戸風鈴とは</Trans></Link>
           </li>
 
           <li>
-            <Link to="/product/"><Trans>まるよしの風鈴</Trans></Link>
+            <Link to="/product"><Trans>まるよしの風鈴</Trans></Link>
           </li>
           <li>
-            <Link to="/workshop/"><Trans>体験する</Trans></Link>
+            <Link to="/workshop"><Trans>体験する</Trans></Link>
           </li>
           <li>
-            <Link to="/works/"><Trans>私たちの仕事</Trans></Link>
+            <Link to="/works"><Trans>私たちの仕事</Trans></Link>
           </li>
           <li>
-            <Link to="/shop/"><Trans>お店、家族の紹介</Trans></Link>
+            <Link to="/shop"><Trans>お店、家族の紹介</Trans></Link>
         </li>
             <li>
-            <Link to="/question/"><Trans>よくある質問</Trans></Link>
+            <Link to="/question"><Trans>よくある質問</Trans></Link>
           </li>
           <li>
-            <Link to="/contact/"><Trans>お問い合わせ</Trans></Link>
+            <Link to="/contact"><Trans>お問い合わせ</Trans></Link>
       </li>
      <li>
       {lang && (

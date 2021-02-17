@@ -1,20 +1,35 @@
 import React,{useState,useEffect,useCallback}  from 'react'
 import {graphql} from "gatsby"
-import Img from "gatsby-image"
+import Image from "../image"
 import { AchievementFilter, MoneyLuckFilter, DiseaseFree, AmuletFilter, SeasonFlower, KirikoFilter, TsuriganeFilter, FuukinFilter, AnimalFilter } from "./index";
 import InputLabel from '@material-ui/core/InputLabel';
-import Layout from "../../components/layout"
-import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem} from "../../style/GlobalStyle";
+
+import { SubTitle, Description, GridList, FlexNav, Scroll, ScrollItem } from "../../style/GlobalStyle";
+import { ProductSlider } from "../index";
 import { Button } from "../../components/Button";
 import ViewColumnIcon from '@material-ui/icons/ViewColumn';
 import GridOnIcon from '@material-ui/icons/GridOn';
 import Tooltip from '@material-ui/core/Tooltip';
 import { IconButton } from "@material-ui/core";
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles,withStyles } from '@material-ui/core/styles';
+import Dialog from '@material-ui/core/Dialog';
+import MuiDialogTitle from '@material-ui/core/DialogTitle';
+import MuiDialogContent from '@material-ui/core/DialogContent';
 import FormControl from '@material-ui/core/FormControl';
+import Typography from '@material-ui/core/Typography';
+import CloseIcon from '@material-ui/icons/Close';
 import Select from '@material-ui/core/Select';
+import SearchIcon from '@material-ui/icons/Search';
 import NativeSelect from '@material-ui/core/NativeSelect';
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+// import { AutoRotatingCarousel } from 'material-auto-rotating-carousel';
+// import { Slide } from 'material-auto-rotating-carousel';
+import {Trans, useTranslation,Link} from
+'gatsby-plugin-react-i18next';
+
+
+// const { red, blue, green } = require('@material-ui/core/colors');
+
+
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -24,15 +39,64 @@ const useStyles = makeStyles((theme) => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
+    dialog: {
+    zIndex: 10000,
+    maxWidth: "1200px",
+    margin:"0 auto"
+  }
 }));
 
+const styles = (theme) => ({
+  root: {
+    margin: 0,
+    padding: theme.spacing(2),
+  },
+  closeButton: {
+    position: 'absolute',
+    right: theme.spacing(1),
+    top: theme.spacing(1),
+    color: theme.palette.grey[500],
+  },
+  dialog: {
+    zIndex:"999"
+  }
+});
+
+const DialogTitle = withStyles(styles)((props) => {
+  const { children, classes, onClose, ...other } = props;
+  return (
+    <MuiDialogTitle disableTypography className={classes.root} {...other}>
+      <Typography variant="h6">{children}</Typography>
+      {onClose ? (
+        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+          <CloseIcon />
+        </IconButton>
+      ) : null}
+    </MuiDialogTitle>
+  );
+});
 
 
-const Fuurin = ({location}) => {
+
+const DialogContent = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+  },
+}))(MuiDialogContent);
+
+
+
+const Fuurin = ({location,data}) => {
   const [change, setChange] = useState(false)
   const [language, setLanguage] = useState("")
     const classes = useStyles();
-
+ const [open, setOpen] = useState(false);
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const handleChange = (event) => {
 
@@ -41,15 +105,13 @@ event.target.value,
     );
   };
 
-
-
   const handleOn = useCallback(()=>{
       setChange(true)
   })
     const handleOff = useCallback(()=>{
       setChange(false)
     })
-  console.log(location)
+  console.log(data)
     useEffect(() => {
     if (location.pathname.split("/")[1]==="en") {
      setLanguage("English")
@@ -93,8 +155,12 @@ event.target.value,
                 <li ><ViewColumnIcon fontSize="large" /></li>
                 </IconButton>
           </Tooltip>
+           {/* <Tooltip title="拡大" interactive>
+               <IconButton  onClick={handleClickOpen} >
+                <li ><SearchIcon fontSize="large" /></li>
+                </IconButton>
+          </Tooltip> */}
           </FlexNav>
-
 
 
           <div className="space-l" />
@@ -118,7 +184,20 @@ event.target.value,
         <SubTitle><Trans>風琴</Trans></SubTitle>
         <FuukinFilter change={change} language={language}/>
     </section>
-    <div className="space-l" />
+      <div className="space-l" />
+
+      <Dialog className={classes.dialog} nClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
+
+        </DialogTitle>
+
+        <DialogContent>
+          <ProductSlider/>
+        </DialogContent>
+
+
+      </Dialog>
+
     </div>
   )
 }

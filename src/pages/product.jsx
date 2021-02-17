@@ -84,7 +84,7 @@ export default ({ data, location }) => {
            <Product data={data.tsuridai} description="風鈴を飾る場所がない、もう少しカッコ良く飾りたい方に吊り台はおすすめです。まるよし風鈴では照明とセットになった行灯型のものも販売しております。" title="吊り台" destination="/fuurin" num="4" />
 
           <div className="space-xl" />
-           <IntroduceCircle  product data={data} />
+           <IntroduceCircle  product />
 </article>
 
 </Layout >
@@ -97,18 +97,6 @@ query {
     childImageSharp {
       fluid(maxWidth: 1600) {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
-      naire: file(relativePath: {eq: "productImg/naire.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 400) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
       original{

@@ -103,14 +103,14 @@ export const Nav = styled.ul `
  font-weight: normal;
  margin:0 auto;
  text-align:center;
- font-size:2.2rem;
+ font-size:1.8rem;
  padding:30px;
 max-width:824px;
  /* @media(max-width:767px){
   w
  } */
  >li{
-  margin:${props =>(props.noSpace ? "0" : "10px")};
+  margin:${props =>(props.noSpace ? "0" : "15px 0 15px")};
    font-weight: bold;
    text-align:${props=>(props.left ? "left" : "center")};
        list-style:${props=>(props.square && "square")};

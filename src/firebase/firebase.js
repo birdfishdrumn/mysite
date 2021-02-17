@@ -3,7 +3,7 @@ import axios from 'axios';
 import firebase from "firebase/app"
 import "firebase/firestore"
 const timestamp = firebase.firestore.Timestamp.now();
-console.log(timestamp)
+
 class Firebase {
     constructor(app) {
         if (!firebaseInstance) {

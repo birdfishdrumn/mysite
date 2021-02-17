@@ -37,5 +37,3 @@ export { default as TimeLine }
 from "./TimeLine/TimeLine"
 export { default as COVID_19 }
 from "./COVID_19/COVID_19"
-export { default as ProductSlider }
-from "./ProductSlider/ProductSlider"

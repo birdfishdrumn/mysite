@@ -21,8 +21,8 @@ import CloseIcon from '@material-ui/icons/Close';
 import Select from '@material-ui/core/Select';
 import SearchIcon from '@material-ui/icons/Search';
 import NativeSelect from '@material-ui/core/NativeSelect';
-// import { AutoRotatingCarousel } from 'material-auto-rotating-carousel';
-// import { Slide } from 'material-auto-rotating-carousel';
+
+
 import {Trans, useTranslation,Link} from
 'gatsby-plugin-react-i18next';
 
@@ -192,7 +192,7 @@ event.target.value,
         </DialogTitle>
 
         <DialogContent>
-          <ProductSlider/>
+
         </DialogContent>
 
 

@@ -24,12 +24,7 @@ module.exports = {
                 },
             },
         },
-        {
-            resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-            options: {
-                devMode: true,
-            },
-        },
+
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-react-helmet`,
         {
@@ -53,13 +48,7 @@ module.exports = {
                 path: `${__dirname}/src/images`,
             },
         },
-        // {
-        //     resolve: `gatsby-source-filesystem`,
-        //     options: {
-        //         name: `locale`,
-        //         path: `${ __dirname }/locales`,
-        //     }
-        // },
+
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-offline`,
         {

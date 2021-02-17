@@ -43,7 +43,6 @@
         "gatsby-transformer-sharp": "^2.5.16",
         "i18next": "^19.8.7",
         "marked": "^1.2.2",
-        "material-auto-rotating-carousel": "^3.0.2",
         "nprogress": "^0.2.0",
         "polished": "^4.0.3",
         "prettier": "2.1.2",

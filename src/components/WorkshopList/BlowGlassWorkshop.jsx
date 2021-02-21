@@ -1,6 +1,6 @@
-import React,{useState,useCallback} from "react"
-import {graphql,useStaticQuery} from "gatsby"
-import { GridList, FlexNav, Scroll,SubTitle, ScrollItem,Description,Nav,Allow } from "../../style/GlobalStyle";
+import React  from "react"
+
+import { SubTitle,Description,Nav,Allow } from "../../style/GlobalStyle";
 import { CarouselSlider } from "../index";
 import { BlowGlassWorkshopData, blowGlassSummary, blowGlassCaution } from "./WorkshopData";
 import { Trans, useTranslation, Link } from 'gatsby-plugin-react-i18next';

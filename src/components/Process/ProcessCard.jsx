@@ -1,5 +1,5 @@
 import React from 'react'
-import { Circle, ProcessWrapper, Number, ImageContainer, ProcessGrid, ProcessDescription } from "./style"
+import {  ProcessWrapper, ImageContainer, ProcessDescription } from "./style"
 import Img from "gatsby-image"
 import Image from "../image"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';

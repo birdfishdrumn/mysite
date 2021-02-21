@@ -6,12 +6,12 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Aos from "aos";
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
-import { News,Post,Gallery,Featured,Content,SubTitle, Description,ImageText} from "../style/GlobalStyle"
+import { News,Gallery,Featured,Content,SubTitle, Description,ImageText} from "../style/GlobalStyle"
 import { Button } from "../components/Button/styles";
 import NewsCardList  from "../components/UI/NewsCard/NewsCardList";
 import FeatureList from "../components/FeatureList/FeatureList";
-import { TabMenu,ProductCard ,Map,Pickup,TopPageContent,COVID_19} from "../components/index";
-import styled from "styled-components";
+import {  Map,Pickup,TopPageContent,COVID_19} from "../components/index";
+
 import Image from "../components/image";
 import {Parallax} from "react-parallax"
 
@@ -31,7 +31,7 @@ export default ({ data }) => {
 
     <section className="hero">
       <figure>
-        <Image filename="uniqlo_poster.jpg" alt=""style={{ height: "100%" }} />
+        <Image filename="uniqlo_poster.jpg" alt="" style={{ height: "100%" }} />
       </figure>
 
         <ImageText>
@@ -48,7 +48,7 @@ export default ({ data }) => {
 
     </div>
         <Content>
-       <Trans>江戸風鈴</Trans>
+       <Trans>江戸風鈴とは</Trans>
       </Content>
       <div className="center">
           <Description  data-aos="fade-up" width="half"><Trans>江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。</Trans><br /><br/>

@@ -182,7 +182,7 @@ text-align:${props => (props.left ? "left" : "center")};
       case "half":
         return `width:80% !important;`
       case "more":
-        return `width:70% !important;`
+        return `width:85% !important;`
     }
     return "width:100%;"
 }};

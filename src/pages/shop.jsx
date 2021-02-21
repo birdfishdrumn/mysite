@@ -8,12 +8,11 @@ import StoreIcon from '@material-ui/icons/Store';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 
 import "aos/dist/aos.css";
-import styled from "styled-components";
-import { Product } from "../components/index";
+
 import { Access,Family}from "../components/PageComponents/index"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import {TwoColumn,SubTitle,Figure,Description,MinTitle,FlexNav} from "../style/GlobalStyle"
+import {SubTitle,FlexNav} from "../style/GlobalStyle"
 import Image from "../components/image"
 
 

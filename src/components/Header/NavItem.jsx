@@ -74,12 +74,12 @@ export const NavItem = ({ lang,mobile }) => {
       {mobile && <li>
         <SNS color flex>
           <li>
-            <a href="https://twitter.com/">
+            <a href="https://twitter.com/@maruyosi_fuurin" target="blank">
               <FontAwesomeIcon color="#1DA1F2" icon={faTwitter} />
             </a>
           </li>
           <li>
-            <a href="http://instagram.com/">
+            <a href="https://www.instagram.com/maruyosi_edofuurin" target="blank">
               <FontAwesomeIcon color="#262626" icon={faInstagram} />
             </a>
           </li>

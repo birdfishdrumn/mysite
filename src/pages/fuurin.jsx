@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 import {ProductTab ,FloatingAction} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-
+import Image from "../components/image"
 
 export default ({ data, location }) => {
   //   const [change,setChange] = useState(false)
@@ -28,11 +28,13 @@ export default ({ data, location }) => {
       pageimgw={data.product.childImageSharp.original.width}
       pageimgh={data.product.childImageSharp.original.height}
     />
-    <div>
+
+           <section className="hero">
       <figure>
-        <Img fluid={data.product.childImageSharp.fluid} alt="製品情報" />
-      </figure>
-        </div>
+        <Image filename="syouhin_top.jpg" alt="製品情報"  style={{ height: "100%" }}/>
+            </figure>
+            </section>
+
         <ProductTab data={data.allProducts} num={location.state && location.state.number} location={location}/>
     <div className="space-l" />
 

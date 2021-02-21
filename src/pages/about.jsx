@@ -63,20 +63,23 @@ export default ({ data, location }) => {
             </Figure>
           </div>
         </TwoColumn>
-
+        <div className="space-xl"/>
         <section className="center">
-        <SubTitle><Trans>江戸風鈴ができるまで</Trans></SubTitle>
-       <MinTitle><Trans>ガラス吹き</Trans></MinTitle>
+          <SubTitle><Trans>江戸風鈴ができるまで</Trans></SubTitle>
+             <div className="space-m"/>
+          <Description left width="half">江戸風鈴は一つ一つ職人が製作しています。最初に風鈴の玉から作るガラス吹き、ガラスの玉ができたら一つ一つ風鈴の内側から絵を描いていきます。風鈴のガラス吹きは良い音のものができるまで10年かかると言われ、とても難しい技術です。絵付けは内側から描くため、最初は思うように描くことができずこちらも最低3年程度修行が必要な技術です。<br /><br />風鈴は庶民的なガラス工芸ですが、熟練の職人の技術によって作られているのです。</Description>
+          <div className="space-m"/>
+       <SubTitle><Trans>ガラス吹き</Trans></SubTitle>
         <div className="space-l"/>
         <Process data={data} />
 
 
           <SubTitle><Trans>動画で確認</Trans></SubTitle>
           <Youtube src="https://www.youtube.com/embed/yYWowTXguP0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
-          <div className="space-xl"/>
+          <div className="space-l"/>
 
-          <MinTitle><Trans>絵付け</Trans></MinTitle>
-
+          <SubTitle><Trans>絵付け</Trans></SubTitle>
+           <div className="space-l"/>
           <Process paint data={data} />
            <SubTitle><Trans>動画で確認</Trans></SubTitle>
           <Youtube src="https://www.youtube.com/embed/LbyTq_nvdBg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>

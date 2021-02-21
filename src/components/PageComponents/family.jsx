@@ -1,6 +1,6 @@
 import React from 'react'
 import { IntroduceContainer,IntroduceAnimal,FamilyImage,FamilyDescription,Flex } from "./style"
-import huurin from "../../images/kingyo.jpg"
+
 import { MinTitle } from "../../style/GlobalStyle";
 import {TimeLine} from "../index";
 import {familyData} from "./familyData"

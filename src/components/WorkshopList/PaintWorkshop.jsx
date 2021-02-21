@@ -1,40 +1,10 @@
-import React,{useState,useCallback} from "react"
-import {graphql,useStaticQuery} from "gatsby"
-import { GridList, FlexNav, Scroll,SubTitle, ScrollItem,Description,Nav,Allow } from "../../style/GlobalStyle";
-import { CarouselSlider } from "../index";
+import React from "react"
+
+import { SubTitle,Description,Nav,Allow } from "../../style/GlobalStyle";
+// import { CarouselSlider } from "../index";
 import { PaintWorkshopData, paintSummary, paintCaution } from "./WorkshopData";
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 const PaintWorkshop = ({data}) => {
-//     const data = useStaticQuery(graphql`
-// query PoppenQuery{
-//     allProducts(
-//     filter: {category: {eq:"ポッペン" }}){
-//       edges {
-//       node {
-//         name
-//         id
-//         category
-//         description
-//          localImage {
-//           childImageSharp{
-//             fluid(maxWidth:300){
-//               ...GatsbyImageSharpFluid_withWebp_tracedSVG
-//             }
-//           }
-//         }
-//         }
-//       }
-//     }
-// }
-// `)
-  //   const [change,setChange] = useState(false)
-  // const handleOn = useCallback(()=>{
-  //     setChange(true)
-  // })
-  //   const handleOff = useCallback(()=>{
-  //     setChange(false)
-  //   })
-  // console.log(location.state.number)
 
   return (
 

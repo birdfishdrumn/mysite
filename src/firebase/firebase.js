@@ -1,6 +1,7 @@
 import firebaseConfig from "./config";
 import axios from 'axios';
 import firebase from "firebase/app"
+import { navigate } from "gatsby";
 import "firebase/firestore"
 const timestamp = firebase.firestore.Timestamp.now();
 
@@ -13,22 +14,29 @@ class Firebase {
             this.db = app.firestore();
             this.functions = app.functions();
             this.storage = app.storage();
+
         }
     }
 
-    async postContact({ name, email, phone, content, selectedDate, message, people }) {
-        return this.db.collection("reservation").add({
+
+    async postContact({ name, email, phone, content, selectedDate, message, people, time }) {
+        const ref = this.db.collection("reservation").doc()
+        let id = ref.id;
+        return this.db.collection("reservation").doc(id).set({
             name: name,
             email: email,
             phone: phone,
             content: content,
             selectedDate: selectedDate,
+            time: time,
             message: message,
             people: people,
             check: false,
-            published_at: timestamp
-
-        })
+            published_at: timestamp,
+            id: id
+        }).then(() => navigate("/complete", {
+            state: { name, email, phone, content, selectedDate, time, message, people },
+        }))
     }
 
 }

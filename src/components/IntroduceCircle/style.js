@@ -2,11 +2,17 @@ import styled from "styled-components";
 
 export const List = styled.div `
  display:grid;
- grid-template-columns:1fr 1fr ;
+ grid-template-columns:1fr 1fr 1fr;
 margin:0 auto;
 text-align:center;
-max-width:700px;
+max-width:950px;
 grid-gap:30px;
+
+@media(max-width:950px){
+  margin:0 auto;
+   grid-template-columns:1fr 1fr ;
+  text-align:center;
+}
 
 @media(max-width:767px){
   margin:0 auto;
@@ -17,7 +23,7 @@ grid-gap:30px;
 
 
 export const Circle = styled.div `
- width: 80%;
+ width: 75%;
 
 @media(max-width:767px){
  width:70%;

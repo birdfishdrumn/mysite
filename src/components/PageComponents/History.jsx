@@ -41,7 +41,7 @@ const History = ({data}) => {
             </Figure>
           </div>
       </MaxTwoColumn>
-      <div className="space-l"/>
+      <div className="space-xl"/>
        <Description width="half">
 <span style={{fontSize:"1.2rem",fontWeight:"bold"}}><Trans>『売り声もなくて買い手の数あるは、音にしられる風鈴の徳』</Trans></span>
 
@@ -52,7 +52,7 @@ const History = ({data}) => {
           響かせるので、始終売り声をあげることが無かったといわれています。</Trans>
           <br/><br/>
       </Description>
-      <div className="space-l" />
+      <div className="space-xl" />
       <MaxTwoColumn auto  little>
             <div>
             <Figure  data-aos="fade-up" >

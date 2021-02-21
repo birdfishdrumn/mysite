@@ -1,8 +1,8 @@
-import React,{useState,useCallback} from "react"
-import {graphql,useStaticQuery} from "gatsby"
-import { GridList, FlexNav, Scroll,SubTitle, ScrollItem,Description,Nav,Allow } from "../../style/GlobalStyle";
-import { CarouselSlider } from "../index";
-import { RemoteWorkshopFlow, remoteSummary, blowGlassCaution } from "./WorkshopData";
+import React from "react"
+
+import {SubTitle,Description,Nav,Allow } from "../../style/GlobalStyle";
+
+import { RemoteWorkshopFlow, remoteSummary, remoteCaution } from "./WorkshopData";
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 const BlowGlassWorkshop = ({data}) => {
 
@@ -45,7 +45,7 @@ const BlowGlassWorkshop = ({data}) => {
       <section>
         <SubTitle hannari>-注意事項-</SubTitle>
          <Nav left hannari small square>
-          {blowGlassCaution.map((item) => (
+          {remoteCaution.map((item) => (
             <li>{item}</li>
           ))}
           </Nav>

@@ -1,12 +1,12 @@
 import React,{useState,useEffect,useCallback}  from 'react'
-import {graphql} from "gatsby"
+
 import Image from "../image"
 import { AchievementFilter, MoneyLuckFilter, DiseaseFree, AmuletFilter, SeasonFlower, KirikoFilter, TsuriganeFilter, FuukinFilter, AnimalFilter } from "./index";
 import InputLabel from '@material-ui/core/InputLabel';
 
-import { SubTitle, Description, GridList, FlexNav, Scroll, ScrollItem } from "../../style/GlobalStyle";
-import { ProductSlider } from "../index";
-import { Button } from "../../components/Button";
+import { SubTitle, Description, FlexNav} from "../../style/GlobalStyle";
+// import { ProductSlider } from "../index";
+import styled  from "styled-components";
 import ViewColumnIcon from '@material-ui/icons/ViewColumn';
 import GridOnIcon from '@material-ui/icons/GridOn';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -19,16 +19,21 @@ import FormControl from '@material-ui/core/FormControl';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Select from '@material-ui/core/Select';
-import SearchIcon from '@material-ui/icons/Search';
-import NativeSelect from '@material-ui/core/NativeSelect';
+// import SearchIcon from '@material-ui/icons/Search';
+// import NativeSelect from '@material-ui/core/NativeSelect';
 
 
 import {Trans, useTranslation,Link} from
 'gatsby-plugin-react-i18next';
 
 
-// const { red, blue, green } = require('@material-ui/core/colors');
-
+const ImageContainer = styled.div`
+ width:50%;
+ margin:20px auto;
+@media(max-width:767px){
+  width:100%;
+}
+`
 
 
 const useStyles = makeStyles((theme) => ({
@@ -88,7 +93,7 @@ const DialogContent = withStyles((theme) => ({
 
 const Fuurin = ({location,data}) => {
   const [change, setChange] = useState(false)
-  const [language, setLanguage] = useState("")
+  const [language, setLanguage] = useState("日本語")
     const classes = useStyles();
  const [open, setOpen] = useState(false);
   const handleClickOpen = () => {
@@ -124,7 +129,18 @@ event.target.value,
          <section className="center">
       <SubTitle><Trans>江戸風鈴</Trans></SubTitle>
           <Description  left width="half"><Trans>風鈴と聞いた時、金魚や花火、あさがおなど夏の柄が多く浮かびますが実は一つ一つ基本的には意味があります。こちらでは風鈴の意味を写真と共に紹介いたします。また現在4カ国語に翻訳もできますので海外の方もご覧になれます。</Trans>
-    </Description>
+        </Description>
+         <div className="space-l"/>
+        <SubTitle><Trans>いろいろな江戸風鈴</Trans></SubTitle>
+        <ImageContainer>
+           <Image filename="fuurin_size.jpg"></Image>
+        </ImageContainer>
+
+        <Description left width="half"><Trans>江戸風鈴には大きさや形が異なるものもあり、写真では左から小丸型、新子丸、釣鐘型といいます。形や大きさによっても音は違います。小丸型や新子丸では軽やかな音、釣鐘型では深みのある音がなります。</Trans><br /><Trans>
+          店頭にお越しいただ場合は是非聴き比べてみてください。
+          </Trans>
+        </Description>
+             <div className="space-l"/>
         <FlexNav>
            <FormControl className={classes.formControl}>
         <InputLabel htmlFor="age-native-simple">Language</InputLabel>
@@ -147,12 +163,12 @@ event.target.value,
       </FormControl>
             <Tooltip title="グリッド" interactive>
               <IconButton  onClick={handleOff} >
-                <li><GridOnIcon fontSize="large"/></li>
+              <li><GridOnIcon fontSize="large" /><p style={{fontSize:"0.8rem"}}>風鈴本体</p></li>
                 </IconButton>
             </Tooltip>
             <Tooltip title="短冊まで" interactive>
                <IconButton  onClick={handleOn} >
-                <li ><ViewColumnIcon fontSize="large" /></li>
+                <li ><ViewColumnIcon fontSize="large" /><p style={{fontSize:"0.8rem"}}>短冊</p></li>
                 </IconButton>
           </Tooltip>
            {/* <Tooltip title="拡大" interactive>
@@ -167,20 +183,28 @@ event.target.value,
 
           <SubTitle hannari><Trans>金運上昇</Trans></SubTitle>
         <MoneyLuckFilter change={change} language={language} />
+          <div className="space-l" />
          <SubTitle  hannari><Trans>目標達成</Trans></SubTitle>
-        <AchievementFilter change={change} language={language} />
+        <AchievementFilter change={change} language={language} /
+        >  <div className="space-l" />
         <SubTitle hannari><Trans>無病息災</Trans></SubTitle>
         <DiseaseFree change={change} language={language} />
+         <div className="space-l" />
         <SubTitle hannari><Trans>魔除け</Trans></SubTitle>
         <AmuletFilter change={change} language={language} />
+         <div className="space-l" />
         <SubTitle hannari><Trans>季節の花</Trans></SubTitle>
         <SeasonFlower change={change} language={language} />
+         <div className="space-l" />
            <SubTitle hannari><Trans>切子</Trans></SubTitle>
         <KirikoFilter change={change} language={language} />
+         <div className="space-l" />
         <SubTitle hannari><Trans>可愛い動物</Trans></SubTitle>
-        <AnimalFilter change={change} language={language}/>
+        <AnimalFilter change={change} language={language} />
+         <div className="space-l" />
         <SubTitle><Trans>新子丸、釣鐘型風鈴</Trans></SubTitle>
-        <TsuriganeFilter change={change} language={language}/>
+        <TsuriganeFilter change={change} language={language} />
+         <div className="space-l" />
         <SubTitle><Trans>風琴</Trans></SubTitle>
         <FuukinFilter change={change} language={language}/>
     </section>

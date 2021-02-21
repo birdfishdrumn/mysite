@@ -1,13 +1,13 @@
-import React, { useState,useCallback } from "react";
-import TextField from "@material-ui/core/TextField";
+import React from "react";
+
 import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { SubTitle, Description,TwoColumn,Figure,Nav,ItemA,ItemB,ItemC,GridContainer} from "../style/GlobalStyle";
-import { Contact } from "../components/index"
+import { SubTitle, Description,TwoColumn,Figure} from "../style/GlobalStyle";
+
 import styled from "styled-components"
 import Image from "../components/image";
-import TextInput from "../components/UI/textInput"
+
 
 
 const TextNav = styled.ul`
@@ -81,7 +81,7 @@ export default ({data,location})=>{
         />
         <section className="hero">
 	<figure>
-            <Image filename="naire_top.jpg" style={{height:"100%"}} alt="製品情報"/>
+            <Image filename="arekore_top.jpg" style={{height:"100%"}} alt="製品情報"/>
     </figure>
         </section>
 

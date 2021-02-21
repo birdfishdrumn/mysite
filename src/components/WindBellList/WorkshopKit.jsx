@@ -1,10 +1,10 @@
 import React  from 'react'
 import {graphql,useStaticQuery} from "gatsby"
 import Img from "gatsby-image"
-import { IntroduceCircle,Process } from "../index";
+import { IntroduceCircle } from "../index";
 import styled from "styled-components"
 import { SubTitle, Description,GridList,ItemA,ItemB,ItemC,GridContainer,MinTitle} from "../../style/GlobalStyle";
-import { Button } from "../../components/Button";
+
 import Image from "../image"
 import { WorkshopKitFlow } from "./TsuridaiData";
 
@@ -66,7 +66,7 @@ query kitQuery{
       <section>
           <div className="space-l" />
         <MinTitle>体験の流れ</MinTitle>
-        <GridList>
+        <GridList single gap>
           {WorkshopKitFlow.map(item => (
             <div>
             <ImageContainer>

@@ -81,7 +81,7 @@ export const FamilyDescription = styled(Description)
  align-items:center;
  margin:auto;
 
- padding:40px 20px 0;
+ padding:40px 0px 0;
  @media(min-width:768px){
    width:80%;
 

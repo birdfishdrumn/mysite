@@ -30,7 +30,7 @@ export const FooterContainer = styled.div `
     }
     }
 
-      @media(min-width:850px){
+      @media(min-width:912px){
           height:55vh;
        flex-direction: row;
    max-width:1200px;
@@ -50,7 +50,7 @@ flex-basis:30%;
       }
 /* 店の概要の要素 */
 
-    @media(max-width:850px){
+    @media(max-width:912px){
   >div:first-child{
 
     >div{
@@ -62,7 +62,7 @@ flex-basis:30%;
 }
 `
 export const ContactIcon = styled.div `
-@media(max-width:850px){
+@media(max-width:912px){
 width:100%;
 text-align:center;
 margin-bottom:50px;
@@ -115,7 +115,7 @@ export const FooterNav = styled.div `
    @media(max-width:1024px){
      font-size:0.85rem;
    }
-     @media(max-width:850px){
+     @media(max-width:912px){
     flex-direction:column;
     text-align:center;
     font-size:1rem;
@@ -128,7 +128,7 @@ export const FooterNav = styled.div `
       @media(max-width:1024px){
         margin-bottom:6px;
    }
-     @media(max-width:850px){
+     @media(max-width:912px){
    padding-bottom:15px;
    border-bottom:1px solid white;
    margin:10px 0;
@@ -137,4 +137,21 @@ export const FooterNav = styled.div `
 
     }
 
+`
+
+export const Privacy = styled.div `
+display:flex;
+cursor: pointer;
+  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+  padding:0px 50px 80px 130px;
+  font-size:0.8rem;
+  @media(max-width:767px){
+    flex-direction:column;
+    padding:20px 0 20px 0;
+    margin:0 auto;
+    text-align:center;
+  }
+  >p{
+    margin:15px;
+  }
 `

@@ -1,12 +1,11 @@
 import React, { useState,useCallback } from "react";
-import TextField from "@material-ui/core/TextField";
-import Img from "gatsby-image"
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description } from "../style/GlobalStyle";
 import {Contact} from "../components/index"
 
-import TextInput from "../components/UI/textInput"
+
 
 export default ({data})=>{
 

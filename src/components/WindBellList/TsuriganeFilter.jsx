@@ -1,9 +1,10 @@
 import React from "react"
 import {graphql,useStaticQuery} from "gatsby"
-import { GridList, FlexNav, Scroll,SubTitle, ScrollItem } from "../../style/GlobalStyle";
+import { GridList,SubTitle, ScrollItem } from "../../style/GlobalStyle";
 import WindBellCard from "./WindBellCard";
+import { Language, Name } from "./Language"
 
-const TsuriganeFilter = ({change}) => {
+const TsuriganeFilter = ({change,language}) => {
   const data = useStaticQuery(graphql`
 query TsuriganeFilterQuery{
     allProducts(
@@ -43,13 +44,12 @@ query TsuriganeFilterQuery{
       <SubTitle hannari>釣鐘型</SubTitle>
         <GridList change={change}>
             {data.allProducts.edges.map(edge => (
-            <ScrollItem>
+            <ScrollItem  key={edge.node.id}>
                 <WindBellCard
-              key={edge.node.id}
                   windBellImage={edge.node.localImage[0].childImageSharp.fluid}
                    allImage={edge.node.localImage[1].childImageSharp.fluid}
-              name={edge.node.name}
-              description={edge.node.description}
+               name={<Name language={language}  langName={edge.node}/>}
+             description={<Language language={language}  lang={edge.node}/>}
               change={change}
             />
                 </ScrollItem>

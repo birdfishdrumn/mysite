@@ -19,16 +19,16 @@ export const TsuridaiData = [{
 export const WorkshopKitFlow = [{
         title: "風鈴に絵を描く",
         description: "風鈴の内側から絵を描きます。",
-        image: "taiken_kit.jpg"
+        image: "paint_workshopkit.jpg"
     },
     {
         title: "短冊をつける",
         description: "短冊をつけて風鈴の音がなるようにしましょう。",
-        image: "taiken_kit.jpg"
+        image: "tanzaku_ito2.jpg"
     },
     {
         title: "風鈴を吊り下げる",
         description: "実際に吊り下げて音を楽しみましょう。",
-        image: "taiken_kit.jpg"
+        image: "do_hang.jpg"
     },
 ]

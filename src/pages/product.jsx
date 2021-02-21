@@ -2,12 +2,11 @@ import React,{useEffect,useState} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql,Link} from "gatsby"
 import Img from "gatsby-image"
-import Aos from "aos"
 import styled from "styled-components";
-import { Product, IntroduceCircle} from "../components/index";
+import { Product, IntroduceCircle,Pankuzu} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { SubTitle, Description, ProductColumn, Figure, TextFlex } from "../style/GlobalStyle";
+import { SubTitle, Description} from "../style/GlobalStyle";
 import {Trans} from "gatsby-plugin-react-i18next"
 import { Button } from "../components/Button";
 
@@ -60,7 +59,7 @@ export default ({ data, location }) => {
             </section>
     </div>
 
-
+    {/* <Pankuzu title="商品の紹介" link="/product"/> */}
         <article className="content">
 
     <div className="center">

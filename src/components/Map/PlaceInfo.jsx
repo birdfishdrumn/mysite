@@ -4,7 +4,7 @@ import Icon from "../../images/huurin_red.png"
 export default function PlaceInfo() {
   const places = [
     { info: "篠原まるよし風鈴", location: { lat:35.706699 , lng: 139.781221 } },
-    // { info: "info2", location: { lat:35.706699 , lng: 139.781221 } },
+
   ];
 
   const [selected, setSelected] = useState(null);

@@ -9,7 +9,6 @@ import jaLocale from "date-fns/locale/ja";
 import {SubTitle} from "../../style/GlobalStyle"
 import {
   MuiPickersUtilsProvider,
-  KeyboardTimePicker,
   KeyboardDateTimePicker,
 } from '@material-ui/pickers';
 

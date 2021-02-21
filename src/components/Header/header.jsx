@@ -1,32 +1,29 @@
-import React,{useState,useEffect,useCallback} from "react"
+import React,{useState} from "react"
 import PropTypes from 'prop-types';
 
-import Search from "../Search/search"
+
 import { Logo } from "../Logo"
 import { makeStyles } from '@material-ui/core/styles';
 import styled from "styled-components";
-import Button from '@material-ui/core/Button';
+
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Slide from '@material-ui/core/Slide';
 import {HeaderBar,Bar,Nav,HeaderMenu,MobileNav,LangNav} from "./style"
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import ClosableDrawer from "./ClosableDrawer";
+
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 import { withStyles } from '@material-ui/core/styles';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import ToggleMenu from "../UI/ToggleMenu/ToggleMenu";
-import {NavItem} from "./NavItem"
 
+
+import {NavItem} from "./NavItem"
 
 const Hamburger = styled(IconButton)`
   display:none;
@@ -34,6 +31,13 @@ const Hamburger = styled(IconButton)`
     display:block
   }
 `
+const LogoWrapper = styled.div`
+  @media(max-width:1024px){
+    margin-top:-5px;
+  }
+
+`
+
 const styles = (theme) => ({
   root: {
     margin: 0,
@@ -103,18 +107,13 @@ const DialogTitle = withStyles(styles)((props) => {
 
 const Header = (props) => {
   const classes = useStyles()
-  const [sm, setSm] = useState(false)
+
   const [open, setOpen] = useState(false);
   const { languages, changeLanguage } = useI18next();
-    const [anchorEl, setAnchorEl] = useState(null);
-console.log(props.location)
-  const OpenMenu= (event) => {
-    setAnchorEl(event.currentTarget);
-  };
 
-  const CloseMenu = () => {
-    setAnchorEl(null);
-  };
+console.log(props.location)
+
+
     const handleClickOpen = () => {
     setOpen(true);
     };
@@ -130,10 +129,9 @@ console.log(props.location)
           <Bar >
             <HeaderMenu>
               <div>
-            <Link to="/">
-        <Logo/>
+                  <Link to="/">
+                    <LogoWrapper><Logo /></LogoWrapper>
                   </Link>
-
                 </div>
                 <LangNav small>
                       {languages.map((lng) => (

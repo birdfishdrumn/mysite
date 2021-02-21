@@ -1,10 +1,10 @@
-import React, { useState,useCallback } from "react";
-import TextField from "@material-ui/core/TextField";
-import Img from "gatsby-image"
+import React from "react";
+
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { SubTitle, Description, MinTitle } from "../style/GlobalStyle";
-import { QuestionAccordion } from "../components/index"
+import { SubTitle, MinTitle } from "../style/GlobalStyle";
+import { QuestionAccordion,IntroduceCircle } from "../components/index"
 import Image from "../components/image"
 export default ({data,location})=>{
 
@@ -44,7 +44,9 @@ export default ({data,location})=>{
           <MinTitle hannari>江戸風鈴の歴史</MinTitle>
            <div className="space-l" />
             <QuestionAccordion history />
-             </div>
+          </div>
+          <div className="space-xl" />
+              <IntroduceCircle  product />
    </article>
       </Layout>
     </div>

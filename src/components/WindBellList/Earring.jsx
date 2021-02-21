@@ -1,6 +1,6 @@
 import React,{useState,useCallback} from "react"
 import {graphql,useStaticQuery} from "gatsby"
-import { GridList, FlexNav, Scroll,SubTitle, ScrollItem,Description } from "../../style/GlobalStyle";
+import { GridList, FlexNav,SubTitle, ScrollItem,Description } from "../../style/GlobalStyle";
 import WindBellCard from "./WindBellCard";
 import ViewColumnIcon from '@material-ui/icons/ViewColumn';
 import GridOnIcon from '@material-ui/icons/GridOn';
@@ -48,21 +48,20 @@ query EarringQuery{
            <FlexNav>
             <Tooltip title="グリッド" interactive>
               <IconButton  onClick={handleOff} >
-                <li><GridOnIcon fontSize="large"/></li>
+                <li><GridOnIcon fontSize="large"/><p style={{fontSize:"0.8rem"}}>本体</p></li>
                 </IconButton>
             </Tooltip>
             <Tooltip title="短冊まで" interactive>
                <IconButton  onClick={handleOn} >
-                <li ><ViewColumnIcon fontSize="large" /></li>
+                <li ><ViewColumnIcon fontSize="large" /><p style={{fontSize:"0.8rem"}}>全体</p></li>
                 </IconButton>
           </Tooltip>
           </FlexNav>
       <SubTitle hannari>イヤリング</SubTitle>
         <GridList change={change}>
             {data.allProducts.edges.map(edge => (
-            <ScrollItem>
+            <ScrollItem  key={edge.node.id}>
                 <WindBellCard
-              key={edge.node.id}
                   windBellImage={edge.node.localImage[0].childImageSharp.fluid}
                    allImage={edge.node.localImage[1].childImageSharp.fluid}
               name={edge.node.name}

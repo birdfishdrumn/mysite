@@ -1,14 +1,14 @@
 import React from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql,Link} from "gatsby"
-import Img from "gatsby-image"
+
 
 import styled from "styled-components";
 
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { FloatingAction,WorkshopList,COVID_19}  from "../components/index";
-
+import Image from "../components/image"
 
 
 const ProductList = styled.div`
@@ -27,11 +27,11 @@ export default ({data,location}) => (
       pageimgw={data.taiken.childImageSharp.original.width}
       pageimgh={data.taiken.childImageSharp.original.height}
     />
-<div className="eyecatch">
+<section className="hero">
 	<figure>
-	   <Img fluid={data.taiken.childImageSharp.fluid} alt="製品情報"/>
+	   <Image filename="workshopPage_top.jpg" style={{height:"100%"}} alt="製品情報"/>
     </figure>
-</div>
+</section>
 
     <article className="content center">
       <div className="space-l"/>

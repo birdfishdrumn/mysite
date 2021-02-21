@@ -1,15 +1,13 @@
-import React,{useState,useCallback} from "react"
+import React from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
-import Img from "gatsby-image"
-import {ProductGrid} from "../components/index"
-import styled from "styled-components";
-import { Product,WindBellCard,WorkshopTab ,FloatingAction,Reserve} from "../components/index";
+
+import { WorkshopTab ,FloatingAction,Reserve} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { SubTitle, Description,GridList,FlexNav,Scroll,ScrollItem} from "../style/GlobalStyle";
 
-import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower } from "../components/WindBellList/index";
+import Image from "../components/image"
+
 
 export default ({ data, location }) => {
 
@@ -23,11 +21,11 @@ export default ({ data, location }) => {
       pageimgw={data.product.childImageSharp.original.width}
       pageimgh={data.product.childImageSharp.original.height}
     />
-    <div>
-      <figure>
-        <Img fluid={data.product.childImageSharp.fluid} alt="製品情報" />
-      </figure>
-        </div>
+   <section className="hero">
+	<figure>
+	   <Image filename="workshopPage_top.jpg" style={{height:"100%"}} alt="製品情報"/>
+    </figure>
+</section>
         <WorkshopTab num={location.state && location.state.number}/>
         <div className="space-l" />
 

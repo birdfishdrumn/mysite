@@ -1,8 +1,8 @@
-import React,{useState,useCallback} from "react"
-import {graphql,useStaticQuery} from "gatsby"
-import { SubTitle, ScrollItem,Description,Nav,Allow } from "../../style/GlobalStyle";
+import React from "react"
+
+import { SubTitle,Description,Nav } from "../../style/GlobalStyle";
 import { Button } from "../Button/styles";
-import { PaintWorkshopData, paintSummary, paintCaution } from "./WorkshopData";
+import { paintCaution } from "./WorkshopData";
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 const GroupWorkshop = ({data}) => {
 
@@ -16,28 +16,18 @@ const GroupWorkshop = ({data}) => {
             体験申し込み用のFAX用紙もこちらに用意させていただきましたので、旅行会社様や学校様はこちらをご利用くださいませ。
           </Trans>
         </Description>
+        <SubTitle hannari>新型コロナウイルスの対策</SubTitle>
+        <Description  left width="half">
+          <Trans>団体様の場合はただいま席数を減らしてのご案内となっておりますので、人数が多い場合は２回に分けてのご案内、また別会場などをご案内させていただくこともあります。詳しくはメール、またはお電話よりお問い合わせくださいませ。
+          </Trans>
+        </Description>
         <div className="space-l"/>
         <a href="https://edo-fuurin.com/wp-content/uploads/2020/05/2007.taiken2.pdf" target="_blank"><Button>体験学習申し込み FAX</Button>
 
         </a>
          <div className="space-l"/>
-      {/* </section>
-         <Nav hannari>
-        {paintSummary.map((item) => (
-            <>
-            <li><Trans>{item.title}</Trans></li>
-            <p><Trans>{item.description}</Trans></p>
-            </>
-          ))}
-          </Nav>
 
-      <section> */}
-        <SubTitle hannari><Trans>-注意事項-</Trans></SubTitle>
-         <Nav left hannari small square>
-          {paintCaution.map((item) => (
-            <li>{item}</li>
-          ))}
-          </Nav>
+
       </section>
 
       <section>

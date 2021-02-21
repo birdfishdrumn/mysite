@@ -1,9 +1,6 @@
-import React,{useState,useCallback}  from 'react'
-import {graphql} from "gatsby"
-import Img from "gatsby-image"
-import { AchievementFilter,MoneyLuckFilter,DiseaseFree,AmuletFilter,SeasonFlower } from "./index";
-import Layout from "../../components/layout"
-import { SubTitle, Description, GridList, MinTitle, Scroll, ScrollItem } from "../../style/GlobalStyle";
+import React from 'react'
+
+import { SubTitle, Description, GridList, MinTitle } from "../../style/GlobalStyle";
 import { TsuridaiData } from "./TsuridaiData";
 import Image from "../image"
 

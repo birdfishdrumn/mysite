@@ -55,7 +55,7 @@ export const MobileNav = styled.nav `
     font-weight:bold;
     font-size:1.2rem;
      text-align:center;
-    color: black;
+    color: white;
 
     >li{
    margin:30px 0;

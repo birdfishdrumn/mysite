@@ -1,5 +1,5 @@
 import React from 'react'
-import { SubTitle, Nav, ListColumn, Description, MinTitle } from "../../style/GlobalStyle";
+import {  ListColumn, Description, MinTitle } from "../../style/GlobalStyle";
 // import { Link } from "gatsby";
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import { Button } from "../Button";

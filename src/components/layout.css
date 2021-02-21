@@ -721,6 +721,12 @@ svg {
     padding: 6px 6px;
 }
 
-.MuiTabs-flexContainer {
-    justify-content: center;
+@media(min-width:767px) {
+    .MuiTabs-flexContainer {
+        justify-content: center;
+    }
+}
+
+.MuiDialog-paperFullScreen {
+    background-color: #00695B;
 }

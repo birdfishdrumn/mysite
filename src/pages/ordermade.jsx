@@ -1,13 +1,13 @@
-import React, { useState,useCallback } from "react";
-import TextField from "@material-ui/core/TextField";
+import React from "react";
+
 import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { SubTitle, Description,TwoColumn,Figure,Nav,ItemA,ItemB,ItemC,GridContainer} from "../style/GlobalStyle";
-import { Contact } from "../components/index"
+import { SubTitle, Description,TwoColumn,Figure,Nav,ItemA,ItemB,ItemC} from "../style/GlobalStyle";
+
 import styled from "styled-components"
 import Image from "../components/image";
-import TextInput from "../components/UI/textInput"
+
 
 
 const TextNav = styled.ul`
@@ -54,7 +54,7 @@ const ImageB = styled(Img)`
 
       position:    absolute;
     z-index:    999;
-    top:        -80px;
+    top:        -60px;
     right:        40px;
     display:block;
     width:200px;
@@ -133,8 +133,8 @@ export default ({data,location})=>{
 
           </div>
           <div style={{margin:"0 auto"}}>
-                <ImageA fluid={data.naire.childImageSharp.fluid}/>
-       <ImageB fluid={data.order2.childImageSharp.fluid}/>
+                <ImageA fluid={data.order.childImageSharp.fluid}/>
+               <ImageB fluid={data.order2.childImageSharp.fluid}/>
           </div>
             </TwoColumn>
           </section>
@@ -175,6 +175,18 @@ query {
     }
   }
       order2: file(relativePath: {eq: "productImg/order_sakana.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 400) {
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+      original{
+        src
+        height
+        width
+      }
+    }
+  }
+        order: file(relativePath: {eq: "productImg/fuujin.jpg"}){
     childImageSharp {
       fluid(maxWidth: 400) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG

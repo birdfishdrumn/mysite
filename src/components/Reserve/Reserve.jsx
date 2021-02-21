@@ -1,6 +1,6 @@
 import React from 'react'
 import PhoneIcon from '@material-ui/icons/Phone';
-import MailIcon from '@material-ui/icons/Mail';
+
 import Reservation from "./Reservation"
 
 import { SubTitle,Description } from "../../style/GlobalStyle"

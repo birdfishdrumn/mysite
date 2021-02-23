@@ -22,7 +22,7 @@ export default ({ data, location }) => {
   <Layout>
     <SEO
       pagetitle="まるよし風鈴の商品紹介"
-      pagedesc="こちらではより詳しくまるよし風鈴の製品である、江戸風鈴、体験キット、風鈴のイヤリングやピアス、ポッペン、体験キットなどについてご紹介いたします。"
+      pagedesc="こちらではより詳しくまるよし風鈴の製品である、金魚やアマビエ様など様々な江戸風鈴、家でも絵付け体験ができる体験キット、風鈴のイヤリングやピアス、ポッペン、などについてご紹介いたします。"
       pagepath={location.pathname}
       pageimg={data.product.childImageSharp.original.src}
       pageimgw={data.product.childImageSharp.original.width}

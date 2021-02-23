@@ -4,8 +4,8 @@ export const TsuridaiData = [{
         image: "tsurindai_tetsubou.jpg"
     },
     {
-        title: "箱型つり台",
-        description: "高級感の有るつり台です。",
+        title: "桐のつり台",
+        description: "桐の木を使ったつり台で、どこから見ても楽しむことが出来る立体的な構造になっています。お気に入りの一つを飾るのに特にお勧めです。",
         image: "tsuridai_meddle.jpg"
     },
     {

@@ -41,8 +41,8 @@ export default ({data,location})=>{
 
       <Layout>
               <SEO
-           pagetitle="風鈴のあれこれ"
-      pagedesc="こちらでは江戸風鈴の吊るし方や修理に関することなど、風鈴のあれこれについてご紹介いたします。"
+           pagetitle="風鈴の梱包・発送"
+      pagedesc="こちらでは江戸風鈴の発送やプレゼントラッピングに関して紹介いたします。"
       pagepath={location.pathname}
       pageimg={data.naire.childImageSharp.original.src}
       pageimgw={data.naire.childImageSharp.original.width}

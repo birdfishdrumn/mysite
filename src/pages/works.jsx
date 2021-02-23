@@ -25,7 +25,7 @@ export default ({ data, location }) => {
   return (
     <Layout>
       <SEO
-        pagetitle="わたしたちの仕事"
+        pagetitle="私たちの仕事"
         pagedesc="こちらでは篠原まるよし風鈴の仕事内容、またお世話になっている川崎大師風鈴市や川越氷川神社縁結び風鈴に関する仕事をご紹介いたします。"
         pagepath={location.pathname}
         pageimg={data.taiken.childImageSharp.original.src}

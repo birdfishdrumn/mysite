@@ -20,7 +20,7 @@ const ProductList = styled.div`
 export default ({data,location}) => (
   <Layout>
     <SEO
-      pagetitle="風鈴製作体験"
+      pagetitle="体験する"
       pagedesc="こちらでは篠原まるよし風鈴の絵付け、ガラス吹き、リモート体験、団体や校外学習の体験について紹介いたします。。"
       pagepath={location.pathname}
       pageimg={data.taiken.childImageSharp.original.src}

@@ -76,8 +76,8 @@ export default ({data,location})=>{
            pagetitle="風鈴のあれこれ"
       pagedesc="こちらでは江戸風鈴の吊るし方や修理に関することなど、風鈴のあれこれについてご紹介いたします。"
       pagepath={location.pathname}
-      pageimg={data.naire.childImageSharp.original.src}
-      pageimgw={data.naire.childImageSharp.original.width}
+      pageimg={data.arekore.childImageSharp.original.src}
+      pageimgw={data.arekore.childImageSharp.original.width}
         />
         <section className="hero">
 	<figure>
@@ -93,8 +93,8 @@ export default ({data,location})=>{
             <TwoColumn>
                  <div>
                 <Figure>
-              <Img
-                fluid={data.hang.childImageSharp.fluid}
+              <Image
+                filename="huurin_hang_kiriko.jpg"
                 alt=""
                 style={{ width: "100%" ,margin:"0"}}
               />
@@ -137,7 +137,6 @@ export default ({data,location})=>{
 };
 
 
-
 export const query = graphql`
 query {
   contact: file(relativePath: {eq: "iro.jpg"}){
@@ -152,7 +151,7 @@ query {
       }
     }
   }
-    naire: file(relativePath: {eq: "productImg/naire.jpg"}){
+    arekore: file(relativePath: {eq: "productImg/fuurin_arekore.jpg"}){
     childImageSharp {
       fluid(maxWidth: 200) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -164,16 +163,5 @@ query {
       }
     }
   }
-      hang: file(relativePath: {eq: "productImg/huurin_hang_kiriko.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 400) {
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
+
 }`

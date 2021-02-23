@@ -12,11 +12,18 @@ module.exports = {
         title: `篠原まるよし風鈴`,
         description: `江戸時代から続く江戸風鈴を制作している篠原まるよし風鈴です。`,
         lang: `ja`,
-        siteUrl: `https://wonderful-hopper-4ed849.netlify.app`,
+        siteUrl: `https://edo-fuurin.com`,
         locale: `ja_JP`,
         fbappid: `XXXXXX`
     },
     plugins: [{
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: "process.env.GOOGLE_ANALYTICS_ID", //デフォルト値
+                head: true, //これ追加
+            },
+        },
+        {
             resolve: `gatsby-plugin-material-ui`,
             options: {
                 stylesProvider: {

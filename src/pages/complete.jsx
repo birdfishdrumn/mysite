@@ -21,7 +21,7 @@ export default ({data,location})=>{
  {/* state: { name, email, phone, content, selectedDate, time, message, people }, */}
 
 <div className="space-xl"/>
-        <SEO  pagetitle="お問い合わせフォーム" />
+        <SEO  pagetitle={location.state && location.state.subject  ? "お問い合わせありがとうございます。" : "体験のお申し込みありがとうございます。" }     />
  <article className="content">
           {location.state && location.state.subject ?
              <SubTitle>お問い合わせありがとうございます。</SubTitle>
@@ -40,13 +40,28 @@ export default ({data,location})=>{
             </Description>
               :
                   <Description left width="half">
-                     体験のお申し込みありがとうございます。担当のものが翌営業日以内にご返信させていただきますので今しばらくお待ちくださいませ。
+                     体験のお申し込みありがとうございます。担当のものが最短で翌営業日以内にはご返信させていただきますので今しばらくお待ちくださいませ。
           <br></br>
 
             </Description>
           }
 
             {location.state &&
+              location.state.subject ?
+              (
+                <Nav small noSpace>
+                    <li>お名前</li>
+                <p>{location.state.name}</p>
+                <li>メールアドレス</li>
+                  <p>{location.state.email}</p>
+                      <li>件名</li>
+                <p>{location.state.subject}</p>
+
+                  <li>メッセージ</li>
+                <p>{location.state.message}</p>
+                      </Nav>
+              )
+              :
               (
               <Nav small noSpace>
                 <li>お名前</li>
@@ -64,8 +79,7 @@ export default ({data,location})=>{
                 <p>{location.state.selectedDate.toLocaleDateString()}</p>
                 <li>体験時間</li>
                   <p>{location.state.time}</p></>)}
-                <li>件名</li>
-                <p>{location.state.subject}</p>
+
                 <li>メッセージ</li>
                 <p>{location.state.message}</p>
               </Nav>

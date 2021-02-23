@@ -6,10 +6,10 @@ import Aos from "aos";
 import { IconButton } from "@material-ui/core";
 import StoreIcon from '@material-ui/icons/Store';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
-
+import YouTubeIcon from '@material-ui/icons/YouTube';
 import "aos/dist/aos.css";
 
-import { Access,Family}from "../components/PageComponents/index"
+import { Access,Family,Media}from "../components/PageComponents/index"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import {SubTitle,FlexNav} from "../style/GlobalStyle"
@@ -17,11 +17,24 @@ import Image from "../components/image"
 
 
 export default ({ data, location }) => {
-  const [active,setActive] = useState(false)
+  const [select,setSelect] = useState("Shop")
   useEffect(() => {
     Aos.init({ duration: 1000, startEvent: 'DOMContentLoaded', once: true });
 
   }, [])
+
+
+  const ShopTag = ({data}) => {
+    switch (select) {
+      case "Shop":
+        return   <Access data={data}/>
+      case "Family":
+        return   <Family data={data}/>
+       case "Media":
+        return <Media/>
+    }
+   return <Access data={data}/>
+  }
   return (
     <Layout>
       <SEO
@@ -41,15 +54,17 @@ export default ({ data, location }) => {
       <article className="content center">
         <SubTitle>お店・家族の紹介</SubTitle>
         <FlexNav small>
-          <li onClick={()=>setActive(false)}><IconButton><StoreIcon/></IconButton><br/>お店</li>
-          <li  onClick={()=>setActive(true)}><IconButton><SupervisedUserCircleIcon/></IconButton><br/>職人の紹介</li>
+          <li onClick={()=>setSelect("Shop")}><IconButton><StoreIcon/></IconButton><br/>お店</li>
+          <li onClick={() => setSelect("Family")}><IconButton><SupervisedUserCircleIcon /></IconButton><br />職人の紹介</li>
+            <li  onClick={()=>setSelect("Media")}><IconButton><YouTubeIcon/></IconButton><br/>メディア</li>
         </FlexNav>
-        {active ? <Family data={data}/>:
+        {/* {active ? <Family data={data}/>:
           (
             <Access data={data}/>
 
          )
-        }
+        } */}
+        <ShopTag data={data}/>
 
 
       </article>

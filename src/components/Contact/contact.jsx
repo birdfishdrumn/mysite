@@ -1,4 +1,4 @@
- import React, { useState,useCallback } from "react"
+ import React, { useState,useCallback,useContext } from "react"
 import TextField from "@material-ui/core/TextField";
 import 'date-fns';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,10 +7,9 @@ import Button from "@material-ui/core/Button";
 import DateFnsUtils from '@date-io/date-fns';
 import jaLocale from "date-fns/locale/ja";
 import {SubTitle} from "../../style/GlobalStyle"
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDateTimePicker,
-} from '@material-ui/pickers';
+
+import { FirebaseContext } from "../../firebase";
+
 
 const useStyles = makeStyles((theme) => ({
 
@@ -22,38 +21,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Contact = ({workshop,dialog}) => {
- const disableMonday = (date) =>{
 
-    // const dateInterditesRaw = [
-    //   new Date(date.getFullYear(),0,3),
-
-    // ];
-
-
-    // const dateInterdites = dateInterditesRaw.map((arrVal) => {return
-    // arrVal.getTime()});
-
-    return date.getDay() === 1;
- }
 
    const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [number, setNumber] = useState(1);
+
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const dt = new Date()
-  // const week = dt.setDate(dt.getDate() + 7)
-  const minDate =dt.setDate(dt.getDate() + 3)
+
   const classes = useStyles()
-  const [selectedDate, setSelectedDate] = useState(dt.setDate(dt.getDate() + 3));
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
-  //   const handleDateChange = (event) => {
-  //   setSelectedDate(event.target.value);
-  // };
-
+  const { firebase } = useContext(FirebaseContext);
   const inputName = useCallback(
     (event) => {
       setName(event.target.value);
@@ -78,35 +56,36 @@ const Contact = ({workshop,dialog}) => {
     },
       [setMessage]
     );
-    const inputNumber = useCallback(
-    (event) => {
-      setNumber(event.target.value);
-    },
-      [setNumber]
-  );
+
 
   const canSubmit = () => {
     if (name === "") return true;
     if (email === "") return true;
     if (subject === "") return true;
-    if (workshop) {
-      if (selectedDate === "") return true;
-    } else {
+
       if (message === "") return true;
-    }
+
     return false;
   };
 
-console.log(number)
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    firebase.postForm({
+      name: name,
+      email: email,
+      subject:subject,
+
+      message: message,
+
+
+    })
+}
+
   return (
     <div className="contact center">
       {dialog && <SubTitle>お問い合わせ</SubTitle>}
       <form
-        name={workshop ? "workshop" : "contact"}
-        method="POST"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        action="/complete"
+        onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" />
@@ -139,23 +118,7 @@ console.log(number)
           name="email"
         />
         <div className="space-s" />
-        {workshop ?
-          <>
-          <TextInput
-          id={subject}
-          fullWidth={true}
-          label={"体験内容 体験人数 備考"}
-          multiline={true}
-          required={true}
-          onChange={inputSubject}
-          rows={5}
-          variant="outlined"
-          value={subject}
-          type={"text"}
-          name="subject"
-        />
-             <span style={{color:"red"}}>※ガラス吹き,絵付けどちらか、体験人数を入力ください。また何か備考があれば続けて追記お願い致します。<br/></span></>
-          :
+
            <TextInput
           id={subject}
           fullWidth={true}
@@ -169,57 +132,8 @@ console.log(number)
           type={"text"}
           name="subject"
         />
-      }
 
 
-        {/* {workshop &&
-          <TextInput
-          fullWidth={true}
-          id="outlined-number"
-          label="人数"
-          type={"number"}
-          variant="outlined"
-          value={number.toLocaleString()}
-          onChange={inputNumber}
-          name="role"
-        />
-       } */}
-
-
-        {/* 体験かどうか  */}
-        {workshop ?
-      <MuiPickersUtilsProvider utils={DateFnsUtils}   locale={jaLocale}>
-            <KeyboardDateTimePicker
-              disablePast
-              shouldDisableDate={disableMonday}
-              minDate={minDate}
-              minHour="10"
-          margin="normal"
-          id="date-picker-dialog"
-          label="体験希望日"
-          format="yyyy/MM/dd HH:mm"
-              value={selectedDate}
-              name="message"
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-            />
-            </MuiPickersUtilsProvider>
-  //         <TextField
-  //            disablePast
-  // id="datetime-local"
-  // label="Select Date & Time"
-  // type="datetime-local"
-  // defaultValue="2017-05-24T03:30"
-  //           value={selectedDate}
-  //           minDate = {minDate}
-  // onChange={handleDateChange}
-  // InputProps={{
-  //  min: "2020-02-01T03:30"
-  // }}
-// />
-          :
            <TextInput
           id={message}
           fullWidth={true}
@@ -233,7 +147,7 @@ console.log(number)
           type={"text"}
           name="message"
         />
-        }
+
         <div className="space-s" />
         <div className="contact__btn">
           <Button

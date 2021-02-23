@@ -7,10 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faFolderOpen } from "@fortawesome/free-regular-svg-icons";
 import { faChevronLeft, faChevronRight, faTags } from "@fortawesome/free-solid-svg-icons";
 // import BlogCard from "../components/Blog/blogCard"
-import RandomPosts from "../components/Blog/randomPosts"
+// import RandomPosts from "../components/Blog/randomPosts"
 import SharingButtons from "../components/UI/shareButton"
 import marked from "marked";
-import { SubTitle } from "../style/GlobalStyle";
+import { SubTitle,Content } from "../style/GlobalStyle";
 
 // import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 
@@ -19,7 +19,7 @@ import { SubTitle } from "../style/GlobalStyle";
 export default ({ data, pageContext, location }) => {
 // マークダウンに変換するための処理
   const source = data.contentfulWork.content.content.replace(/\n/gi, '\nreplaced_text ');
-
+   console.log(data.contentfulWork)
 marked.setOptions({
         gfm: true,
         breaks: true,
@@ -35,18 +35,29 @@ marked.setOptions({
         //       data.contentfulWork.content.content
         //     )}…`}
         pagepath={location.pathname}
-        blogimg={`https:${data.contentfulWork.image.file.url}`}
-        pageimgw={data.contentfulWork.image.file.details.image.width}
-        pageimgh={data.contentfulWork.image.file.details.image.height}
+        // blogimg={`https:${data.contentfulWork.image.file.url}`}
+        pageimgw={data.contentfulWork.image && data.contentfulWork.image.file.details.image.width}
+        pageimgh={data.contentfulWork.image && data.contentfulWork.image.file.details.image.height}
 
       />
-      <div className="eyecatch">
+      {data.contentfulWork.category.name !== "お知らせ" &&
+       <div className="hero">
         <figure>
-          <Img fluid={data.glass_plane.childImageSharp.fluid} alt="" />
+          <Img fluid={data.contentfulWork.image.fluid} style={{height:"100%"}} alt="" />
         </figure>
       </div>
+      }
+
 
       <article className="content">
+        {data.contentfulWork.category.name === "お知らせ" &&
+          <>
+          <div className="space-xl"/>
+          <Content>お知らせ</Content>
+          <div className="space-xl"/>
+          </>
+        }
+        {/* <div className="space-xl" /> */}
         <div className="container">
           <SubTitle noSpace left>{data.contentfulWork.title}</SubTitle>
 
@@ -70,16 +81,7 @@ marked.setOptions({
               {/* {data.contentfulWork.content.content} */}
             </p>
           </div>
-          <div className="tag">
-            {/* タグ */}
-            <ul>
-              {data.contentfulWork.tags.map(tag => (
-                <>
-                  <FontAwesomeIcon icon={faTags} /><li className={tag.slug} key={tag.id}><Link to={`/tag/${tag.slug}/`}>{tag.name}</Link></li></>
-              ))}
 
-            </ul>
-          </div>
       <SharingButtons
         title={data.contentfulWork.title}
         url={`${location.pathname}`}
@@ -121,7 +123,7 @@ marked.setOptions({
   )
 }
 export const query = graphql`
-  query($id: String!, $tagid: String!){
+  query($id: String!){
         glass_plane: file(relativePath: { eq: "glass_plane.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
@@ -138,8 +140,7 @@ export const query = graphql`
     sort: {fields: date,order: DESC}
     skip: 0
     limit: 4
-       filter: {tags:{
-      elemMatch:{id: {eq: $tagid}}}})
+     )
 {
     edges{
       node{
@@ -168,11 +169,11 @@ export const query = graphql`
       name
       slug
     }
-   tags{
-      name
-      slug
-      id
-    }
+  #  tags{
+  #     name
+  #     slug
+  #     id
+  #   }
         content{
       content
     }

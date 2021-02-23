@@ -8,7 +8,7 @@ query NewsQuery{
     allContentfulWork(
     sort: {fields: date,order: DESC}
     skip: 0
-    limit: 3
+    limit: 5
     filter: {category:
     {name: {eq:"お知らせ"}}})
     {
@@ -39,7 +39,7 @@ query NewsQuery{
 
 
          {data.allContentfulWork.edges.map(({ node }) => (
-          <NewsCard key={node.id} slug={node.slug} fluid={node.image.fluid} alt={node.image.description} dataTime={node.date}
+          <NewsCard key={node.id} slug={node.slug}  dataTime={node.date}
             catname={node.category.name} title={node.title}  dateJP={node.dateJP} />
         ))}
 

@@ -21,9 +21,7 @@ exports.createPages = async({ graphql, actions, reporter }) => {
         id
         slug
 
-        tags{
-          id
-        }
+
       }
          next{
         title
@@ -47,18 +45,7 @@ exports.createPages = async({ graphql, actions, reporter }) => {
       }
     }
   }
-  allContentfulTag{
-    edges{
-      node{
-        slug
-        id
-        name
-        work{
-          title
-        }
-      }
-    }
-  }
+
 }
 
   `)
@@ -70,7 +57,7 @@ exports.createPages = async({ graphql, actions, reporter }) => {
 
     // 全ての個別記事ページを作成する。
     blogresult.data.allContentfulWork.edges.forEach(({ node, next, previous }) => {
-        const random = Math.floor(Math.random() * node.tags.length);
+        // const random = Math.floor(Math.random() * node.tags.length);
         createPage({
 
             path: `/blog/post/${node.slug}`,
@@ -81,7 +68,7 @@ exports.createPages = async({ graphql, actions, reporter }) => {
                 next,
                 previous,
                 // catid: node.category.id,
-                tagid: node.tags[random].id //tagsにはidが二つはいるものもある為、その中の0番目の要素をもつidを取得する。
+                // tagid: node.tags[random].id //tagsにはidが二つはいるものもある為、その中の0番目の要素をもつidを取得する。
             },
         })
     })
@@ -135,28 +122,28 @@ exports.createPages = async({ graphql, actions, reporter }) => {
 
 
     // タグ一覧ページのページネーションの設定
-    blogresult.data.allContentfulTag.edges.forEach(({ node }) => {
-        const tagPostsPerPage = 2
-        const tagPosts = node.work && node.work.length //カテゴリーに属した記事の件数
-        const tagPages = Math.ceil(tagPosts / tagPostsPerPage) //カテゴリーページの総数
-        Array.from({ length: tagPages }).forEach((_, i) => {
-            createPage({
-                path: i === 0 ?
-                    `/tag/${node.slug}/` : `/tag/${node.slug}/${i + 1}/`,
-                component: path.resolve(`./src/templates/tag-template.js`),
-                context: {
-                    tagid: node.id,
-                    tagname: node.name,
-                    tagslug: node.slug,
-                    skip: tagPostsPerPage * i,
-                    limit: tagPostsPerPage,
-                    currentPage: i + 1,
-                    isFirst: i + 1 === 1,
-                    isLast: i + 1 === tagPages,
-                }
-            })
-        })
-    })
+    // blogresult.data.allContentfulTag.edges.forEach(({ node }) => {
+    //     const tagPostsPerPage = 2
+    //     const tagPosts = node.work && node.work.length //カテゴリーに属した記事の件数
+    //     const tagPages = Math.ceil(tagPosts / tagPostsPerPage) //カテゴリーページの総数
+    //     Array.from({ length: tagPages }).forEach((_, i) => {
+    //         createPage({
+    //             path: i === 0 ?
+    //                 `/tag/${node.slug}/` : `/tag/${node.slug}/${i + 1}/`,
+    //             component: path.resolve(`./src/templates/tag-template.js`),
+    //             context: {
+    //                 tagid: node.id,
+    //                 tagname: node.name,
+    //                 tagslug: node.slug,
+    //                 skip: tagPostsPerPage * i,
+    //                 limit: tagPostsPerPage,
+    //                 currentPage: i + 1,
+    //                 isFirst: i + 1 === 1,
+    //                 isLast: i + 1 === tagPages,
+    //             }
+    //         })
+    //     })
+    // })
 
 
     // const blogresultData = blogresult.data.allContentfulWork.edges

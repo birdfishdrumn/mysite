@@ -39,6 +39,21 @@ class Firebase {
         }))
     }
 
+    async postForm({ name, email, subject, message }) {
+        const ref = this.db.collection("contacts").doc()
+        let id = ref.id;
+        return this.db.collection("contacts").doc(id).set({
+            name: name,
+            email: email,
+            subject: subject,
+            message: message,
+            published_at: timestamp,
+            id: id
+        }).then(() => navigate("/complete", {
+            state: { name, email, subject, message },
+        }))
+    }
+
 }
 
 let firebaseInstance;

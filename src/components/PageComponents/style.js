@@ -7,7 +7,7 @@ export const IntroduceContainer = styled.div `
  height:30%;
 max-width:700px;
 
- border:3px solid black;
+ /* border:3px solid black; */
  margin:0 auto;
  padding:30px;
 display:flex;

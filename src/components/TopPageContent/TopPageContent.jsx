@@ -1,9 +1,10 @@
-import React from 'react'
-import { SubTitle, Description, ProductColumn,DescriptionFlex, Figure, MinTitle } from "../../style/GlobalStyle"
+import React,{useEffect} from 'react'
+import {  Description, ProductColumn,DescriptionFlex, Figure, MinTitle } from "../../style/GlobalStyle"
 import Img from "gatsby-image"
 import { Button } from "../Button/styles";
 import { Trans, useTranslation, Link } from 'gatsby-plugin-react-i18next';
 import Image from "../image"
+import Aos from "aos"
 import styled from "styled-components";
 
 
@@ -31,11 +32,15 @@ const ProductTextFlex = styled(DescriptionFlex)`
 const TopPageContent = ({ data }) => {
     const onlineOpen = () => {
     const url = "https://maruyosi.theshop.jp/"
-window.open(url, '_blank')
-}
+      window.open(url, '_blank')
+
+    }
+    useEffect(() => {
+    Aos.init({ duration: 1000, startEvent: "DOMContentLoaded", once: true })
+  }, [])
   return (
     <div>
-       <ProductColumn responsive margin ="right" more >
+       <ProductColumn  data-aos="fade-up" responsive margin ="right" more >
          <ProductTextFlex>
              <div className="center">
 
@@ -54,7 +59,7 @@ window.open(url, '_blank')
           </div>
       </ProductColumn>
       <div className="space-m"/>
-          <ProductColumn responsive margin="left" more reverse>
+          <ProductColumn  data-aos="fade-up"  responsive margin="left" more reverse>
         <ProductTextFlex reverse>
 
 
@@ -75,7 +80,7 @@ window.open(url, '_blank')
           </div>
       </ProductColumn>
        <div className="space-m"/>
-         <ProductColumn responsive more margin="right">
+         <ProductColumn  data-aos="fade-up"  responsive more margin="right">
                 <ProductTextFlex>
              <div className="center">
 

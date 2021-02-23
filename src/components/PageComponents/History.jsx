@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import {HistoryImage } from "./style"
 import { Trans, useTranslation, Link } from 'gatsby-plugin-react-i18next';
 import Image from "../image"
+
 const History = ({data}) => {
 
 
@@ -14,8 +15,8 @@ const History = ({data}) => {
          <MaxTwoColumn auto reverse little>
         <div>
 
-     <MinTitle ><Trans>江戸風鈴の誕生</Trans></MinTitle>
-            <Description left width="more">
+     <MinTitle data-aos="fade-up" ><Trans>江戸風鈴の誕生</Trans></MinTitle>
+            <Description data-aos="fade-up" left width="more">
  <Trans>江戸風鈴の名称はその道の第一人者・篠原儀治（しのはら よしはる）がひとつひとつ宙吹きで作られたｶﾞﾗｽの風鈴を”江戸風鈴”と命名しました。江戸時代の末期から庶民に知られるようになったｶﾞﾗｽの風鈴、それ以前は、庶民が手の届かない程高価なものでした。</Trans>
 <br/>
           <Trans>大名や豪商たちの中で珍品として崇め奉られ、”風琴”と呼ばれお屋敷の部屋の中に下げられていました。風の琴なんて、名前も上品でした。</Trans>
@@ -42,7 +43,7 @@ const History = ({data}) => {
           </div>
       </MaxTwoColumn>
       <div className="space-xl"/>
-       <Description width="half">
+       <Description width="half" data-aos="fade-up">
 <span style={{fontSize:"1.2rem",fontWeight:"bold"}}><Trans>『売り声もなくて買い手の数あるは、音にしられる風鈴の徳』</Trans></span>
 
           <br/>
@@ -68,7 +69,7 @@ const History = ({data}) => {
 
 
      <MinTitle ><Trans>魔除けとしての風鈴</Trans></MinTitle>
-      <Description left width="more">
+      <Description data-aos="fade-up" left width="more">
 
           <Trans>日本人は、音に対する信仰がつよく「鈴」を魔除けにしているのは有名です。
           また、昔から朱色（あか）を魔除けにしており１９７０年代まで朱色の風鈴が

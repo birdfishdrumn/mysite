@@ -1,14 +1,21 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { Circle } from "./style"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import Img from "gatsby-image"
 import Image from "../image"
+import Aos from "aos";
+
 import { Description,MinTitle } from '../../style/GlobalStyle'
-export default ({link,image,description,title}) => {
+export default ({ link, image, description, title }) => {
+
+    useEffect(() => {
+    Aos.init({ duration: 1200, startEvent: 'DOMContentLoaded', once: true });
+
+    }, [])
   return (
-    <div>
+    <div data-aos="fade-up">
       <Link to={link}>
-      <Circle>
+      <Circle >
           <Image filename={image} style={{ borderRadius: "10%" }}/>
       </Circle>
       <MinTitle hannari><Trans>{title}</Trans></MinTitle>

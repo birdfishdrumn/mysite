@@ -4,22 +4,16 @@ import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import Aos from "aos";
 import "aos/dist/aos.css";
-import styled from "styled-components";
+
 import { Product,Process } from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { History } from "../components/PageComponents/index";
-import {TwoColumn,SubTitle,Figure,Description,MinTitle} from "../style/GlobalStyle"
+import {TwoColumn,SubTitle,Figure,Description,MinTitle,Youtube} from "../style/GlobalStyle"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
-import Image from "../components/image";
 
-const Youtube = styled.iframe`
-width:560px;
-height:310px;
-@media(max-width:767px){
-  width:98%;
-}
-`
+
+
 
 
 export default ({ data, location }) => {
@@ -47,7 +41,7 @@ export default ({ data, location }) => {
         <SubTitle><Trans>江戸風鈴のこと</Trans></SubTitle>
 
         <div className="space-l"/>
-        <TwoColumn>
+        <TwoColumn data-aos="fade-up">
           <div>
             <SubTitle border noSpace><Trans>江戸風鈴とは</Trans></SubTitle>
             <Description left><br/><Trans>江戸風鈴は江戸時代から伝わる技術を受け継いで制作しているガラス製の風鈴です。</Trans><br /><br />
@@ -64,10 +58,10 @@ export default ({ data, location }) => {
           </div>
         </TwoColumn>
         <div className="space-xl"/>
-        <section className="center">
-          <SubTitle><Trans>江戸風鈴ができるまで</Trans></SubTitle>
+        <section className="center" >
+          <SubTitle data-aos="fade-up" ><Trans>江戸風鈴ができるまで</Trans></SubTitle>
              <div className="space-m"/>
-          <Description left width="half">江戸風鈴は一つ一つ職人が製作しています。最初に風鈴の玉から作るガラス吹き、ガラスの玉ができたら一つ一つ風鈴の内側から絵を描いていきます。風鈴のガラス吹きは良い音のものができるまで10年かかると言われ、とても難しい技術です。絵付けは内側から描くため、最初は思うように描くことができずこちらも最低3年程度修行が必要な技術です。<br /><br />風鈴は庶民的なガラス工芸ですが、熟練の職人の技術によって作られているのです。</Description>
+          <Description data-aos="fade-up" left width="half">江戸風鈴は一つ一つ職人が製作しています。最初に風鈴の玉から作るガラス吹き、ガラスの玉ができたら一つ一つ風鈴の内側から絵を描いていきます。風鈴のガラス吹きは良い音のものができるまで10年かかると言われ、とても難しい技術です。絵付けは内側から描くため、最初は思うように描くことができずこちらも最低3年程度修行が必要な技術です。<br /><br />風鈴は庶民的なガラス工芸ですが、熟練の職人の技術によって作られているのです。</Description>
           <div className="space-m"/>
        <SubTitle><Trans>ガラス吹き</Trans></SubTitle>
         <div className="space-l"/>

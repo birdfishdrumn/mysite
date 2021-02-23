@@ -149,7 +149,7 @@ if (time === "") return true;
 
   return (
     <div className="contact center">
-    <SubTitle>体験のお申し込み</SubTitle>
+    {/* <SubTitle>体験のお申し込み</SubTitle> */}
        <form onSubmit={handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" />
@@ -157,7 +157,7 @@ if (time === "") return true;
         <TextInput
           id={name}
           fullWidth={true}
-          label={"お名前"}
+          label={"お名前(必須)"}
           multiline={false}
           required={true}
           onChange={inputName}
@@ -171,7 +171,7 @@ if (time === "") return true;
         <TextInput
           id={email}
           fullWidth={true}
-          label={"メールアドレス"}
+          label={"メールアドレス(必須)"}
           multiline={false}
           required={true}
           onChange={inputEmail}
@@ -185,7 +185,7 @@ if (time === "") return true;
             <TextInput
           id={phone}
           fullWidth={true}
-          label={"電話番号"}
+          label={"電話番号(必須)"}
           multiline={false}
           required={true}
           onChange={inputPhone}
@@ -197,22 +197,6 @@ if (time === "") return true;
         />
         <div className="space-s" />
 
-
-        {/* <span style={{color:"red"}}>※ガラス吹き,絵付けどちらか、体験人数を入力ください。また何か備考があれば続けて追記お願い致します。<br/></span> */}
-
-
-
-
-          {/* <TextInput
-          fullWidth={true}
-          id="outlined-number"
-          label="人数"
-          type={"number"}
-          variant="outlined"
-          value={people.toLocaleString()}
-          onChange={inputPeople}
-          name="people"
-        /> */}
 
         <div className="space-s" />
             <FormControl className={classes.formControl}>
@@ -236,6 +220,8 @@ if (time === "") return true;
 
         </Select>
         </FormControl>
+               <p style={{color:"red",fontSize:"0.9rem",textAlign:"left"}}>※只今フォームでは6人までのお申し込みとなっております。それ以上は電話でご相談ください。<br/></p>
+
                 <div className="space-m" />
 
 

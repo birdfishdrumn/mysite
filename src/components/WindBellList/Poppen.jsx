@@ -111,7 +111,7 @@ query PoppenQuery{
           </GridList>
           <section>
             <SubTitle hannari>ぽっぺんの作り方</SubTitle>
-
+          <Description>申し訳ありません。ただいま準備中です。</Description>
           </section>
           </section>
       </section>

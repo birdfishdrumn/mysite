@@ -40,6 +40,7 @@
         "gatsby-source-contentful": "^3.0.4",
         "gatsby-source-filesystem": "^2.3.31",
         "gatsby-source-google-calendar": "^1.1.1",
+        "gatsby-source-instagram": "^0.9.0",
         "gatsby-transformer-sharp": "^2.5.16",
         "i18next": "^19.8.7",
         "marked": "^1.2.2",

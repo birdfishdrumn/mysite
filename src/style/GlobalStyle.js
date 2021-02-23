@@ -105,17 +105,19 @@ export const Nav = styled.ul `
  text-align:center;
  font-size:1.8rem;
  padding:30px;
-max-width:824px;
+max-width:${props=> (props.min ? "550px" : "824px")};
  /* @media(max-width:767px){
   w
  } */
  >li{
   margin:${props =>(props.noSpace ? "0" : "15px 0 15px")};
    font-weight: bold;
+
+
    text-align:${props=>(props.left ? "left" : "center")};
        list-style:${props=>(props.square && "square")};
-
-        font-size:${props =>(props.small ? "1.3rem" : "1.7rem")};
+    color:${props => (props.grey && "dimgrey")};
+        font-size:${props =>(props.small ? "1.2rem" : "1.7rem")};
  @media(max-width:767px){
 /* font-size:1.7rem; */
   width:100%;
@@ -144,9 +146,12 @@ export const SubTitle = styled.div `
  font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: bold;
  margin-bottom:0px;
+ color:${props => (props.white ? "white" : "black")};
  text-align:${props =>(props.left ? "left" : "center")};
  font-size:${props=>(props.small ? "1.8rem" : "2.2rem")};
- border:${props=>(props.border && "1px solid black")};
+ border:${props => (props.border && "1px solid black")};
+
+ text-shadow:${props => (props.shadow && "1px 1px 2px black")};
  padding:${props => (props.noSpace ? "10px 0 10px" : "30px")};
  @media(max-width:768px){
    font-size:1.7rem;
@@ -163,8 +168,9 @@ export const MinDescription = styled.p `
 export const Description = styled.div `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
 text-align:${props => (props.left ? "left" : "center")};
- font-weight:normal;
+ font-weight:${props=>(props.bold ? "bold": "normal")};
  line-height: 1.7em;
+  text-shadow:${props => (props.shadow && "1px 1px 2px black")};
  padding:${props => (props.padding ? "30px 0 30px" : "10px 0 10px")};
 
   ${props => {
@@ -182,7 +188,7 @@ text-align:${props => (props.left ? "left" : "center")};
       case "half":
         return `width:80% !important;`
       case "more":
-        return `width:85% !important;`
+        return `width:70% !important;`
     }
     return "width:100%;"
 }};
@@ -241,9 +247,12 @@ export const ImageText = styled.div `
 export const MinTitle = styled.div `
   font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: bold;
- /* text-align:left; */
- /* width:75%; */
- /* font-size:1.5rem; */
+ ${props => props.border && `
+  border-bottom:3px solid #ccc;
+ display:inline-block;
+ padding-bottom:10px;
+ `}
+
  text-align:${props => (props.left ? "left" : "center")};
  font-size:${props=>(props.large ? "1.8rem" : "1.5rem")};
  margin:10px auto;
@@ -488,7 +497,7 @@ export const MaxTwoColumn = styled.div `
      grid-template-columns:1fr;
 
       >div{
-    margin:5x;
+    margin:0px;
    }
    }
    >div:first-child{
@@ -500,7 +509,7 @@ export const MaxTwoColumn = styled.div `
    >div:last-child{
     text-align:center;
         @media(max-width:1024px){
-       margin:5px;
+       margin:0px;
       order:${props => (props.reverse && 1)};
     }
    }
@@ -584,7 +593,6 @@ export const ItemC = styled.div`
     grid-column: 2/3;
     /* background: #88f; */
 `
-
 
 
 
@@ -679,7 +687,13 @@ export const Figure = styled.figure `
  margin:0;
 `
 
-
+export const Youtube = styled.iframe`
+width:560px;
+height:310px;
+@media(max-width:767px){
+  width:98%;
+}
+`
 
 /* ===============================================
 #  set css variables

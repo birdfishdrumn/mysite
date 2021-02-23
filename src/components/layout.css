@@ -117,15 +117,6 @@ svg {
     object-fit: cover;
 }
 
-.hero .wave {
-    position: absolute;
-    right: 0;
-    bottom: -10px;
-    left: 0;
-    margin: auto;
-    width: 100%;
-}
-
 @media (min-width: 768px) {
     .hero figure {
         height: 700px;
@@ -152,14 +143,15 @@ svg {
     }
 }
 
-.tag ul {
+
+/* .tag ul {
     list-style: none;
     display: inline-flex
 }
 
 .tag ul li {
     margin: 5px
-}
+} */
 
 @media (min-width: 768px) {
     .details {
@@ -183,73 +175,62 @@ svg {
 
 /* 見出しの装飾 */
 
-.bar {
-    padding-bottom: 16px;
-    position: relative;
-}
-
-.bar::before,
-.bar::after {
-    display: block;
-    content: '';
-    background-color: #0facde;
-    width: 80%;
-    height: 1px;
-    position: absolute;
-}
-
-.bar::before {
-    left: 0;
-    bottom: 6px;
-}
-
-.bar::after {
-    right: 0;
-    bottom: 0;
-}
-
-.content .bar::before {
-    width: 200px;
-}
-
-@media (min-width: 768px) {
-    .bar {
-        max-width: 375px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .bar::before,
-    .bar::after {
-        width: 73%;
-    }
-    .content .bar {
-        max-width: none;
-    }
-    .content .bar::before {
-        width: 312px;
-    }
-    .content .bar::after {
-        width: 81%;
-    }
-}
-
 
 /* フォト */
 
-.photo figure {
-    max-height: 100%;
-    height: 170px;
+@media (max-width: 1024px) {
+    .photo {
+        margin-bottom: 120px;
+    }
+}
+
+@media (max-width: 767px) {
+    .photo {
+        max-height: 100%;
+        height: 400px;
+        margin-bottom: 150px;
+    }
+    .photo figure {
+        max-height: 100%;
+        height: 400px !important;
+        width: 100%;
+    }
+    .react-parallax-bgimage {
+        max-height: 100%;
+        height: 500px !important;
+        object-fit: cover;
+        width: 100% !important;
+    }
+    .react-parallax {
+        height: 500px !important;
+        width: 100%;
+    }
 }
 
 
-/* .photo div img {
-    width: 100%;
-    height: 170px;
+/* .react-parallax-bgimage {
+    height: 300px !important;
     object-fit: cover;
-
+    max-height: 100%;
 } */
 
-@media(min-width: 500px) and (max-width: 767px) {
+@media (min-width: 768px) {
+    .photo {
+        max-height: 100%;
+        height: 400px;
+    }
+    .photo figure {
+        max-height: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    .react-parallax {
+        height: 500px !important;
+    }
+}
+
+
+/* @media(min-width: 500px) and (max-width: 767px) {
     .react-parallax-bgimage {
         top: -70px !important;
     }
@@ -268,12 +249,13 @@ svg {
     .photo img {
         height: 386px;
     }
-}
+} */
 
 
 /* フッター */
 
-.footer {
+
+/* .footer {
     padding-top: 60px;
     padding-bottom: 60px;
     color: #fff;
@@ -316,12 +298,13 @@ svg {
         margin-bottom: 0;
         font-size: 18px;
     }
-}
+} */
 
 
 /* footer　背景画像 */
 
-.footer {
+
+/* .footer {
     position: relative;
 }
 
@@ -337,20 +320,10 @@ svg {
     right: 0;
     left: 0;
     margin: auto;
-}
+} */
 
 
 /* SNSメニュー */
-
-.sns {
-    display: flex;
-    list-style: none;
-    font-size: 40px;
-}
-
-.sns li:not(:last-child) {
-    margin-right: 30px;
-}
 
 
 /* コンテンツ */
@@ -505,21 +478,37 @@ svg {
 
 /* ブログ記事一覧 */
 
-.posts {
+
+/* .posts {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 50px;
     padding-bottom: 50px;
-}
+} */
 
-.posts article {
+
+/* .posts article {
     width: 48%;
     margin-bottom: 20px;
+} */
+
+.cat-chip {
+    padding: 0.3em 0.8em;
+    border-radius: 1em;
+    background-color: rgba(0, 0, 255, 0.3);
+    color: #fff;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    left: 5px;
 }
 
 .posts figure {
     max-height: 100%;
+    position: relative;
     height: 150px;
     width: 200px;
 }
@@ -527,6 +516,18 @@ svg {
 .posts img {
     height: 150px;
     object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .posts img {
+        width: 90%;
+        object-fit: cover;
+    }
+    .posts figure {
+        max-height: 100%;
+        width: 270px;
+        height: 100%;
+    }
 }
 
 .posts h3 {
@@ -607,24 +608,13 @@ svg {
 
 /* UI */
 
-.cat-chip {
-    padding: 0.3em 0.8em;
-    border-radius: 1em;
-    background-color: rgba(0, 0, 255, 0.3);
-    color: #fff;
-    font-size: 14px;
-    display: inline-flex;
-    align-items: center;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-}
 
-.eyecatch-box {
+/* .eyecatch-box {
     position: relative;
-}
+} */
 
-.tag-chip {
+
+/* .tag-chip {
     padding: 0.3em 0.8em;
     border-radius: 1em;
     background-color: rgba(0, 0, 255, 0.3);
@@ -633,7 +623,7 @@ svg {
     display: inline-flex;
     align-items: center;
     margin: 5px
-}
+} */
 
 .center {
     text-align: center;
@@ -656,12 +646,19 @@ svg {
     margin: 120px 0 120px 0;
 }
 
+.space-2l {
+    margin: 240px 0 240px 0;
+}
+
 @media(max-width:767px) {
     .space-xl {
         margin: 40px 0 40px 0;
     }
     .space-l {
         margin: 30px 0 30px 0;
+    }
+    .space-2l {
+        margin: 90px 0 90px 0;
     }
 }
 

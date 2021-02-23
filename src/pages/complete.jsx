@@ -23,24 +23,24 @@ export default ({data,location})=>{
 <div className="space-xl"/>
         <SEO  pagetitle="お問い合わせフォーム" />
  <article className="content">
-          {location.state ?
-             <SubTitle>体験のお申し込みありがとうございます。</SubTitle>
-           : <SubTitle>お問い合わせありがとうございます。</SubTitle>
+          {location.state.subject ?
+             <SubTitle>お問い合わせありがとうございます。</SubTitle>
+           : <SubTitle>体験のお申し込みありがとうございます。</SubTitle>
           }
         <div className="space-m" />
 
           <div className="center">
 
-            {location.state ?
-               <Description width="more">
-              体験のお申し込みありがとうございます。担当のものが翌営業日以内にご返信させていただきますので今しばらくお待ちくださいませ。
+            {location.state.subject ?
+               <Description width="half">
+         お問い合わせいただきありがとうございました。<br />
+              担当の者が確認しだいご返信させていただきますので、今しばらくお待ちくださいませ。
           <br></br>
 
             </Description>
               :
-                  <Description width="more">
-              お問い合わせいただきありがとうございました。<br />
-              担当の者が確認しだいご返信させていただきますので、今しばらくお待ちくださいませ。
+                  <Description left width="half">
+                     体験のお申し込みありがとうございます。担当のものが翌営業日以内にご返信させていただきますので今しばらくお待ちくださいませ。
           <br></br>
 
             </Description>
@@ -53,8 +53,9 @@ export default ({data,location})=>{
                 <p>{location.state.name}</p>
                 <li>メールアドレス</li>
                 <p>{location.state.email}</p>
-                <li>電話番号</li>
+                {location.state.phone && (<><li>電話番号</li>
                 <p>{location.state.phone}</p>
+
                 <li>体験内容</li>
                 <p>{location.state.content}</p>
                 <li>人数</li>
@@ -62,8 +63,10 @@ export default ({data,location})=>{
                 <li>体験日</li>
                 <p>{location.state.selectedDate.toLocaleDateString()}</p>
                 <li>体験時間</li>
-                <p>{location.state.time}</p>
-                <li>備考欄</li>
+                  <p>{location.state.time}</p></>)}
+                <li>件名</li>
+                <p>{location.state.subject}</p>
+                <li>メッセージ</li>
                 <p>{location.state.message}</p>
               </Nav>
             )}

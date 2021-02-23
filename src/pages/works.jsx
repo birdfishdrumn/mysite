@@ -128,7 +128,7 @@ export default ({ data, location }) => {
           <div>
             <Figure  data-aos="fade-up" >
               <Image
-                filename="darumadaishi.jpg"
+                filename="kawasakidaishi_paint.jpg"
                 alt=""
                 style={{ width: "100%" }}
               />

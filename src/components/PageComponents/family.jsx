@@ -46,7 +46,7 @@ const family = ({data}) => {
         <div className="space-l" />
         <Flex>
             <IntroduceAnimal>
-           <FamilyImage><Image filename="naire.jpg" style={{borderRadius:"50%"}}/></FamilyImage>
+           <FamilyImage><Image filename="huuta.jpg" style={{borderRadius:"50%"}}/></FamilyImage>
         <div>
         <MinTitle hannari>ふうた</MinTitle>
 
@@ -54,7 +54,7 @@ const family = ({data}) => {
         </IntroduceAnimal>
               <div className="space-s"/>
             <IntroduceAnimal>
-       <FamilyImage><Image filename="naire.jpg" style={{borderRadius:"50%"}}/></FamilyImage>
+       <FamilyImage><Image filename="turtle.jpg" style={{borderRadius:"50%"}}/></FamilyImage>
         <div>
         <MinTitle hannari>カメ男</MinTitle>
 

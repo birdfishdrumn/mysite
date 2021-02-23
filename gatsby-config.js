@@ -127,6 +127,12 @@ module.exports = {
                 showSpinner: true,
             },
         },
+        {
+            resolve: 'gatsby-source-instagram',
+            options: {
+                username: '3663679915'
+            }
+        },
 
     ],
 

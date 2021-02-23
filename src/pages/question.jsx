@@ -45,7 +45,9 @@ export default ({data,location})=>{
            <div className="space-l" />
             <QuestionAccordion history />
           </div>
-          <div className="space-xl" />
+          <div className="space-l" />
+          <MinTitle hannari>江戸風鈴の発送・吊るし方</MinTitle>
+           <div className="space-l" />
               <IntroduceCircle  product />
    </article>
       </Layout>

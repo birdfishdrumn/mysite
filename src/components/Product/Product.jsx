@@ -4,7 +4,7 @@ import Aos from "aos"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import styled from "styled-components";
 import Img from "gatsby-image"
-import {graphql} from "gatsby"
+
 const ProductImg = styled(Img)`
     /* width:90%; */
     margin:0 auto;
@@ -41,9 +41,9 @@ const Product = ({data,description,title,destination,num,reverse,isEn}) => {
     Aos.init({ duration: 1000, startEvent: "DOMContentLoaded", once: true })
   }, [])
   return (
-       <ProductColumn   reverse={reverse}>
+       <ProductColumn  data-aos="fade-up" reverse={reverse}>
           <div>
-            <Figure  data-aos="fade-up">
+            <Figure  >
               <ProductImg
                 fluid={data.childImageSharp.fluid}
                 alt=""

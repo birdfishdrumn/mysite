@@ -2,6 +2,7 @@ import React from 'react'
 
 import { SubTitle, Description, GridList, MinTitle } from "../../style/GlobalStyle";
 import { TsuridaiData } from "./TsuridaiData";
+import { Trans } from "gatsby-plugin-react-i18next";
 import Image from "../image"
 
 const  Tsuridai= () => {
@@ -11,7 +12,7 @@ const  Tsuridai= () => {
 
     <div>
         <section className="center">
-      <SubTitle hannari>吊り台</SubTitle>
+      <SubTitle hannari><Trans>吊り台</Trans></SubTitle>
         <Description width="half">つり台は家の中で飾る場所があまり無い方や、かっこよく飾りたい方におすすめです。まるよし風鈴では行灯型の吊り台も製作しており、照明としてお使いいただくことも可能です。
 
     </Description>

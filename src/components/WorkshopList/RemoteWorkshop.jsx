@@ -10,9 +10,9 @@ const BlowGlassWorkshop = ({data}) => {
 
         <div>
       <section className="center">
-              <SubTitle hannari>-リモート体験-</SubTitle>
+              <SubTitle hannari><Trans>-リモート体験-</Trans></SubTitle>
           <Description  left width="half">
-   リモート絵付け体験では自宅にいても職人の説明を受けて絵付けにチャレンジする事が出来ます。特に新型コロナの影響でなかなか東京方面に旅行に来れない方々に提案させていただいております。
+   <Trans>リモート絵付け体験では自宅にいても職人の説明を受けて絵付けにチャレンジする事が出来ます。特に新型コロナの影響でなかなか東京方面に旅行に来れない方々に提案させていただいております。</Trans>
     </Description>
       </section>
          <Nav hannari>
@@ -36,14 +36,13 @@ const BlowGlassWorkshop = ({data}) => {
         ))}
 
          <li><Trans>⑥短冊を付けて完成！</Trans></li>
-          <p>絵を描き終わったら短冊を付けて音がなるようにしましょう。短冊の付け方なども説明いたしますのでご安心ください。
-             <br/>終わったらinstagramなどで写真を後悔しましょう！
+          <p><Trans>絵を描き終わったら短冊を付けて音がなるようにしましょう。短冊の付け方なども説明いたしますのでご安心ください。</Trans>
         </p>
         </Nav>
 
       </section>
       <section>
-        <SubTitle hannari>-注意事項-</SubTitle>
+        <SubTitle hannari><Trans>-注意事項-</Trans></SubTitle>
          <Nav left hannari small square>
           {remoteCaution.map((item) => (
             <li>{item}</li>

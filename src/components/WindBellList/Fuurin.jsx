@@ -137,7 +137,7 @@ event.target.value,
         </ImageContainer>
 
         <Description left width="half"><Trans>江戸風鈴には大きさや形が異なるものもあり、写真では左から小丸型、新子丸、釣鐘型といいます。形や大きさによっても音は違います。小丸型や新子丸では軽やかな音、釣鐘型では深みのある音がなります。</Trans><br /><Trans>
-          店頭にお越しいただ場合は是非聴き比べてみてください。
+          <Trans>店頭にお越しいただ場合は是非聴き比べてみてください。</Trans>
           </Trans>
         </Description>
              <div className="space-l"/>
@@ -202,7 +202,7 @@ event.target.value,
         <SubTitle hannari><Trans>可愛い動物</Trans></SubTitle>
         <AnimalFilter change={change} language={language} />
          <div className="space-l" />
-        <SubTitle><Trans>新子丸、釣鐘型風鈴</Trans></SubTitle>
+        {/* <SubTitle><Trans>新子丸、釣鐘型風鈴</Trans></SubTitle> */}
         <TsuriganeFilter change={change} language={language} />
          <div className="space-l" />
         <SubTitle><Trans>風琴</Trans></SubTitle>

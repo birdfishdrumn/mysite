@@ -26,7 +26,7 @@ const BlowGlassWorkshop = ({data}) => {
           ))}
           </Nav>
       <section>
-        <SubTitle hannari>-体験の流れ-</SubTitle>
+        <SubTitle hannari><Trans>-体験の流れ-</Trans></SubTitle>
 
         <Nav hannari>
           {BlowGlassWorkshopData.map((item,index) => (
@@ -37,13 +37,13 @@ const BlowGlassWorkshop = ({data}) => {
               </>
         ))}
 
-         <li>⑦短冊を付けて完成！</li>
-        <p>短冊をつけて割れないように箱に入れて持ち帰れます。お疲れ様でした。</p>
+         <li><Trans>⑦短冊を付けて完成！</Trans></li>
+        <p><Trans>短冊をつけて割れないように箱に入れて持ち帰れます。お疲れ様でした。</Trans></p>
         </Nav>
 
       </section>
       <section>
-        <SubTitle hannari>-注意事項-</SubTitle>
+        <SubTitle hannari><Trans>-注意事項-</Trans></SubTitle>
          <Nav left hannari small square>
           {blowGlassCaution.map((item) => (
             <li>{item}</li>

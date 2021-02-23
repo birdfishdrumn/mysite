@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Reservation = ({workshop,dialog}) => {
+const Reservation = () => {
  const disableMonday = (date) =>{
 
     return date.getDay() === 1;

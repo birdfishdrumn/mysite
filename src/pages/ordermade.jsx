@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description,TwoColumn,Figure,Nav,ItemA,ItemB,ItemC} from "../style/GlobalStyle";
-
+import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
 import Image from "../components/image";
 
@@ -87,17 +87,17 @@ export default ({data,location})=>{
 
 
  <article className="content">
-          <SubTitle>江戸風鈴の名入れ</SubTitle>
-          <Description left width="half">ただ今江戸風鈴の名入れを承っております。ご希望のお名前を職人が一つ一つ墨で書き、背景にぼかしの入った短冊模様を入れて制作致します。大切な方のへのプレゼント、何か企画のお名前を入れたりイベントなどにもオススメです。<br/></Description>
+          <SubTitle><Trans>江戸風鈴の名入れ</Trans></SubTitle>
+          <Description left width="half"><Trans>篠原まるよし風鈴では江戸風鈴の名入れを承っております。ご希望のお名前を職人が一つ一つ墨で書き、背景にぼかしの入った短冊模様を入れて制作致します。大切な方のへのプレゼント、何か企画のお名前を入れたりイベントなどにもオススメです。</Trans><br/></Description>
            <TwoColumn reverse>
           <div>
               <Description large left >
 
                 <TextNav style={{ marginTop: "30px"}} className="center">
-                  <li >料金</li>
-                  <p>¥300(税抜き)<br/><span >※それ以上は一文字増えるごとに+100円になります</span>。</p>
-                  <li>注文方法</li>
-                  <p>オンラインショップよりご購入希望の商品と名入れの商品を一緒にお入れください。ご希望の名前は備考欄にお書きください。</p>
+                  <li ><Trans>料金</Trans></li>
+                  <p>¥300(税抜き)<br/><span ><Trans>※それ以上は一文字増えるごとに+100円になります</Trans></span>。</p>
+                  <li><Trans>注文方法</Trans></li>
+                  <p><Trans>オンラインショップよりご購入希望の商品と名入れの商品を一緒にお入れください。ご希望の名前は備考欄にお書きください。</Trans></p>
                  </TextNav>
             </Description>
 
@@ -116,19 +116,14 @@ export default ({data,location})=>{
 
 
           <section>
-            <SubTitle>風鈴のオーダーメイドについて</SubTitle>
+            <SubTitle><Trans>風鈴のオーダーメイドについて</Trans></SubTitle>
             <TwoColumn>
               <div style={{marginBottom:"0"}}>
               <Description  left >
-                  新しい模様はデザインを決めたり、内側から描くのに大丈夫かな？
-                  なんてことを準備しなくてはなりません。したがって通常のものより
-                  高価になります。<br/><br/>
+                  <Trans>新しい模様はデザインを決めたり、内側から描くのに大丈夫かな？なんてことを準備しなくてはなりません。したがって通常のものより高価になります。</Trans><br/><br/>
+                   <Trans>５個前後の場合は一つ約3000〜4000円ほど、また一点ものの場合はもう少し高くなります。詳しくはメールやお電話で詳しくはお問い合わせ下さいませ。</Trans>
 
-                  ５個前後の場合は一つ約3000〜4000円ほど、また一点ものの場合はもう少し高くなります。
-<br/>
-                  オーダーに関しましてはメールやお電話で詳しくはお問い合わせ下さいませ。
                   <br />
-                  またオーダー時にはキャンセルがないように前金も頂いておりますのでご了承ください。
             </Description>
 
           </div>

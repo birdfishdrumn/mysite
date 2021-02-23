@@ -77,7 +77,7 @@ export const BlowGlassWorkshopData = [{
 ]
 
 export const RemoteWorkshopFlow = [{
-        title: "ご予約",
+        title: "①ご予約",
         description: "現在リモート体験は予約フォームではなくメール、またお電話からよろしくお願い致します。"
     },
     {
@@ -150,7 +150,7 @@ export const remoteSummary = [{
         description: "約60分〜90分",
     },
     {
-        title: "用意する物",
+        title: "持ち物",
         description: "体験キット、筆洗い、ティッシュ、zoomアプリの入ったPC",
     }
 ]

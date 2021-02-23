@@ -109,7 +109,7 @@ export default ({ data }) => {
               <ParallaxText>
                 <SubTitle white shadow><Trans>気持ちを込める</Trans></SubTitle>
                 <Description shadow large left color="white" >
-                  <Trans> 江戸風鈴はガラスを溶かして風鈴の玉を作るところから絵付けまで、全て職人の手作業で製作されています。江戸風鈴を手にとっていただいた方々に喜んでいただけるよう、私たちは一つ一つの風鈴に「気もちを込める」という事を大事にして風鈴を製作しております。</Trans>
+                  <Trans>江戸風鈴はガラスを溶かして風鈴の玉を作るところから絵付けまで、全て職人の手作業で製作されています。江戸風鈴を手にとっていただいた方々に喜んでいただけるよう、私たちは一つ一つの風鈴に「気もちを込める」という事を大事にして風鈴を製作しております。</Trans>
 
                 </Description>
               </ParallaxText>
@@ -150,7 +150,7 @@ export default ({ data }) => {
       <section>
         <SubTitle><Trans>Instagram</Trans></SubTitle>
         <Description left width="half">
-          instagramやtwitterなどで江戸風鈴の情報も発信しておりますのでよろしければフォローお願い致します。
+          <Trans>instagramやtwitterなどで江戸風鈴の情報も発信しておりますのでよろしければフォローお願い致します。</Trans>
         </Description>
                 <div className="space-l" />
         <Instagram/>

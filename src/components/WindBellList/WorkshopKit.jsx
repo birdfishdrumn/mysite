@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { IntroduceCircle } from "../index";
 import styled from "styled-components"
 import { SubTitle, Description,GridList,ItemA,ItemB,ItemC,GridContainer,MinTitle} from "../../style/GlobalStyle";
-
+import { Trans } from "gatsby-plugin-react-i18next";
 import Image from "../image"
 import { WorkshopKitFlow } from "./TsuridaiData";
 
@@ -41,9 +41,8 @@ query kitQuery{
 
     <div>
         <section className="center">
-      <SubTitle hannari>体験キット</SubTitle>
-        <Description left width="half">自宅でも江戸風鈴の体験ができるように、江戸風鈴の体験キットをご用意いたしました。
-         こちらがあれば筆洗いと紙を用意して、すぐに江戸風鈴の絵付け体験を楽しむことができます。
+      <SubTitle hannari><Trans>体験キット</Trans></SubTitle>
+        <Description left width="half"><Trans>自宅でも江戸風鈴の体験ができるように、江戸風鈴の体験キットをご用意いたしました。こちらがあれば筆洗いと紙を用意して、すぐに江戸風鈴の絵付け体験を楽しむことができます。</Trans>
     </Description>
       </section>
       <div className="space-m"/>
@@ -55,17 +54,17 @@ query kitQuery{
     </GridContainer>
       </section>
       <section className="center">
-        <SubTitle hannari>体験の始め方</SubTitle>
+        <SubTitle hannari><Trans>体験の始め方</Trans></SubTitle>
 
         <div className="space-l" />
-        <MinTitle>用意する物</MinTitle>
+        <MinTitle><Trans>用意する物</Trans></MinTitle>
           <div className="space-l" />
         <IntroduceCircle data={data} />
 
       </section>
       <section>
           <div className="space-l" />
-        <MinTitle>体験の流れ</MinTitle>
+        <MinTitle><Trans>-体験の流れ-</Trans></MinTitle>
         <GridList single gap>
           {WorkshopKitFlow.map(item => (
             <div>
@@ -82,11 +81,11 @@ query kitQuery{
       </section>
           <div className="space-l" />
       <section>
-        <SubTitle hannari>絵の描き方</SubTitle>
+        <SubTitle hannari><Trans>絵の描き方</Trans></SubTitle>
         <Description>申し訳ありません。ただいま準備中です。</Description>
       </section>
          <section>
-        <SubTitle hannari>短冊の付け方</SubTitle>
+        <SubTitle hannari><Trans>短冊の付け方</Trans></SubTitle>
                 <Description>申し訳ありません。ただいま準備中です。</Description>
       </section>
     <div className="space-l" />

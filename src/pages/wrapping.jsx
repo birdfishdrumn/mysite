@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description,TwoColumn,Figure,MinTitle} from "../style/GlobalStyle";
-
+import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
 import Image from "../components/image";
 
@@ -56,7 +56,7 @@ export default ({data,location})=>{
 
  <article className="content">
     <section>
-          <SubTitle>江戸風鈴の梱包</SubTitle>
+          <SubTitle><Trans>江戸風鈴の梱包</Trans></SubTitle>
 
             <TwoColumn reverse>
                  <div>
@@ -78,10 +78,10 @@ export default ({data,location})=>{
           </div>
 
           <div>
-              <Description left  width="more">
-                  篠原まるよし風鈴でお買い上げいただいたお客様、体験をおやりになったお客様の風鈴は全て割れないようにパッキンや箱でお包み致します。
-                  体験をおやりになったお客様は結構箱に入るのか不安に思われるようですがご安心ください。<br /><br /><br />
-                  箱の種類は小丸型の風鈴の場合は基本的には白い無地の箱と江戸風鈴のシールの付いた箱にお入れいたします。<br />切子の風鈴やじんべえ鮫、釣鐘型など少し高価な風鈴に関しては写真下のような化粧箱にお入れさせていただきます。
+                <Description left width="more">
+                  <Trans>篠原まるよし風鈴でお買い上げいただいたお客様、体験をおやりになったお客様の風鈴は全て割れないようにパッキンや箱でお包み致します。体験をおやりになったお客様は結構箱に入るのか不安に思われるようですがご安心ください。</Trans>
+                  <br /><br /><br />
+                  <Trans>箱の種類は小丸型の風鈴の場合は基本的には白い無地の箱と江戸風鈴のシールの付いた箱にお入れいたします。</Trans><br /><Trans>切子の風鈴やじんべえ鮫、釣鐘型など少し高価な風鈴に関しては写真下のような化粧箱にお入れさせていただきます。</Trans>
             </Description>
 
           </div>
@@ -91,20 +91,20 @@ export default ({data,location})=>{
            <div className="space-l"/>
 
            <section>
-            <SubTitle>風鈴のラッピング</SubTitle>
+            <SubTitle><Trans>風鈴のラッピング</Trans></SubTitle>
             <Description left width="half">
-              プレゼントをご希望の方には風鈴の箱をラッピングすることもできますので、お申し付け下さい。ネットショップでご注文の方は注文時の備考欄よりラッピング希望とお伝えくださいませ。
+              <Trans>プレゼントをご希望の方には風鈴の箱をラッピングすることもできますので、お申し付け下さい。ネットショップでご注文の方は注文時の備考欄よりラッピング希望とお伝えくださいませ。</Trans>
             </Description>
 
           </section>
                     <div className="space-l"/>
           <section>
-            <SubTitle>江戸風鈴の発送</SubTitle>
+            <SubTitle><Trans>江戸風鈴の発送</Trans></SubTitle>
              <Description left width="half">
-              当店では江戸風鈴の発送も行っております。ネットショップでのご購入の場合はもちろん、お店にきて音などを選んだ上でご購入いただいた場合なども発送が可能ですのでお申し付け下さいませ。
+              <Trans>当店では江戸風鈴の発送も行っております。ネットショップでのご購入の場合はもちろん、お店にきて音などを選んだ上でご購入いただいた場合なども発送が可能ですのでお申し付け下さいませ。</Trans>
             </Description>
-            <MinTitle>※海外への発送に関しまして</MinTitle>
-            <Description left width="half">当店から直接では海外への発送は行っておりませんがご希望の方はお問い合わせフォーム、お電話、メールにてご相談くださいませ。これまでもフランスやニュージーランド、タイの方々などにもお取引の実績もございます。</Description>
+            <MinTitle><Trans>※海外への発送に関しまして</Trans></MinTitle>
+            <Description left width="half"><Trans>当店から直接では海外への発送は行っておりませんがご希望の方はお問い合わせフォーム、お電話、メールにてご相談くださいませ。これまでもフランスやニュージーランド、タイの方々などにもお取引の実績もございます。</Trans></Description>
           </section>
 
    </article>

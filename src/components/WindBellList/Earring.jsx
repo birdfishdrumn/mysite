@@ -5,6 +5,7 @@ import WindBellCard from "./WindBellCard";
 import ViewColumnIcon from '@material-ui/icons/ViewColumn';
 import GridOnIcon from '@material-ui/icons/GridOn';
 import Tooltip from '@material-ui/core/Tooltip';
+import {Trans} from 'gatsby-plugin-react-i18next';
 import { IconButton } from "@material-ui/core";
 const Earring = () => {
     const data = useStaticQuery(graphql`
@@ -42,8 +43,8 @@ query EarringQuery{
 
         <div>
       <section className="center">
-              <SubTitle>イヤリング・ピアス</SubTitle>
-          <Description  width="half">当店では風鈴の技術を応用して風鈴型のイヤリング、ピアスの製造も行っております。とても小さい商品でも、絵柄は内側から手描きで彩色してます。浴衣などと非常に相性が良いので夏のファッションとしていかがでしょうか。
+              <SubTitle><Trans>イヤリング・ピアス</Trans></SubTitle>
+          <Description left  width="half"><Trans>当店では風鈴の技術を応用して風鈴型のイヤリング、ピアスの製造も行っております。とても小さい商品でも、絵柄は内側から手描きで彩色してます。浴衣などと非常に相性が良いので夏のファッションとしていかがでしょうか。</Trans>
     </Description>
            <FlexNav>
             <Tooltip title="グリッド" interactive>
@@ -57,7 +58,7 @@ query EarringQuery{
                 </IconButton>
           </Tooltip>
           </FlexNav>
-      <SubTitle hannari>イヤリング</SubTitle>
+      <SubTitle hannari><Trans>イヤリング</Trans></SubTitle>
         <GridList change={change}>
             {data.allProducts.edges.map(edge => (
             <ScrollItem  key={edge.node.id}>

@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description,TwoColumn,Figure} from "../style/GlobalStyle";
-
+import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
 import Image from "../components/image";
 
@@ -88,7 +88,7 @@ export default ({data,location})=>{
 
  <article className="content">
 
-          <SubTitle>江戸風鈴の吊るし方</SubTitle>
+          <SubTitle><Trans>江戸風鈴を吊るす場所</Trans></SubTitle>
           <section>
             <TwoColumn>
                  <div>
@@ -103,22 +103,13 @@ export default ({data,location})=>{
 
           <div>
               <Description left  >
-             今から少し前までは、軒下に下げるのが当たり前でした。
-軒下といっても、一階部分の軒です。二階以上のベランダなどに
-下げると風が強く、一日中鳴りっぱなしになります。
-風鈴の魅力は、時おり鳴るのが良いとされます。<br/>
-したがって一年中で風が少なく暑い夏が好まれます。
+             <Trans>今から少し前までは、軒下に下げるのが当たり前でした。軒下といっても、一階部分の軒です。二階以上のベランダなどに下げると風が強く、一日中鳴りっぱなしになります。風鈴の魅力は、時おり鳴るのが良いとされます。したがって一年中で風が少なく暑い夏が好まれます。</Trans><br/>
                   <br /><br />
-最近の家屋には、軒がない家が殆どです。古民家の様なお宅
-ばかりでしたら良いのですが、そうはいきません。
-また、マンションだったり、家と家の間が狭く、ご近所の方に
-「うるさいから止めて」なんて言われたりして表に下げる場所が
-無くなってしまいました。日本では特にこの風鈴を見ると自分の家に
-飾りたくなるんです。風情を楽しみ、音を愛でる習慣があるからです。
+                  <Trans>最近の家屋には、軒がない家が殆どです。古民家の様なお宅ばかりでしたら良いのですが、そうはいきません。また、マンションだったり、家と家の間が狭く、ご近所の方に「うるさいから止めて」なんて言われたりして表に下げる場所が無くなってしまいました。日本では特にこの風鈴を見ると自分の家に飾りたくなるんです。風情を楽しみ、音を愛でる習慣があるからです。</Trans>
+
                   <br /><br />
-                  最近は、家の中に下げる方が殆どになりました。カーテンレールのような場所にかひっかける箇所がないことも本当は悲しくもなります。そこで私たちは壁に特殊な釣り具をつけて飾ることも
-お勧めしています。また、吊り台に下げて風情を楽しむなんて言う
-ことも良いかと思います。
+                  <Trans>最近は、家の中に下げる方が殆どになりました。かといって家の中に吊り下げる場所はカーテンレールのような場所しかないことが多いです。そこで私たちは壁に特殊な釣り具をつけて飾ることもお勧めしています。また、吊り台に下げて風情を楽しむなんて言うことも良いかと思います。</Trans>
+
             </Description>
 
           </div>
@@ -128,16 +119,15 @@ export default ({data,location})=>{
            <div className="space-l"/>
 
            <section>
-            <SubTitle>風鈴が壊れてしまった時</SubTitle>
+            <SubTitle><Trans>風鈴が壊れてしまった時</Trans></SubTitle>
             <Description left width="half">
-              江戸風鈴の場合は、縁起の良いものが多く、「えーっ。」なんて言うことに
-              なりますね。大丈夫です。家族の身代わりになってくれたんです。
-              「有難う」という気持ちで燃えないゴミの日に処分してください。
+              <Trans>江戸風鈴の場合は、縁起の良いものが多く、「えーっ。」なんて言うことになりますね。大丈夫です。家族の身代わりになってくれたんです。「有難う」という気持ちで燃えないゴミの日に処分してください。</Trans>
             </Description>
              <div className="space-l"/>
-            <SubTitle>糸・ガラス管の修理</SubTitle>
+            <SubTitle><Trans>糸・ガラス管の修理</Trans></SubTitle>
             <Description left width="half">
-              古くなった風鈴の糸の交換は、本体が破損していなければできます。￥150円程で承っておりますのでご希望の方は一度メールやお電話でお問い合わせお願い致します。大切に使って頂いた方に感謝いたします。
+              <Trans>古くなった風鈴の糸の交換は、本体が破損していなければできます。￥150円程で承っておりますのでご希望の方は一度メールやお電話でお問い合わせお願い致します。大切に使って頂いた方に感謝いたします。</Trans>
+
             </Description>
   </section>
    </article>

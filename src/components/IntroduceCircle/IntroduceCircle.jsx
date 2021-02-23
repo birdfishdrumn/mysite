@@ -15,7 +15,7 @@ const FeatureList = ({ data,product}) => {
   ]
   const introduce = product ? Product : WorkshopKit
   return (
-    <List>
+    <List product>
       {introduce.map((item,index) => (
         <CircleCard title={item.title ? item.title : ""} key={index} image={item.image} description={item.description} content={item.content} link={item.link}/>
       ))}

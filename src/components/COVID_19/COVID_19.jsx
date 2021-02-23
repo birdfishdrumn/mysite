@@ -10,7 +10,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
 import { Description, MinTitle, Nav,GridList,MinDescription } from "../../style/GlobalStyle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import {Trans} from 'gatsby-plugin-react-i18next';
 import { shopPlan ,customerPlan} from "./covidData";
 const styles = (theme) => ({
   root: {
@@ -75,7 +75,7 @@ export default function CustomizedDialogs() {
   return (
     <div>
       <Button caution onClick={handleClickOpen}>
-       当店の新型コロナウイルス対策につきまして
+       <Trans>当店の新型コロナウイルス対策につきまして</Trans>
       </Button>
       <Dialog className={classes.dialog} nClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>

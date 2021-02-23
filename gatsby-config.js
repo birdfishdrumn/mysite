@@ -36,7 +36,7 @@ module.exports = {
                 background_color: `#ffffff`,
                 theme_color: `#477294`,
                 display: `standalone`,
-                icon: `src/images/icon.png`, // This path is relative to the root of the site.
+                icon: `src/images/logo2.png`, // This path is relative to the root of the site.
             },
         },
         `gatsby-transformer-sharp`,
@@ -107,7 +107,7 @@ module.exports = {
                 i18nextOptions: {
                     debug: true,
                     lowerCaseLng: true,
-                    saveMissing: false,
+                    saveMissing: true,
                     interpolation: {
                         escapeValue: false // not needed for react as it escapes by default
                     },

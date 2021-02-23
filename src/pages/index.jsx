@@ -77,7 +77,7 @@ export default ({ data }) => {
       <div className="center">
           <Description large left data-aos="fade-up" width="half"><Trans>私たち篠原まるよし風鈴では家族で江戸時代から伝わる技術を受け継いで江戸風鈴を製作しています。</Trans><br /><br /><br />
 
-         <Trans>一つ一つ職人が気持ちを込めて作った風鈴は、ガラスならではの涼しげでリラックスできる軽やかな音と、直接描かれた絵柄で見る人を癒してくれるでしょう。暑い夏にゆったりしながら、そっと風鈴の音に耳を傾けてみませんか？</Trans>
+         <Trans>一つ一つ職人が気持ちを込めて作った風鈴は、ガラスならではの涼しげでリラックスできる軽やかな音と優しい絵柄で見る人を癒してくれるでしょう。暑い夏にゆったりしながら、そっと風鈴の音に耳を傾けてみませんか？</Trans>
       <br /> <br /> <br />
           <Trans>江戸風鈴は商標登録されており、現在は日本中で二件しか江戸風鈴の製作を行なっておりません。</Trans>
           </Description>
@@ -107,9 +107,10 @@ export default ({ data }) => {
           <Parallax bgImage={data.narabi.publicURL} strength={100} alt="" style={{ height: "100%" }}>
             <ParallaxContainer>
               <ParallaxText>
-                <SubTitle white shadow>気持ちを込める</SubTitle>
+                <SubTitle white shadow><Trans>気持ちを込める</Trans></SubTitle>
                 <Description shadow large left color="white" >
-                  江戸風鈴は職人一人一人の手作業で作られます。テクノロジーがより発展しつつあり、仕事が機械に置き換わりつつある現代で人間が作るからこそ、作るものに「気を入れる」という事を大事にして風鈴を製作しております。
+                  <Trans> 江戸風鈴はガラスを溶かして風鈴の玉を作るところから絵付けまで、全て職人の手作業で製作されています。江戸風鈴を手にとっていただいた方々に喜んでいただけるよう、私たちは一つ一つの風鈴に「気もちを込める」という事を大事にして風鈴を製作しております。</Trans>
+
                 </Description>
               </ParallaxText>
             </ParallaxContainer>

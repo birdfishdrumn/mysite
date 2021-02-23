@@ -20,7 +20,7 @@ const Access = ({data}) => {
         <div className="space-m"/>
         <TwoColumn>
           <div>
-            <SubTitle noSpace>お店について</SubTitle>
+            <SubTitle noSpace><Trans>お店について</Trans></SubTitle>
             <Description left>
               <Trans>お店は佐竹商店街の中にあります。普段からお店の前には風鈴を飾っております。 一階は基本的には仕事場で作業中なので少し入り辛いと思いますが、風鈴の販売もやっておりますので、 是非お気軽にご来店下さい。</Trans>
               <br/><br/><Trans>またガラス吹き体験では一階奥の工房で最初にガラスを吹いていただきます。二階は主に絵付け体験の会場となっております。</Trans>

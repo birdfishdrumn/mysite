@@ -23,7 +23,7 @@ export default ({data,location})=>{
 <div className="space-xl"/>
         <SEO  pagetitle="お問い合わせフォーム" />
  <article className="content">
-          {location.state.subject ?
+          {location.state && location.state.subject ?
              <SubTitle>お問い合わせありがとうございます。</SubTitle>
            : <SubTitle>体験のお申し込みありがとうございます。</SubTitle>
           }
@@ -31,7 +31,7 @@ export default ({data,location})=>{
 
           <div className="center">
 
-            {location.state.subject ?
+            {location.state && location.state.subject ?
                <Description width="half">
          お問い合わせいただきありがとうございました。<br />
               担当の者が確認しだいご返信させていただきますので、今しばらくお待ちくださいませ。

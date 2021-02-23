@@ -59,6 +59,8 @@ query($skip: Int!, $limit: Int!) {
     sort: {fields: date,order: DESC}
     skip: $skip
     limit: $limit
+    filter: {category:
+    {name: {ne: "お知らせ"}}}
     ){
     edges{
       node{

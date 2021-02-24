@@ -47,28 +47,13 @@ export default ({data,location})=>{
           }
 
             {location.state &&
-              location.state.subject ?
-              (
-                <Nav small noSpace>
-                    <li>お名前</li>
-                <p>{location.state.name}</p>
-                <li>メールアドレス</li>
-                  <p>{location.state.email}</p>
-                      <li>件名</li>
-                <p>{location.state.subject}</p>
-
-                  <li>メッセージ</li>
-                <p>{location.state.message}</p>
-                      </Nav>
-              )
-              :
               (
               <Nav small noSpace>
                 <li>お名前</li>
                 <p>{location.state.name}</p>
                 <li>メールアドレス</li>
                 <p>{location.state.email}</p>
-                {location.state.phone && (<><li>電話番号</li>
+                {location.state.phone ? (<><li>電話番号</li>
                 <p>{location.state.phone}</p>
 
                 <li>体験内容</li>
@@ -78,10 +63,20 @@ export default ({data,location})=>{
                 <li>体験日</li>
                 <p>{location.state.selectedDate.toLocaleDateString()}</p>
                 <li>体験時間</li>
-                  <p>{location.state.time}</p></>)}
+                  <p>{location.state.time}</p>
 
                 <li>メッセージ</li>
                 <p>{location.state.message}</p>
+                  </>)
+                :
+                  <>
+                    <li>件名</li>
+                <p>{location.state.subject}</p>
+                    <li>メッセージ</li>
+                <p>{location.state.message}</p>
+                    </>
+                  }
+
               </Nav>
             )}
                <Link to="/" ><Button>Topページに戻る</Button></Link>

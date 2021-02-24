@@ -10,7 +10,7 @@ export const TsuridaiData = [{
     },
     {
         title: "行灯型つり台",
-        description: "行灯型つり台",
+        description: "お昼は風鈴を飾る釣り台として、夜は行灯のように間接照明としてもお楽しみいただけるつり台です。",
         image: "tsuridai_andon.jpg"
     },
 

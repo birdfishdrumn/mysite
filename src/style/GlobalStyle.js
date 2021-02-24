@@ -252,6 +252,11 @@ export const MinTitle = styled.div `
  display:inline-block;
  padding-bottom:10px;
  `}
+  ${props => props.borderLeft && `
+   border-left:6px solid black;
+    padding-left:10px;
+ `}
+ color:${props => (props.black && "black")};
 
  text-align:${props => (props.left ? "left" : "center")};
  font-size:${props=>(props.large ? "1.8rem" : "1.5rem")};
@@ -636,15 +641,18 @@ font-weight:bold;
 margin:${props => (props.small ? "5px auto" : "30px auto")};
 list-style:none;
  display:flex;
- color:${props=>(props.white ? "white" : "grey")};
+ color:${props => (props.white ? "white" : "grey")};
   flex-wrap: wrap;
   justify-content:center;
   >li{
+
     margin:20px;
   }
 `
 
-
+export const FlexNavLi = styled.li`
+  color:${props => props.active==="true" && "red"};
+`
 // ------------- レイアウト--------------------
 
 export const Allow = styled.div`

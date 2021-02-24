@@ -26,3 +26,5 @@ export { default as AnimalFilter }
 from "./AnimalFilter"
 export { default as WorkshopKit }
 from "./WorkshopKit"
+export { default as Choice }
+from "./Choice"

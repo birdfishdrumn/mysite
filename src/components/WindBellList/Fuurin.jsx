@@ -1,7 +1,7 @@
 import React,{useState,useEffect,useCallback}  from 'react'
 
 import Image from "../image"
-import { AchievementFilter, MoneyLuckFilter, DiseaseFree, AmuletFilter, SeasonFlower, KirikoFilter, TsuriganeFilter, FuukinFilter, AnimalFilter } from "./index";
+import { AchievementFilter, MoneyLuckFilter, DiseaseFree, AmuletFilter, SeasonFlower, KirikoFilter, TsuriganeFilter, FuukinFilter, AnimalFilter,Choice } from "./index";
 import InputLabel from '@material-ui/core/InputLabel';
 
 import { SubTitle, Description, FlexNav} from "../../style/GlobalStyle";
@@ -140,7 +140,8 @@ event.target.value,
           <Trans>店頭にお越しいただ場合は是非聴き比べてみてください。</Trans>
           </Trans>
         </Description>
-             <div className="space-l"/>
+        <div className="space-l" />
+
         <FlexNav>
            <FormControl className={classes.formControl}>
         <InputLabel htmlFor="age-native-simple">Language</InputLabel>
@@ -209,7 +210,8 @@ event.target.value,
         <FuukinFilter change={change} language={language}/>
     </section>
       <div className="space-l" />
-
+       {/* <Choice/> */}
+        <div className="space-l" />
       <Dialog className={classes.dialog} nClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
 

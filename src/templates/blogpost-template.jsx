@@ -13,7 +13,7 @@ import marked from "marked";
 import { SubTitle,Content } from "../style/GlobalStyle";
 
 // import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
-
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 // 個別記事ページ
 export default ({ data, pageContext, location }) => {
@@ -77,8 +77,11 @@ marked.setOptions({
 
           <div className="postbody">
             <p>
-                      <div className="body-text" dangerouslySetInnerHTML={{ __html: marked(parsedSouce) }} />
-              {/* {data.contentfulWork.content.content} */}
+              {/* <div className="body-text" dangerouslySetInnerHTML={{ __html: marked(parsedSouce) }} /> */}
+              {data.contentfulWork.content.content}
+
+
+              {documentToReactComponents(data.contentfulWork.long.json)}
             </p>
           </div>
 
@@ -174,6 +177,9 @@ export const query = graphql`
   #     slug
   #     id
   #   }
+     long{
+       json
+     }
         content{
       content
     }

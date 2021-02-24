@@ -53,8 +53,8 @@ export default ({ data, location }) => {
 
       <article className="content center">
         <SubTitle>お店・家族の紹介</SubTitle>
-        <FlexNav small>
-          <li onClick={()=>setSelect("Shop")}><IconButton><StoreIcon/></IconButton><br/>お店</li>
+        <FlexNav small >
+          <li onClick={() => setSelect("Shop")}><IconButton><StoreIcon style={{color:"red"}} /></IconButton><br/>お店</li>
           <li onClick={() => setSelect("Family")}><IconButton><SupervisedUserCircleIcon /></IconButton><br />職人の紹介</li>
             <li  onClick={()=>setSelect("Media")}><IconButton><YouTubeIcon/></IconButton><br/>メディア</li>
         </FlexNav>
@@ -88,19 +88,7 @@ query {
       }
     }
   }
-    shop: file(relativePath: {eq: "shop.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 400) {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
     map: file(relativePath: {eq: "map.jpg"}){
     childImageSharp {
       fluid(maxWidth: 800) {

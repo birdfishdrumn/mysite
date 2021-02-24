@@ -68,7 +68,7 @@ const Footer = () => {
   </FooterContainer>
  		<Privacy>
 				<p><Link to="/privacy">個人情報のお取り扱いに関しまして</Link></p>
-				<p>{year} &copy; s篠原まるよし風鈴 All Rights Reserved.</p>
+				<p>{year} &copy; 篠原まるよし風鈴 All Rights Reserved.</p>
 	 </Privacy>
 </FooterWrapper>
 )

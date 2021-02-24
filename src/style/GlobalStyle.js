@@ -425,7 +425,7 @@ export const ProductColumn = styled.div `
    margin:0 auto;
    grid-template-columns:1fr 1fr;
    /* max-width:807px; */
-   max-width:${props => (props.more ? "1024px" : "807px")};
+   max-width:${props => (props.more ? "1024px" : "857px")};
    >div{
      ${props => {
     switch (props.margin) {

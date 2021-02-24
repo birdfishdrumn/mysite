@@ -30,6 +30,7 @@ export const Nav = styled.nav `
     display: flex;
     justify-content: center;
     list-style: none;
+    max-width:624px;
     margin-top: 18px;
     font-weight:bold;
     font-size:1.2rem;

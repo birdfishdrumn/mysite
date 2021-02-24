@@ -1,6 +1,7 @@
 import React from 'react'
 import { TwoColumn, SubTitle, Description ,Figure,Nav} from "../../style/GlobalStyle";
 import Img from "gatsby-image"
+import Image from "../image"
 import styled from "styled-components"
 import { accessData } from "./accessData"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
@@ -28,7 +29,7 @@ const Access = ({data}) => {
           </div>
           <div>
             <Figure>
-              <Img fluid={data.shop.childImageSharp.fluid} alt="" style={{ width: "80%",margin:"0 auto" }} />
+              <Image filename="shop.jpg" alt="" style={{ width: "80%",margin:"0 auto" }} />
             </Figure>
           </div>
           </TwoColumn>

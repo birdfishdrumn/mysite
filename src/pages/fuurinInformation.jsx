@@ -139,19 +139,8 @@ export default ({data,location})=>{
 
 export const query = graphql`
 query {
-  contact: file(relativePath: {eq: "iro.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 800) {
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
-    arekore: file(relativePath: {eq: "productImg/fuurin_arekore.jpg"}){
+
+    arekore: file(relativePath: {eq: "Introduce/fuurin_arekore.jpg"}){
     childImageSharp {
       fluid(maxWidth: 200) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG

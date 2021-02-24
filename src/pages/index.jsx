@@ -51,7 +51,9 @@ export default ({ data }) => {
 
   return (
   <Layout>
-      <SEO />
+      <SEO
+        pagetitle={t('篠原まるよし風鈴 江戸風鈴の制作')}
+      />
 
     <section className="hero">
       <figure>

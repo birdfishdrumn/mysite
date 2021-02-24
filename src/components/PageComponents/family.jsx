@@ -31,7 +31,7 @@ const family = ({data}) => {
           <>
             <IntroduceContainer>
 
-              <FamilyImage><Image filename="naire.jpg" style={{borderRadius:"50%"}}/></FamilyImage>
+              <FamilyImage><Image filename={item.image} style={{borderRadius:"50%"}}/></FamilyImage>
         <div>
               <MinTitle hannari>{item.name}</MinTitle>
               <FamilyDescription left >{item.description}</FamilyDescription>

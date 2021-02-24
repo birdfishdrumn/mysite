@@ -9,7 +9,7 @@ max-width:700px;
 
  /* border:3px solid black; */
  margin:0 auto;
- padding:30px;
+ padding:5px;
 display:flex;
 >div:last-child{
   margin:0 auto;
@@ -18,15 +18,15 @@ display:flex;
 @media(max-width:768px){
   flex-direction:column;
 
-  margin:0 20px;
+  margin:0 5px;
 }
 
 `
 export const IntroduceAnimal = styled.div `
  height:30%;
-max-width:305px;
+max-width:295px;
 
- border:3px solid black;
+ /* border:3px solid black; */
  margin:0 30px;
  padding:30px;
 
@@ -80,7 +80,7 @@ export const FamilyDescription = styled(Description)
 `
  align-items:center;
  margin:auto;
-
+ width:100%;
  padding:40px 0px 0;
  @media(min-width:768px){
    width:80%;

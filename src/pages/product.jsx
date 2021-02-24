@@ -40,12 +40,16 @@ export default ({ data, location }) => {
   }
   }, [])
 
+  const onlineOpen = () => {
+    const url = "https://maruyosi.theshop.jp/"
+window.open(url, '_blank')
+}
 
     return (
     < Layout >
     <SEO
       pagetitle="まるよし風鈴の商品の紹介"
-      pagedesc="こちらでは様々な商品を紹介します。"
+      pagedesc="こちらでは江戸風鈴、イヤリング、ポッペン、つり台、また気になる風鈴の情報について紹介します。"
       pagepath={location.pathname}
       pageimg={data.product.childImageSharp.original.src}
       pageimgw={data.product.childImageSharp.original.width}
@@ -69,7 +73,7 @@ export default ({ data, location }) => {
               <Trans>直接お店に出向かなくても、オンラインショップもやっているのでご購入をご希望の方はこちらからよろしくお願い致します。</Trans>
            <br/>
     </Description>
-            <Button><Trans>オンラインショップ</Trans></Button>
+            <Button  onClick={onlineOpen}><Trans>オンラインショップ</Trans></Button>
                   <div className="space-l" />
     </div>
           <Product isEn={isEn} data={data.fuurin} description="風鈴には小丸、新子丸、釣鐘型のように大きさが違う種類のものがあり、様々な縁起の良い絵柄が描かれます。あなたのお部屋にあったものを豊富な品揃えの中からお探しください。" title="江戸風鈴" destination="/fuurin" num="0" />

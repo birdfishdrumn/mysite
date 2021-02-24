@@ -43,7 +43,8 @@ const Media = () => {
             <div className="space-m"/>
           <li>NHK 「ニュースシブ五時」</li>
            <li>テレビ東京  「東京交差点」</li>
-            <li>TBS  「孤独のグルメ」</li>
+            <li>テレビ東京  「孤独のグルメ」</li>
+             <li>テレビ東京  「モヤモヤさまぁず」</li>
             <li>フジテレビ 「なりゆき街道旅」</li>
              {/* <li></li> */}
 
@@ -55,7 +56,9 @@ const Media = () => {
            <li>ダーリンの東京散歩: 歩く世界</li>
 
           </Nav>
-          </Flex>
+        </Flex>
+        <div className="space-m"/>
+        <Description>随時更新させていただきます！</Description>
       </section>
     </div>
   )

@@ -24,6 +24,12 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-source-instagram',
+            options: {
+                username: '3663679915'
+            }
+        },
+        {
             resolve: `gatsby-plugin-material-ui`,
             options: {
                 stylesProvider: {
@@ -134,12 +140,7 @@ module.exports = {
                 showSpinner: true,
             },
         },
-        {
-            resolve: 'gatsby-source-instagram',
-            options: {
-                username: '3663679915'
-            }
-        },
+
 
     ],
 

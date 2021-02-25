@@ -209,8 +209,8 @@ event.target.value,
         <SubTitle><Trans>風琴</Trans></SubTitle>
         <FuukinFilter change={change} language={language}/>
     </section>
-      <div className="space-l" />
-       {/* <Choice/> */}
+      {/* <div className="space-l" />
+       <Choice/> */}
         <div className="space-l" />
       <Dialog className={classes.dialog} nClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>

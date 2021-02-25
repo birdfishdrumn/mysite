@@ -146,6 +146,8 @@ export const SubTitle = styled.div `
  font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
  font-weight: bold;
  margin-bottom:0px;
+
+
  color:${props => (props.white ? "white" : "black")};
  text-align:${props =>(props.left ? "left" : "center")};
  font-size:${props=>(props.small ? "1.8rem" : "2.2rem")};
@@ -156,7 +158,13 @@ export const SubTitle = styled.div `
  @media(max-width:768px){
    font-size:1.7rem;
  }
+
+
+
 `
+
+
+
 
 export const MinDescription = styled.p `
  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
@@ -265,8 +273,21 @@ export const MinTitle = styled.div `
    font-size:2.8rem;
  }`)}
  @media(max-width:767px){
-    font-size:${props=>(props.small && "1.1rem")};
+    font-size:${props => (props.small && "1.1rem")};
  }
+ position:relative;
+  ${props => props.custom && `
+    display:inline-block;
+  color: black;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #ccc;/*上線*/
+  border-bottom: solid 3px #ccc;/*下線*/
+  // background: #ccc;
+  padding-left:10px;
+  padding-right:10px;
+ `}
+
+
   `
     // ==========テキストデザイン===========
 

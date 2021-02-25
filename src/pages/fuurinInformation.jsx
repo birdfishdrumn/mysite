@@ -7,7 +7,7 @@ import { SubTitle, Description,TwoColumn,Figure} from "../style/GlobalStyle";
 import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
 import Image from "../components/image";
-
+import { Choice } from "../components/WindBellList/index";
 
 
 const TextNav = styled.ul`
@@ -116,7 +116,8 @@ export default ({data,location})=>{
 
         </TwoColumn>
           </section>
-           <div className="space-l"/>
+          <div className="space-l" />
+
 
            <section>
             <SubTitle><Trans>風鈴が壊れてしまった時</Trans></SubTitle>
@@ -129,7 +130,8 @@ export default ({data,location})=>{
               <Trans>古くなった風鈴の糸の交換は、本体が破損していなければできます。￥150円程で承っておりますのでご希望の方は一度メールやお電話でお問い合わせお願い致します。大切に使って頂いた方に感謝いたします。</Trans>
 
             </Description>
-  </section>
+          </section>
+          <Choice/>
    </article>
       </Layout>
     </div>

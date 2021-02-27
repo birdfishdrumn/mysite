@@ -20,7 +20,7 @@ const Media = () => {
       <section>
         <SubTitle>メディアの掲載</SubTitle>
         <MinTitle border>YouTube</MinTitle>
-        <Description>2021 OWV</Description>
+
         <Youtube width="560" height="315" src="https://www.youtube.com/embed/o2XUNTQbP4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
         <Nav border small min grey left>
             <li>OWVが風鈴作りに挑戦してみた！[OWVチャンネル]</li>

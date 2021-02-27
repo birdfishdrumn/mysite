@@ -19,7 +19,7 @@ module.exports = {
     plugins: [{
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: "process.env.GOOGLE_ANALYTICS_ID", //デフォルト値
+                trackingId: process.env.GOOGLE_ANALYTICS_ID, //デフォルト値
                 head: true, //これ追加
             },
         },

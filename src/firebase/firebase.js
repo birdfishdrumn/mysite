@@ -17,7 +17,7 @@ class Firebase {
 
         }
     }
-
+   
 
     async postContact({ name, email, phone, content, selectedDate, message, people, time }) {
         const ref = this.db.collection("reservation").doc()

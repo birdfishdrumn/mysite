@@ -256,6 +256,7 @@ if (time === "") return true;
           }}
             />
             </MuiPickersUtilsProvider>
+          <p style={{color:"red",fontSize:"0.9rem",textAlign:"left"}}>※フォームでの体験は現在の日時から三日後のみ予約可能です。それ以内でしたらお電話でご予約ください。<br/></p>
 
 
         <div className="space-s" />

@@ -16,7 +16,7 @@ export default props => {
   const dateJP = props.dateJP
   const catname = props.catname
   const content = props.content ? (props.content.length > 80  ?   props.content.content.slice(0, 80) + "....." : props.content.content) : ""
-console.log(props)
+
   return (
 
     <Article key={key}>

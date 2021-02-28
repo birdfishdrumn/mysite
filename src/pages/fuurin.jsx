@@ -17,16 +17,14 @@ export default ({ data, location }) => {
   //     setChange(false)
   //   })
 
-  console.log(location)
+
     return (
   <Layout>
     <SEO
       pagetitle="まるよし風鈴の商品紹介"
       pagedesc="こちらではより詳しくまるよし風鈴の製品である、金魚やアマビエ様など様々な江戸風鈴、家でも絵付け体験ができる体験キット、風鈴のイヤリングやピアス、ポッペン、などについてご紹介いたします。"
       pagepath={location.pathname}
-      pageimg={data.product.childImageSharp.original.src}
-      pageimgw={data.product.childImageSharp.original.width}
-      pageimgh={data.product.childImageSharp.original.height}
+
     />
 
            <section className="hero">
@@ -47,19 +45,7 @@ export default ({ data, location }) => {
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
-  product: file(relativePath: {eq: "ayame4.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
    allProducts
    {
     edges {

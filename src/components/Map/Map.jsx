@@ -62,7 +62,7 @@ const  Map = ({noBtn}) =>{
 
   if (loadError) return "Error";
   if (!isLoaded) return "Loading...";
-  console.log(process.env.GATSBY_googleMapsApiKey)
+
   return (
     <MapFlex>
       <Container>

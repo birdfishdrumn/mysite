@@ -2,22 +2,27 @@ import firebaseConfig from "./config";
 import axios from 'axios';
 import firebase from "firebase/app"
 import { navigate } from "gatsby";
+
 import "firebase/firestore"
 const timestamp = firebase.firestore.Timestamp.now();
 
 class Firebase {
     constructor(app) {
-        if (!firebaseInstance) {
-            app.initializeApp(firebaseConfig);
+            if (!firebaseInstance) {
+                app.initializeApp(firebaseConfig);
 
-            // this.auth = app.auth();
-            this.db = app.firestore();
-            this.functions = app.functions();
-            this.storage = app.storage();
+                // this.auth = app.auth();
+                this.db = app.firestore();
+                this.functions = app.functions();
+                this.storage = app.storage();
 
+            }
         }
-    }
-   
+        // useEffect(() => {
+        //     if (location.pathname.split("/")[1] === "en") {
+        //         setLanguage("English")
+        //     }
+        // }, [])
 
     async postContact({ name, email, phone, content, selectedDate, message, people, time }) {
         const ref = this.db.collection("reservation").doc()

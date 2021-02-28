@@ -24,9 +24,7 @@ exports.createProduct = functions
     .onCreate((snap, context) => {
         // const { Id } = context.params
         const post = snap.data()
-        console.log("post", post)
-        console.log(post.name)
-        console.log(post.email)
+
         const customerEmail = post.email
             // console.log("Id", Id)
         let mailOptions = {
@@ -75,7 +73,7 @@ exports.contactForm = functions
     .onCreate((snap, context) => {
         // const { Id } = context.params
         const post = snap.data()
-        console.log("post", post)
+
         const customerEmail = post.email
             // console.log("Id", Id)
         let mailOptions = {

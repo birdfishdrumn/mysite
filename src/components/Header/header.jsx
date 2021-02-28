@@ -111,7 +111,7 @@ const Header = (props) => {
   const [open, setOpen] = useState(false);
   const { languages, changeLanguage } = useI18next();
 
-console.log(props.location)
+
 
 
     const handleClickOpen = () => {

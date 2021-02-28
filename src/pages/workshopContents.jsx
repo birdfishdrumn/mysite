@@ -17,9 +17,7 @@ export default ({ data, location }) => {
       pagetitle="風鈴製作体験の内容"
       pagedesc="ガラス吹き、絵付け、リモート、団体の体験について詳しく紹介いたします。"
       pagepath={location.pathname}
-      pageimg={data.product.childImageSharp.original.src}
-      pageimgw={data.product.childImageSharp.original.width}
-      pageimgh={data.product.childImageSharp.original.height}
+
     />
    <section className="hero">
 	<figure>
@@ -40,19 +38,19 @@ export default ({ data, location }) => {
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
-  product: file(relativePath: {eq: "ayame4.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
+#   workshop: file(relativePath: {eq: "workshop_top.jpg"}){
+#     childImageSharp {
+#       fluid(maxWidth: 1600) {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
+# ...GatsbyImageSharpFluid_withWebp_tracedSVG
+#       }
+#       original{
+#         src
+#         height
+#         width
+#       }
+#     }
+#   }
    allProducts
    {
     edges {

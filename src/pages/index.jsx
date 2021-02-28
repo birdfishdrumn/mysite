@@ -41,7 +41,7 @@ export default ({ data }) => {
   const { t } = useTranslation();
   // console.log(t)
 
-  console.log(data)
+
     useEffect(() => {
     Aos.init({ duration: 1200, startEvent: 'DOMContentLoaded', once: true });
 

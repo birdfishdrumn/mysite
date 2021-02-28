@@ -21,8 +21,10 @@ const Media = () => {
         <SubTitle>メディアの掲載</SubTitle>
         <MinTitle border>YouTube</MinTitle>
 
-        <Youtube width="560" height="315" src="https://www.youtube.com/embed/o2XUNTQbP4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
+
+
         <Nav border small min grey left>
+              <Youtube width="560" height="315" src="https://www.youtube.com/embed/o2XUNTQbP4A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></Youtube>
             <li>OWVが風鈴作りに挑戦してみた！[OWVチャンネル]</li>
           <li>しまじろうのできた！「ふうりんをつくるのまき」[しまじろう公式チャンネル]</li>
             {/* <li>TBS  「孤独のグルメ」</li> */}

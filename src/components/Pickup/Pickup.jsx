@@ -1,6 +1,7 @@
 import React from 'react'
-import {graphql,useStaticQuery,Link} from "gatsby"
+import {graphql,useStaticQuery} from "gatsby"
 import { PickupContainer } from "./style"
+import {Link} from "gatsby-plugin-react-i18next"
 import Img from "gatsby-image";
 import { SubTitle, Description, MinTitle } from "../../style/GlobalStyle"
 import DoneOutlineIcon from '@material-ui/icons/DoneOutline';
@@ -27,7 +28,7 @@ query PickupQuery{
   }
 }
 `)
-  console.log(data.contentfulWork)
+
   const pickup = data.contentfulWork
   return (
     <PickupContainer>
@@ -37,7 +38,7 @@ query PickupQuery{
         <Img fluid={pickup.image.fluid} style={{margin:"0 auto"}}/>
       </div>
         <MinTitle hannari>{pickup.title}</MinTitle>
-         <Description hannari>{pickup.content.content.slice(0,40)}</Description>
+         <Description hannari>{pickup.content.content}</Description>
       {/* <div key={pickup.id} slug={pickup.slug} fluid={pickup.image.fluid} alt={pickup.image.description} dataTime={pickup.date}
             catname={pickup.category.name} title={pickup.title}  /> */}
         </Link>

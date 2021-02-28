@@ -117,6 +117,7 @@ event.target.value,
       setChange(false)
     })
   console.log(data)
+  // もし英語のパスがあれば
     useEffect(() => {
     if (location.pathname.split("/")[1]==="en") {
      setLanguage("English")

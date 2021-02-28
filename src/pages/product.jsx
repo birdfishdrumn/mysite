@@ -32,7 +32,7 @@ height:90px;
 
 export default ({ data, location }) => {
   const [isEn,setIsEn] = useState(false)
-  console.log(location.pathname.split("/")[1])
+  // console.log(location.pathname.split("/")[1])
   // もしurlにenが存在したら。
   useEffect(() => {
     if (location.pathname.split("/")[1]==="en") {

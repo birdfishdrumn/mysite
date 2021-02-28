@@ -1,5 +1,6 @@
 import React from "react"
-import { graphql,Link } from 'gatsby';
+import { graphql } from 'gatsby';
+import {Link} from "gatsby-plugin-react-i18next"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -19,7 +20,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 export default ({ data, pageContext, location }) => {
 // マークダウンに変換するための処理
   const source = data.contentfulWork.content.content.replace(/\n/gi, '\nreplaced_text ');
-   console.log(data.contentfulWork)
+
 marked.setOptions({
         gfm: true,
         breaks: true,

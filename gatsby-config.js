@@ -120,7 +120,7 @@ module.exports = {
                 i18nextOptions: {
                     debug: true,
                     lowerCaseLng: true,
-                    saveMissing: true,
+                    saveMissing: false,
                     interpolation: {
                         escapeValue: false // not needed for react as it escapes by default
                     },

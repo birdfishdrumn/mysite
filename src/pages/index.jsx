@@ -53,11 +53,13 @@ export default ({ data }) => {
   <Layout>
       <SEO
         pagetitle={t('篠原まるよし風鈴 江戸風鈴の制作')}
+             pagedesc={t('篠原まるよし風鈴では伝統工芸である江戸風鈴を東京都台東区で製作しております。江戸風鈴の製作体験、販売にも力を入れておりますので、上野、御徒町、浅草などへ観光の方は是非お立ち寄りください')}
+
       />
 
-    <section className="hero">
+    <section className="top">
       <figure>
-        <Image filename="uniqlo_poster.jpg" alt="" style={{ height: "100%" }} />
+        <Image filename="homepage_top.jpg" alt="" style={{ height: "100%" }} />
       </figure>
 
         <ImageText>

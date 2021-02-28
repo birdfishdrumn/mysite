@@ -29,7 +29,7 @@ const Access = ({data}) => {
           </div>
           <div>
             <Figure>
-              <Image filename="shop.jpg" alt="" style={{ width: "80%",margin:"0 auto" }} />
+              <img src={data.shop.publicURL} alt="" style={{ width: "80%",margin:"0 auto" }} />
             </Figure>
           </div>
           </TwoColumn>

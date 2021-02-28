@@ -109,6 +109,13 @@ query {
       }
     }
   }
+      shop: file(relativePath: {eq: "shop.jpg"}){
+
+
+     publicURL
+
+
+  }
 
 }
 `

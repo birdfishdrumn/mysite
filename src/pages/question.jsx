@@ -16,9 +16,9 @@ export default ({data,location})=>{
         <SEO pagetitle="よくある質問"
          pagedesc="こちらでは風鈴の仕事に関してよくある質問をご回答いたします。"
       pagepath={location.pathname}
-      pageimg={data.contact.childImageSharp.original.src}
-      pageimgw={data.contact.childImageSharp.original.width}
-      pageimgh={data.contact.childImageSharp.original.height}/>
+      pageimg={data.question.childImageSharp.original.src}
+      pageimgw={data.question.childImageSharp.original.width}
+      pageimgh={data.question.childImageSharp.original.height}/>
            <section className="hero">
 	<figure>
 	   <Image filename="huurin_zaru_top.jpg" style={{ height: "100%" }}  alt="製品情報"/>
@@ -59,7 +59,7 @@ export default ({data,location})=>{
 
 export const query = graphql`
 query {
-  contact: file(relativePath: {eq: "iro.jpg"}){
+  question: file(relativePath: {eq: "Introduce/huurin_zaru_top.jpg"}){
     childImageSharp {
       fluid(maxWidth: 1600) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG

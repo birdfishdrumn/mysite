@@ -119,16 +119,48 @@ svg {
 
 @media (min-width: 768px) {
     .hero figure {
-        height: 700px;
+        height: 600px;
     }
     .hero figure img {
-        height: 700px;
+        height: 600px;
     }
     .hero .catch h1 {
         font-size: 40px;
         margin-bottom: 30px;
     }
     .hero .catch p {
+        font-size: 16px;
+    }
+}
+
+.top {
+    position: relative;
+    margin-top: 0px;
+}
+
+.top figure {
+    max-height: 100%;
+    height: 450px;
+}
+
+.top figure img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .top figure {
+        height: 730px;
+    }
+    .top figure img {
+        height: 730px;
+    }
+    .top .catch h1 {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    .top .catch p {
         font-size: 16px;
     }
 }

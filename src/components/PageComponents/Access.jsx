@@ -5,7 +5,8 @@ import Image from "../image"
 import styled from "styled-components"
 import { accessData } from "./accessData"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
-import {Map} from "../index"
+import { Map } from "../index"
+import ShopImg from "../../images/shop.jpg"
 const AccessMap = styled.div`
  margin:0 auto;
  max-width:924px;
@@ -29,7 +30,7 @@ const Access = ({data}) => {
           </div>
           <div>
             <Figure>
-              <img src={data.shop.publicURL} alt="" style={{ width: "80%",margin:"0 auto" }} />
+              <img src={ShopImg} alt="" style={{ width: "80%",margin:"0 auto" }} />
             </Figure>
           </div>
           </TwoColumn>

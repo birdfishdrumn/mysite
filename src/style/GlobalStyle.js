@@ -1,59 +1,59 @@
-import styled, { css, createGlobalStyle, keyframes } from "styled-components"
-import Img from "gatsby";
-import { important, rgba } from "polished"
+import styled, { css } from "styled-components"
+// , { css, createGlobalStyle, keyframes }
+// import { important, rgba } from "polished"
 
 /* ===============================================
 #  color setting
 =============================================== */
-export const colors = {}
+// export const colors = {}
 
-colors.background = "#fffeff"
-colors.text = "#617e8c"
+// colors.background = "#fffeff"
+// colors.text = "#617e8c"
 
-colors.paleGray = "#f9f9f9"
-colors.lightGray = "#ddd"
-colors.gray = "#96acb3"
+// colors.paleGray = "#f9f9f9"
+// colors.lightGray = "#ddd"
+// colors.gray = "#96acb3"
 
-colors.primaryPurple = "#9E69D7"
-colors.primary = "#FA96BB"
-colors.primaryLight = rgba("#FA96BB", 0.15)
-colors.primaryPale = rgba("#FA96BB", 0.07)
+// colors.primaryPurple = "#9E69D7"
+// colors.primary = "#FA96BB"
+// colors.primaryLight = rgba("#FA96BB", 0.15)
+// colors.primaryPale = rgba("#FA96BB", 0.07)
 
-colors.secondary = "#FFB238"
-colors.danger = "#FF5C55"
-colors.success = "#4FCE7A"
-colors.warn = "#feaa2e"
-colors.info = "#2490eb"
+// colors.secondary = "#FFB238"
+// colors.danger = "#FF5C55"
+// colors.success = "#4FCE7A"
+// colors.warn = "#feaa2e"
+// colors.info = "#2490eb"
 
-/* ===============================================
-#  other variables
-=============================================== */
+// /* ===============================================
+// #  other variables
+// =============================================== */
 
-export const fadeIn = keyframes `
-  0% {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-`
+// export const fadeIn = keyframes `
+//   0% {
+//     opacity: 0;
+//     visibility: hidden;
+//     transform: translateY(10px);
+//   }
+//   100% {
+//     opacity: 1;
+//     visibility: visible;
+//     transform: translateY(0);
+//   }
+// `
 
-export const fadeOut = keyframes `
-  0% {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-  }
-`
+// export const fadeOut = keyframes `
+//   0% {
+//     opacity: 1;
+//     visibility: visible;
+//     transform: translateY(0);
+//   }
+//   100% {
+//     opacity: 0;
+//     visibility: hidden;
+//     transform: translateY(-10px);
+//   }
+// `
 
 export const size = {
     width: "800px",
@@ -727,19 +727,19 @@ height:310px;
 /* ===============================================
 #  set css variables
 =============================================== */
-function setColor() {
-    let styles = ""
-    for (const key in colors) {
-        styles += `--${key}: ${colors[key]};`
-    }
-    return css `
-    :root {
-      ${styles}
-      --width: ${size.width};
-      --topHeight: ${size.topHeight};
-    }
-  `
-}
+// function setColor() {
+//     let styles = ""
+//     for (const key in colors) {
+//         styles += `--${key}: ${colors[key]};`
+//     }
+//     return css `
+//     :root {
+//       ${styles}
+//       --width: ${size.width};
+//       --topHeight: ${size.topHeight};
+//     }
+//   `
+// }
 
 /* ===============================================
 #  font setting
@@ -767,8 +767,8 @@ const font = css `
 /* ===============================================
 #  global style
 =============================================== */
-const GlobalStyle = createGlobalStyle `
-  ${setColor}
+// const GlobalStyle = createGlobalStyle `
+  /* ${setColor}
   html {
     font-size: 16px;
   }
@@ -816,28 +816,28 @@ const GlobalStyle = createGlobalStyle `
   }
   ::selection {
     background: rgba(255, 250, 118, 0.35);
-  }
+  } */
 
   /* ===============================================
   # smart phone
-  =============================================== */
-  @media screen and (max-width: 780px) {
-    html, body {
-      font-size: 15px;
-    }
-    .pc {
-      display: none !important;
-    }
-  }
+//   =============================================== */
+//   @media screen and (max-width: 780px) {
+//     html, body {
+//       font-size: 15px;
+//     }
+//     .pc {
+//       display: none !important;
+//     }
+//   }
 
-  /* ===============================================
-  # pc
-  =============================================== */
-  @media screen and (min-width: 781px) {
-    .sp {
-      display: none !important;
-    }
-  }
-`
+//   /* ===============================================
+//   # pc
+//   =============================================== */
+//   @media screen and (min-width: 781px) {
+//     .sp {
+//       display: none !important;
+//     }
+//   }
+// `
 
-export default GlobalStyle
+// export default GlobalStyle

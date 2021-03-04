@@ -1,32 +1,14 @@
 import React from "react";
 
-import Img from "gatsby-image"
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description,TwoColumn,Figure,MinTitle} from "../style/GlobalStyle";
-import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
+import { Trans} from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
 import Image from "../components/image";
 
 
-
-const TextNav = styled.ul`
- margin-top:30px;
-text-align:center;
->li{
-  margin:5px;
-  font-size:1.3rem;
-   font-weight:bold;
-}
->p{
-  margin:10px;
-  >span{
-  font-size:0.9rem;
-  color:red;
-}
-}
-
-`
 
 // const ConflictImageWrapper = styled.div`
 // position:relative;

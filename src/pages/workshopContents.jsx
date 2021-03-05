@@ -38,19 +38,7 @@ export default ({ data, location }) => {
         //スプレッド構文で配列を展開する。
 export const query = graphql`
 query {
-#   workshop: file(relativePath: {eq: "workshop_top.jpg"}){
-#     childImageSharp {
-#       fluid(maxWidth: 1600) {
 
-# ...GatsbyImageSharpFluid_withWebp_tracedSVG
-#       }
-#       original{
-#         src
-#         height
-#         width
-#       }
-#     }
-#   }
    allProducts
    {
     edges {

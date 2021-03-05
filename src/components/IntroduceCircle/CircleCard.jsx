@@ -2,7 +2,7 @@ import React,{useEffect} from 'react'
 import { Circle } from "./style"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 import Img from "gatsby-image"
-import Image from "../image"
+import Image from "../minImage"
 import Aos from "aos";
 
 import { Description,MinTitle } from '../../style/GlobalStyle'

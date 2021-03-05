@@ -80,7 +80,7 @@ export const query = graphql`
 query {
   product: file(relativePath: {eq: "Introduce/huurin_narabi.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 800) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

@@ -169,7 +169,7 @@ query {
 
   kikyou: file(relativePath: {eq: "kikyou.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 320) {
+      fluid(maxWidth: 200) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -177,7 +177,7 @@ query {
   }
   gizagiza: file(relativePath: {eq: "kirikuchi_square.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 320) {
+      fluid(maxWidth: 200) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -188,7 +188,7 @@ query {
   narabi: file(relativePath: {eq: "Introduce/huurin_etsuke_overlay.jpg"}){
     publicURL
     childImageSharp {
-      fluid(maxWidth: 800) {
+      fluid(maxWidth: 400) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

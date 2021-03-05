@@ -31,7 +31,7 @@ query PoppenQuery{
     }
         utamaro: file(relativePath: { eq: "Introduce/utamaro005_main.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 400) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
         original {

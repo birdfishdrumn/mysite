@@ -3,7 +3,7 @@ import {  Description, ProductColumn,DescriptionFlex, Figure, MinTitle } from ".
 import Img from "gatsby-image"
 import { Button } from "../Button/styles";
 import { Trans, useTranslation, Link } from 'gatsby-plugin-react-i18next';
-import Image from "../image"
+import Image from "../minImage"
 import Aos from "aos"
 import styled from "styled-components";
 

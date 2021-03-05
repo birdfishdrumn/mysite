@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components"
+import styled, { css } from "styled-components";
+
 // , { css, createGlobalStyle, keyframes }
 // import { important, rgba } from "polished"
 
@@ -99,7 +100,7 @@ export const Title = styled.h1 `
 
 
 export const Nav = styled.ul `
-  font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
+  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  font-weight: normal;
  margin:0 auto;
  text-align:center;
@@ -143,7 +144,7 @@ max-width:${props=> (props.min ? "550px" : "824px")};
 
 
 export const SubTitle = styled.div `
- font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  font-weight: bold;
  margin-bottom:0px;
 
@@ -253,7 +254,7 @@ export const ImageText = styled.div `
 
 
 export const MinTitle = styled.div `
-  font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
+  font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  font-weight: bold;
  ${props => props.border && `
   border-bottom:3px solid #ccc;
@@ -294,7 +295,7 @@ export const MinTitle = styled.div `
 
 // ------------- レイアウト--------------------
 export const ProductTitle = styled.div `
- font-family:${props =>(props.hannari ? "はんなり明朝" :"'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif")};
+ font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
  font-weight: bold;
  margin-bottom:0px;
  text-align:left;

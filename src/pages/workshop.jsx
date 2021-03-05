@@ -1,6 +1,6 @@
 import React from "react"
 // import {Header} from "../components/Header/Header"
-import {graphql,Link} from "gatsby"
+import {graphql} from "gatsby"
 
 
 import styled from "styled-components";
@@ -11,9 +11,8 @@ import { FloatingAction,WorkshopList,COVID_19}  from "../components/index";
 import Image from "../components/image"
 
 
-const ProductList = styled.div`
 
-`
+
 
 
 

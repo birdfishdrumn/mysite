@@ -1,7 +1,7 @@
 import React,{useState,useEffect,useCallback}  from 'react'
 
 import Image from "../image"
-import { AchievementFilter, MoneyLuckFilter, DiseaseFree, AmuletFilter, SeasonFlower, KirikoFilter, TsuriganeFilter, FuukinFilter, AnimalFilter,Choice } from "./index";
+import { AchievementFilter, MoneyLuckFilter, DiseaseFree, AmuletFilter, SeasonFlower, KirikoFilter, TsuriganeFilter, FuukinFilter, AnimalFilter } from "./index";
 import InputLabel from '@material-ui/core/InputLabel';
 
 import { SubTitle, Description, FlexNav} from "../../style/GlobalStyle";
@@ -23,7 +23,7 @@ import Select from '@material-ui/core/Select';
 // import NativeSelect from '@material-ui/core/NativeSelect';
 
 
-import {Trans, useTranslation,Link} from
+import {Trans} from
 'gatsby-plugin-react-i18next';
 
 
@@ -96,9 +96,7 @@ const Fuurin = ({location,data}) => {
   const [language, setLanguage] = useState("日本語")
     const classes = useStyles();
  const [open, setOpen] = useState(false);
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -112,10 +110,10 @@ event.target.value,
 
   const handleOn = useCallback(()=>{
       setChange(true)
-  })
+  },[setChange])
     const handleOff = useCallback(()=>{
       setChange(false)
-    })
+    },[setChange])
   console.log(data)
   // もし英語のパスがあれば
     useEffect(() => {

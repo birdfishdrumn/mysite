@@ -1,10 +1,10 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+
 import { Information,InfoTitle} from "./style";
-import styled from "styled-components"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock } from "@fortawesome/free-solid-svg-icons"
-import { Description } from "../../../style/GlobalStyle";
+
 import { Link } from "gatsby";
 const  NewsCard = (props) =>{
 

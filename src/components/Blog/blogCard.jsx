@@ -19,7 +19,7 @@ export default props => {
 
   return (
 
-    <Article key={key}>
+    <Article className="center" key={key}>
         <div>
 
                 <figure >
@@ -35,7 +35,7 @@ export default props => {
             {dataTime && (<Time dataTime={dataTime}><FontAwesomeIcon />
             {dateJP}</Time>)}
 
-          <Description>{content}</Description>
+          <Description left>{content}</Description>
                 </Link>
         </div>
             </Article>

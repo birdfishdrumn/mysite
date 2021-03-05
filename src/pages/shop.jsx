@@ -18,7 +18,7 @@ import Image from "../components/image"
 
 export default ({ data, location }) => {
   const [select, setSelect] = useState("Shop")
-  const [active,setActive] = useState(false)
+
   useEffect(() => {
     Aos.init({ duration: 1000, startEvent: 'DOMContentLoaded', once: true });
 

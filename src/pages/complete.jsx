@@ -90,21 +90,3 @@ export default ({data,location})=>{
     </div>
   );
 };
-
-
-
-export const query = graphql`
-query {
-  contact: file(relativePath: {eq: "iro.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
-}`

@@ -3,8 +3,8 @@ import React from "react";
 import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { SubTitle, Description,TwoColumn,Figure,Nav,ItemA,ItemB,ItemC} from "../style/GlobalStyle";
-import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
+import { SubTitle, Description,TwoColumn,Figure} from "../style/GlobalStyle";
+import { Trans} from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
 import Image from "../components/image";
 

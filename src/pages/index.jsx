@@ -194,14 +194,7 @@ query {
       }
     }
   }
-    sudare: file(relativePath: {eq: "sudare_fuurin.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 320) {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-    }
-  }
     online: file(relativePath: {eq: "Introduce/onlineshop_top.jpg"}){
     childImageSharp {
       fluid(maxWidth: 320) {
@@ -218,28 +211,28 @@ query {
       }
     }
   }
-  allContentfulWork(
-    sort: {fields: date,order: DESC}
-    skip: 0
-    limit: 4
-    ){
-    edges{
-      node{
-      title
-      category{
-        name
-      }
-      id
-      slug
-      image{
-        fluid(maxWidth: 573){
-          ...GatsbyContentfulFluid_withWebp
-        }
-          description
-      }
-      }
+  # allContentfulWork(
+  #   sort: {fields: date,order: DESC}
+  #   skip: 0
+  #   limit: 4
+  #   ){
+  #   edges{
+  #     node{
+  #     title
+  #     category{
+  #       name
+  #     }
+  #     id
+  #     slug
+  #     image{
+  #       fluid(maxWidth: 573){
+  #         ...GatsbyContentfulFluid_withWebp
+  #       }
+  #         description
+  #     }
+  #     }
 
-    }
-  }
+  #   }
+  # }
 }
 `

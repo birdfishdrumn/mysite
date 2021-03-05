@@ -1,4 +1,4 @@
-import React, { useState,useCallback } from "react";
+import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -41,21 +41,3 @@ export default ({data})=>{
     </div>
   );
 };
-
-
-
-export const query = graphql`
-query {
-  contact: file(relativePath: {eq: "iro.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 1600) {
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
-}`

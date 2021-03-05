@@ -1,7 +1,7 @@
 import React, { useEffect }from 'react'
-import Feature from "../Feature/Feature"
+import Feature from "./Feature"
 import { List } from "./style"
-import Aos from "aos";
+
 
 const FeatureList = ({ data }) => {
 

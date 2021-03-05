@@ -1,65 +1,7 @@
 import styled, { css } from "styled-components";
 
-// , { css, createGlobalStyle, keyframes }
-// import { important, rgba } from "polished"
 
-/* ===============================================
-#  color setting
-=============================================== */
-// export const colors = {}
 
-// colors.background = "#fffeff"
-// colors.text = "#617e8c"
-
-// colors.paleGray = "#f9f9f9"
-// colors.lightGray = "#ddd"
-// colors.gray = "#96acb3"
-
-// colors.primaryPurple = "#9E69D7"
-// colors.primary = "#FA96BB"
-// colors.primaryLight = rgba("#FA96BB", 0.15)
-// colors.primaryPale = rgba("#FA96BB", 0.07)
-
-// colors.secondary = "#FFB238"
-// colors.danger = "#FF5C55"
-// colors.success = "#4FCE7A"
-// colors.warn = "#feaa2e"
-// colors.info = "#2490eb"
-
-// /* ===============================================
-// #  other variables
-// =============================================== */
-
-// export const fadeIn = keyframes `
-//   0% {
-//     opacity: 0;
-//     visibility: hidden;
-//     transform: translateY(10px);
-//   }
-//   100% {
-//     opacity: 1;
-//     visibility: visible;
-//     transform: translateY(0);
-//   }
-// `
-
-// export const fadeOut = keyframes `
-//   0% {
-//     opacity: 1;
-//     visibility: visible;
-//     transform: translateY(0);
-//   }
-//   100% {
-//     opacity: 0;
-//     visibility: hidden;
-//     transform: translateY(-10px);
-//   }
-// `
-
-export const size = {
-    width: "800px",
-    topHeight: "370px",
-}
 
 // ==========テキストデザイン===========
 
@@ -745,25 +687,25 @@ height:310px;
 /* ===============================================
 #  font setting
 =============================================== */
-const font = css `
-  font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial,
-    メイリオ, Meiryo, sans-serif;
-  word-wrap: break-word;
-  word-break: break-all;
-  -moz-font-feature-settings: "palt";
-  -webkit-font-feature-settings: "palt";
-  font-feature-settings: "palt";
-  font-variant-ligatures: no-common-ligatures;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: auto;
-  -webkit-text-stroke: 1px transparent;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  letter-spacing: 0.05rem;
-  font-weight: 400;
-  color: var(--text);
-`
+// const font = css `
+//   font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI",
+//     "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial,
+//     メイリオ, Meiryo, sans-serif;
+//   word-wrap: break-word;
+//   word-break: break-all;
+//   -moz-font-feature-settings: "palt";
+//   -webkit-font-feature-settings: "palt";
+//   font-feature-settings: "palt";
+//   font-variant-ligatures: no-common-ligatures;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-rendering: auto;
+//   -webkit-text-stroke: 1px transparent;
+//   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//   letter-spacing: 0.05rem;
+//   font-weight: 400;
+//   color: var(--text);
+// `
 
 /* ===============================================
 #  global style

@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faFolderOpen } from "@fortawesome/free-regular-svg-icons";
-import { faChevronLeft, faChevronRight, faTags } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 // import BlogCard from "../components/Blog/blogCard"
 // import RandomPosts from "../components/Blog/randomPosts"
 import SharingButtons from "../components/UI/shareButton"
@@ -26,7 +26,7 @@ marked.setOptions({
         breaks: true,
 });
 
-  const parsedSouce = marked(source).replace(/replaced_text/g, '');
+  // const parsedSouce = marked(source).replace(/replaced_text/g, '');
 
   return (
     <Layout>

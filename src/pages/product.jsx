@@ -1,9 +1,9 @@
 import React,{useEffect,useState} from "react"
 // import {Header} from "../components/Header/Header"
-import {graphql,Link} from "gatsby"
+import {graphql} from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components";
-import { Product, IntroduceCircle,Pankuzu} from "../components/index";
+import { Product, IntroduceCircle} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { SubTitle, Description} from "../style/GlobalStyle";
@@ -11,24 +11,6 @@ import {Trans} from "gatsby-plugin-react-i18next"
 import { Button } from "../components/Button";
 
 
-const ProductImg = styled(Img)`
-    width:90%;
-    margin:0 auto;
-`
-const TextButton = styled.div`
- text-align:right;
- border:1px solid #ccc;
- padding:10px 0;
-height:90px;
- cursor: pointer;
- transition:0.3s;
- margin:auto auto 0 0;
- &:hover:not(:disabled){
-  color:white;
-  background:black;
-  border:1px solid rgba(0,0,0,0)
-}
-`
 
 export default ({ data, location }) => {
   const [isEn,setIsEn] = useState(false)

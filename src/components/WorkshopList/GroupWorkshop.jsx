@@ -2,8 +2,8 @@ import React from "react"
 
 import { SubTitle,Description,Nav } from "../../style/GlobalStyle";
 import { Button } from "../Button/styles";
-import { paintCaution } from "./WorkshopData";
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+
+import {Trans} from 'gatsby-plugin-react-i18next';
 const GroupWorkshop = ({data}) => {
 
   return (
@@ -22,7 +22,7 @@ const GroupWorkshop = ({data}) => {
           </Trans>
         </Description>
         <div className="space-l"/>
-        <a href="https://edo-fuurin.com/wp-content/uploads/2020/05/2007.taiken2.pdf" target="_blank"><Button>体験学習申し込み FAX</Button>
+        <a href="http://www.sam.hi-ho.ne.jp/maruyosi/2007.taiken2.pdf" target="_blank"><Button>体験学習申し込み FAX</Button>
 
         </a>
          <div className="space-l"/>

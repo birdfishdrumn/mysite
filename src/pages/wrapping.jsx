@@ -111,6 +111,17 @@ query {
       }
     }
   }
-
+    naire: file(relativePath: {eq: "productImg/naire.jpg"}){
+    childImageSharp {
+      fluid(maxWidth: 200) {
+...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+      original{
+        src
+        height
+        width
+      }
+    }
+  }
 
 }`

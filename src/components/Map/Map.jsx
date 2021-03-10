@@ -6,7 +6,7 @@ import { Description, MinTitle } from "../../style/GlobalStyle";
 import PlaceInfo from "./PlaceInfo";
 import styled from "styled-components";
 import { Button } from "../Button";
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+import {Trans,Link} from 'gatsby-plugin-react-i18next';
 // const config = require('gatsby-plugin-config');
 
 

@@ -1,7 +1,6 @@
 import React,{useEffect,useState} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
-import Img from "gatsby-image"
 import Aos from "aos";
 import { IconButton } from "@material-ui/core";
 import StoreIcon from '@material-ui/icons/Store';

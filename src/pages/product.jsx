@@ -2,7 +2,6 @@ import React,{useEffect,useState} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
 import Img from "gatsby-image"
-import styled from "styled-components";
 import { Product, IntroduceCircle} from "../components/index";
 import SEO from "../components/seo"
 import Layout from "../components/layout"

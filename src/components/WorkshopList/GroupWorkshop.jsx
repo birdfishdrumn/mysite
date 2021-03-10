@@ -1,10 +1,10 @@
 import React from "react"
 
-import { SubTitle,Description,Nav } from "../../style/GlobalStyle";
+import { SubTitle,Description } from "../../style/GlobalStyle";
 import { Button } from "../Button/styles";
 
 import {Trans} from 'gatsby-plugin-react-i18next';
-const GroupWorkshop = ({data}) => {
+const GroupWorkshop = () => {
 
   return (
 

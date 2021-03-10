@@ -1,7 +1,7 @@
 import React from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
-import Img from "gatsby-image"
+
 
 import {ProductTab ,FloatingAction} from "../components/index";
 import SEO from "../components/seo"

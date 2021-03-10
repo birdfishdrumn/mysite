@@ -1,6 +1,6 @@
 import React from "react"
 import {graphql,useStaticQuery} from "gatsby"
-import { GridList, ScrollItem, SubTitle} from "../../style/GlobalStyle";
+import { GridList, ScrollItem} from "../../style/GlobalStyle";
 import WindBellCard from "./WindBellCard";
 import { Language,Name } from "./Language"
 const SeasonFlower = ({change,language}) => {

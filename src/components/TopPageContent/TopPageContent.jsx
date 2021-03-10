@@ -2,7 +2,7 @@ import React,{useEffect} from 'react'
 import {  Description, ProductColumn,DescriptionFlex, Figure, MinTitle } from "../../style/GlobalStyle"
 import Img from "gatsby-image"
 import { Button } from "../Button/styles";
-import { Trans, useTranslation, Link } from 'gatsby-plugin-react-i18next';
+import { Trans, Link } from 'gatsby-plugin-react-i18next';
 import Image from "../minImage"
 import Aos from "aos"
 import styled from "styled-components";

@@ -3,7 +3,7 @@ import React from "react"
 import {SubTitle,Description,Nav,Allow } from "../../style/GlobalStyle";
 
 import { RemoteWorkshopFlow, remoteSummary, remoteCaution } from "./WorkshopData";
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+import {Trans} from 'gatsby-plugin-react-i18next';
 const BlowGlassWorkshop = ({data}) => {
 
   return (

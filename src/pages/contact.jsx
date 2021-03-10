@@ -7,7 +7,7 @@ import {Contact} from "../components/index"
 
 
 
-export default ({data})=>{
+export default ()=>{
 
 
   return (

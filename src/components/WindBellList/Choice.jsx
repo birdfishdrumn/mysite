@@ -1,7 +1,6 @@
 import React from 'react'
 import { SubTitle, Description,MinTitle } from "../../style/GlobalStyle";
 import { Trans } from "gatsby-plugin-react-i18next"
-import Image from "../image"
 import styled from "styled-components";
 
 const Author = styled.p`

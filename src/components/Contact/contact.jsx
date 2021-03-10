@@ -1,26 +1,17 @@
  import React, { useState,useCallback,useContext } from "react"
-import TextField from "@material-ui/core/TextField";
+
 import 'date-fns';
-import { makeStyles } from '@material-ui/core/styles';
+
 import TextInput from "../UI/textInput"
 import Button from "@material-ui/core/Button";
-import DateFnsUtils from '@date-io/date-fns';
-import jaLocale from "date-fns/locale/ja";
+
 import {SubTitle} from "../../style/GlobalStyle"
 
 import { FirebaseContext } from "../../firebase";
 
 
-const useStyles = makeStyles((theme) => ({
 
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 200,
-  },
-}));
-
-const Contact = ({workshop,dialog}) => {
+const Contact = ({dialog}) => {
 
 
    const [name, setName] = useState("");
@@ -29,7 +20,6 @@ const Contact = ({workshop,dialog}) => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const classes = useStyles()
 
   const { firebase } = useContext(FirebaseContext);
   const inputName = useCallback(

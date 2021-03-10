@@ -5,7 +5,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description,TwoColumn,Figure,MinTitle} from "../style/GlobalStyle";
 import { Trans} from 'gatsby-plugin-react-i18next';
-import styled from "styled-components"
 import Image from "../components/image";
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import {  ListColumn, Description, MinTitle } from "../../style/GlobalStyle";
 // import { Link } from "gatsby";
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+import {Trans,Link} from 'gatsby-plugin-react-i18next';
 import { Button } from "../Button";
 import Image from "../image"
 import {WorkshopData} from "./WorkshopData"

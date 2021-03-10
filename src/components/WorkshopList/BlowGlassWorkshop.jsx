@@ -1,11 +1,11 @@
 import React  from "react"
 
 import { SubTitle,Description,Nav,Allow } from "../../style/GlobalStyle";
-import { CarouselSlider } from "../index";
-import { BlowGlassWorkshopData, blowGlassSummary, blowGlassCaution } from "./WorkshopData";
-import { Trans, useTranslation, Link } from 'gatsby-plugin-react-i18next';
 
-const BlowGlassWorkshop = ({data}) => {
+import { BlowGlassWorkshopData, blowGlassSummary, blowGlassCaution } from "./WorkshopData";
+import { Trans } from 'gatsby-plugin-react-i18next';
+
+const BlowGlassWorkshop = () => {
 
   return (
 

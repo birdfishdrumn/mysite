@@ -1,6 +1,5 @@
 import React from "react"
 import {graphql,useStaticQuery} from "gatsby"
-import BlogCard from "../../Blog/blogCard"
 import  NewsCard from "./NewsCard";
 const NewsCardList = () => {
   const data = useStaticQuery(graphql`

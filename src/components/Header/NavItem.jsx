@@ -1,11 +1,10 @@
 import React from "react"
 import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
-import { MobileNav } from "./style";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
-  faFacebookSquare,
 faInstagram
 } from "@fortawesome/free-brands-svg-icons"
 import {SNS} from "../Footer/style"

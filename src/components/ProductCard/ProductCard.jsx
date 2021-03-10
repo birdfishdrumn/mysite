@@ -1,8 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Img from "gatsby-image"
+
 import {Link} from "gatsby"
-import { ProductImage, Content, Image, ProductText,ProductButton,ProductDescription } from "./style";
+import { ProductImage, Image, ProductText,ProductButton,ProductDescription } from "./style";
 
 
 

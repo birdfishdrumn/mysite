@@ -2,7 +2,7 @@ import React,{useEffect} from 'react'
 import {  ProcessWrapper, ImageContainer, ProcessDescription } from "./style"
 import Aos from "aos";
 import Image from "../minImage"
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+import {Trans} from 'gatsby-plugin-react-i18next';
 const ProcessCard = ({  description, reverse, content, image }) => {
   useEffect(() => {
     Aos.init({ duration: 1000, startEvent: 'DOMContentLoaded', once: true });

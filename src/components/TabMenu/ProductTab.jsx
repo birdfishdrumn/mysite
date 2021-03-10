@@ -1,4 +1,4 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -6,7 +6,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 import Box from '@material-ui/core/Box';
-import { Link } from "gatsby";
+
 import { Fuurin,Earring,Poppen,Tsuridai,WorkshopKit } from "../WindBellList/index";
 
 function TabPanel(props) {
@@ -60,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ScrollableTabsButtonForce({num,location,data}) {
 
-   const [isHeightOver, setIsHeightOver] = React.useState(false);
 
   // useEffect(() => {
   //   const scrollAction = () => {

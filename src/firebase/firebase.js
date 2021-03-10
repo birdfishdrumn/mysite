@@ -1,5 +1,4 @@
 import firebaseConfig from "./config";
-import axios from 'axios';
 import firebase from "firebase/app"
 import { navigate } from "gatsby";
 

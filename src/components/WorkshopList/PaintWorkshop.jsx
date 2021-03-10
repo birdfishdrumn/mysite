@@ -3,7 +3,7 @@ import React from "react"
 import { SubTitle,Description,Nav,Allow } from "../../style/GlobalStyle";
 // import { CarouselSlider } from "../index";
 import { PaintWorkshopData, paintSummary, paintCaution } from "./WorkshopData";
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+import {Trans} from 'gatsby-plugin-react-i18next';
 const PaintWorkshop = ({data}) => {
 
   return (

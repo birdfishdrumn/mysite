@@ -1,7 +1,6 @@
 import React from 'react'
-import {ProcessGrid, ProcessDescription } from "./style"
+import {ProcessGrid } from "./style"
 import ProcessCard from "./ProcessCard";
-import Img from "gatsby-image"
 import { processData, paintProcessData} from "./processData";
 
 

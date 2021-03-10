@@ -1,12 +1,11 @@
-import React,{useEffect,useState} from "react"
+import React,{useEffect} from "react"
 // import {Header} from "../components/Header/Header"
 import {graphql} from "gatsby"
-import Img from "gatsby-image"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import Aos from "aos";
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
-import { News,Gallery,Featured,Content,SubTitle, Description,ImageText} from "../style/GlobalStyle"
+import { News,Featured,Content,SubTitle, Description,ImageText} from "../style/GlobalStyle"
 import { Button } from "../components/Button/styles";
 import NewsCardList  from "../components/UI/NewsCard/NewsCardList";
 import FeatureList from "../components/FeatureList/FeatureList";
@@ -188,7 +187,7 @@ query {
   narabi: file(relativePath: {eq: "Introduce/huurin_etsuke_overlay.jpg"}){
     publicURL
     childImageSharp {
-      fluid(maxWidth: 320) {
+      fluid(maxWidth: 200) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

@@ -1,69 +1,18 @@
 import React from "react";
-
-import Img from "gatsby-image"
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description,TwoColumn,Figure} from "../style/GlobalStyle";
-import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
-import styled from "styled-components"
+import { Trans} from 'gatsby-plugin-react-i18next';
 import Image from "../components/minImage";
 import { Choice } from "../components/WindBellList/index";
 
 
-const TextNav = styled.ul`
- margin-top:30px;
-text-align:center;
->li{
-  margin:5px;
-  font-size:1.3rem;
-   font-weight:bold;
-}
->p{
-  margin:10px;
-  >span{
-  font-size:0.9rem;
-  color:red;
-}
-}
-
-`
-
-// const ConflictImageWrapper = styled.div`
-// position:relative;
-
-// `
-
-const ImageA = styled(Img)`
 
 
-    position:    absolute;
-    z-index:    0;
-    top:        0px;
-    left:        0px;
-  display:block;
-   width:350px;
-   margin-top:20px;
-       @media(max-width:767px){
-      width:270px;
-    }
-`
 
 
-const ImageB = styled(Img)`
 
 
-      position:    absolute;
-    z-index:    999;
-    top:        -80px;
-    right:        40px;
-    display:block;
-    width:200px;
-    @media(max-width:767px){
-      width:150px;
-       top:        -50px;
-    right:        20px;
-    }
-`
 
 export default ({data,location})=>{
 

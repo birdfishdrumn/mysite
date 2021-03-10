@@ -1,10 +1,10 @@
 import React from 'react'
 import { TwoColumn, SubTitle, Description ,Figure,Nav} from "../../style/GlobalStyle";
 import Img from "gatsby-image"
-import Image from "../image"
+
 import styled from "styled-components"
 import { accessData } from "./accessData"
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+import {Trans} from 'gatsby-plugin-react-i18next';
 import { Map } from "../index"
 import ShopImg from "../../images/shop.jpg"
 const AccessMap = styled.div`

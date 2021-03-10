@@ -1,6 +1,4 @@
 import React  from 'react'
-import {graphql,useStaticQuery} from "gatsby"
-import Img from "gatsby-image"
 import { IntroduceCircle } from "../index";
 import styled from "styled-components"
 import { SubTitle, Description,GridList,ItemA,ItemB,ItemC,GridContainer,MinTitle} from "../../style/GlobalStyle";
@@ -19,24 +17,8 @@ const ImageContainer = styled.div`
  }
 `
 
-const  WorkshopKit= ({}) => {
-    const data = useStaticQuery(graphql`
-query kitQuery{
-    kikyou: file(relativePath: {eq: "iro2.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 400) {
+const  WorkshopKit= () => {
 
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
-   }
-   `)
   return (
 
     <div>
@@ -59,7 +41,7 @@ query kitQuery{
         <div className="space-l" />
         <MinTitle><Trans>用意する物</Trans></MinTitle>
           <div className="space-l" />
-        <IntroduceCircle data={data} />
+        <IntroduceCircle  />
 
       </section>
       <section>

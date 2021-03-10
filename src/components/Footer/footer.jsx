@@ -1,5 +1,5 @@
 import React from "react"
-import {graphql,useStaticQuery,Link} from "gatsby"
+import {Link} from "gatsby"
 
 import { Logo } from "../index"
 import {FooterWrapper,FooterContainer,SNS,ContactIcon,FooterNav,Privacy} from "./style"
@@ -7,7 +7,7 @@ import { Description } from "../../style/GlobalStyle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
-  faFacebookSquare,
+
 faInstagram
 } from "@fortawesome/free-brands-svg-icons"
 import PhoneIcon from '@material-ui/icons/Phone';

@@ -1,5 +1,4 @@
  import React, { useState,useCallback,useContext } from "react"
-import TextField from "@material-ui/core/TextField";
 import 'date-fns';
 import { makeStyles } from '@material-ui/core/styles';
 import TextInput from "../UI/textInput"
@@ -8,7 +7,6 @@ import DateFnsUtils from '@date-io/date-fns';
 import jaLocale from "date-fns/locale/ja";
 
 import InputLabel from '@material-ui/core/InputLabel';
-import { SubTitle } from "../../style/GlobalStyle"
 import FormControl from '@material-ui/core/FormControl';
 import {
   MuiPickersUtilsProvider,
@@ -83,12 +81,7 @@ const Reservation = () => {
     },
     [setPhone]
     );
-    const inputPeople = useCallback(
-    (event) => {
-      setPeople(event.target.value);
-    },
-    [setPeople]
-    );
+
     const inputMessage = useCallback(
     (event) => {
       setMessage(event.target.value);

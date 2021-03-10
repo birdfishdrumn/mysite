@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 import { History } from "../components/PageComponents/index";
 import {TwoColumn,SubTitle,Figure,Description,Youtube} from "../style/GlobalStyle"
-import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
+import {Trans} from 'gatsby-plugin-react-i18next';
 
 
 

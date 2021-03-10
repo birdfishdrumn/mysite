@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-regular-svg-icons";
-import { Article,Time,PostFigure } from "./style"
+
+import { Article,Time } from "./style"
 import {Description, MinTitle} from "../../style/GlobalStyle"
 export default props => {
 

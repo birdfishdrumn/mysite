@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import Img from "gatsby-image"
 import { Description } from '../../style/GlobalStyle'
 
 export const ProcessWrapper = styled.div `

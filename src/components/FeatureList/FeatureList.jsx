@@ -1,9 +1,9 @@
-import React, { useEffect }from 'react'
+import React from 'react'
 import Feature from "./Feature"
 import { List } from "./style"
 
 
-const FeatureList = ({ data }) => {
+const FeatureList = () => {
 
   const dataList = [
     { image: "garasuhuki-top.jpg", description: "一つ一つ型を使わず、宙で形を整えて作ります。そのため音も違います。",content:"宙吹き" },

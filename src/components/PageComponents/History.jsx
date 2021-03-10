@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { Description,MinTitle,MaxTwoColumn,SubTitle,Figure,} from '../../style/GlobalStyle'
-import Img from "gatsby-image"
+import { Description,MinTitle,MaxTwoColumn,Figure,} from '../../style/GlobalStyle'
+
 import {HistoryImage } from "./style"
-import { Trans, useTranslation, Link } from 'gatsby-plugin-react-i18next';
+import { Trans} from 'gatsby-plugin-react-i18next';
 import Image from "../minImage"
 
-const History = ({data}) => {
+const History = () => {
 
 
 

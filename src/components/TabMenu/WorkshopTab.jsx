@@ -7,7 +7,6 @@ import Tab from '@material-ui/core/Tab';
 
 
 import Box from '@material-ui/core/Box';
-import { Link } from "gatsby";
 import { PaintWorkshop,RemoteWorkshop,BlowGlassWorkshop,GroupWorkshop} from "../WorkshopList/index";
 
 

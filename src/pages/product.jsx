@@ -94,7 +94,7 @@ query {
 
     fuurin: file(relativePath: {eq: "kingyo4.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 200) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -107,7 +107,7 @@ query {
   }
     earring: file(relativePath: {eq: "productImg/earring_top.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 200) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -120,7 +120,7 @@ query {
   }
       poppen: file(relativePath: {eq: "productImg/poppen_top.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 200) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -133,7 +133,7 @@ query {
   }
      kit: file(relativePath: {eq: "Introduce/taiken_kit.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 200) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -146,7 +146,7 @@ query {
   }
         tsuridai: file(relativePath: {eq: "Introduce/tsuridai_kingyo.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 200) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

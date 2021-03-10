@@ -4,7 +4,7 @@ import { IntroduceContainer,IntroduceAnimal,FamilyImage,FamilyDescription,Flex }
 import { MinTitle } from "../../style/GlobalStyle";
 import {TimeLine} from "../index";
 import {familyData} from "./familyData"
-import Image from "../image"
+import Image from "../minImage"
 
 const family = ({data}) => {
 

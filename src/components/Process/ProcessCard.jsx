@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import {  ProcessWrapper, ImageContainer, ProcessDescription } from "./style"
 import Aos from "aos";
-import Image from "../image"
+import Image from "../minImage"
 import {Trans, useTranslation,Link} from 'gatsby-plugin-react-i18next';
 const ProcessCard = ({  description, reverse, content, image }) => {
   useEffect(() => {

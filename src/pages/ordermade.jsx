@@ -171,7 +171,7 @@ query {
   }
       order2: file(relativePath: {eq: "productImg/order_sakana.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 200) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
       original{
@@ -183,7 +183,7 @@ query {
   }
         order: file(relativePath: {eq: "productImg/fuujin.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 200) {
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
       original{

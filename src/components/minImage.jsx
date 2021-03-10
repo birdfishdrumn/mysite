@@ -8,7 +8,7 @@ export default props => {
   query {
     allImageSharp {
       nodes{
-        fluid(maxWidth:320){
+        fluid(maxWidth:200){
           originalName
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }

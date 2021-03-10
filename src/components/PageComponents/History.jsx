@@ -4,7 +4,7 @@ import { Description,MinTitle,MaxTwoColumn,SubTitle,Figure,} from '../../style/G
 import Img from "gatsby-image"
 import {HistoryImage } from "./style"
 import { Trans, useTranslation, Link } from 'gatsby-plugin-react-i18next';
-import Image from "../image"
+import Image from "../minImage"
 
 const History = ({data}) => {
 

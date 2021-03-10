@@ -92,7 +92,7 @@ export const query = graphql`
 query {
   about: file(relativePath: {eq: "Introduce/glass_plane_top.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 1600) {
+      fluid(maxWidth: 800) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -105,7 +105,7 @@ query {
   }
     works: file(relativePath: {eq: "kingyo_re.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 800) {
+      fluid(maxWidth: 320) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -131,7 +131,7 @@ query {
   }
       history: file(relativePath: {eq: "garasuhuki.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 800) {
+      fluid(maxWidth: 320) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

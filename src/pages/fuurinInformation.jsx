@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 import { SubTitle, Description,TwoColumn,Figure} from "../style/GlobalStyle";
 import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
-import Image from "../components/image";
+import Image from "../components/minImage";
 import { Choice } from "../components/WindBellList/index";
 
 

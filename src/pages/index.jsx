@@ -169,7 +169,7 @@ query {
 
   kikyou: file(relativePath: {eq: "kikyou.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 200) {
+      fluid(maxWidth: 100) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -177,7 +177,7 @@ query {
   }
   gizagiza: file(relativePath: {eq: "kirikuchi_square.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 200) {
+      fluid(maxWidth: 100) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -188,7 +188,7 @@ query {
   narabi: file(relativePath: {eq: "Introduce/huurin_etsuke_overlay.jpg"}){
     publicURL
     childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 320) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -197,7 +197,7 @@ query {
 
     online: file(relativePath: {eq: "Introduce/onlineshop_top.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 320) {
+      fluid(maxWidth: 300) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
@@ -205,7 +205,7 @@ query {
   }
       shouhin: file(relativePath: {eq: "Introduce/shouhin_top.jpg"}){
     childImageSharp {
-      fluid(maxWidth: 320) {
+      fluid(maxWidth: 300) {
 
 ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }

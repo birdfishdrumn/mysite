@@ -181,18 +181,6 @@ export const query = graphql`
   query {
     taiken: file(relativePath: { eq: "taiken.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
-        original {
-          src
-          height
-          width
-        }
-      }
-    }
-    works: file(relativePath: { eq: "kingyo_re.jpg" }) {
-      childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
@@ -203,6 +191,7 @@ export const query = graphql`
         }
       }
     }
+
 
   }
 `

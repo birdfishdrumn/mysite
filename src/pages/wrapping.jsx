@@ -111,28 +111,6 @@ query {
       }
     }
   }
-    naire: file(relativePath: {eq: "productImg/naire.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 200) {
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
-      hang: file(relativePath: {eq: "productImg/huurin_hang_kiriko.jpg"}){
-    childImageSharp {
-      fluid(maxWidth: 400) {
-...GatsbyImageSharpFluid_withWebp_tracedSVG
-      }
-      original{
-        src
-        height
-        width
-      }
-    }
-  }
+
+
 }`

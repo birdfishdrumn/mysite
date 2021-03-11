@@ -106,7 +106,7 @@ export default ({ data }) => {
           <section className="photo">
 
       <figure>
-          {/* <Img fluid={data.narabi.childImageSharp.fluid} alt="" style={{ height: "100%" }} /> */}
+
           <Parallax bgImage={data.narabi.publicURL} strength={100} alt="" style={{ height: "100%" }}>
             <ParallaxContainer>
               <ParallaxText>
@@ -184,7 +184,7 @@ query {
 }
 
 
-  narabi: file(relativePath: {eq: "Introduce/huurin_etsuke_overlay.jpg"}){
+  narabi: file(relativePath: {eq: "overlay.jpg"}){
     publicURL
     childImageSharp {
       fluid(maxWidth: 200) {

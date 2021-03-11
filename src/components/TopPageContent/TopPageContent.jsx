@@ -1,10 +1,10 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import {  Description, ProductColumn,DescriptionFlex, Figure, MinTitle } from "../../style/GlobalStyle"
 import Img from "gatsby-image"
 import { Button } from "../Button/styles";
 import { Trans, Link } from 'gatsby-plugin-react-i18next';
 import Image from "../minImage"
-import Aos from "aos"
+
 import styled from "styled-components";
 
 
@@ -30,17 +30,14 @@ const ProductTextFlex = styled(DescriptionFlex)`
 
 
 const TopPageContent = ({ data }) => {
-    const onlineOpen = () => {
+  const onlineOpen = () => {
     const url = "https://maruyosi.theshop.jp/"
-      window.open(url, '_blank')
+    window.open(url, '_blank')
+  }
 
-    }
-    useEffect(() => {
-    Aos.init({ duration: 1000, startEvent: "DOMContentLoaded", once: true })
-  }, [])
   return (
     <div>
-       <ProductColumn  data-aos="fade-up" responsive margin ="right" more >
+       <ProductColumn   responsive margin ="right" more >
          <ProductTextFlex>
              <div className="center">
 
@@ -59,7 +56,7 @@ const TopPageContent = ({ data }) => {
           </div>
       </ProductColumn>
       <div className="space-m"/>
-          <ProductColumn  data-aos="fade-up"  responsive margin="left" more reverse>
+          <ProductColumn    responsive margin="left" more reverse>
         <ProductTextFlex reverse>
 
 
@@ -80,7 +77,7 @@ const TopPageContent = ({ data }) => {
           </div>
       </ProductColumn>
        <div className="space-m"/>
-         <ProductColumn  data-aos="fade-up"  responsive more margin="right">
+         <ProductColumn    responsive more margin="right">
                 <ProductTextFlex>
              <div className="center">
 

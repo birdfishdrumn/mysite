@@ -2,11 +2,8 @@ import React from "react"
 import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
-faInstagram
-} from "@fortawesome/free-brands-svg-icons"
+import { TwitterIcon,InstagramIcon} from '@material-ui/icons';
+
 import {SNS} from "../Footer/style"
 const MobileLang = styled.ul`
 font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
@@ -74,12 +71,12 @@ export const NavItem = ({ lang,mobile }) => {
         <SNS color flex>
           <li>
             <a href="https://twitter.com/@maruyosi_fuurin" target="blank">
-              <FontAwesomeIcon color="#1DA1F2" icon={faTwitter} />
+              <TwitterIcon/>
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com/maruyosi_edofuurin" target="blank">
-              <FontAwesomeIcon color="#262626" icon={faInstagram} />
+             <InstagramIcon/>
             </a>
           </li>
         </SNS>

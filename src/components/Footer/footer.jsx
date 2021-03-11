@@ -4,12 +4,10 @@ import {Link} from "gatsby"
 import { Logo } from "../index"
 import {FooterWrapper,FooterContainer,SNS,ContactIcon,FooterNav,Privacy} from "./style"
 import { Description } from "../../style/GlobalStyle";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faTwitter,
 
-faInstagram
-} from "@fortawesome/free-brands-svg-icons"
+import { TwitterIcon,InstagramIcon} from '@material-ui/icons';
+
+
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import { NavItem } from "../Header/NavItem"
@@ -52,13 +50,13 @@ const Footer = () => {
 		<SNS>
 			<li>
 				<a href="https://twitter.com/@maruyosi_fuurin" target="blank">
-					<FontAwesomeIcon icon={ faTwitter} />
+				 <TwitterIcon/>
 					 <span>Twitter</span>
 				</a>
 			</li>
 			<li>
 				<a href="https://www.instagram.com/maruyosi_edofuurin" target="blank" >
-						<FontAwesomeIcon icon={ faInstagram} />
+						<InstagramIcon/>
 					 <span>Instagram</span>
 				</a>
 			</li>

@@ -89,7 +89,7 @@ export default ({ data }) => {
           <COVID_19/>
 
           <div className="space-xl" />
-          <SubTitle  data-aos="fade-up" hannari><Trans>良い音のひみつ</Trans></SubTitle>
+          <SubTitle  hannari><Trans>良い音のひみつ</Trans></SubTitle>
           <div className="space-l" />
            <div className="space-l" />
           <div className="center">

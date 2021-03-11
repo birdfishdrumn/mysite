@@ -365,14 +365,16 @@ svg {
     padding-bottom: 40px;
 }
 
-.content .container {
-    max-width: 785px;
-}
 
-.content h1 {
+/* .content .container {
+    max-width: 785px;
+} */
+
+
+/* .content h1 {
     margin-bottom: 25px;
     font-size: 24px;
-}
+} */
 
 .postbody>* {
     margin-bottom: 2em;
@@ -405,10 +407,6 @@ svg {
     .content {
         padding-top: 70px;
         padding-bottom: 60px;
-    }
-    .content h1 {
-        margin-bottom: 40px;
-        font-size: 38px;
     }
     .postbody h2 {
         font-size: 28px;

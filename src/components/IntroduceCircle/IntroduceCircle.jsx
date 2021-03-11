@@ -2,7 +2,7 @@ import React from 'react'
 import CircleCard from "./CircleCard"
 import { List } from "./style"
 
-const FeatureList = ({ data,product}) => {
+const FeatureList = ({ product}) => {
   const Product = [
     { image: "naire.jpg", description: "まるよし風鈴では風鈴に特別な名入れやオーダーメイドのもの受け付けております。大切なへ方のプレゼントにお勧めいたします。",title:"名入れ・オーダーメイド",link:"/ordermade" },
     { image: "fuurin_arekore.jpg", description: "風鈴の吊るし場所、ご購入の際の選び方、割れてしまった場合、修理のことなどはこちらからどうぞ。",title:"風鈴の吊るし方、選び方",link:"/fuurinInformation"},

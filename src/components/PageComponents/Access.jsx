@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { accessData } from "./accessData"
 import {Trans} from 'gatsby-plugin-react-i18next';
-import { Map } from "../index"
+
 import ShopImg from "../../images/shop.jpg"
 const AccessMap = styled.div`
  margin:0 auto;
@@ -14,10 +14,42 @@ const AccessMap = styled.div`
    width:85%;
  }
 `
+const List = styled.ul`
+ margin:0 auto;
+ max-width:700px;
+ @media(max-width:700px){
+   width:100%;
+   /* padding:0 10px; */
+ }
+
+`
+const ListItem = styled.li`
+justify-content:center;
+padding:20px 5px;
+display:flex;
+border-bottom:solid 1px #eee;
+>p{
+   font-family:'游明朝','Yu Mincho','Hiragino Mincho Pro',sans-serif;
+   font-size:1rem;
+   margin:0 20px;
+}
+>p:first-child{
+
+ text-align:left;
+ flex-basis: 40%;
+}
+>p:last-child{
+ flex-basis: 60%;
+  text-align:left;
+  flex-flow:wrap;
+}
+`
+
+
 
 const Access = ({data}) => {
   return (
-    <div>
+    <div >
       <section>
         <div className="space-m"/>
         <TwoColumn>
@@ -61,8 +93,38 @@ const Access = ({data}) => {
           <p>お店には駐車場がないので、申し訳ありませんが、お近くの白線などに駐車お願い致します。</p>
         </Nav>
       </section>
-      <div className="space-l"/>
-      <Map noBtn/>
+      <div className="space-l" />
+      <SubTitle>店舗概要</SubTitle>
+      <div className="space-m" />
+      <List>
+        <ListItem>
+          <p>店舗名</p><p>篠原まるよし風鈴</p>
+        </ListItem>
+         <ListItem>
+          <p>代表者</p><p>篠原　正義</p>
+        </ListItem>
+          <ListItem>
+          <p>創設</p><p>平成2年</p>
+        </ListItem>
+            <ListItem>
+          <p>所在地</p><p>東京都台東区台東4-25-10</p>
+        </ListItem>
+         <ListItem>
+          <p>電話番号</p><p>03-3832-0227</p>
+        </ListItem>
+            <ListItem>
+          <p>メール</p><p> maruyosi@sam.hi-ho.ne.jp</p>
+        </ListItem>
+               <ListItem>
+          <p>施設概要</p><p>店舗1F、体験場2F
+          </p>
+        </ListItem>
+              <ListItem>
+          <p>施設設備</p><p>トイレ一室、駐車場無し
+          </p>
+       </ListItem>
+    </List>
+      {/* <Map noBtn/> */}
     </div>
   )
 }

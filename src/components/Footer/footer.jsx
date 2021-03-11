@@ -5,8 +5,8 @@ import { Logo } from "../index"
 import {FooterWrapper,FooterContainer,SNS,ContactIcon,FooterNav,Privacy} from "./style"
 import { Description } from "../../style/GlobalStyle";
 
-import { TwitterIcon,InstagramIcon} from '@material-ui/icons';
-
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
@@ -50,13 +50,13 @@ const Footer = () => {
 		<SNS>
 			<li>
 				<a href="https://twitter.com/@maruyosi_fuurin" target="blank">
-				 <TwitterIcon/>
-					 <span>Twitter</span>
+       	<TwitterIcon style={{fontSize:"35px"}}/>
+					 <span >Twitter</span>
 				</a>
 			</li>
 			<li>
 				<a href="https://www.instagram.com/maruyosi_edofuurin" target="blank" >
-						<InstagramIcon/>
+						<InstagramIcon  style={{fontSize:"35px"}}/>
 					 <span>Instagram</span>
 				</a>
 			</li>

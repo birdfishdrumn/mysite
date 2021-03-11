@@ -2,7 +2,8 @@ import React from "react"
 import { Trans, Link, useI18next } from 'gatsby-plugin-react-i18next';
 import styled from "styled-components"
 
-import { TwitterIcon,InstagramIcon} from '@material-ui/icons';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import TwitterIcon from '@material-ui/icons/Twitter';
 
 import {SNS} from "../Footer/style"
 const MobileLang = styled.ul`
@@ -71,12 +72,12 @@ export const NavItem = ({ lang,mobile }) => {
         <SNS color flex>
           <li>
             <a href="https://twitter.com/@maruyosi_fuurin" target="blank">
-              <TwitterIcon/>
+              <TwitterIcon style={{fontSize:"40px"}}/>
             </a>
           </li>
           <li>
             <a href="https://www.instagram.com/maruyosi_edofuurin" target="blank">
-             <InstagramIcon/>
+             <InstagramIcon style={{fontSize:"40px"}}/>
             </a>
           </li>
         </SNS>

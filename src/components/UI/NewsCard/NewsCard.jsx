@@ -2,8 +2,6 @@ import React from 'react';
 
 import { Information,InfoTitle} from "./style";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faClock } from "@fortawesome/free-solid-svg-icons"
 
 import { Link } from "gatsby";
 const  NewsCard = (props) =>{
@@ -32,7 +30,7 @@ const  NewsCard = (props) =>{
 
     <Information>
      <dl>
-<dt> {props.dataTime && (<time dataTime={props.dataTime}> <FontAwesomeIcon icon={faClock} />    {props.dateJP}</time>)}</dt>
+<dt> {props.dataTime && (<time dataTime={props.dataTime}>    {props.dateJP}</time>)}</dt>
 <InfoTitle><Link to={`/blog/post/${props.slug}`}>{props.title}</Link></InfoTitle>
 </dl>
       </Information>

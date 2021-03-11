@@ -15,7 +15,7 @@ const Choice = () => {
         <SubTitle><Trans>風鈴の選び方</Trans></SubTitle>
 
         <Description left width="half"><Trans>
-          <Author>記事を書いた人:篠原　通宏</Author><br/><br/>
+          <Author>記事を書いた人:篠原 通宏</Author><br/><br/>
           江戸風鈴をお家に一つ、と思うと種類がたくさんあって悩みますよね。そんな時選ぶ基準を専門家視点でお伝えすると、<br /><br /><br />
         ・①音から選ぶ<br/>
 

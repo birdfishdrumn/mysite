@@ -12,12 +12,10 @@ import GridOnIcon from '@material-ui/icons/GridOn';
 import Tooltip from '@material-ui/core/Tooltip';
 import { IconButton } from "@material-ui/core";
 import { makeStyles,withStyles } from '@material-ui/core/styles';
-import Dialog from '@material-ui/core/Dialog';
-import MuiDialogTitle from '@material-ui/core/DialogTitle';
-import MuiDialogContent from '@material-ui/core/DialogContent';
+
 import FormControl from '@material-ui/core/FormControl';
-import Typography from '@material-ui/core/Typography';
-import CloseIcon from '@material-ui/icons/Close';
+
+
 import Select from '@material-ui/core/Select';
 // import SearchIcon from '@material-ui/icons/Search';
 // import NativeSelect from '@material-ui/core/NativeSelect';
@@ -66,28 +64,6 @@ const styles = (theme) => ({
     zIndex:"999"
   }
 });
-
-const DialogTitle = withStyles(styles)((props) => {
-  const { children, classes, onClose, ...other } = props;
-  return (
-    <MuiDialogTitle disableTypography className={classes.root} {...other}>
-      <Typography variant="h6">{children}</Typography>
-      {onClose ? (
-        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
-          <CloseIcon />
-        </IconButton>
-      ) : null}
-    </MuiDialogTitle>
-  );
-});
-
-
-
-const DialogContent = withStyles((theme) => ({
-  root: {
-    padding: theme.spacing(2),
-  },
-}))(MuiDialogContent);
 
 
 
@@ -203,7 +179,7 @@ event.target.value,
         <AnimalFilter change={change} language={language} />
          <div className="space-l" />
         {/* <SubTitle><Trans>新子丸、釣鐘型風鈴</Trans></SubTitle> */}
-        <TsuriganeFilter change={change} language={language} />
+        <TsuriganeFilter change={change} language={language}/>
          <div className="space-l" />
         <SubTitle><Trans>風琴</Trans></SubTitle>
         <FuukinFilter change={change} language={language}/>
@@ -211,17 +187,7 @@ event.target.value,
       {/* <div className="space-l" />
        <Choice/> */}
         <div className="space-l" />
-      <Dialog className={classes.dialog} nClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
 
-        </DialogTitle>
-
-        <DialogContent>
-
-        </DialogContent>
-
-
-      </Dialog>
 
     </div>
   )

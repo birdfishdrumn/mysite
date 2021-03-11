@@ -60,7 +60,7 @@ const AccordionDetails = withStyles((theme) => ({
   },
 }))(MuiAccordionDetails);
 
-const  QuestionAccordion = ({business,fuurin,history}) =>{
+const  QuestionAccordion = ({business,fuurin}) =>{
   const [expanded, setExpanded] = React.useState('');
 
   const handleChange = (panel) => (event, newExpanded) => {

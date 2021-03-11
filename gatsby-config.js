@@ -120,7 +120,7 @@ module.exports = {
                 i18nextOptions: {
                     debug: true,
                     lowerCaseLng: true,
-                    saveMissing: false,
+                    saveMissing: true,
                     interpolation: {
                         escapeValue: false // not needed for react as it escapes by default
                     },
@@ -144,6 +144,12 @@ module.exports = {
             resolve: `gatsby-plugin-lodash`,
             options: {
                 disabledFeatures: [`shorthands`, `cloning`],
+            },
+        },
+        {
+            resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+            options: {
+                devMode: true,
             },
         },
 

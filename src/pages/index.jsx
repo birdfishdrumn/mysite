@@ -78,7 +78,7 @@ export default ({ data }) => {
        <Trans>風を音に変える</Trans>
       </Content>
       <div className="center">
-          <Description large left data-aos="fade-up" width="half"><Trans>私たち篠原まるよし風鈴では家族で江戸時代から伝わる技術を受け継いで江戸風鈴を製作しています。</Trans><br /><br /><br />
+          <Description large left width="half"><Trans>私たち篠原まるよし風鈴では家族で江戸時代から伝わる技術を受け継いで江戸風鈴を製作しています。</Trans><br /><br /><br />
 
          <Trans>一つ一つ職人が気持ちを込めて作った風鈴は、ガラスならではの涼しげでリラックスできる軽やかな音と優しい絵柄で見る人を癒してくれるでしょう。暑い夏にゆったりしながら、そっと風鈴の音に耳を傾けてみませんか？</Trans>
       <br /> <br /> <br />

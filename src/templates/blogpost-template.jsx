@@ -5,8 +5,9 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faFolderOpen } from "@fortawesome/free-regular-svg-icons";
+
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
 // import BlogCard from "../components/Blog/blogCard"
 // import RandomPosts from "../components/Blog/randomPosts"
 import SharingButtons from "../components/UI/shareButton"
@@ -63,11 +64,11 @@ marked.setOptions({
           <SubTitle noSpace left>{data.contentfulWork.title}</SubTitle>
 
           <aside className="info">
-            <time dataTime={data.contentfulWork.date}><FontAwesomeIcon icon={faClock} />
+            <time dataTime={data.contentfulWork.date}>
               {data.contentfulWork.dateJP}</time>
             {/* カテゴリーの表示 */}
             <div className="cat">
-              <FontAwesomeIcon icon={faFolderOpen} />
+
               <ul>
                 <Link to={`/cat/${data.contentfulWork.category.slug}/`}>
                   <li className={data.contentfulWork.category.slug}>{data.contentfulWork.category.name}</li>

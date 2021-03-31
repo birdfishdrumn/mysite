@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import BlogCard from "../components/Blog/blogCard"
 import Pagenation from "../components/UI/pagenation";
 import { SubTitle } from "../style/GlobalStyle";
+
 export default ({ data, location, pageContext }) => {
 
 

@@ -97,7 +97,7 @@ exports.createPages = async({ graphql, actions, reporter }) => {
 
     // カテゴリー一覧ページのページネーションの設定
     blogresult.data.allContentfulCategory.edges.forEach(({ node }) => {
-        const catPostsPerPage = 2
+        const catPostsPerPage = 10
         const catPosts = node.work && node.work.length //カテゴリーに属した記事の件数
         const catPages = Math.ceil(catPosts / catPostsPerPage) //カテゴリーページの総数
         Array.from({ length: catPages }).forEach((_, i) => {

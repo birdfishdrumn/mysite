@@ -28,7 +28,7 @@ marked.setOptions({
 });
 
   // const parsedSouce = marked(source).replace(/replaced_text/g, '');
-
+console.log(data.contentfulWork.category.slug)
   return (
     <Layout>
       <SEO pagetitle={data.contentfulWork.title}
@@ -59,7 +59,7 @@ marked.setOptions({
           <div className="space-xl"/>
           </>
         }
-        {/* <div className="space-xl" /> */}
+
         <div className="container">
           <SubTitle noSpace left>{data.contentfulWork.title}</SubTitle>
 
@@ -76,6 +76,7 @@ marked.setOptions({
               </ul>
             </div>
           </aside>
+
 
           <div className="postbody">
             <p>

@@ -3,7 +3,7 @@ import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Aos from "aos"
-import "aos/dist/aos.css"
+// import "aos/dist/aos.css"
 import { Trans} from 'gatsby-plugin-react-i18next';
 import { Contact,FloatingAction } from "../components/index"
 import SEO from "../components/seo"

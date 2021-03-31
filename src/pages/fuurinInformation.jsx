@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { SubTitle, Description,TwoColumn,Figure} from "../style/GlobalStyle";
 import { Trans} from 'gatsby-plugin-react-i18next';
-import Image from "../components/minImage";
+import Image from "../components/image";
 import { Choice } from "../components/WindBellList/index";
 
 

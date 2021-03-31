@@ -6,7 +6,7 @@ import { IconButton } from "@material-ui/core";
 import StoreIcon from '@material-ui/icons/Store';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 import YouTubeIcon from '@material-ui/icons/YouTube';
-import "aos/dist/aos.css";
+
 
 import { Access,Family,Media}from "../components/PageComponents/index"
 import SEO from "../components/seo"

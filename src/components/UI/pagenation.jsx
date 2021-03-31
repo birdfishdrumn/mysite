@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import { ChevronRightIcon, ChevronLeftIcon } from '@material-ui/icons';
 
-export default Pagenation = (props) => {
+const Pagenation = (props) => {
 
 
     const path = props.path
@@ -36,3 +36,5 @@ export default Pagenation = (props) => {
 
     )
 }
+
+export default Pagenation

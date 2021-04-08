@@ -45,7 +45,7 @@ const TopPageContent = ({ data }) => {
             <div className="space-l"/>
               <Link to="/product" ><Button ><Trans>詳しく見る</Trans></Button></Link>
           </div>
-           <MinTitle first hannari large><Trans>まるよしの風鈴</Trans></MinTitle>
+           <MinTitle first hannari large><Trans>商品の紹介</Trans></MinTitle>
 
         </ProductTextFlex>
 

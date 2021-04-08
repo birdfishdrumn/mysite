@@ -45,6 +45,7 @@ export default ({ data, location, pageContext }) => {
        }
 
 
+
         <Pagenation path="cat" pageContext={pageContext} originPath={pageContext.catslug} />
       </div>
     </section>

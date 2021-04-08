@@ -32,7 +32,7 @@ export const NavItem = ({ lang,mobile }) => {
           </li>
 
           <li>
-            <Link to="/product"><Trans>まるよしの風鈴</Trans></Link>
+            <Link to="/product"><Trans>商品の紹介</Trans></Link>
           </li>
           <li>
             <Link to="/workshop"><Trans>体験する</Trans></Link>

@@ -14,17 +14,14 @@ export default ({ data, location, pageContext }) => (
   <Layout>
     <SEO
       pagetitle="ブログ"
-      pagedesc="篠原のブログです"
+      pagedesc="記事一覧"
       pagepath={location.pathname}
     />
 
-    <div className="eyecatch">
-      <figure>
-        <Img fluid={data.about.childImageSharp.fluid} alt="製品情報" />
-      </figure>
-    </div>
+
     <section classNameName="content bloglist">
       <div className="container">
+          <div className="space-2l" />
         <SubTitle>記事一覧</SubTitle>
         <div className="posts">
           {data.allContentfulWork.edges.map(({ node }) => (
@@ -41,9 +38,10 @@ export default ({ data, location, pageContext }) => (
             />
           ))}
         </div>
-        <Pagenation path="blog" pageContext={pageContext} />
+        {/* <Pagenation path="blog" pageContext={pageContext} /> */}
       </div>
     </section>
+    <div className="space-l" />
   </Layout>
 )
 // skipは何軒めからという意味、limitは何軒表示するかという意味

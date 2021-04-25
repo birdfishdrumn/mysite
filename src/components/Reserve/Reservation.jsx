@@ -46,7 +46,7 @@ const Reservation = () => {
   const [content, setContent] = useState("")
   const dt = new Date()
   // const week = dt.setDate(dt.getDate() + 7)
-  const minDate = dt.setDate(dt.getDate() + 3)
+  const minDate = dt.setDate(dt.getDate() + 2)
   const classes = useStyles()
   const [selectedDate, setSelectedDate] = useState(dt)
 
@@ -216,6 +216,10 @@ const Reservation = () => {
             />
           </RadioGroup>
         </FormControl>
+         <p style={{ color: "red", fontSize: "0.9rem", textAlign: "left" }}>
+          ※ガラス吹き体験は現在調整中です。緊急事態宣言が解除され次第、再開予定です。
+          <br />
+        </p>
         <div className="space-l" />
 
         <MuiPickersUtilsProvider utils={DateFnsUtils} locale={jaLocale}>
@@ -236,7 +240,7 @@ const Reservation = () => {
           />
         </MuiPickersUtilsProvider>
         <p style={{ color: "red", fontSize: "0.9rem", textAlign: "left" }}>
-          ※フォームでの体験は現在の日時から三日後のみ予約可能です。それ以内でしたらお電話でご予約ください。
+          ※フォームでの体験は現在の日時から2日後のみ予約可能です。それ以内でしたらお電話でご予約ください。
           <br />
         </p>
 
@@ -256,8 +260,11 @@ const Reservation = () => {
             <option value={"10:30"}>10:30</option>
             <option value={"11:00"}>11:00</option>
             <option value={"13:00"}>13:00</option>
+             <option value={"13:00"}>13:30</option>
             <option value={"14:00"}>14:00</option>
+             <option value={"14:00"}>14:30</option>
             <option value={"15:00"}>15:00</option>
+            <option value={"15:00"}>15:30</option>
           </Select>
         </FormControl>
         <div className="space-m" />

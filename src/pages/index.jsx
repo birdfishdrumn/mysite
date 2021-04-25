@@ -21,7 +21,6 @@ import {
   Pickup,
   TopPageContent,
   COVID_19,
-  Instagram,
 } from "../components/index"
 
 import Image from "../components/image"

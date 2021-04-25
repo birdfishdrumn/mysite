@@ -186,19 +186,7 @@ export default ({ data }) => {
         <div className="space-l" />
         <Map />
       </section>
-      <div className="space-l" />
-      <section>
-        <SubTitle>
-          <Trans>Instagram</Trans>
-        </SubTitle>
-        <Description left width="half">
-          <Trans>
-            instagramやtwitterなどで江戸風鈴の情報も発信しておりますのでよろしければフォローお願い致します。
-          </Trans>
-        </Description>
-        <div className="space-l" />
-        <Instagram />
-      </section>
+
       <div className="space-xl" />
     </Layout>
   )

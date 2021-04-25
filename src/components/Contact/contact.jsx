@@ -1,82 +1,71 @@
- import React, { useState,useCallback,useContext } from "react"
+import React, { useState, useCallback, useContext } from "react"
 
-import 'date-fns';
+import "date-fns"
 
 import TextInput from "../UI/textInput"
-import Button from "@material-ui/core/Button";
+import Button from "@material-ui/core/Button"
 
-import {SubTitle} from "../../style/GlobalStyle"
+import { SubTitle } from "../../style/GlobalStyle"
 
-import { FirebaseContext } from "../../firebase";
+import { FirebaseContext } from "../../firebase"
 
+const Contact = ({ dialog }) => {
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
 
+  const [subject, setSubject] = useState("")
+  const [message, setMessage] = useState("")
 
-const Contact = ({dialog}) => {
-
-
-   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-
-
-  const { firebase } = useContext(FirebaseContext);
+  const { firebase } = useContext(FirebaseContext)
   const inputName = useCallback(
-    (event) => {
-      setName(event.target.value);
+    event => {
+      setName(event.target.value)
     },
     [setName]
-  );
-    const inputEmail = useCallback(
-    (event) => {
-      setEmail(event.target.value);
+  )
+  const inputEmail = useCallback(
+    event => {
+      setEmail(event.target.value)
     },
     [setEmail]
-    );
-    const inputSubject = useCallback(
-    (event) => {
-      setSubject(event.target.value);
+  )
+  const inputSubject = useCallback(
+    event => {
+      setSubject(event.target.value)
     },
     [setSubject]
-    );
-    const inputMessage = useCallback(
-    (event) => {
-      setMessage(event.target.value);
+  )
+  const inputMessage = useCallback(
+    event => {
+      setMessage(event.target.value)
     },
-      [setMessage]
-    );
-
+    [setMessage]
+  )
 
   const canSubmit = () => {
-    if (name === "") return true;
-    if (email === "") return true;
-    if (subject === "") return true;
+    if (name === "") return true
+    if (email === "") return true
+    if (subject === "") return true
 
-      if (message === "") return true;
+    if (message === "") return true
 
-    return false;
-  };
+    return false
+  }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault()
     firebase.postForm({
       name: name,
       email: email,
-      subject:subject,
-
+      subject: subject,
       message: message,
-
-
     })
-}
+  }
 
   return (
     <div className="contact center">
       {dialog && <SubTitle>お問い合わせ</SubTitle>}
-      <form
-        onSubmit={handleSubmit}
-      >
+      <form onSubmit={handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" />
 
@@ -109,7 +98,7 @@ const Contact = ({dialog}) => {
         />
         <div className="space-s" />
 
-           <TextInput
+        <TextInput
           id={subject}
           fullWidth={true}
           label={"件名"}
@@ -123,8 +112,7 @@ const Contact = ({dialog}) => {
           name="subject"
         />
 
-
-           <TextInput
+        <TextInput
           id={message}
           fullWidth={true}
           label={"お問い合わせ内容"}
@@ -147,7 +135,7 @@ const Contact = ({dialog}) => {
             disabled={canSubmit()}
           >
             送信
-              </Button>
+          </Button>
         </div>
       </form>
     </div>

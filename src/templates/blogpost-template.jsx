@@ -1,97 +1,114 @@
 import React from "react"
-import { graphql } from 'gatsby';
-import {Link} from "gatsby-plugin-react-i18next"
+import { graphql } from "gatsby"
+import { Link } from "gatsby-plugin-react-i18next"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons"
 
 // import BlogCard from "../components/Blog/blogCard"
 // import RandomPosts from "../components/Blog/randomPosts"
 import SharingButtons from "../components/UI/shareButton"
-import marked from "marked";
-import { SubTitle,Content } from "../style/GlobalStyle";
+import marked from "marked"
+import { SubTitle, Content } from "../style/GlobalStyle"
 
 // import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 // 個別記事ページ
 export default ({ data, pageContext, location }) => {
-// マークダウンに変換するための処理
-  const source = data.contentfulWork.content.content.replace(/\n/gi, '\nreplaced_text ');
+  // マークダウンに変換するための処理
+  const source = data.contentfulWork.content.content.replace(
+    /\n/gi,
+    "\nreplaced_text "
+  )
 
-marked.setOptions({
-        gfm: true,
-        breaks: true,
-});
+  marked.setOptions({
+    gfm: true,
+    breaks: true,
+  })
 
   // const parsedSouce = marked(source).replace(/replaced_text/g, '');
-console.log(data.contentfulWork.category.slug)
+  console.log(data.contentfulWork.category.slug)
   return (
     <Layout>
-      <SEO pagetitle={data.contentfulWork.title}
+      <SEO
+        pagetitle={data.contentfulWork.title}
         pagedesc={data.contentfulWork.content.content.slice(0, 70) + "..."}
         // pagedesc={`${documentToPlainTextString(
         //       data.contentfulWork.content.content
         //     )}…`}
         pagepath={location.pathname}
         // blogimg={`https:${data.contentfulWork.image.file.url}`}
-        pageimgw={data.contentfulWork.image && data.contentfulWork.image.file.details.image.width}
-        pageimgh={data.contentfulWork.image && data.contentfulWork.image.file.details.image.height}
-
+        pageimgw={
+          data.contentfulWork.image &&
+          data.contentfulWork.image.file.details.image.width
+        }
+        pageimgh={
+          data.contentfulWork.image &&
+          data.contentfulWork.image.file.details.image.height
+        }
       />
-      {data.contentfulWork.category.name !== "お知らせ" &&
-       <div className="hero">
-        <figure>
-          <Img fluid={data.contentfulWork.image.fluid} style={{height:"100%"}} alt="" />
-        </figure>
-      </div>
-      }
-
+      {data.contentfulWork.category.name !== "お知らせ" && (
+        <div className="hero">
+          <figure>
+            <Img
+              fluid={data.contentfulWork.image.fluid}
+              style={{ height: "100%" }}
+              alt=""
+            />
+          </figure>
+        </div>
+      )}
 
       <article className="content">
-        {data.contentfulWork.category.name === "お知らせ" &&
+        {data.contentfulWork.category.name === "お知らせ" && (
           <>
-          <div className="space-xl"/>
-          <Content>お知らせ</Content>
-          <div className="space-xl"/>
+            <div className="space-xl" />
+            <Content>お知らせ</Content>
+            <div className="space-xl" />
           </>
-        }
+        )}
 
         <div className="container">
-          <SubTitle noSpace left>{data.contentfulWork.title}</SubTitle>
+          <SubTitle noSpace left>
+            {data.contentfulWork.title}
+          </SubTitle>
 
           <aside className="info">
             <time dataTime={data.contentfulWork.date}>
-              {data.contentfulWork.dateJP}</time>
+              {data.contentfulWork.dateJP}
+            </time>
             {/* カテゴリーの表示 */}
             <div className="cat">
-
               <ul>
                 <Link to={`/cat/${data.contentfulWork.category.slug}/`}>
-                  <li className={data.contentfulWork.category.slug}>{data.contentfulWork.category.name}</li>
+                  <li className={data.contentfulWork.category.slug}>
+                    {data.contentfulWork.category.name}
+                  </li>
                 </Link>
               </ul>
             </div>
           </aside>
-
 
           <div className="postbody">
             <p>
               {/* <div className="body-text" dangerouslySetInnerHTML={{ __html: marked(parsedSouce) }} /> */}
               {data.contentfulWork.content.content}
 
-
               {documentToReactComponents(data.contentfulWork.long.json)}
             </p>
           </div>
 
-      <SharingButtons
-        title={data.contentfulWork.title}
-        url={`${location.pathname}`}
-      />
+          <SharingButtons
+            title={data.contentfulWork.title}
+            url={`${location.pathname}`}
+          />
 
           {/*  ページネーションの設定 */}
           <ul className="postlink">
@@ -106,7 +123,6 @@ console.log(data.contentfulWork.category.slug)
             {pageContext.previous && (
               <li className="next">
                 <Link to={`/blog/post/${pageContext.previous.slug}`} rel="next">
-
                   <span>{pageContext.previous.title}</span>
                   <FontAwesomeIcon icon={faChevronRight} />
                 </Link>
@@ -124,13 +140,12 @@ console.log(data.contentfulWork.category.slug)
           {/* 関連記事の取得 */}
         </div>
       </article>
-
     </Layout>
   )
 }
 export const query = graphql`
-  query($id: String!){
-        glass_plane: file(relativePath: { eq: "glass_plane.jpg" }) {
+  query($id: String!) {
+    glass_plane: file(relativePath: { eq: "glass_plane.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -142,66 +157,59 @@ export const query = graphql`
         }
       }
     }
-     allContentfulWork(
-    sort: {fields: date,order: DESC}
-    skip: 0
-    limit: 4
-     )
-{
-    edges{
-      node{
-      title
-      category{
-        name
+    allContentfulWork(sort: { fields: date, order: DESC }, skip: 0, limit: 4) {
+      edges {
+        node {
+          title
+          category {
+            name
+          }
+          id
+          slug
+          image {
+            fluid(maxWidth: 573) {
+              ...GatsbyContentfulFluid_withWebp
+            }
+            description
+          }
+        }
       }
+    }
+    contentfulWork(id: { eq: $id }) {
+      title
+      dateJP: date(formatString: "YYYY年MM月DD日")
+      date
       id
-      slug
-      image{
-        fluid(maxWidth: 573){
+      category {
+        name
+        slug
+      }
+      #  tags{
+      #     name
+      #     slug
+      #     id
+      #   }
+      long {
+        json
+      }
+      content {
+        content
+      }
+      image {
+        fluid(maxWidth: 1862) {
           ...GatsbyContentfulFluid_withWebp
         }
-          description
-      }
-      }
-
-    }
-  }
-  contentfulWork(id: {eq: $id}){
-    title
-    dateJP:date(formatString: "YYYY年MM月DD日")
-    date
-    id
-    category {
-      name
-      slug
-    }
-  #  tags{
-  #     name
-  #     slug
-  #     id
-  #   }
-     long{
-       json
-     }
-        content{
-      content
-    }
-        image{
-      fluid(maxWidth: 1862){
-        ...GatsbyContentfulFluid_withWebp
-      }
-      description
-      file{
-        details{
-          image{
-            width
-            height
+        description
+        file {
+          details {
+            image {
+              width
+              height
+            }
           }
-
+          url
         }
-        url
       }
     }
   }
-}
 `

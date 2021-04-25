@@ -1,149 +1,126 @@
- import React, { useState,useCallback,useContext } from "react"
-import 'date-fns';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState, useCallback, useContext } from "react"
+import "date-fns"
+import { makeStyles } from "@material-ui/core/styles"
 import TextInput from "../UI/textInput"
-import Button from "@material-ui/core/Button";
-import DateFnsUtils from '@date-io/date-fns';
-import jaLocale from "date-fns/locale/ja";
+import Button from "@material-ui/core/Button"
+import DateFnsUtils from "@date-io/date-fns"
+import jaLocale from "date-fns/locale/ja"
 
-import InputLabel from '@material-ui/core/InputLabel';
-import FormControl from '@material-ui/core/FormControl';
+import InputLabel from "@material-ui/core/InputLabel"
+import FormControl from "@material-ui/core/FormControl"
 import {
   MuiPickersUtilsProvider,
-   KeyboardDatePicker,
+  KeyboardDatePicker,
+} from "@material-ui/pickers"
+import Radio from "@material-ui/core/Radio"
+import RadioGroup from "@material-ui/core/RadioGroup"
+import FormControlLabel from "@material-ui/core/FormControlLabel"
+import FormLabel from "@material-ui/core/FormLabel"
+import { FirebaseContext } from "../../firebase"
 
-} from '@material-ui/pickers';
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormLabel from '@material-ui/core/FormLabel';
-import { FirebaseContext } from "../../firebase";
+import Select from "@material-ui/core/Select"
 
-import Select from '@material-ui/core/Select';
-
-
-const useStyles = makeStyles((theme) => ({
-
+const useStyles = makeStyles(theme => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: 200,
   },
-    formControl: {
+  formControl: {
     margin: theme.spacing(1),
     minWidth: 220,
   },
-}));
+}))
 
 const Reservation = () => {
- const disableMonday = (date) =>{
-
-    return date.getDay() === 1;
- }
-  const { firebase } = useContext(FirebaseContext);
-   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [people, setPeople] = useState(1);
-    const [phone, setPhone] = useState("");
+  const disableMonday = date => {
+    return date.getDay() === 1
+  }
+  const { firebase } = useContext(FirebaseContext)
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [people, setPeople] = useState(1)
+  const [phone, setPhone] = useState("")
   const [time, setTime] = useState("")
-  const [message, setMessage] = useState("");
-  const [content, setContent] = useState("");
+  const [message, setMessage] = useState("")
+  const [content, setContent] = useState("")
   const dt = new Date()
   // const week = dt.setDate(dt.getDate() + 7)
-  const minDate =dt.setDate(dt.getDate() + 3)
+  const minDate = dt.setDate(dt.getDate() + 3)
   const classes = useStyles()
-  const [selectedDate, setSelectedDate] = useState(dt);
+  const [selectedDate, setSelectedDate] = useState(dt)
 
-
-
-
-
-
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
+  const handleDateChange = date => {
+    setSelectedDate(date)
+  }
 
   const inputName = useCallback(
-    (event) => {
-      setName(event.target.value);
+    event => {
+      setName(event.target.value)
     },
     [setName]
-  );
-    const inputEmail = useCallback(
-    (event) => {
-      setEmail(event.target.value);
+  )
+  const inputEmail = useCallback(
+    event => {
+      setEmail(event.target.value)
     },
     [setEmail]
-    );
-    const inputPhone = useCallback(
-    (event) => {
-      setPhone(event.target.value);
+  )
+  const inputPhone = useCallback(
+    event => {
+      setPhone(event.target.value)
     },
     [setPhone]
-    );
+  )
 
-    const inputMessage = useCallback(
-    (event) => {
-      setMessage(event.target.value);
+  const inputMessage = useCallback(
+    event => {
+      setMessage(event.target.value)
     },
-      [setMessage]
-    );
-  const selectPeople= (event) => {
+    [setMessage]
+  )
+  const selectPeople = event => {
+    setPeople(event.target.value)
+  }
 
-    setPeople(
-event.target.value,
-    );
-  };
+  const selectTime = event => {
+    setTime(event.target.value)
+  }
 
-    const selectTime = (event) => {
+  const handleChange = event => {
+    setContent(event.target.value)
+  }
 
-    setTime(
-event.target.value,
-    );
-  };
-
-  const handleChange = (event) => {
-
-    setContent(
-event.target.value,
-    );
-  };
-
-
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault()
     firebase.postContact({
       name: name,
       email: email,
       phone: phone,
       content: content,
-      selectedDate:selectedDate,
+      selectedDate: selectedDate,
       message: message,
       people: people,
       time: time,
-
     })
-}
+  }
 
   const canSubmit = () => {
-    if (name === "") return true;
-    if (email === "") return true;
-    if (phone === "") return true;
-    if (content === "") return true;
+    if (name === "") return true
+    if (email === "") return true
+    if (phone === "") return true
+    if (content === "") return true
 
-      if (selectedDate === "") return true;
-if (time === "") return true;
+    if (selectedDate === "") return true
+    if (time === "") return true
 
-
-
-    return false;
-  };
-
+    return false
+  }
 
   return (
     <div className="contact center">
-    {/* <SubTitle>体験のお申し込み</SubTitle> */}
-       <form onSubmit={handleSubmit}>
+      {/* <SubTitle>体験のお申し込み</SubTitle> */}
+      <form onSubmit={handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" />
 
@@ -175,7 +152,7 @@ if (time === "") return true;
           name="email"
         />
 
-            <TextInput
+        <TextInput
           id={phone}
           fullWidth={true}
           label={"電話番号(必須)"}
@@ -190,91 +167,101 @@ if (time === "") return true;
         />
         <div className="space-s" />
 
-
         <div className="space-s" />
-            <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="age-native-simple">人数</InputLabel>
-        <Select
-          native
-          value={people}
-          onChange={selectPeople}
-          inputProps={{
-            name: 'age',
-            id: 'age-native-simple',
-          }}
-        >
-          <option aria-label="None" value="" />
+        <FormControl className={classes.formControl}>
+          <InputLabel htmlFor="age-native-simple">人数</InputLabel>
+          <Select
+            native
+            value={people}
+            onChange={selectPeople}
+            inputProps={{
+              name: "age",
+              id: "age-native-simple",
+            }}
+          >
+            <option aria-label="None" value="" />
             <option value={"1"}>1</option>
-             <option value={"2"}>2</option>
+            <option value={"2"}>2</option>
             <option value={"3"}>3</option>
             <option value={"4"}>4</option>
             <option value={"5"}>5</option>
-             <option value={"6"}>6</option>
-
-        </Select>
+            <option value={"6"}>6</option>
+          </Select>
         </FormControl>
-               <p style={{color:"red",fontSize:"0.9rem",textAlign:"left"}}>※只今フォームでは6人までのお申し込みとなっております。それ以上は電話でご相談ください。<br/></p>
+        <p style={{ color: "red", fontSize: "0.9rem", textAlign: "left" }}>
+          ※只今フォームでは6人までのお申し込みとなっております。それ以上は電話でご相談ください。
+          <br />
+        </p>
 
-                <div className="space-m" />
+        <div className="space-m" />
 
-
-
-
-
-  <FormControl component="fieldset">
+        <FormControl component="fieldset">
           <FormLabel component="legend">体験内容</FormLabel>
-               <div className="space-s" />
-      <RadioGroup aria-label="gender" name="content" value={content} onChange={handleChange}>
-        <FormControlLabel value="絵付け体験" control={<Radio />} label="絵付け体験" />
-        <FormControlLabel value="ガラス吹き体験" control={<Radio />} label="ガラス吹き体験" />
-      </RadioGroup>
-    </FormControl>
+          <div className="space-s" />
+          <RadioGroup
+            aria-label="gender"
+            name="content"
+            value={content}
+            onChange={handleChange}
+          >
+            <FormControlLabel
+              value="絵付け体験"
+              control={<Radio />}
+              label="絵付け体験"
+            />
+            <FormControlLabel
+              value="ガラス吹き体験"
+              control={<Radio />}
+              label="ガラス吹き体験"
+            />
+          </RadioGroup>
+        </FormControl>
         <div className="space-l" />
 
-      <MuiPickersUtilsProvider utils={DateFnsUtils}   locale={jaLocale}>
-            <KeyboardDatePicker
-              disablePast
-              shouldDisableDate={disableMonday}
-              minDate={minDate}
-
-          margin="normal"
-          id="date-picker-dialog"
-          label="体験希望日"
-          format="yyyy/MM/dd"
-              value={selectedDate}
-              name="message"
-          onChange={handleDateChange}
-          KeyboardButtonProps={{
-            'aria-label': 'change date',
-          }}
-            />
-            </MuiPickersUtilsProvider>
-          <p style={{color:"red",fontSize:"0.9rem",textAlign:"left"}}>※フォームでの体験は現在の日時から三日後のみ予約可能です。それ以内でしたらお電話でご予約ください。<br/></p>
-
+        <MuiPickersUtilsProvider utils={DateFnsUtils} locale={jaLocale}>
+          <KeyboardDatePicker
+            disablePast
+            shouldDisableDate={disableMonday}
+            minDate={minDate}
+            margin="normal"
+            id="date-picker-dialog"
+            label="体験希望日"
+            format="yyyy/MM/dd"
+            value={selectedDate}
+            name="message"
+            onChange={handleDateChange}
+            KeyboardButtonProps={{
+              "aria-label": "change date",
+            }}
+          />
+        </MuiPickersUtilsProvider>
+        <p style={{ color: "red", fontSize: "0.9rem", textAlign: "left" }}>
+          ※フォームでの体験は現在の日時から三日後のみ予約可能です。それ以内でしたらお電話でご予約ください。
+          <br />
+        </p>
 
         <div className="space-s" />
-            <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="age-native-simple">体験時間</InputLabel>
-        <Select
-          native
-          value={time}
-          onChange={selectTime}
-          inputProps={{
-            name: 'age',
-            id: 'age-native-simple',
-          }}
-        >
-          <option aria-label="None" value="" />
-              <option value={"10:30"}>10:30</option>
-              <option value={"11:00"}>11:00</option>
+        <FormControl className={classes.formControl}>
+          <InputLabel htmlFor="age-native-simple">体験時間</InputLabel>
+          <Select
+            native
+            value={time}
+            onChange={selectTime}
+            inputProps={{
+              name: "age",
+              id: "age-native-simple",
+            }}
+          >
+            <option aria-label="None" value="" />
+            <option value={"10:30"}>10:30</option>
+            <option value={"11:00"}>11:00</option>
             <option value={"13:00"}>13:00</option>
             <option value={"14:00"}>14:00</option>
-             <option value={"15:00"}>15:00</option>
-
-        </Select>
+            <option value={"15:00"}>15:00</option>
+          </Select>
         </FormControl>
         <div className="space-m" />
-           <TextInput
+        <TextInput
           id={message}
           fullWidth={true}
           label={"備考"}
@@ -298,7 +285,7 @@ if (time === "") return true;
             disabled={canSubmit()}
           >
             送信
-              </Button>
+          </Button>
         </div>
       </form>
     </div>

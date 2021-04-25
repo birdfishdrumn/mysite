@@ -1,17 +1,16 @@
-import React, { useState } from "react";
-import { Marker, InfoWindow } from "@react-google-maps/api";
+import React, { useState } from "react"
+import { Marker, InfoWindow } from "@react-google-maps/api"
 import Icon from "../../images/huurin_red.png"
 export default function PlaceInfo() {
   const places = [
-    { info: "篠原まるよし風鈴", location: { lat:35.706699 , lng: 139.781221 } },
+    { info: "篠原まるよし風鈴", location: { lat: 35.706699, lng: 139.781221 } },
+  ]
 
-  ];
-
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState(null)
 
   return (
     <>
-      {places.map((marker) => (
+      {places.map(marker => (
         <Marker
           key={`${marker.location.lat * marker.location.lng}`}
           position={{
@@ -19,7 +18,7 @@ export default function PlaceInfo() {
             lng: marker.location.lng,
           }}
           onMouseOver={() => {
-            setSelected(marker);
+            setSelected(marker)
             // マウスオーバーで<InfoWindow>が描画されます。
           }}
           icon={{
@@ -40,12 +39,12 @@ export default function PlaceInfo() {
             lng: selected.location.lng,
           }}
           onCloseClick={() => {
-            setSelected(null);
+            setSelected(null)
           }}
         >
           <div>{selected.info}</div>
         </InfoWindow>
       ) : null}
     </>
-  );
+  )
 }

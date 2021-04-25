@@ -1,38 +1,35 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin')
-const nodemailer = require('nodemailer')
+const functions = require("firebase-functions")
+const admin = require("firebase-admin")
+const nodemailer = require("nodemailer")
 
-admin.initializeApp();
-
-
+admin.initializeApp()
 
 const gmailEmail = functions.config().gmail.email
 const gmailPassword = functions.config().gmail.password
 const gmailSend = functions.config().admin.email
 const mailTransport = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: gmailEmail,
-        pass: gmailPassword
-    }
+  service: "gmail",
+  auth: {
+    user: gmailEmail,
+    pass: gmailPassword,
+  },
 })
 
 exports.createProduct = functions
-    .region('asia-northeast1')
-    .firestore
-    .document('reservation/{reservationId}')
-    .onCreate((snap, context) => {
-        // const { Id } = context.params
-        const post = snap.data()
+  .region("asia-northeast1")
+  .firestore.document("reservation/{reservationId}")
+  .onCreate((snap, context) => {
+    // const { Id } = context.params
+    const post = snap.data()
 
-        const customerEmail = post.email
-            // console.log("Id", Id)
-        let mailOptions = {
-            from: gmailEmail,
-            to: [gmailSend, customerEmail],
+    const customerEmail = post.email
+    // console.log("Id", Id)
+    let mailOptions = {
+      from: gmailEmail,
+      to: [gmailSend, customerEmail],
 
-            subject: '篠原まるよし風鈴',
-            html: `<div>
+      subject: "篠原まるよし風鈴",
+      html: `<div>
               <h4>この度は体験のご予約をいただきありがとうございます。</h4>
                <h4>下記の内容で体験の予約を受付させていただきました。</h4>
 
@@ -53,35 +50,33 @@ exports.createProduct = functions
                <p>tel 03-3832-0227<br/>
                mail  maruyosi@sam.hi-ho.ne.jp
                </p>
-            </div>`
+            </div>`,
+    }
 
-        }
-
-        mailTransport.sendMail(mailOptions, (err, info) => {
-            if (err) {
-                console.error(err)
-                return
-            }
-            console.log('success')
-        })
-    });
+    mailTransport.sendMail(mailOptions, (err, info) => {
+      if (err) {
+        console.error(err)
+        return
+      }
+      console.log("success")
+    })
+  })
 
 exports.contactForm = functions
-    .region('asia-northeast1')
-    .firestore
-    .document('contacts/{contactId}')
-    .onCreate((snap, context) => {
-        // const { Id } = context.params
-        const post = snap.data()
+  .region("asia-northeast1")
+  .firestore.document("contacts/{contactId}")
+  .onCreate((snap, context) => {
+    // const { Id } = context.params
+    const post = snap.data()
 
-        const customerEmail = post.email
-            // console.log("Id", Id)
-        let mailOptions = {
-            from: gmailEmail,
-            to: [gmailSend, customerEmail],
+    const customerEmail = post.email
+    // console.log("Id", Id)
+    let mailOptions = {
+      from: gmailEmail,
+      to: [gmailSend, customerEmail],
 
-            subject: '篠原まるよし風鈴',
-            html: `<div>
+      subject: "篠原まるよし風鈴",
+      html: `<div>
               <h4>この度はお問い合わせいただき誠にありがとうございます。</h4>
                <h4>下記の内容でお問い合わせを受け付けました。</h4>
 
@@ -97,15 +92,14 @@ exports.contactForm = functions
                <p>tel 03-3832-0227<br/>
                mail  maruyosi@sam.hi-ho.ne.jp
                </p>
-            </div>`
+            </div>`,
+    }
 
-        }
-
-        mailTransport.sendMail(mailOptions, (err, info) => {
-            if (err) {
-                console.error(err)
-                return
-            }
-            console.log('success')
-        })
-    });
+    mailTransport.sendMail(mailOptions, (err, info) => {
+      if (err) {
+        console.error(err)
+        return
+      }
+      console.log("success")
+    })
+  })

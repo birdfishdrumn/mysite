@@ -1,16 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import React from "react"
+import PropTypes from "prop-types"
+import { makeStyles } from "@material-ui/core/styles"
 
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import Tabs from "@material-ui/core/Tabs"
+import Tab from "@material-ui/core/Tab"
 
-import Box from '@material-ui/core/Box';
+import Box from "@material-ui/core/Box"
 
-import { Fuurin,Earring,Poppen,Tsuridai,WorkshopKit } from "../WindBellList/index";
+import {
+  Fuurin,
+  Earring,
+  Poppen,
+  Tsuridai,
+  WorkshopKit,
+} from "../WindBellList/index"
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index, ...other } = props
 
   return (
     <div
@@ -26,27 +32,26 @@ function TabPanel(props) {
         </Box>
       )}
     </div>
-  );
+  )
 }
 
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
-};
+}
 
 function a11yProps(index) {
   return {
     id: `scrollable-force-tab-${index}`,
-    'aria-controls': `scrollable-force-tabpanel-${index}`,
-  };
+    "aria-controls": `scrollable-force-tabpanel-${index}`,
+  }
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 2,
-    width: '100%',
-
+    width: "100%",
   },
   tab: {
     padding: "15px",
@@ -54,13 +59,11 @@ const useStyles = makeStyles((theme) => ({
     // justifyContent:"center"
   },
   bar: {
-    position:"fixed"
-  }
-}));
+    position: "fixed",
+  },
+}))
 
-export default function ScrollableTabsButtonForce({num,location,data}) {
-
-
+export default function ScrollableTabsButtonForce({ num, location, data }) {
   // useEffect(() => {
   //   const scrollAction = () => {
   //     if (450 < window.scrollY) {
@@ -80,64 +83,53 @@ export default function ScrollableTabsButtonForce({num,location,data}) {
   //     window.removeEventListener("scroll", scrollAction);
   //   };
   // }, []);
-const number=Number(num)
-  const classes = useStyles();
-  const [value, setValue] = React.useState(number ? number : 0);
+  const number = Number(num)
+  const classes = useStyles()
+  const [value, setValue] = React.useState(number ? number : 0)
 
   const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+    setValue(newValue)
+  }
 
   return (
     <div className={classes.root}>
-
-        <Tabs
-          style={{boxShadow:"none"}}
-          value={value}
-          onChange={handleChange}
-         className={classes.tab}
-          indicatorColor="transparent"
+      <Tabs
+        style={{ boxShadow: "none" }}
+        value={value}
+        onChange={handleChange}
+        className={classes.tab}
+        indicatorColor="transparent"
         textColor="primary"
-          scrollButtons="on"
+        scrollButtons="on"
         aria-label="scrollable force tabs example"
-         variant="scrollable"
-              // centered
-        >
-          <Tab label="風鈴"  {...a11yProps(0)} />
-        <Tab label="イヤリング" {...a11yProps(1)}/>
-          <Tab label="ポッペン"  {...a11yProps(2)} />
+        variant="scrollable"
+        // centered
+      >
+        <Tab label="風鈴" {...a11yProps(0)} />
+        <Tab label="イヤリング" {...a11yProps(1)} />
+        <Tab label="ポッペン" {...a11yProps(2)} />
         <Tab label="体験キット" {...a11yProps(3)} />
-         <Tab label="吊り台" {...a11yProps(4)} />
-        </Tabs>
+        <Tab label="吊り台" {...a11yProps(4)} />
+      </Tabs>
 
       <TabPanel value={value} index={0}>
-        <Fuurin data={data} location={location}/>
+        <Fuurin data={data} location={location} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Earring/>
+        <Earring />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Poppen/>
+        <Poppen />
       </TabPanel>
       <TabPanel value={value} index={3}>
-       <WorkshopKit/>
+        <WorkshopKit />
       </TabPanel>
-          <TabPanel value={value} index={4}>
-        <Tsuridai/>
+      <TabPanel value={value} index={4}>
+        <Tsuridai />
       </TabPanel>
     </div>
-  );
+  )
 }
-
-
-
-
-
-
-
-
-
-
 
 // import React from 'react';
 // import { makeStyles } from '@material-ui/core/styles';

@@ -1,8 +1,8 @@
 import styled, { css } from "styled-components"
-
+import Img from "gatsby-image"
 // ==========テキストデザイン===========
 
-export const Content = styled.h1`
+export const Content = styled.h1 `
   font-family: "游明朝", "Yu Mincho", "Hiragino Mincho Pro", sans-serif;
   font-weight: bold;
   margin: 100px;
@@ -15,7 +15,7 @@ export const Content = styled.h1`
   }
 `
 
-export const Title = styled.h1`
+export const Title = styled.h1 `
   font-family: "游明朝", "Yu Mincho", "Hiragino Mincho Pro", sans-serif;
   font-weight: bold;
   position: absolute;
@@ -35,7 +35,7 @@ export const Title = styled.h1`
   }
 `
 
-export const Nav = styled.ul`
+export const Nav = styled.ul `
   font-family: "游明朝", "Yu Mincho", "Hiragino Mincho Pro", sans-serif;
   font-weight: normal;
   margin: 0 auto;
@@ -77,14 +77,14 @@ export const Nav = styled.ul`
   }
 `
 
-export const SubTitle = styled.div`
+export const SubTitle = styled.div `
   font-family: "游明朝", "Yu Mincho", "Hiragino Mincho Pro", sans-serif;
   font-weight: bold;
   margin-bottom: 0px;
 
   color: ${props => (props.white ? "white" : "black")};
   text-align: ${props => (props.left ? "left" : "center")};
-  font-size: ${props => (props.small ? "1.8rem" : "2.2rem")};
+  font-size: ${props => (props.small ? "1.8rem" : "2.35rem")};
   border: ${props => props.border && "1px solid black"};
 
   text-shadow: ${props => props.shadow && "1px 1px 2px black"};
@@ -94,13 +94,13 @@ export const SubTitle = styled.div`
   }
 `
 
-export const MinDescription = styled.p`
+export const MinDescription = styled.p `
   font-family: "游明朝", "Yu Mincho", "Hiragino Mincho Pro", sans-serif;
   padding: 5px 0 5px;
   color: gray;
 `
 
-export const Description = styled.div`
+export const Description = styled.div `
   font-family: "游明朝", "Yu Mincho", "Hiragino Mincho Pro", sans-serif;
   text-align: ${props => (props.left ? "left" : "center")};
   font-weight: ${props => (props.bold ? "bold" : "normal")};
@@ -626,6 +626,14 @@ export const Youtube = styled.iframe`
   }
 `
 
+export const StyledImage = styled(Img)`
+ width:500px;
+ height:400px;
+ object-fit:cover;
+ @media(max-width:768px){
+   width:100%;
+ }
+`
 /* ===============================================
 #  set css variables
 =============================================== */

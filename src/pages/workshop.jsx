@@ -3,10 +3,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
-import { FloatingAction, WorkshopList, COVID_19 } from "../components/index"
+import { FloatingAction, WorkshopList, COVID_19,FuurinMatsuri } from "../components/index"
 import Image from "../components/image"
 
-export default ({ data, location }) => (
+export default ({ data, location }) => {
+  console.log(data)
+ return (
   <Layout>
     <SEO
       pagetitle="体験する"
@@ -29,12 +31,17 @@ export default ({ data, location }) => (
     <article className="content center">
       <div className="space-l" />
       <COVID_19 />
+      <div className="space-l" />
+      <FuurinMatsuri img={data.app.childImageSharp.original.src} />
       <div className="space-xl" />
+
+
       <WorkshopList data={data} />
     </article>
     <FloatingAction title="予約する" reserve />
-  </Layout>
-)
+   </Layout>
+ )
+}
 //スプレッド構文で配列を展開する。
 export const query = graphql`
   query {
@@ -61,6 +68,19 @@ export const query = graphql`
           width
         }
       }
+    }
+     app: file(relativePath: { eq: "huurinapp_news.jpg" }) {
+           childImageSharp {
+        fluid(maxWidth: 200) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+        original {
+          src
+          height
+          width
+        }
+      }
+
     }
   }
 `

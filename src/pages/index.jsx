@@ -27,6 +27,7 @@ import Image from "../components/image"
 import { Parallax } from "react-parallax"
 import styled from "styled-components"
 
+
 const ParallaxText = styled.div`
   /* background: #fff; */
   left: 50%;
@@ -152,11 +153,12 @@ export default ({ data }) => {
       </section>
       <div className="space-xl" />
       <section className="center">
+        <div className="space-2l" />
         <SubTitle>
           <Trans>私たちの仕事</Trans>
         </SubTitle>
         {/* <Description left width="half" bold><Trans>篠原まるよし風鈴では風鈴本体となる玉の制作から、絵付けまでの工程を全て当店で行っております。そして風鈴の販売、体験学習にも力を入れております。商品のご購入や体験学習、またオンラインショップもありますのでこちらからご覧ください。</Trans></Description> */}
-        <div className="space-l" />
+        <div className="space-xl" />
 
         <TopPageContent data={data} />
       </section>

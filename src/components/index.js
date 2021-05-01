@@ -3,8 +3,8 @@ from "./Product/Product"
 export * from "./Logo"
 export { default as WorkshopTab }
 from "./TabMenu/WorkshopTab"
-    // export { default as CarouselSlider }
-    // from "./CarouselSlider/CarouselSlider"
+export { default as FuurinMatsuri }
+from "./FuurinMatsuri/FuurinMatsuri"
 export { default as ProductCard }
 from "./ProductCard/ProductCard"
 export { default as WindBellCard }

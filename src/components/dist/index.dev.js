@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 var _exportNames = {
   Product: true,
   WorkshopTab: true,
+  FuurinMatsuri: true,
   ProductCard: true,
   WindBellCard: true,
   Contact: true,
@@ -33,6 +34,12 @@ Object.defineProperty(exports, "WorkshopTab", {
   enumerable: true,
   get: function get() {
     return _WorkshopTab["default"];
+  }
+});
+Object.defineProperty(exports, "FuurinMatsuri", {
+  enumerable: true,
+  get: function get() {
+    return _FuurinMatsuri["default"];
   }
 });
 Object.defineProperty(exports, "ProductCard", {
@@ -148,6 +155,8 @@ Object.keys(_Logo).forEach(function (key) {
 });
 
 var _WorkshopTab = _interopRequireDefault(require("./TabMenu/WorkshopTab"));
+
+var _FuurinMatsuri = _interopRequireDefault(require("./FuurinMatsuri/FuurinMatsuri"));
 
 var _ProductCard = _interopRequireDefault(require("./ProductCard/ProductCard"));
 

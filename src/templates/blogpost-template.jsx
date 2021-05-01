@@ -15,7 +15,7 @@ import {
 // import RandomPosts from "../components/Blog/randomPosts"
 import SharingButtons from "../components/UI/shareButton"
 import marked from "marked"
-import { SubTitle, Content } from "../style/GlobalStyle"
+import { SubTitle, Content,MinTitle } from "../style/GlobalStyle"
 
 // import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -80,6 +80,7 @@ export default ({ data, pageContext, location }) => {
             {data.contentfulWork.title}
           </SubTitle>
 
+
           <aside className="info">
             <time dataTime={data.contentfulWork.date}>
               {data.contentfulWork.dateJP}
@@ -99,7 +100,8 @@ export default ({ data, pageContext, location }) => {
           <div className="postbody">
             <p>
               {/* <div className="body-text" dangerouslySetInnerHTML={{ __html: marked(parsedSouce) }} /> */}
-              {data.contentfulWork.content.content}
+              <MinTitle left min> {data.contentfulWork.content.content}</MinTitle>
+
 
               {documentToReactComponents(data.contentfulWork.long.json)}
             </p>

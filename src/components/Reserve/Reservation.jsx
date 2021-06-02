@@ -217,7 +217,7 @@ const Reservation = () => {
           </RadioGroup>
         </FormControl>
          <p style={{ color: "red", fontSize: "0.9rem", textAlign: "left" }}>
-          ※ガラス吹き体験は現在調整中です。緊急事態宣言が解除され次第、再開予定です。
+
           <br />
         </p>
         <div className="space-l" />

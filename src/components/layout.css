@@ -699,6 +699,9 @@ svg {
     .space-l {
         margin: 40px 0 40px 0;
     }
+      .space-2xl {
+        margin: 90px 0 90px 0;
+    }
 }
 
 .padding-s {

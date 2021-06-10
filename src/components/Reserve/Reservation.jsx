@@ -243,6 +243,10 @@ const Reservation = () => {
           ※フォームでの体験は現在の日時から2日後のみ予約可能です。それ以内でしたらお電話でご予約ください。
           <br />
         </p>
+          <p style={{ color: "red", fontSize: "0.9rem", textAlign: "left" }}>
+          ※只今6/12日(土曜日)は12:30〜14:30の間は混み合っている為、それ以外のお時間をご検討の上、電話でのみご予約くださいませ。お手数おかけいたしますがよろしくお願い致します。
+          <br />
+        </p>
 
         <div className="space-s" />
         <FormControl className={classes.formControl}>

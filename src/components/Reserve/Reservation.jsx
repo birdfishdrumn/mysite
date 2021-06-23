@@ -17,7 +17,7 @@ import RadioGroup from "@material-ui/core/RadioGroup"
 import FormControlLabel from "@material-ui/core/FormControlLabel"
 import FormLabel from "@material-ui/core/FormLabel"
 import { FirebaseContext } from "../../firebase"
-
+import {Forbidden,AfternoonOk} from "../../text/ReserveCationText"
 import Select from "@material-ui/core/Select"
 
 const useStyles = makeStyles(theme => ({
@@ -34,7 +34,13 @@ const useStyles = makeStyles(theme => ({
 
 const Reservation = () => {
   const disableMonday = date => {
-    return date.getDay() === 1
+    const dateRaw = [
+new Date('2021-06-27T00:00').getTime(),
+// new Date('2021-05-03T00:00').getTime()
+];
+
+
+return dateRaw.includes(date.getTime()) ||  date.getDay() === 1
   }
   const { firebase } = useContext(FirebaseContext)
   const [name, setName] = useState("")
@@ -123,6 +129,11 @@ const Reservation = () => {
       <form onSubmit={handleSubmit}>
         <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" />
+           <p style={{ color: "red", fontSize: "0.9rem", textAlign: "left" }}>
+          {AfternoonOk()}
+          <br />
+        </p>
+
 
         <TextInput
           id={name}
@@ -244,7 +255,7 @@ const Reservation = () => {
           <br />
         </p>
           <p style={{ color: "red", fontSize: "0.9rem", textAlign: "left" }}>
-          ※只今6/12日(土曜日)は12:30〜14:30の間は混み合っている為、それ以外のお時間をご検討の上、電話でのみご予約くださいませ。お手数おかけいたしますがよろしくお願い致します。
+          {Forbidden("6/27")}
           <br />
         </p>
 

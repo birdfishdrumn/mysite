@@ -33,10 +33,12 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const Reservation = () => {
+
+  // ダメな日付を指定する処理
   const disableMonday = date => {
     const dateRaw = [
 new Date('2021-06-27T00:00').getTime(),
-// new Date('2021-05-03T00:00').getTime()
+new Date('2021-07-04T00:00').getTime()
 ];
 
 
@@ -255,7 +257,7 @@ return dateRaw.includes(date.getTime()) ||  date.getDay() === 1
           <br />
         </p>
           <p style={{ color: "red", fontSize: "0.9rem", textAlign: "left" }}>
-          {Forbidden("6/27")}
+          {Forbidden("7/4")}
           <br />
         </p>
 

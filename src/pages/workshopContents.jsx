@@ -6,6 +6,7 @@ import { WorkshopTab, FloatingAction, Reserve } from "../components/index"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 
+
 import Image from "../components/image"
 
 export default ({ data, location }) => {
@@ -29,6 +30,7 @@ export default ({ data, location }) => {
       <div className="space-l" />
 
       <Reserve />
+
       <div className="space-xl" />
       <FloatingAction reserve title="ご予約はこちら" />
     </Layout>

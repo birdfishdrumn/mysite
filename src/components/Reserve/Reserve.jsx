@@ -1,6 +1,6 @@
 import React from "react"
 import PhoneIcon from "@material-ui/icons/Phone"
-
+import { Button } from "../Button/styles"
 import Reservation from "./Reservation"
 
 import { SubTitle, Description } from "../../style/GlobalStyle"
@@ -19,10 +19,15 @@ const Reserve = () => {
       <SubTitle>ご予約フォーム</SubTitle>
       <Description width="half" left>
         ※予約フォームでは送信した時点では予約は完了しません。返信のメールが来るまでお待ちくださいませ。最短で翌日のお返事になります。
-        <br />
-        また他のお客様たちとの調整で、ご希望のお時間を少しずらしてご提案させていただくこともありますのでよろしくお願い致します。
       </Description>
-      <Reservation />
+          <div className="center"style={{ marginTop: 50 }}>
+        <Button>予約フォームを開く</Button>
+           <p style={{ color: "red", fontSize: "0.9rem" }}>
+          ※外部リンクに飛びます。
+          <br />
+        </p>
+
+      </div>
     </div>
   )
 }

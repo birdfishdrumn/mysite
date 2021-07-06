@@ -34,7 +34,8 @@ const FloatingAction = ({ title, reserve, online }) => {
   const [open, setOpen] = useState(false)
 
   const handleClickOpen = () => {
-    setOpen(true)
+   const url = "https://reservation-app-dusky.vercel.app"
+    window.open(url, "_blank")
   }
   const onlineOpen = () => {
     const url = "https://maruyosi.theshop.jp/"
@@ -64,25 +65,7 @@ const FloatingAction = ({ title, reserve, online }) => {
 
         {/*ダイアログ */}
       </div>
-      <div>
-        <Dialog
-          fullScreen={fullScreen}
-          open={open}
-          className={classes.dialog}
-          onClose={handleClose}
-          aria-labelledby="form-dialog-title"
-        >
-          {/* <DialogTitle id="form-dialog-title" className="center">{title}</DialogTitle> */}
-          <DialogContent>
-            {reserve ? <Reserve /> : <Contact dialog />}
-          </DialogContent>
-          <DialogActions>
-            <Button onClick={handleClose} color="primary">
-              キャンセル
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </div>
+
     </>
   )
 }

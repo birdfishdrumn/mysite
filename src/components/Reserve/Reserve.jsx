@@ -5,6 +5,10 @@ import Reservation from "./Reservation"
 
 import { SubTitle, Description } from "../../style/GlobalStyle"
 const Reserve = () => {
+  const handleClickOpen = () => {
+   const url = "https://reservation-app-dusky.vercel.app"
+    window.open(url, "_blank")
+  }
   return (
     <div className="center">
       <SubTitle>電話予約</SubTitle>
@@ -21,7 +25,7 @@ const Reserve = () => {
         ※予約フォームでは送信した時点では予約は完了しません。返信のメールが来るまでお待ちくださいませ。最短で翌日のお返事になります。
       </Description>
           <div className="center"style={{ marginTop: 50 }}>
-        <Button>予約フォームを開く</Button>
+        <Button onClick={()=>handleClickOpen()}>予約フォームを開く</Button>
            <p style={{ color: "red", fontSize: "0.9rem" }}>
           ※外部リンクに飛びます。
           <br />
